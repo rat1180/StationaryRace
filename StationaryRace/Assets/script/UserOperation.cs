@@ -55,7 +55,8 @@ public class UserOperation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        KeyListener();
+        KeySend();
     }
 
     //キーの初期化
@@ -72,6 +73,7 @@ public class UserOperation : MonoBehaviour
 
     private void KeyListener()
     {
+        //各キーの入力処理
         if (Input.GetKey(KeyCode.A))
         {
             Key.AcceleKey = true;

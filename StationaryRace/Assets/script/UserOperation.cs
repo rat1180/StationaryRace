@@ -38,18 +38,36 @@ public class UserOperation : MonoBehaviour
     /****************
      その他の変数
     *****************/
-    int Erflg;
+    
+    //エラー判定
+    private int Erflg;
+
+    //順位
+    private int Rank = 3;
+
+    //アイテム
+    private int ItemNm;
+
+    //CP通過タイム
+    private double CPTime;
 
     // Start is called before the first frame update
     void Start()
     {
+        //キーの初期化
+        InitKey();
+
+        InitSet();
+
+        //エラーチェックを行う
         Erflg = InitErCheck();
-        if(Erflg == 1 || Erflg == 2)
+        if(Erflg != 0)
         {
             Debug.Log(Erflg);
         }
 
-        InitKey();
+        RankSend();
+
     }
 
     // Update is called once per frame
@@ -68,6 +86,17 @@ public class UserOperation : MonoBehaviour
         Key.ItemKey = false;
         Key.HandleKey = 0;
         
+
+    }
+
+    //機体、UIの取得
+    private void InitSet()
+    {
+        //機体
+        Mashin = transform.Find("test_M").gameObject;
+
+        //UI
+        //UI = transform.Find("UI").gameObject;
 
     }
 
@@ -118,7 +147,36 @@ public class UserOperation : MonoBehaviour
     private void KeySend()
     {
         //機体に送る
+        if(Key.AcceleKey == true)
+        {
+            Debug.Log("アクセルon");
+        }
+        if(Key.BrakeKey == true)
+        {
+            Debug.Log("ブレーキon");
+        }
+        if(Key.ItemKey == true)
+        {
+            Debug.Log("アイテムon");
+        }
+        if(Key.HandleKey == 1)
+        {
+            Debug.Log("右");
+        }else if(Key.HandleKey == 2)
+        {
+            Debug.Log("左");
+        }
     }
+
+    //UIに順位を送る
+    public void RankSend()
+    {
+        //UI.GetComponent<UI>().RankingChange(Rank);
+    }
+
+    /******************
+     　　エラー系
+    *******************/
 
     //エラーチェック(0:異常なし 1:機体エラー 2:UIエラー)
     public int InitErCheck()

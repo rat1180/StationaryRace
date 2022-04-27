@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using ITEMConst;
+using ITEMConst; //アイテムの定数値を使うために記入
 
 public class ItemManager : MonoBehaviour
 {

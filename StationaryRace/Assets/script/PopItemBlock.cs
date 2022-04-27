@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//using itemposition; //アイテムの場所の参照
+
 public class PopItemBlock : MonoBehaviour
 {
     public GameObject ItemBlock;
@@ -19,6 +21,5 @@ public class PopItemBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

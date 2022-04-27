@@ -32,6 +32,7 @@ public class UserOperation : MonoBehaviour
 
     //自分の機体
     private GameObject Mashin;
+
     //UI
     private GameObject UI;
 
@@ -50,6 +51,18 @@ public class UserOperation : MonoBehaviour
 
     //CP通過タイム
     private double CPTime;
+
+    /***************
+     定義用変数
+    ****************/
+
+    //ハンドル操作
+    private int NULL = 0;
+    private int RIGHT = 1;
+    private int LEFT = 2;
+
+    //アイテム変数(なしは-1)
+    private int NON = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +90,10 @@ public class UserOperation : MonoBehaviour
         KeySend();
     }
 
+    /************
+     起動時処理(エラーは下)
+    *************/
+
     //キーの初期化
     public void InitKey()
     {
@@ -84,12 +101,12 @@ public class UserOperation : MonoBehaviour
         Key.AcceleKey = false;
         Key.BrakeKey = false;
         Key.ItemKey = false;
-        Key.HandleKey = 0;
+        Key.HandleKey = NULL;
         
 
     }
 
-    //機体、UIの取得
+    //機体、UIの取得や各値の初期値セット
     private void InitSet()
     {
         //機体
@@ -98,7 +115,16 @@ public class UserOperation : MonoBehaviour
         //UI
         UI = transform.Find("UI").gameObject;
 
+        ItemNm = NON;
+
+        //起動時は表示しない
+        Rank = -1;
+
     }
+
+    /***********
+     Update処理
+    ************/
 
     private void KeyListener()
     {
@@ -132,17 +158,21 @@ public class UserOperation : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            Key.HandleKey = 1;
+            Key.HandleKey = RIGHT;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            Key.HandleKey = 2;
+            Key.HandleKey = LEFT;
         }
         else
         {
-            Key.HandleKey = 0;
+            Key.HandleKey = NULL;
         }
     }
+
+    /**************
+     機体との通信
+    ***************/
 
     private void KeySend()
     {
@@ -159,19 +189,48 @@ public class UserOperation : MonoBehaviour
         {
             Debug.Log("アイテムon");
         }
-        if(Key.HandleKey == 1)
+        if(Key.HandleKey == RIGHT)
         {
             Debug.Log("右");
-        }else if(Key.HandleKey == 2)
+        }else if(Key.HandleKey == LEFT)
         {
             Debug.Log("左");
         }
     }
 
-    //UIに順位を送る
+    /**************
+     UIとの通信
+    ***************/
+
+    //UIに順位を送る(起動時は-1で表示せず)
     public void RankSend()
     {
         UI.GetComponent<UI>().RankingChange(Rank);
+    }
+
+    //UIにアイテムを送る
+    public void ItemSend()
+    {
+        //アイテムがあるならその番号、ないなら-1を送る
+        //UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);
+    }
+
+    /***************
+     システムとの通信
+    ****************/
+
+    //ゲームが始まった時とCP通過時に呼んでもらう
+    public void RankSet(int NewRank)
+    {
+        //ランクの変動がなければ行わない
+        if(Rank == NewRank)
+        {
+            return;
+        }
+
+        Rank = NewRank;
+
+        RankSend();
     }
 
     /******************

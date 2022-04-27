@@ -96,7 +96,7 @@ public class UserOperation : MonoBehaviour
         Mashin = transform.Find("test_M").gameObject;
 
         //UI
-        //UI = transform.Find("UI").gameObject;
+        UI = transform.Find("UI").gameObject;
 
     }
 
@@ -171,7 +171,7 @@ public class UserOperation : MonoBehaviour
     //UI‚É‡ˆÊ‚ğ‘—‚é
     public void RankSend()
     {
-        //UI.GetComponent<UI>().RankingChange(Rank);
+        UI.GetComponent<UI>().RankingChange(Rank);
     }
 
     /******************

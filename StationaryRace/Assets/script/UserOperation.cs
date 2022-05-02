@@ -27,7 +27,7 @@ public class UserOperation : MonoBehaviour
 
 
     /****************
-     子クラスの取得用オブジェクト
+     他クラスの取得用オブジェクト
     *****************/
 
     //自分の機体
@@ -47,13 +47,16 @@ public class UserOperation : MonoBehaviour
     private int Erflg;
 
     //順位
-    private int Rank = 3;
+    private int Rank;
 
     //アイテム
     private int ItemNm;
 
     //CP通過タイム
     private double CPTime;
+
+    //CPの通過数
+    private int CPcnt;
 
     //ユーザー番号
     private int UserNm;
@@ -70,13 +73,16 @@ public class UserOperation : MonoBehaviour
     //アイテム変数(なしは-1)
     private int NON = -1;
 
+    void Awake()
+    {
+        InitSet();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         //キーの初期化
         InitKey();
-
-        InitSet();
 
         //エラーチェックを行う
         Erflg = InitErCheck();
@@ -84,8 +90,6 @@ public class UserOperation : MonoBehaviour
         {
             Debug.Log(Erflg);
         }
-
-        //RankSend();
 
     }
 
@@ -125,9 +129,6 @@ public class UserOperation : MonoBehaviour
         UI = transform.Find("UI").gameObject;
 
         ItemNm = NON;
-
-        //起動時は表示しない
-        Rank = -1;
 
     }
 
@@ -210,6 +211,9 @@ public class UserOperation : MonoBehaviour
 
     }
 
+    //CP通過時の処理
+
+
     /**************
      UIとの通信
     ***************/
@@ -248,7 +252,7 @@ public class UserOperation : MonoBehaviour
     //ゲームが始まった時とCP通過時にシステムからもらう
     public void RankSet()
     {
-        int NewRank = 3;//GMSystem.GetComponent<GMSystem>().RankGet(UserNm);戻り値付き
+        int NewRank = GMSystem.GetComponent<GMSystem>().RankGet(UserNm);
 
         //ランクの変動がなければ行わない
         if (Rank == NewRank)

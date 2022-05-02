@@ -5,15 +5,19 @@ using UnityEngine.UI; //テキストを扱う場合は、using UnityEngine.UI; を忘れずに記
 
 public class UI : MonoBehaviour
 {
-    public static int rank;
+    // 値を受け取るための変数
+    public static int rank;                        
     public static int draw_item;
-    public GameObject ranknunber1;                 //スコア表示用の宣言
-    public GameObject ranknunber2;                 //スコア表示用の宣言
-    public GameObject ranknunber3;                 //スコア表示用の宣言
-    public GameObject ranknunber4;                 //スコア表示用の宣言
-    public GameObject ranknunber5;                 //スコア表示用の宣言
-    public GameObject ranknunber6;                 //スコア表示用の宣言
 
+    // 順位表示のオブジェクト
+    public GameObject RankNunber1;                
+    public GameObject RankNunber2;                 
+    public GameObject RankNunber3;                　
+    public GameObject RankNunber4;                 
+    public GameObject RankNunber5;                 
+    public GameObject RankNunber6;            
+    
+    // アイテム表示のオブジェクト
     public GameObject Item_nunber1;
     public GameObject Item_nunber2;
     public GameObject Item_nunber3;
@@ -37,45 +41,46 @@ public class UI : MonoBehaviour
         DRAW_SCORE();
         DRAW_ITEM();
     }
-    public void RankingChange(int ranker)
+    public void RankingChange(int ranker) // 他スクリプトから値を受け取る 
     {
         rank = ranker;
     }
+    // 値によって表示するオブジェクトを変える
     void DRAW_SCORE()
     {
-        ranknunber1.SetActive(false);
-        ranknunber2.SetActive(false);
-        ranknunber3.SetActive(false);
-        ranknunber4.SetActive(false);
-        ranknunber5.SetActive(false);
-        ranknunber6.SetActive(false);
+        RankNunber1.SetActive(false);
+        RankNunber2.SetActive(false);
+        RankNunber3.SetActive(false);
+        RankNunber4.SetActive(false);
+        RankNunber5.SetActive(false);
+        RankNunber6.SetActive(false);
         switch (rank)
         {
             case 1:
-                ranknunber1.SetActive(true);
+                RankNunber1.SetActive(true);
                 break;
             case 2:
-                ranknunber2.SetActive(true);
+                RankNunber2.SetActive(true);
                 break;
             case 3:
-                ranknunber3.SetActive(true);
+                RankNunber3.SetActive(true);
                 break;
             case 4:
-                ranknunber4.SetActive(true);
+                RankNunber4.SetActive(true);
                 break;
             case 5:
-                ranknunber5.SetActive(true);
+                RankNunber5.SetActive(true);
                 break;
             case 6:
-                ranknunber6.SetActive(true);
+                RankNunber6.SetActive(true);
                 break;
             case -1:
-                ranknunber1.SetActive(false);
-                ranknunber2.SetActive(false);
-                ranknunber3.SetActive(false);
-                ranknunber4.SetActive(false);
-                ranknunber5.SetActive(false);
-                ranknunber6.SetActive(false);
+                RankNunber1.SetActive(false);
+                RankNunber2.SetActive(false);
+                RankNunber3.SetActive(false);
+                RankNunber4.SetActive(false);
+                RankNunber5.SetActive(false);
+                RankNunber6.SetActive(false);
                 break;
 
 
@@ -83,6 +88,7 @@ public class UI : MonoBehaviour
 
 
     }
+    // 上の処理と同じ
     public void ITEM_CHANGE(int item)
     {
         draw_item = item;

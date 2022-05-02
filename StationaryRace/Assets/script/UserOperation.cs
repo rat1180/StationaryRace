@@ -44,7 +44,7 @@ public class UserOperation : MonoBehaviour
     private int Erflg;
 
     //順位
-    private int Rank = 3;
+    private int Rank = 4;
 
     //アイテム
     private int ItemNm;
@@ -79,7 +79,7 @@ public class UserOperation : MonoBehaviour
             Debug.Log(Erflg);
         }
 
-        RankSend();
+        // RankSend();
 
     }
 
@@ -88,6 +88,8 @@ public class UserOperation : MonoBehaviour
     {
         KeyListener();
         KeySend();
+        ItemSend();
+        RankSend();
     }
 
     /************
@@ -211,7 +213,7 @@ public class UserOperation : MonoBehaviour
     //UIにアイテムを送る
     public void ItemSend()
     {
-        ItemNm = 3;
+       
         //アイテムがあるならその番号、ないなら-1を送る
         UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);
     }

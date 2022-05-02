@@ -333,8 +333,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36157864ec64dc24685b285d8cb6462f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  type: 3
+  upspeed: 10
+  backspeed: -5
+  maxspeed: 150
+  accel: 1.01
+  Accelflg: 0
+  type: 2
   _material:
   - {fileID: 2100000, guid: 9543ff26b9888a74eac5521ba774a9b2, type: 2}
   - {fileID: 2100000, guid: 9701bb91b77af5044b505463f9ea56eb, type: 2}

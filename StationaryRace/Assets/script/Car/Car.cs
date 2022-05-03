@@ -6,9 +6,9 @@ public class Car : MonoBehaviour
 {
     public float upspeed;       // 前進スピード
     public float backspeed;     // 後退スピードorブレーキ
-    private float maxspeed;      // 最大加速
+    private float maxspeed;     // 最大加速
     public float accel;         // 加速値
-    private float sensitivity;  // 感度
+    private float handle;       // 旋回力
     private bool Accelflg;      // 機体が動いているか
 
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class Car : MonoBehaviour
         //backspeed = 20.0f;
         maxspeed = 120.0f;
         accel = 1.001f;
-        sensitivity = 0.1f;
+        handle = 0.1f;
         Accelflg = false;
     }
 
@@ -51,19 +51,18 @@ public class Car : MonoBehaviour
     {
 
         if (Input.GetKey(KeyCode.W)) // Wキーを押している間
-        {   
-
+        {
             Accelflg = true;
 
-                // Time.deltaTimeを掛ける事でfpsの違いによって速度が変わらなくなる
-                GetComponent<Rigidbody>().velocity += transform.forward * Time.deltaTime * upspeed;  
+            // Time.deltaTimeを掛ける事でfpsの違いによって速度が変わらなくなる
+            GetComponent<Rigidbody>().velocity += transform.forward * Time.deltaTime * upspeed;
 
-                if (upspeed < maxspeed) // upspeedがmaxspeedより小さい間
-                {
-                    upspeed *= accel;   // 徐々に加速する
-                }
+            if (upspeed < maxspeed) // upspeedがmaxspeedより小さい間
+            {
+                upspeed *= accel;   // 徐々に加速する
+            }
         }
-        else if(Input.GetKey(KeyCode.S)) // Sキーを押している間
+        else if (Input.GetKey(KeyCode.S)) // Sキーを押している間
         {
             Accelflg = false;
 
@@ -71,9 +70,9 @@ public class Car : MonoBehaviour
             GetComponent<Rigidbody>().velocity -= transform.forward * Time.deltaTime * backspeed;
 
             if (backspeed < maxspeed * 0.3) // backspeedがmaxspeedより小さい間
-                {
-                    backspeed *= accel;   // accelの値を掛け続ける
-                }
+            {
+                backspeed *= accel;   // accelの値を掛け続ける
+            }
         }
         else  // 何の操作もしていない状態
         {
@@ -90,22 +89,24 @@ public class Car : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A))
             {
-                transform.Rotate(0, -sensitivity, 0);
+                transform.Rotate(0, -handle, 0);
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                transform.Rotate(0, sensitivity, 0);
+                transform.Rotate(0, handle, 0);
             }
+
         }
         else if(Accelflg == false)
         {
             if (Input.GetKey(KeyCode.A))
             {
-                transform.Rotate(0, sensitivity, 0);
+                transform.Rotate(0, handle, 0);
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                transform.Rotate(0, -sensitivity, 0);
+                transform.Rotate(0, -handle, 0);
+
             }
         }
         

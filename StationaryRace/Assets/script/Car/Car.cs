@@ -8,7 +8,7 @@ public class Car : MonoBehaviour
     public float backspeed;     // 後退スピードorブレーキ
     private float maxspeed;     // 最大加速
     public float accel;         // 加速値
-    private float handle;       // 旋回力
+    public float handle;        // 旋回力
     private bool Accelflg;      // 機体が動いているか
 
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class Car : MonoBehaviour
         maxspeed = 120.0f;
         accel = 1.001f;
         handle = 0.1f;
-        Accelflg = false;
+        Accelflg = true;
     }
 
     // Update is called once per frame
@@ -27,6 +27,7 @@ public class Car : MonoBehaviour
     {
         CarMoveAccel();
         CarMoveHandle();
+        CarMoveDrift();
     }
 
     /*
@@ -109,7 +110,19 @@ public class Car : MonoBehaviour
 
             }
         }
-        
+    }
+
+    // ドリフト操作
+    private void CarMoveDrift()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            handle = 0.5f;
+        }
+        else
+        {
+            handle = 0.1f;
+        }
     }
 }
 

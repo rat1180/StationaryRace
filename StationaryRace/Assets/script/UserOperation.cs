@@ -39,9 +39,6 @@ public class UserOperation : MonoBehaviour
     //システム
     private GameObject GMSystem;
 
-    //アイテム
-    public GameObject ItemManager;
-
     /****************
      その他の変数
     *****************/
@@ -93,13 +90,12 @@ public class UserOperation : MonoBehaviour
         {
             Debug.Log(Erflg);
         }
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        ItemSend();
         KeyListener();
         //KeySend();
     }
@@ -127,13 +123,10 @@ public class UserOperation : MonoBehaviour
         GMSystem = transform.parent.gameObject;
 
         //機体
-        Mashin = transform.Find("Player").gameObject;
+        Mashin = transform.Find("Prayer").gameObject;
 
         //UI
         UI = transform.Find("UI").gameObject;
-
-        //アイテム
-        //ItemManager = gameObject.Find("ITEMManager").gameObject;
 
         ItemNm = NON;
 
@@ -228,17 +221,14 @@ public class UserOperation : MonoBehaviour
     //UIに順位を送る(起動時は-1で表示せず)
     public void RankSend()
     {
-        //UI.GetComponent<UI>().RankingChange(Rank);
+        UI.GetComponent<UI>().RankingChange(Rank);
     }
 
     //UIにアイテムを送る
     public void ItemSend()
     {
-        //アイテム取得（デバッグ）
-        ItemNm = ItemManager.GetComponent<ItemManager>().RETURN_INUM(1);
-
         //アイテムがあるならその番号、ないなら-1を送る
-        UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);
+        //UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);
     }
 
     /***************

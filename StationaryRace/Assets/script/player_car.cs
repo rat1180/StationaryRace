@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class player_car : MonoBehaviour
 {
-    public float upspeed = 10.0f;   // 前進スピード
+    public float upspeed = 1.0f;   // 前進スピード
     public float backspeed = -5.0f; // 後退スピードorブレーキ
     public float maxspeed = 150;    // 最大加速
     public float accel = 1.010f;    // 加速値
@@ -24,7 +24,10 @@ public class player_car : MonoBehaviour
     void Update()
     {
         CarMove();
-
+    }
+    /*
+    public void kitai()
+    {
         //機体のテクスチャ変更
         switch (type)
         {
@@ -38,24 +41,7 @@ public class player_car : MonoBehaviour
                 this.GetComponent<Renderer>().material = _material[2];
                 break;
         }
-    }
-
-    /*
-    public struct Moveflg  // フラグ用構造体
-    {
-        // アクセル用フラグ  true / ON  false / OFF
-        public bool Accelflg;
-
-        // バックorブレーキ用フラグ  true / ON  false / OFF
-        public bool Backflg;
-
-        // アイテム用フラグ  true / ON  false / OFF
-        public bool Itemflg;
-
-        // ハンドル用フラグ  0 : なし  1 : 右  2 : 左
-        public bool Handleflg;
-    } 
-    */
+    }*/
 
     private void CarMove()
     {

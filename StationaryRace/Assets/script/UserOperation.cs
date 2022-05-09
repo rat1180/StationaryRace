@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ITEMConst;
 
 //キー情報構造体
 public struct KEYS
@@ -38,6 +39,9 @@ public class UserOperation : MonoBehaviour
 
     //システム
     private GameObject GMSystem;
+
+    //アイテム
+    private GameObject ItemManger;
 
     /****************
      その他の変数
@@ -127,6 +131,9 @@ public class UserOperation : MonoBehaviour
 
         //UI
         UI = transform.Find("UI").gameObject;
+
+        //アイテム
+        ItemManger = gameObject.Find("ItemManger").gameObject;
 
         ItemNm = NON;
 
@@ -227,8 +234,11 @@ public class UserOperation : MonoBehaviour
     //UIにアイテムを送る
     public void ItemSend()
     {
+        //アイテム取得（デバッグ）
+        ItemManger..GetComponent<ItemManger>().(1);
+
         //アイテムがあるならその番号、ないなら-1を送る
-        //UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);
+        UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);
     }
 
     /***************

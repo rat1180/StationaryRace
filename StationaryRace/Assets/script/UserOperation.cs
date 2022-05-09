@@ -123,7 +123,7 @@ public class UserOperation : MonoBehaviour
         GMSystem = transform.parent.gameObject;
 
         //‹@‘Ì
-        Mashin = transform.Find("test_M").gameObject;
+        Mashin = transform.Find("Prayer").gameObject;
 
         //UI
         UI = transform.Find("UI").gameObject;

@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class testplay : MonoBehaviour
 {
-    public float speed = 0.01f;
+    public float speed = 0.1f;
+    public bool itemhave = false;
+    private int USER_Num = 0;//ユーザ番号
+    ItemManager IManager;//アイテムマネージャー参照準備
+
+    GameObject ItemMana;       //アイテムマネージャーのゲームオブジェクトを取得する準備.
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        ItemMana = GameObject.Find("ITEMManager");   //アイテムマネージャーを取得.
+        IManager = ItemMana.GetComponent<ItemManager>();
+        USER_Num = 1; //ユーザー番号（ここでは試験的に1）
     }
 
     // Update is called once per frame
     void Update()
     {
+        //キー入力で移動
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.position += new Vector3(0, 0, speed);
@@ -31,14 +39,21 @@ public class testplay : MonoBehaviour
         {
             transform.position += new Vector3(-speed, 0, 0);
         }
+        //スペースキーでアイテムの使用（テスト）
+        if (Input.GetKey(KeyCode.Space))
+        {
+            IManager.Item_Use(USER_Num);//
+            itemhave = false;
+        }
     }
-    /*
-    void OnCollisionEnter(Collision collision)
+    public void ItemHave()
     {
-        Debug.Log("衝突したオブジェクト：" + gameObject.name);
-        Debug.Log("衝突されたオブジェクト：" + collision.gameObject.name);
+        IManager.USER_NUM(USER_Num);
+        itemhave = true;
+    }
 
-        Destroy(collision.gameObject);
-
-    }*/
+    public int NUMBER_RETURN() //ユーザー番号を返す関数
+    {
+        return USER_Num;
+    }
 }

@@ -7,15 +7,15 @@ public class Car : MonoBehaviour
     public float upspeed;       // 前進スピード
     public float backspeed;     // 後退スピードorブレーキ
     private float maxspeed;     // 最大加速
-    public float accel;         // 加速値
+    private float accel;        // 加速値
     public float handle;        // 旋回力
     private bool Accelflg;      // 機体が動いているか
 
     // Start is called before the first frame update
     void Start()
     {
-        //upspeed = 20.0f;
-        //backspeed = 20.0f;
+        upspeed = 20.0f;
+        backspeed = 19.0f;
         maxspeed = 120.0f;
         accel = 1.001f;
         handle = 0.1f;
@@ -28,6 +28,12 @@ public class Car : MonoBehaviour
         CarMoveAccel();
         CarMoveHandle();
         CarMoveDrift();
+        ItemHit();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
     }
 
     /*
@@ -86,7 +92,7 @@ public class Car : MonoBehaviour
     // ハンドル操作
     private void CarMoveHandle()
     {
-        if (Accelflg == true)
+        if (upspeed > backspeed)
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -98,7 +104,7 @@ public class Car : MonoBehaviour
             }
 
         }
-        else if(Accelflg == false)
+        else if(backspeed > upspeed)
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -117,12 +123,62 @@ public class Car : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            handle = 0.5f;
+            handle = 0.3f;
         }
         else
         {
             handle = 0.1f;
         }
     }
+
+    // アイテムが当たった時の処理
+    public void ItemHit()
+    {
+        if (gameObject.name == "ENPITU")
+        {
+
+        }
+        else if (gameObject.name == "ERASER_RESIDDUE")
+        {
+
+        }
+        else if (gameObject.name == "BLACKBOARD_ERASER")
+        {
+
+        }
+        else if (gameObject.name == "MECHANICAL_PEN_LEAD")
+        {
+
+        }
+        else if (gameObject.name == "STICKY_NOTE")
+        {
+
+        }
+        else if (gameObject.name == "TAPE_BALL")
+        {
+
+        }
+        else if (gameObject.name == "SCOTCH_TAPE")
+        {
+
+        }
+        else if (gameObject.name == "MAGIC_PEN")
+        {
+
+        }
+        else if (gameObject.name == "ORIGAMI_CRANE")
+        {
+
+        }
+        else if (gameObject.name == "BIRIBIRI_PEN")
+        {
+
+        }
+        else if (gameObject.name == "INDIA_INK")
+        {
+
+        }
+    }
+
 }
 

@@ -27,7 +27,7 @@ public class UserOperation : MonoBehaviour
 
 
     /****************
-     子クラスの取得用オブジェクト
+     他クラスの取得用オブジェクト
     *****************/
 
     //自分の機体
@@ -35,6 +35,9 @@ public class UserOperation : MonoBehaviour
 
     //UI
     private GameObject UI;
+
+    //システム
+    private GameObject GMSystem;
 
     /****************
      その他の変数
@@ -44,13 +47,19 @@ public class UserOperation : MonoBehaviour
     private int Erflg;
 
     //順位
-    private int Rank = 4;
+    private int Rank;
 
     //アイテム
     private int ItemNm;
 
     //CP通過タイム
     private double CPTime;
+
+    //CPの通過数
+    private int CPcnt;
+
+    //ユーザー番号
+    private int UserNm;
 
     /***************
      定義用変数
@@ -64,22 +73,23 @@ public class UserOperation : MonoBehaviour
     //アイテム変数(なしは-1)
     private int NON = -1;
 
+    void Awake()
+    {
+        InitSet();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         //キーの初期化
         InitKey();
 
-        InitSet();
-
         //エラーチェックを行う
         Erflg = InitErCheck();
-        if (Erflg != 0)
+        if(Erflg != 0)
         {
             Debug.Log(Erflg);
         }
-
-        // RankSend();
 
     }
 
@@ -87,9 +97,7 @@ public class UserOperation : MonoBehaviour
     void Update()
     {
         KeyListener();
-        KeySend();
-        ItemSend();
-        RankSend();
+        //KeySend();
     }
 
     /************
@@ -99,27 +107,28 @@ public class UserOperation : MonoBehaviour
     //キーの初期化
     public void InitKey()
     {
-
+        
         Key.AcceleKey = false;
         Key.BrakeKey = false;
         Key.ItemKey = false;
         Key.HandleKey = NULL;
-
+        
 
     }
 
     //機体、UIの取得や各値の初期値セット
     private void InitSet()
     {
+        //システム
+        GMSystem = transform.parent.gameObject;
+
         //機体
-        Mashin = transform.Find("test_M").gameObject;
+        Mashin = transform.Find("Prayer").gameObject;
 
         //UI
         UI = transform.Find("UI").gameObject;
 
         ItemNm = NON;
-
-        //Rank = RankSet();
 
     }
 
@@ -175,36 +184,41 @@ public class UserOperation : MonoBehaviour
      機体との通信
     ***************/
 
-    private void KeySend()
+    public KEYS KeySend()
     {
-        //機体に送る
-        if (Key.AcceleKey == true)
+        //テストログ
+        if(Key.AcceleKey == true)
         {
             Debug.Log("アクセルon");
         }
-        if (Key.BrakeKey == true)
+        if(Key.BrakeKey == true)
         {
             Debug.Log("ブレーキon");
         }
-        if (Key.ItemKey == true)
+        if(Key.ItemKey == true)
         {
             Debug.Log("アイテムon");
         }
-        if (Key.HandleKey == RIGHT)
+        if(Key.HandleKey == RIGHT)
         {
             Debug.Log("右");
-        }
-        else if (Key.HandleKey == LEFT)
+        }else if(Key.HandleKey == LEFT)
         {
             Debug.Log("左");
         }
+
+        return Key;
+
     }
+
+    //CP通過時の処理
+
 
     /**************
      UIとの通信
     ***************/
 
-    //UIに順位を送る
+    //UIに順位を送る(起動時は-1で表示せず)
     public void RankSend()
     {
         UI.GetComponent<UI>().RankingChange(Rank);
@@ -213,28 +227,62 @@ public class UserOperation : MonoBehaviour
     //UIにアイテムを送る
     public void ItemSend()
     {
-       
         //アイテムがあるならその番号、ないなら-1を送る
-        UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);
+        //UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);
     }
 
     /***************
      システムとの通信
+    ****************/
+
+    //生成時に割り振ってもらう(関数呼び出しはシステムで)
+    public int InitUser(int nm)
+    {
+        if(nm != null)
+        {
+            //値エラー
+            return 1;
+        }
+
+        UserNm = nm;
+        return 0;
+
+    }
+
+    //ゲームが始まった時とCP通過時にシステムからもらう
+    public void RankSet()
+    {
+        int NewRank = GMSystem.GetComponent<GMSystem>().RankGet(UserNm);
+
+        //ランクの変動がなければ行わない
+        if (Rank == NewRank)
+        {
+            return;
+        }
+
+        Rank = NewRank;
+
+        RankSend();
+    }
 
     /******************
      　　エラー系
     *******************/
 
-    //エラーチェック(0:異常なし 1:機体エラー 2:UIエラー)
+    //エラーチェック(0:異常なし 1:機体エラー 2:UIエラー 3:システムエラー)
     public int InitErCheck()
     {
-        if (Mashin == null)
+        if(Mashin == null)
         {
             return 1;
         }
         if (UI == null)
         {
             return 2;
+        }
+        if (GMSystem == null)
+        {
+            return 3;
         }
         return 0;
     }
@@ -249,6 +297,7 @@ public class UserOperation : MonoBehaviour
         ErCode = Erflg;
 
         //ErCodeをシステムに送信
+        //GMSystem.GetComponent<GMSystem>().ErGet(ErCode);
 
     }
 

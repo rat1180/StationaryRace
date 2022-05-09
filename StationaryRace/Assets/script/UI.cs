@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //テキストを扱う場合は、using UnityEngine.UI; を忘れずに記述
 
-using ITEMConst;
 public class UI : MonoBehaviour
 {
     // 値を受け取るための変数
     public static int rank;                        
-    public int draw_item;
+    public static int draw_item;
 
     // 順位表示のオブジェクト
     public GameObject RankNunber1;                
@@ -109,41 +108,37 @@ public class UI : MonoBehaviour
 
         switch (draw_item)
         {
-            case ITEM.ENPITU:
+            case 1:
                 Item_nunber1.SetActive(true);
-                Debug.Log(draw_item);
                 break;
-            case ITEM.ERASER_RESIDDUE:
+            case 2:
                 Item_nunber2.SetActive(true);
-                Debug.Log(draw_item);
                 break;
-            case ITEM.BLACKBOARD_ERASER:
+            case 3:
                 Item_nunber3.SetActive(true);
-                Debug.Log(draw_item);
                 break;
-            case ITEM.MECHANICAL_PEN_LEAD:
+            case 4:
                 Item_nunber4.SetActive(true);
-                Debug.Log(draw_item);
                 break;
-            case ITEM.STICKY_NOTE:
+            case 5:
                 Item_nunber5.SetActive(true);
                 break;
-            case ITEM.TAPE_BALL:
+            case 6:
                 Item_nunber6.SetActive(true);
                 break;
-            case ITEM.SCOTCH_TAPE:
+            case 7:
                 Item_nunber7.SetActive(true);
                 break;
-            case ITEM.MAGIC_PEN:
+            case 8:
                 Item_nunber8.SetActive(true);
                 break;
-            case ITEM.ORIGAMI_CRANE:
+            case 9:
                 Item_nunber9.SetActive(true);
                 break;
-            case ITEM.BIRIBIRI_PEN:
+            case 10:
                 Item_nunber10.SetActive(true);
                 break;
-            case ITEM.ItemNull:
+            case -1:
                 Item_nunber1.SetActive(false);
                 Item_nunber2.SetActive(false);
                 Item_nunber3.SetActive(false);

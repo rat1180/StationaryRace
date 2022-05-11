@@ -40,7 +40,7 @@ public class ItemManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Player = GameObject.Find("Player").transform.position;//プレイヤーの座標を取得
+        Player = GameObject.Find("Car").transform.position;//プレイヤーの座標を取得
         //Player = GameObject.Find("Player").transform.forward;//プレイヤーの座標を取得
     }
 

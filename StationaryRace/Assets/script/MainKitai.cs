@@ -6,24 +6,26 @@ public class MainKitai : MonoBehaviour
 {
     public int KitaiNumber = 0;        //機体番号
     private int o_max = 0;             //機体数
-    //public Material[] _material;       //テクスチャの割り当て
-    GameObject[] kitaiObject;   //オブジェクトの割り当て
+    GameObject[] kitaiObject;          //オブジェクトの割り当て
 
     // Start is called before the first frame update
     void Start()
     {
-        o_max = this.transform.childCount;     //子オブジェクトの個数を取得
-        kitaiObject = new GameObject[o_max];
+        o_max = this.transform.childCount;        //子オブジェクトの個数を取得
+        kitaiObject = new GameObject[o_max];      //インスタンス作成
 
+        //全ての子オブジェクトを取得
         for(int i = 0; i < o_max; i++)
         {
             kitaiObject[i] = transform.GetChild(i).gameObject;
         }
 
+        //全ての子オブジェクトを非アクティブ
         foreach (GameObject gamObj in kitaiObject)
         {
             gamObj.SetActive(false);
         }
+        //一つだけアクティブにする
         kitaiObject[KitaiNumber].SetActive(true);
     }
 
@@ -43,25 +45,4 @@ public class MainKitai : MonoBehaviour
             kitaiObject[KitaiNumber].SetActive(true);
         }
     }
-
-    /*
-    //選択された機体の番号を受け取る
-    public void KitaiSet(int type)
-    {
-        KitaiNumber = type;
-
-        //機体のテクスチャ変更
-        switch (type)
-        {
-            case 0:
-                this.GetComponent<Renderer>().material = kitaiObject[0];
-                break;
-            case 1:
-                this.GetComponent<Renderer>().material = kitaiObject[1];
-                break;
-            case 2:
-                this.GetComponent<Renderer>().material = kitaiObject[2];
-                break;
-        }
-    }*/
 }

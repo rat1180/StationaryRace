@@ -7,19 +7,21 @@ public class Car : MonoBehaviour
     public float upspeed;       // 前進スピード
     public float backspeed;     // 後退スピードorブレーキ
     private float maxspeed;     // 最大加速
-    public float accel;         // 加速値
-    private float handle;       // 旋回力
+    private float accel;        // 加速値
+    public float handle;        // 旋回力
     private bool Accelflg;      // 機体が動いているか
+    public float time;          // 時間
+    public float maxtime;
 
     // Start is called before the first frame update
     void Start()
     {
-        //upspeed = 20.0f;
-        //backspeed = 20.0f;
-        maxspeed = 120.0f;
+        upspeed = 20.0f;
+        backspeed = 19.0f;
+        maxspeed = 100.0f;
         accel = 1.001f;
         handle = 0.1f;
-        Accelflg = false;
+        Accelflg = true;
     }
 
     // Update is called once per frame
@@ -27,6 +29,14 @@ public class Car : MonoBehaviour
     {
         CarMoveAccel();
         CarMoveHandle();
+        //CarMoveDrift();
+        //ItemSpeedUp();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //ItemSpeedUp();
+        ItemHit();
     }
 
     /*
@@ -69,7 +79,7 @@ public class Car : MonoBehaviour
             // Time.deltaTimeを掛ける事でfpsの違いによって速度が変わらなくなる
             GetComponent<Rigidbody>().velocity -= transform.forward * Time.deltaTime * backspeed;
 
-            if (backspeed < maxspeed * 0.3) // backspeedがmaxspeedより小さい間
+            if (backspeed < maxspeed * 0.2) // backspeedがmaxspeedより小さい間
             {
                 backspeed *= accel;   // accelの値を掛け続ける
             }
@@ -85,7 +95,7 @@ public class Car : MonoBehaviour
     // ハンドル操作
     private void CarMoveHandle()
     {
-        if (Accelflg == true)
+        if (upspeed > backspeed)
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -97,7 +107,7 @@ public class Car : MonoBehaviour
             }
 
         }
-        else if(Accelflg == false)
+        else if(backspeed > upspeed)
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -109,7 +119,80 @@ public class Car : MonoBehaviour
 
             }
         }
-        
     }
+
+    /*
+    // ドリフト操作
+    private void CarMoveDrift()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            handle = 0.3f;
+        }
+        else
+        {
+            handle = 0.1f;
+        }
+    }
+    */
+
+    public void ItemSpeedUp()
+    {
+        /*
+        if (gameObject.name == "STICKY_NOTE") // 付箋
+        {
+            upspeed = maxspeed;
+            maxspeed = 150;
+            upspeed += 20;
+        }
+        */
+        Debug.Log("スピードアップ");
+    }
+
+    // アイテムが当たった時の処理
+    public void ItemHit()
+    {
+        if (gameObject.name == "ENPITU")
+        {
+
+        }
+        else if (gameObject.name == "ERASER_RESIDDUE")
+        {
+
+        }
+        else if (gameObject.name == "BLACKBOARD_ERASER")
+        {
+
+        }
+        else if (gameObject.name == "MECHANICAL_PEN_LEAD")
+        {
+
+        } 
+        else if (gameObject.name == "TAPE_BALL")
+        {
+
+        }
+        else if (gameObject.name == "SCOTCH_TAPE")
+        {
+
+        }
+        else if (gameObject.name == "MAGIC_PEN")
+        {
+
+        }
+        else if (gameObject.name == "ORIGAMI_CRANE")
+        {
+
+        }
+        else if (gameObject.name == "BIRIBIRI_PEN")
+        {
+
+        }
+        else if (gameObject.name == "INDIA_INK")
+        {
+
+        }
+    }
+
 }
 

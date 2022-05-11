@@ -40,7 +40,7 @@ public class UserOperation : MonoBehaviour
     private GameObject GMSystem;
 
     //アイテム
-    public GameObject ItemManager;
+    private GameObject ItemManager;
 
     /****************
      その他の変数
@@ -99,7 +99,7 @@ public class UserOperation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ItemSend();
+        //ItemSend();
         KeyListener();
         //KeySend();
     }
@@ -127,13 +127,13 @@ public class UserOperation : MonoBehaviour
         GMSystem = transform.parent.gameObject;
 
         //機体
-        Mashin = transform.Find("Player").gameObject;
+        Mashin = transform.Find("test_M").gameObject;
 
         //UI
-        UI = transform.Find("UI").gameObject;
+        //UI = transform.Find("UI").gameObject;
 
         //アイテム
-        //ItemManager = gameObject.Find("ITEMManager").gameObject;
+        //ItemManager = GameObject.Find("ITEMManager").gameObject;
 
         ItemNm = NON;
 
@@ -235,10 +235,10 @@ public class UserOperation : MonoBehaviour
     public void ItemSend()
     {
         //アイテム取得（デバッグ）
-        ItemNm = ItemManager.GetComponent<ItemManager>().RETURN_INUM(1);
+        //ItemNm = ItemManager.GetComponent<ItemManager>().RETURN_INUM(1);
 
         //アイテムがあるならその番号、ないなら-1を送る
-        UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);
+        //UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);
     }
 
     /***************

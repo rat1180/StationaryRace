@@ -45,12 +45,12 @@ namespace UnityEngine.Advertisements
             //Only update orientation if we are showing
             if (Screen.width > Screen.height)
             {
-                if (m_CurrentScreenOrientation != ScreenOrientation.LandscapeLeft)
+                if (m_CurrentScreenOrientation != ScreenOrientation.Landscape)
                 {
-                    SwapCanvas(ScreenOrientation.LandscapeLeft);
+                    SwapCanvas(ScreenOrientation.Landscape);
                 }
 
-                m_CurrentScreenOrientation = ScreenOrientation.LandscapeLeft;
+                m_CurrentScreenOrientation = ScreenOrientation.Landscape;
             }
             else
             {
@@ -81,7 +81,7 @@ namespace UnityEngine.Advertisements
                 HideSkipButton(m_PortraitCanvas);
             }
 
-            if (m_CurrentScreenOrientation == ScreenOrientation.LandscapeLeft)
+            if (m_CurrentScreenOrientation == ScreenOrientation.Landscape)
             {
                 m_LandscapeCanvas.SetActive(true);
             }
@@ -186,7 +186,7 @@ namespace UnityEngine.Advertisements
 
         private void SwapCanvas(ScreenOrientation newOrientation)
         {
-            if (newOrientation == ScreenOrientation.LandscapeLeft)
+            if (newOrientation == ScreenOrientation.Landscape)
             {
                 m_LandscapeCanvas.SetActive(true);
                 m_PortraitCanvas.SetActive(false);

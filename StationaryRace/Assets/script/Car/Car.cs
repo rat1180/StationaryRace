@@ -30,10 +30,10 @@ public class Car : MonoBehaviour
         CarMoveAccel();
         CarMoveHandle();
         //CarMoveDrift();
-        ItemSpeedUp();
+        //ItemSpeedUp();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collision collision)
     {
         ItemSpeedUp();
         ItemHit();
@@ -135,7 +135,7 @@ public class Car : MonoBehaviour
         }
     }
     */
-
+    
     public void ItemSpeedUp()
     {
         if (gameObject.name == "STICKY_NOTE") // •tâ³

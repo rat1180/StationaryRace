@@ -30,12 +30,12 @@ public class Car : MonoBehaviour
         CarMoveAccel();
         CarMoveHandle();
         //CarMoveDrift();
-        ItemSpeedUp();
+        //ItemSpeedUp();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        ItemSpeedUp();
+        //ItemSpeedUp();
         ItemHit();
     }
 
@@ -138,12 +138,15 @@ public class Car : MonoBehaviour
 
     public void ItemSpeedUp()
     {
+        /*
         if (gameObject.name == "STICKY_NOTE") // 付箋
         {
             upspeed = maxspeed;
             maxspeed = 150;
             upspeed += 20;
         }
+        */
+        Debug.Log("スピードアップ");
     }
 
     // アイテムが当たった時の処理

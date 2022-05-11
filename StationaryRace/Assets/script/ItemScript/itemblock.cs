@@ -7,7 +7,7 @@ public class itemblock : MonoBehaviour
     int ItemNum = 0;           //アイテムマネージャーに数値を渡す用変数.
     int USER_NUM = 0;          //ユーザー番号
     GameObject ItemMana;       //アイテムマネージャーのゲームオブジェクトを取得する準備.
-    GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
+    GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備. 
     testplay ItemHave;         //スクリプトを参照する準備.
     public AudioClip Dessound; //CDみたいなもの.
     AudioSource audioSource;   //CDプレイヤーみたいなもの.

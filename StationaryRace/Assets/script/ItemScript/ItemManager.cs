@@ -126,6 +126,11 @@ public class ItemManager : MonoBehaviour
     {
         USER_NUMBER = num;
     }
+    //ユーザー番号を引数にアイテムナンバーを返す関数
+    public int RETURN_INUM(int USER_NUM)
+    {
+        return USER_HAVE[USER_NUMBER, 1];
+    }
 
     //ユーザー番号を引数にアイテムナンバーを返す関数
     public int RETURN_INUM(int USER_NUM)

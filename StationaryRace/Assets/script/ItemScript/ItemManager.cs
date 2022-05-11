@@ -40,7 +40,8 @@ public class ItemManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Player = GameObject.Find("Player").transform.position;//プレイヤーの座標を取得
+        Player = GameObject.Find("Car").transform.position;//プレイヤーの座標を取得
+        //Player = GameObject.Find("Player").transform.forward;//プレイヤーの座標を取得
     }
 
     public void Item(int USER_NUM,int ITEMNUM)//itemblockが破壊された際にこれを呼ぶ.
@@ -126,6 +127,12 @@ public class ItemManager : MonoBehaviour
         USER_NUMBER = num;
     }
     //ユーザー番号を引数にアイテムナンバーを返す関数
+    //public int RETURN_INUM(int USER_NUM)
+    //{
+    //    return USER_HAVE[USER_NUMBER, 1];
+    //}
+
+    //ユーザー番号を引数にアイテムナンバーを返す関数
     public int RETURN_INUM(int USER_NUM)
     {
         return USER_HAVE[USER_NUMBER, 1];
@@ -152,9 +159,14 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.STICKY_NOTE://付箋.
                 Debug.Log("USE:STICKY_NOTE!");
+                Player.z += 5;
+                Player.y += 3;
+                Instantiate(STICKY_NOTE, Player, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.TAPE_BALL://丸めたテープ.
                 Debug.Log("USE:TAPE_BALL!");
+                Player.z += 3;
+                Instantiate(TAPE_BALL, Player, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.SCOTCH_TAPE://セロハンテープ.
                 Debug.Log("USE:SCOTCH_TAPE!");

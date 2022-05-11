@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ITEMConst;
 
 //キー情報構造体
 public struct KEYS
@@ -41,7 +40,7 @@ public class UserOperation : MonoBehaviour
     private GameObject GMSystem;
 
     //アイテム
-    private GameObject ItemManger;
+    public GameObject ItemManager;
 
     /****************
      その他の変数
@@ -94,12 +93,13 @@ public class UserOperation : MonoBehaviour
         {
             Debug.Log(Erflg);
         }
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        ItemSend();
         KeyListener();
         //KeySend();
     }
@@ -127,13 +127,13 @@ public class UserOperation : MonoBehaviour
         GMSystem = transform.parent.gameObject;
 
         //機体
-        Mashin = transform.Find("test_M").gameObject;
+        Mashin = transform.Find("Player").gameObject;
 
         //UI
         UI = transform.Find("UI").gameObject;
 
         //アイテム
-        ItemManger = gameObject.Find("ItemManger").gameObject;
+        //ItemManager = gameObject.Find("ITEMManager").gameObject;
 
         ItemNm = NON;
 
@@ -228,14 +228,14 @@ public class UserOperation : MonoBehaviour
     //UIに順位を送る(起動時は-1で表示せず)
     public void RankSend()
     {
-        UI.GetComponent<UI>().RankingChange(Rank);
+        //UI.GetComponent<UI>().RankingChange(Rank);
     }
 
     //UIにアイテムを送る
     public void ItemSend()
     {
         //アイテム取得（デバッグ）
-        ItemManger..GetComponent<ItemManger>().(1);
+        ItemNm = ItemManager.GetComponent<ItemManager>().RETURN_INUM(1);
 
         //アイテムがあるならその番号、ないなら-1を送る
         UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);

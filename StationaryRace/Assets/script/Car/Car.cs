@@ -10,13 +10,15 @@ public class Car : MonoBehaviour
     private float accel;        // 加速値
     public float handle;        // 旋回力
     private bool Accelflg;      // 機体が動いているか
+    public float time;          // 時間
+    public float maxtime;
 
     // Start is called before the first frame update
     void Start()
     {
         upspeed = 20.0f;
         backspeed = 19.0f;
-        maxspeed = 120.0f;
+        maxspeed = 100.0f;
         accel = 1.001f;
         handle = 0.1f;
         Accelflg = true;
@@ -27,13 +29,14 @@ public class Car : MonoBehaviour
     {
         CarMoveAccel();
         CarMoveHandle();
-        CarMoveDrift();
-        ItemHit();
+        //CarMoveDrift();
+        ItemSpeedUp();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        ItemSpeedUp();
+        ItemHit();
     }
 
     /*
@@ -76,7 +79,7 @@ public class Car : MonoBehaviour
             // Time.deltaTimeを掛ける事でfpsの違いによって速度が変わらなくなる
             GetComponent<Rigidbody>().velocity -= transform.forward * Time.deltaTime * backspeed;
 
-            if (backspeed < maxspeed * 0.3) // backspeedがmaxspeedより小さい間
+            if (backspeed < maxspeed * 0.2) // backspeedがmaxspeedより小さい間
             {
                 backspeed *= accel;   // accelの値を掛け続ける
             }
@@ -118,6 +121,7 @@ public class Car : MonoBehaviour
         }
     }
 
+    /*
     // ドリフト操作
     private void CarMoveDrift()
     {
@@ -128,6 +132,17 @@ public class Car : MonoBehaviour
         else
         {
             handle = 0.1f;
+        }
+    }
+    */
+
+    public void ItemSpeedUp()
+    {
+        if (gameObject.name == "STICKY_NOTE") // 付箋
+        {
+            upspeed = maxspeed;
+            maxspeed = 150;
+            upspeed += 20;
         }
     }
 
@@ -149,11 +164,7 @@ public class Car : MonoBehaviour
         else if (gameObject.name == "MECHANICAL_PEN_LEAD")
         {
 
-        }
-        else if (gameObject.name == "STICKY_NOTE")
-        {
-
-        }
+        } 
         else if (gameObject.name == "TAPE_BALL")
         {
 

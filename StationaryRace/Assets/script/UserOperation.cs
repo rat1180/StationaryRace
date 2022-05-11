@@ -61,6 +61,12 @@ public class UserOperation : MonoBehaviour
     //CPの通過数
     private int CPcnt;
 
+    //CPの最大数（ゴール）
+    private int CPmax;
+
+    //ゴール判定
+    private bool GLflg;
+
     //ユーザー番号
     private int UserNm;
 
@@ -136,6 +142,13 @@ public class UserOperation : MonoBehaviour
         //ItemManager = GameObject.Find("ITEMManager").gameObject;
 
         ItemNm = NON;
+
+        CPcnt = 0;
+
+        //本来はシステムからもらう
+        CPmax = 5;
+
+        GLflg = false;
 
     }
 
@@ -218,8 +231,25 @@ public class UserOperation : MonoBehaviour
 
     }
 
-    //CP通過時の処理
+    //CP通過時の処理(現状はデバッグ,アルファ版用)
+    public void CP(int CPNm)
+    {
+        if(CPNm == CPcnt + 1)
+        {
+            CPcnt++;
 
+            //システムからもらう
+            //CPTime = 
+
+            Debug.Log("CP通過");
+
+            if(CPcnt == CPmax)
+            {
+                GLflg = true;
+                Debug.Log("ゴール");
+            }
+        }
+    }
 
     /**************
      UIとの通信
@@ -273,6 +303,11 @@ public class UserOperation : MonoBehaviour
         Rank = NewRank;
 
         RankSend();
+    }
+
+    private double TimeSet()
+    {
+
     }
 
     /******************

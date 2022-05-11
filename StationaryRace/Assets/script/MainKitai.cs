@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class MainKitai : MonoBehaviour
 {
-    private int index = 0;
+    public int KitaiNumber = 0;        //機体番号
     private int o_max = 0;             //機体数
-    public int KitaiNumber;            //機体番号
     //public Material[] _material;       //テクスチャの割り当て
     GameObject[] kitaiObject;   //オブジェクトの割り当て
 
@@ -21,12 +20,11 @@ public class MainKitai : MonoBehaviour
             kitaiObject[i] = transform.GetChild(i).gameObject;
         }
 
-
         foreach (GameObject gamObj in kitaiObject)
         {
             gamObj.SetActive(false);
         }
-        kitaiObject[index].SetActive(true);
+        kitaiObject[KitaiNumber].SetActive(true);
     }
 
     // Update is called once per frame
@@ -35,14 +33,14 @@ public class MainKitai : MonoBehaviour
         if (Input.GetKeyDown("q"))
         {
             //現在のアクティブな子オブジェクトを非アクティブ
-            kitaiObject[index].SetActive(false);
-            index++;
+            kitaiObject[KitaiNumber].SetActive(false);
+            KitaiNumber++;
 
             //子オブジェクトをすべて切り替えたらまた最初のオブジェクトに戻る
-            if (index == o_max) { index = 0; }
+            if (KitaiNumber == o_max) { KitaiNumber = 0; }
 
             //次のオブジェクトをアクティブ化
-            kitaiObject[index].SetActive(true);
+            kitaiObject[KitaiNumber].SetActive(true);
         }
     }
 

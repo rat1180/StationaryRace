@@ -305,10 +305,12 @@ public class UserOperation : MonoBehaviour
         RankSend();
     }
 
+    /*
     private double TimeSet()
     {
 
     }
+    */
 
     /******************
      　　エラー系

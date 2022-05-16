@@ -15,7 +15,7 @@ C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-61989
+51294
 Successfully changed project path to: C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
 C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 114.71 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 109.21 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.0f1 (4bf1ec4b23c9)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/Resources/UnitySubsystems
@@ -58,50 +58,372 @@ Direct3D:
     Renderer: NVIDIA GeForce RTX 3070 Laptop GPU (ID=0x249d)
     Vendor:   NVIDIA
     VRAM:     8044 MB
-    Driver:   30.0.15.1259
+    Driver:   30.0.14.9717
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56496
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56236
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.008576 seconds.
+Registered in 0.007156 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 106.97 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 101.41 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.921 seconds
+- Completed reload, in  0.838 seconds
 Domain Reload Profiling:
-	ReloadAssembly (922ms)
-		BeginReloadAssembly (83ms)
+	ReloadAssembly (839ms)
+		BeginReloadAssembly (70ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (515ms)
-			LoadAssemblies (80ms)
+		EndReloadAssembly (473ms)
+			LoadAssemblies (67ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (113ms)
+			SetupTypeCache (105ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (32ms)
-			SetupLoadedEditorAssemblies (308ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (283ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (107ms)
+				RefreshPlugins (101ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (142ms)
-				ProcessInitializeOnLoadMethodAttributes (50ms)
+				ProcessInitializeOnLoadAttributes (124ms)
+				ProcessInitializeOnLoadMethodAttributes (49ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007451 seconds.
+Registered in 0.007355 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file data-000001FFB4019010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB7A70C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB7843C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB81FA750 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB3E35010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB81FA750 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB3E93E20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB8231B70 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB8FC78B0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB85F24F0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB7DDB620 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB84AE440 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB85F62C0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB90C4730 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB78B4010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB78DC620 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB3E1D670 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Package Manager log level set to [2]
+Mono: successfully reloaded assembly
+- Completed reload, in  2.306 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2307ms)
+		BeginReloadAssembly (201ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (2011ms)
+			LoadAssemblies (68ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (228ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (1543ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (102ms)
+				ProcessInitializeOnLoadAttributes (1305ms)
+				ProcessInitializeOnLoadMethodAttributes (110ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Failed to load shader (instanceID 418, GUID dd89cf5b9246416f84610a006f916af7)
+Failed to load shader (instanceID 416, GUID 14eb328de4b8eb245bb7cea29e4ac00b)
+Failed to load shader (instanceID 402, GUID 68e6db2ebdc24f95958faec2be5558d6)
+Failed to load shader (instanceID 398, GUID bc1ede39bf3643ee8e493720e4259791)
+Failed to load shader (instanceID 396, GUID fe393ace9b354375a9cb14cdbbc28be4)
+Failed to load shader (instanceID 408, GUID cf81c85f95fe47e1a27f6ae460cf182c)
+Failed to load shader (instanceID 414, GUID 48bb5f55d8670e349b6e614913f9d910)
+Failed to load shader (instanceID 404, GUID 85187c2149c549c5b33f0cdb02836b17)
+Failed to load shader (instanceID 412, GUID 128e987d567d4e2c824d754223b3f3b0)
+Failed to load shader (instanceID 400, GUID f7ada0af4f174f0694ca6a487b8f543d)
+Failed to load shader (instanceID 406, GUID a02a7d8c237544f1962732b55a9aebf1)
+Failed to load shader (instanceID 420, GUID c8d12adcee749c344b8117cf7c7eb912)
+Failed to load shader (instanceID 410, GUID 1e3b057af24249748ff873be7fafee47)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3943 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (56.9 KB). Loaded Objects now: 4373.
+Memory consumption went from 147.6 MB to 147.6 MB.
+Total: 6.582500 ms (FindLiveObjects: 0.376000 ms CreateObjectMapping: 0.304600 ms MarkObjects: 5.787100 ms  DeleteObjects: 0.113300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006634 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001FFC02AEC80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFBC276020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB7B27840 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB82ED040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB7A33020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFBB3C5060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFBB3FC480 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFC02C9490 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFBAEEE030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB8F13F70 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFBAB62020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFBF649020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB8F13F70 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB82F7D50 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFBB668C50 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB7843C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFBC2B3360 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.310 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1310ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1059ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (224ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (575ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (383ms)
+				ProcessInitializeOnLoadMethodAttributes (84ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Failed to load shader (instanceID 418, GUID dd89cf5b9246416f84610a006f916af7)
+Failed to load shader (instanceID 416, GUID 14eb328de4b8eb245bb7cea29e4ac00b)
+Failed to load shader (instanceID 402, GUID 68e6db2ebdc24f95958faec2be5558d6)
+Failed to load shader (instanceID 398, GUID bc1ede39bf3643ee8e493720e4259791)
+Failed to load shader (instanceID 396, GUID fe393ace9b354375a9cb14cdbbc28be4)
+Failed to load shader (instanceID 408, GUID cf81c85f95fe47e1a27f6ae460cf182c)
+Failed to load shader (instanceID 414, GUID 48bb5f55d8670e349b6e614913f9d910)
+Failed to load shader (instanceID 404, GUID 85187c2149c549c5b33f0cdb02836b17)
+Failed to load shader (instanceID 412, GUID 128e987d567d4e2c824d754223b3f3b0)
+Failed to load shader (instanceID 400, GUID f7ada0af4f174f0694ca6a487b8f543d)
+Failed to load shader (instanceID 406, GUID a02a7d8c237544f1962732b55a9aebf1)
+Failed to load shader (instanceID 420, GUID c8d12adcee749c344b8117cf7c7eb912)
+Failed to load shader (instanceID 410, GUID 1e3b057af24249748ff873be7fafee47)
+Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3937 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (25.6 KB). Loaded Objects now: 4375.
+Memory consumption went from 147.4 MB to 147.4 MB.
+Total: 6.541100 ms (FindLiveObjects: 0.283000 ms CreateObjectMapping: 0.333700 ms MarkObjects: 5.859300 ms  DeleteObjects: 0.064400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006721 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001FFBAB62020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB812F020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB76C4010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB3FCB1D0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB7A33020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB839E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB9798020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFBCACE020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFBC088030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB9871030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFBF2BF050 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FF6B77AEE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB9871030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB93032E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB78B4010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB7843C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001FFB39C4480 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.327 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1328ms)
+		BeginReloadAssembly (129ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (1100ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (259ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (591ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (392ms)
+				ProcessInitializeOnLoadMethodAttributes (96ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Failed to load shader (instanceID 418, GUID dd89cf5b9246416f84610a006f916af7)
+Failed to load shader (instanceID 416, GUID 14eb328de4b8eb245bb7cea29e4ac00b)
+Failed to load shader (instanceID 402, GUID 68e6db2ebdc24f95958faec2be5558d6)
+Failed to load shader (instanceID 398, GUID bc1ede39bf3643ee8e493720e4259791)
+Failed to load shader (instanceID 396, GUID fe393ace9b354375a9cb14cdbbc28be4)
+Failed to load shader (instanceID 408, GUID cf81c85f95fe47e1a27f6ae460cf182c)
+Failed to load shader (instanceID 414, GUID 48bb5f55d8670e349b6e614913f9d910)
+Failed to load shader (instanceID 404, GUID 85187c2149c549c5b33f0cdb02836b17)
+Failed to load shader (instanceID 412, GUID 128e987d567d4e2c824d754223b3f3b0)
+Failed to load shader (instanceID 400, GUID f7ada0af4f174f0694ca6a487b8f543d)
+Failed to load shader (instanceID 406, GUID a02a7d8c237544f1962732b55a9aebf1)
+Failed to load shader (instanceID 420, GUID c8d12adcee749c344b8117cf7c7eb912)
+Failed to load shader (instanceID 410, GUID 1e3b057af24249748ff873be7fafee47)
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3937 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (25.6 KB). Loaded Objects now: 4377.
+Memory consumption went from 147.4 MB to 147.4 MB.
+Total: 6.264300 ms (FindLiveObjects: 0.296500 ms CreateObjectMapping: 0.306800 ms MarkObjects: 5.625700 ms  DeleteObjects: 0.034100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 871018.296487 seconds.
+  path: Assets/prefabs/item/itemblock.prefab
+  artifactKey: Guid(5a38c1524d659764a8c891f8ee9eed41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/itemblock.prefab using Guid(5a38c1524d659764a8c891f8ee9eed41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe9bfed7b8fb9bdb9d60ce70d488467b') in 0.118376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/prefabs/item/TAPE_BALL.prefab
+  artifactKey: Guid(89d8ba23c16252a4895c69283f46db00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/TAPE_BALL.prefab using Guid(89d8ba23c16252a4895c69283f46db00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '891b08d9916bfc4d844db545cec35c2f') in 0.015290 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

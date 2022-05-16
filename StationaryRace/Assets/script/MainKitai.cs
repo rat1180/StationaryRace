@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainKitai : MonoBehaviour
 {
-    public int KitaiNumber = 0;        //機体番号
+    public int MachineNum = 0;        //機体番号
     private int o_max = 0;             //機体数
     GameObject[] kitaiObject;          //オブジェクトの割り当て
 
@@ -26,7 +26,7 @@ public class MainKitai : MonoBehaviour
             gamObj.SetActive(false);
         }
         //一つだけアクティブにする
-        kitaiObject[KitaiNumber].SetActive(true);
+        kitaiObject[MachineNum].SetActive(true);
     }
 
     // Update is called once per frame
@@ -35,14 +35,20 @@ public class MainKitai : MonoBehaviour
         if (Input.GetKeyDown("q"))
         {
             //現在のアクティブな子オブジェクトを非アクティブ
-            kitaiObject[KitaiNumber].SetActive(false);
-            KitaiNumber++;
+            kitaiObject[MachineNum].SetActive(false);
+            MachineNum++;
 
             //子オブジェクトをすべて切り替えたらまた最初のオブジェクトに戻る
-            if (KitaiNumber == o_max) { KitaiNumber = 0; }
+            if (MachineNum == o_max) { MachineNum = 0; }
 
             //次のオブジェクトをアクティブ化
-            kitaiObject[KitaiNumber].SetActive(true);
+            kitaiObject[MachineNum].SetActive(true);
         }
+    }
+
+    //ユーザーから機体番号の受け取り
+    public void MachinNumber()
+    {
+        MainKitai 
     }
 }

@@ -8,6 +8,11 @@ public class MainKitai : MonoBehaviour
     private int o_max = 0;             //機体数
     GameObject[] kitaiObject;          //オブジェクトの割り当て
 
+    public struct KitaiNum
+    {
+        public int num;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,9 +51,26 @@ public class MainKitai : MonoBehaviour
         }
     }
 
+    /*
     //ユーザーから機体番号の受け取り
     public void MachinNumber()
     {
-        MainKitai 
+        //UserClass.UserNum machin;
+        machin.num = MachineNum;
+
+        switch (MachineNum)
+        {
+            case 1:
+                //次のオブジェクトをアクティブ化
+                kitaiObject[MachineNum].SetActive(true);
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            default:
+                break;
+        }
     }
+    */
 }

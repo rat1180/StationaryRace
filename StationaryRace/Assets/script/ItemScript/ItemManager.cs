@@ -148,6 +148,8 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.ERASER_RESIDDUE://è¡ÇµÉJÉX.
                 Debug.Log("USE:ERASER_RESIDDUE!");
+                Player.z -= 1;
+                Instantiate(ERASER_RESIDDUE, Player, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.BLACKBOARD_ERASER://çïî¬ÇØÇµ.
                 Debug.Log("USE:BLACKBOARD_ERASER!");

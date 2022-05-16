@@ -6,15 +6,14 @@ public class STICKY_NOTE : MonoBehaviour
 {
     public int durability;//耐久値
     GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
-    Car PlayerSc; //プレイヤーの関数を呼ぶための準備
+
+    //testplay PlayerSc; //プレイヤーの関数を呼ぶための準備
     // Start is called before the first frame update
     void Start()
     {
         durability = Random.Range(2, 6); ; //耐久値を2～6でランダムに決める
-        Player= GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
-        PlayerSc = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
-
-        this.GetComponent<Rigidbody>().useGravity = false;
+        Player= GameObject.Find("Player");         //プレイヤーのゲームオブジェクトを取得.
+        //PlayerSc = Player.GetComponent<testplay>(); //プレイヤーのスクリプトを参照する.
     }
 
     // Update is called once per frame
@@ -26,16 +25,26 @@ public class STICKY_NOTE : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider collision)
+    //ステージに当たった際にフラグを切り替える
+    void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("hit");
-        // 衝突した相手にPlayerタグが付いているとき.
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Stage")
         {
-            durability -= 1;
+            {
+                this.GetComponent<Rigidbody>().useGravity = false;//グラビティをなくす
+                this.GetComponent<BoxCollider>().isTrigger = true;//isTriggerをつける
+            }
         }
-        //ここでプレイヤーのスピードアップ関数を呼び出す
-        PlayerSc.ItemSpeedUp(); //プレーヤースクリプトでスピードアップ関数を呼ぶ
     }
 
+        void OnTriggerEnter(Collider collider)
+        {
+            // 衝突した相手にPlayerタグが付いているとき.
+            if (collider.gameObject.tag == "Player")
+            {
+                durability -= 1;
+            }
+            //ここでプレイヤーのスピードアップ関数を呼び出す
+            //PlayerSc.SpeedUp(); //プレーヤースクリプトでスピードアップ関数を呼ぶ
+        }
 }

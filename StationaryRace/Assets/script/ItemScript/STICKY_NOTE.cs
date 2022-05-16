@@ -6,6 +6,7 @@ public class STICKY_NOTE : MonoBehaviour
 {
     public int durability;//耐久値
     GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
+
     //testplay PlayerSc; //プレイヤーの関数を呼ぶための準備
     // Start is called before the first frame update
     void Start()
@@ -23,24 +24,27 @@ public class STICKY_NOTE : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
     //ステージに当たった際にフラグを切り替える
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Stage")
         {
-            this.GetComponent<BoxCollider>().isTrigger = true;//isTriggerをつける
-            this.GetComponent<Rigidbody>().useGravity = false;//グラビティをなくす
+            {
+                this.GetComponent<Rigidbody>().useGravity = false;//グラビティをなくす
+                this.GetComponent<BoxCollider>().isTrigger = true;//isTriggerをつける
+            }
         }
     }
 
-    void OnTriggerEnter(Collider collider)
-    {
-        // 衝突した相手にPlayerタグが付いているとき.
-        if (collider.gameObject.tag == "Player")
+        void OnTriggerEnter(Collider collider)
         {
-            durability -= 1;
+            // 衝突した相手にPlayerタグが付いているとき.
+            if (collider.gameObject.tag == "Player")
+            {
+                durability -= 1;
+            }
+            //ここでプレイヤーのスピードアップ関数を呼び出す
+            //PlayerSc.SpeedUp(); //プレーヤースクリプトでスピードアップ関数を呼ぶ
         }
-        //ここでプレイヤーのスピードアップ関数を呼び出す
-        //PlayerSc.SpeedUp(); //プレーヤースクリプトでスピードアップ関数を呼ぶ
-    }
 }

@@ -79,7 +79,7 @@ public class Car : MonoBehaviour
             // Time.deltaTime‚ðŠ|‚¯‚éŽ–‚Åfps‚Ìˆá‚¢‚É‚æ‚Á‚Ä‘¬“x‚ª•Ï‚í‚ç‚È‚­‚È‚é
             GetComponent<Rigidbody>().velocity -= transform.forward * Time.deltaTime * backspeed;
 
-            if (backspeed < maxspeed * 0.2) // backspeed‚ªmaxspeed‚æ‚è¬‚³‚¢ŠÔ
+            if (backspeed < maxspeed * 0.5) // backspeed‚ªmaxspeed‚æ‚è¬‚³‚¢ŠÔ
             {
                 backspeed *= accel;   // accel‚Ì’l‚ðŠ|‚¯‘±‚¯‚é
             }

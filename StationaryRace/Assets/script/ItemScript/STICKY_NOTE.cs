@@ -23,16 +23,24 @@ public class STICKY_NOTE : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
+    //ステージに当たった際にフラグを切り替える
     void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "Stage")
+        {
+            this.GetComponent<BoxCollider>().isTrigger = true;//isTriggerをつける
+            this.GetComponent<Rigidbody>().useGravity = false;//グラビティをなくす
+        }
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
         // 衝突した相手にPlayerタグが付いているとき.
-        if (collision.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Player")
         {
             durability -= 1;
         }
         //ここでプレイヤーのスピードアップ関数を呼び出す
         //PlayerSc.SpeedUp(); //プレーヤースクリプトでスピードアップ関数を呼ぶ
     }
-
 }

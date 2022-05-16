@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Car : MonoBehaviour
 {
@@ -11,7 +13,6 @@ public class Car : MonoBehaviour
     public float handle;        // 旋回力
     private bool Accelflg;      // 機体が動いているか
     public float time;          // 時間
-    public float maxtime;
 
     // Start is called before the first frame update
     void Start()
@@ -30,12 +31,11 @@ public class Car : MonoBehaviour
         CarMoveAccel();
         CarMoveHandle();
         //CarMoveDrift();
-        //ItemSpeedUp();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        //ItemSpeedUp();
+        ItemSpeedUp();
         ItemHit();
     }
 
@@ -79,7 +79,7 @@ public class Car : MonoBehaviour
             // Time.deltaTimeを掛ける事でfpsの違いによって速度が変わらなくなる
             GetComponent<Rigidbody>().velocity -= transform.forward * Time.deltaTime * backspeed;
 
-            if (backspeed < maxspeed * 0.5) // backspeedがmaxspeedより小さい間
+            if (backspeed < maxspeed * 0.2) // backspeedがmaxspeedより小さい間
             {
                 backspeed *= accel;   // accelの値を掛け続ける
             }
@@ -125,7 +125,7 @@ public class Car : MonoBehaviour
     // ドリフト操作
     private void CarMoveDrift()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space)) // スペースキーを押している間
         {
             handle = 0.3f;
         }
@@ -135,18 +135,19 @@ public class Car : MonoBehaviour
         }
     }
     */
-
+    
+    // スピードアップ用関数
     public void ItemSpeedUp()
     {
-        /*
+        
         if (gameObject.name == "STICKY_NOTE") // 付箋
         {
             upspeed = maxspeed;
             maxspeed = 150;
             upspeed += 20;
         }
-        */
-        Debug.Log("スピードアップ");
+        Debug.Log("SpeedUp");
+
     }
 
     // アイテムが当たった時の処理
@@ -154,44 +155,49 @@ public class Car : MonoBehaviour
     {
         if (gameObject.name == "ENPITU")
         {
-
+            Debug.Log("ENPITU");
         }
         else if (gameObject.name == "ERASER_RESIDDUE")
         {
-
+            Debug.Log("ERASER_RESIDDUE");
         }
         else if (gameObject.name == "BLACKBOARD_ERASER")
         {
-
+            Debug.Log("BLACKBOARD_ERASER");
         }
         else if (gameObject.name == "MECHANICAL_PEN_LEAD")
         {
-
+            Debug.Log("MECHANICAL_PEN_LEAD");
         } 
         else if (gameObject.name == "TAPE_BALL")
         {
-
+            Debug.Log("TAPE_BALL");
         }
         else if (gameObject.name == "SCOTCH_TAPE")
         {
-
+            Debug.Log("SCOTCH_TAPE");
         }
         else if (gameObject.name == "MAGIC_PEN")
         {
-
+            Debug.Log("MAGIC_PEN");
         }
         else if (gameObject.name == "ORIGAMI_CRANE")
         {
-
+            Debug.Log("ORIGAMI_CRANE");
         }
         else if (gameObject.name == "BIRIBIRI_PEN")
         {
-
+            Debug.Log("BIRIBIRI_PEN");
         }
         else if (gameObject.name == "INDIA_INK")
         {
-
+            Debug.Log("INDIA_INK");
         }
+
+    }
+    public void CountTime()
+    {
+        time -= Time.deltaTime;
     }
 
 }

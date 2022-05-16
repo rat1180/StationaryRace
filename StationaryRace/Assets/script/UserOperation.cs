@@ -258,7 +258,7 @@ public class UserOperation : MonoBehaviour
     //UIに順位を送る(起動時は-1で表示せず)
     public void RankSend()
     {
-        //UI.GetComponent<UI>().RankingChange(Rank);
+        UI.GetComponent<UI>().RankingChange(Rank);
     }
 
     //UIにアイテムを送る

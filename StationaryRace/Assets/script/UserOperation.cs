@@ -40,7 +40,7 @@ public class UserOperation : MonoBehaviour
     private GameObject GMSystem;
 
     //アイテム
-    public GameObject ItemManager;
+    private GameObject ItemManager;
 
     /****************
      その他の変数
@@ -60,6 +60,12 @@ public class UserOperation : MonoBehaviour
 
     //CPの通過数
     private int CPcnt;
+
+    //CPの最大数（ゴール）
+    private int CPmax;
+
+    //ゴール判定
+    private bool GLflg;
 
     //ユーザー番号
     private int UserNm;
@@ -99,7 +105,7 @@ public class UserOperation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ItemSend();
+        //ItemSend();
         KeyListener();
         //KeySend();
     }
@@ -127,15 +133,22 @@ public class UserOperation : MonoBehaviour
         GMSystem = transform.parent.gameObject;
 
         //機体
-        Mashin = transform.Find("Player").gameObject;
+        Mashin = transform.Find("test_M").gameObject;
 
         //UI
-        UI = transform.Find("UI").gameObject;
+        //UI = transform.Find("UI").gameObject;
 
         //アイテム
-        //ItemManager = gameObject.Find("ITEMManager").gameObject;
+        //ItemManager = GameObject.Find("ITEMManager").gameObject;
 
         ItemNm = NON;
+
+        CPcnt = 0;
+
+        //本来はシステムからもらう
+        CPmax = 5;
+
+        GLflg = false;
 
     }
 
@@ -218,8 +231,25 @@ public class UserOperation : MonoBehaviour
 
     }
 
-    //CP通過時の処理
+    //CP通過時の処理(現状はデバッグ,アルファ版用)
+    public void CP(int CPNm)
+    {
+        if(CPNm == CPcnt + 1)
+        {
+            CPcnt++;
 
+            //システムからもらう
+            //CPTime = 
+
+            Debug.Log("CP通過");
+
+            if(CPcnt == CPmax)
+            {
+                GLflg = true;
+                Debug.Log("ゴール");
+            }
+        }
+    }
 
     /**************
      UIとの通信
@@ -235,10 +265,10 @@ public class UserOperation : MonoBehaviour
     public void ItemSend()
     {
         //アイテム取得（デバッグ）
-        ItemNm = ItemManager.GetComponent<ItemManager>().RETURN_INUM(1);
+        //ItemNm = ItemManager.GetComponent<ItemManager>().RETURN_INUM(1);
 
         //アイテムがあるならその番号、ないなら-1を送る
-        UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);
+        //UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);
     }
 
     /***************
@@ -273,6 +303,11 @@ public class UserOperation : MonoBehaviour
         Rank = NewRank;
 
         RankSend();
+    }
+
+    private double TimeSet()
+    {
+
     }
 
     /******************

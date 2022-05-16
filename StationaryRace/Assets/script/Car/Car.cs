@@ -21,7 +21,7 @@ public class Car : MonoBehaviour
         backspeed = 19.0f;
         maxspeed = 100.0f;
         accel = 1.001f;
-        handle = 0.1f;
+        handle = 0.2f;
         Accelflg = true;
     }
 

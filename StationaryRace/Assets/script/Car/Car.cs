@@ -14,6 +14,8 @@ public class Car : MonoBehaviour
     private bool Accelflg;      // ‹@‘Ì‚ª“®‚¢‚Ä‚¢‚é‚©
     public float time;          // ŽžŠÔ
 
+    public bool itemhave = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -198,6 +200,12 @@ public class Car : MonoBehaviour
     public void CountTime()
     {
         time -= Time.deltaTime;
+    }
+
+    public void ItemHave()
+    {
+
+        itemhave = true;
     }
 
 }

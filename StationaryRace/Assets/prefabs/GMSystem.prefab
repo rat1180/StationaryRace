@@ -74,7 +74,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5558046137343681055}
+  - {fileID: 1976746169432298777}
   - {fileID: 1929490985196249319}
   m_Father: {fileID: 2392126130803540815}
   m_RootOrder: 0
@@ -98,6 +98,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2392126131668047739}
     m_Modifications:
+    - target: {fileID: 1381390028763935312, guid: a7554719ae1bac84eb642070a64e1805, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5001066245630969152, guid: a7554719ae1bac84eb642070a64e1805, type: 3}
       propertyPath: m_Name
       value: Car
@@ -148,9 +152,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7554719ae1bac84eb642070a64e1805, type: 3}
---- !u!4 &5558046137343681055 stripped
+--- !u!4 &1976746169432298777 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5001066245630969180, guid: a7554719ae1bac84eb642070a64e1805, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1381390028763935322, guid: a7554719ae1bac84eb642070a64e1805, type: 3}
   m_PrefabInstance: {fileID: 596021903569577795}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4429278257036926189

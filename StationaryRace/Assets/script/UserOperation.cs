@@ -105,7 +105,7 @@ public class UserOperation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ItemSend();
+        ItemSend();
         KeyListener();
         //KeySend();
     }

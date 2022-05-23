@@ -41,7 +41,7 @@ public class ItemManager : MonoBehaviour
     void Update()
     {
         Player = GameObject.Find("Car").transform.position;//プレイヤーの座標を取得
-        //Player = GameObject.Find("Player").transform.forward;//プレイヤーの座標を取得
+        
     }
 
     public void Item(int USER_NUM,int ITEMNUM)//itemblockが破壊された際にこれを呼ぶ.

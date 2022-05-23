@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class MainKitai : MonoBehaviour
 {
-    public int MachineNum = 0;        //機体番号
+    public int MachineNum = 0;         //機体番号
     private int o_max = 0;             //機体数
     GameObject[] kitaiObject;          //オブジェクトの割り当て
 
-    public struct KitaiNum
-    {
-        public int num;
-    }
+    public int Player_Mode = 0; //プレーヤーの状態
+
+    private const int StartRase = 10;   //レース前
+    private const int RaseNow = 20;     //レース中
+    private const int Goal = 30;        //ゴール
+    private const int AttackItem = 40;  //攻撃アイテムが当たった
+    private const int DownStage = 50;   //ステージから落ちた
+    private const int ORIGAMI_CRANE = 60;//鶴の折り紙に変身
 
     // Start is called before the first frame update
     void Start()
@@ -50,27 +54,4 @@ public class MainKitai : MonoBehaviour
             kitaiObject[MachineNum].SetActive(true);
         }
     }
-
-    /*
-    //ユーザーから機体番号の受け取り
-    public void MachinNumber()
-    {
-        //UserClass.UserNum machin;
-        machin.num = MachineNum;
-
-        switch (MachineNum)
-        {
-            case 1:
-                //次のオブジェクトをアクティブ化
-                kitaiObject[MachineNum].SetActive(true);
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            default:
-                break;
-        }
-    }
-    */
 }

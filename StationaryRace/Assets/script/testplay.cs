@@ -7,8 +7,8 @@ public class testplay : MonoBehaviour
     public float speed = 0.1f;
     public bool itemhave = false;
     private int USER_Num = 0;//ユーザ番号
-    ItemManager IManager;//アイテムマネージャー参照準備
 
+    ItemManager IManager;//アイテムマネージャー参照準備
     GameObject ItemMana;       //アイテムマネージャーのゲームオブジェクトを取得する準備.
 
     // Start is called before the first frame update

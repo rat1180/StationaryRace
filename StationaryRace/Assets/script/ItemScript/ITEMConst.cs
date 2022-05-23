@@ -7,15 +7,20 @@ namespace ITEMConst
         public const int ItemNull = -1;             //何もない何もない
         public const int ENPITU = 100;              //えんぴつ.
         public const int ERASER_RESIDDUE = 101;     //ケシカス.
-        public const int BLACKBOARD_ERASER = 102;   //黒板けし.
-        public const int MECHANICAL_PEN_LEAD = 103; //シャーペン芯.☆
-        public const int STICKY_NOTE = 104;         //付箋.☆
-        public const int TAPE_BALL = 105;           //丸めたボール.
-        public const int SCOTCH_TAPE = 106;         //セロハンテープ.
-        public const int MAGIC_PEN = 107;           //マジックペン.
-        public const int ORIGAMI_CRANE = 108;       //鶴の折り紙.☆
-        public const int BIRIBIRI_PEN = 109;        //ビリビリペン.☆
-        public const int INDIA_INK = 110;           //墨汁.
-        public const int CARDBOARD = 111;           //段ボール☆
+        public const int KESHIKASU_BOM = 102;       //ケシカス爆弾.
+        public const int BLACKBOARD_ERASER = 103;   //黒板けし.
+        public const int MECHANICAL_PEN_LEAD = 104; //シャーペン芯.☆
+        public const int STICKY_NOTE = 105;         //付箋.☆
+        public const int TAPE_BALL = 106;           //丸めたボール.
+        public const int SCOTCH_TAPE = 107;         //セロハンテープ.
+        public const int MAGIC_PEN = 108;           //マジックペン.
+        public const int ORIGAMI_CRANE = 109;       //鶴の折り紙.☆
+        public const int BIRIBIRI_PEN = 110;        //ビリビリペン.☆
+        public const int INDIA_INK = 111;           //墨汁.
+        public const int CARDBOARD = 112;           //段ボール☆
+
+        //アイテム数値の最大値・最小値
+        public const int ItemMin = 100; //最小の値
+        public const int ItemMax = 113; //最大の値（最大の値に+1して範囲に入れる）
     }
 }

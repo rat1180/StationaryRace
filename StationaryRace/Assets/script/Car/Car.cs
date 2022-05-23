@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 public class Car : MonoBehaviour
@@ -13,6 +12,7 @@ public class Car : MonoBehaviour
     public float handle;        // 旋回力
     private bool Accelflg;      // 機体が動いているか
     public float time;          // 時間
+    public GameObject cp;       // チェックポイント
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,7 @@ public class Car : MonoBehaviour
         accel = 1.001f;
         handle = 0.2f;
         Accelflg = true;
+        cp = GameObject.Find("CP");
     }
 
     // Update is called once per frame
@@ -35,8 +36,16 @@ public class Car : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
+
         ItemSpeedUp();
         ItemHit();
+        WallHit(collision);
+
+        if (collision.gameObject.tag == "CP") //CPタグの付いたオブジェクトと当たった時に関数を呼ぶ
+        {
+            CPHit();
+        }
+        
     }
 
     /*
@@ -200,5 +209,18 @@ public class Car : MonoBehaviour
         time -= Time.deltaTime;
     }
 
+    public void CPHit()  // チェックポイントと当たった時に呼び出す関数
+    {
+       // cp.GetComponent<CheckP>(); // CheckPointスクリプトの関数呼び出し
+    }
+
+    public void WallHit(Collider collision)  // 壁と当たった時
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            
+        }
+
+    }
 }
 

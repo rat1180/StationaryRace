@@ -14,6 +14,12 @@ public class Car : MonoBehaviour
     private bool Accelflg;      // 機体が動いているか
     public float time;          // 時間
 
+    //追加
+    private int USER_Num = 0;//ユーザ番号
+    public bool itemhave = false;
+    ItemManager IManager;//アイテムマネージャー参照準備
+    GameObject ItemMana;       //アイテムマネージャーのゲームオブジェクトを取得する準備.
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +29,10 @@ public class Car : MonoBehaviour
         accel = 1.001f;
         handle = 0.1f;
         Accelflg = true;
+        //追加
+        ItemMana = GameObject.Find("ITEMManager");   //アイテムマネージャーを取得.
+        IManager = ItemMana.GetComponent<ItemManager>();
+        USER_Num = 1; //ユーザー番号（ここでは試験的に1）
     }
 
     // Update is called once per frame
@@ -31,6 +41,12 @@ public class Car : MonoBehaviour
         CarMoveAccel();
         CarMoveHandle();
         //CarMoveDrift();
+        //スペースキーでアイテムの使用（テスト）
+        if (Input.GetKey(KeyCode.Space) && itemhave == true) 
+        {
+            IManager.Item_Use(USER_Num);//アイテム使用
+            itemhave = false;
+        }
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -200,5 +216,11 @@ public class Car : MonoBehaviour
         time -= Time.deltaTime;
     }
 
+    //追加
+    public void ItemHave()
+    {
+        //IManager.USER_NUM(USER_Num);
+        itemhave = true;
+    }
 }
 

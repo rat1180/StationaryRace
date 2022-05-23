@@ -30,7 +30,7 @@ public class itemblock : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {  
-        if (collision.gameObject.tag == "Car")// 衝突した相手にPlayerタグが付いているとき.
+        if (collision.gameObject.tag == "Car")// 衝突した相手にCarタグが付いているとき.
         {
          AudioSource.PlayClipAtPoint(Dessound, transform.position); //アイテムが破壊された際に効果音を鳴らす.
 

@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CARDBOARD
     - Car
+    - Car_On
     - ERASER_RESIDDUE
     - GMSystem
     - ItemManager
@@ -10,9 +11,17 @@ ScriptsOnlyBuild:
     - ParticleDestory
     - PopItemBlock
     - STICKY_NOTE
+    - SoftGear.Strix.Unity.Runtime.StrixDebugHUD
+    - StrixConnectGUI
+    - StrixEnterRoom
     - UI
     - UserOperation
     - itemblock
+    StrixUnityRuntime.dll:
+    - SoftGear.Strix.Unity.Runtime.StrixMovementSynchronizer
+    - SoftGear.Strix.Unity.Runtime.StrixReplicator
+    - SoftGear.Strix.Unity.Runtime.StrixReplicatorSettings
+    - SoftGear.Strix.Unity.Runtime.StrixSceneInfo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
@@ -36,11 +45,20 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.HorizontalLayoutGroup
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
+    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/a_test.unity:
+    Assets/Scenes/rat1180.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -63,8 +81,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -80,45 +96,79 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1612}
+    - Class: 114
       Script: {instanceID: 1614}
     - Class: 114
-      Script: {instanceID: 1832}
+      Script: {instanceID: 1810}
     - Class: 114
-      Script: {instanceID: 2136}
+      Script: {instanceID: 1834}
     - Class: 114
-      Script: {instanceID: 2370}
+      Script: {instanceID: 2138}
     - Class: 114
-      Script: {instanceID: 2772}
+      Script: {instanceID: 2372}
     - Class: 114
-      Script: {instanceID: 2814}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 2958}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 3170}
+      Script: {instanceID: 2926}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 2960}
     - Class: 114
-      Script: {instanceID: 4650}
+      Script: {instanceID: 3172}
     - Class: 114
-      Script: {instanceID: 4778}
+      Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 5086}
+      Script: {instanceID: 3230}
     - Class: 114
-      Script: {instanceID: 5098}
+      Script: {instanceID: 3534}
     - Class: 114
-      Script: {instanceID: 5538}
+      Script: {instanceID: 3740}
     - Class: 114
-      Script: {instanceID: 5784}
+      Script: {instanceID: 4652}
     - Class: 114
-      Script: {instanceID: 5948}
+      Script: {instanceID: 4780}
     - Class: 114
-      Script: {instanceID: 6670}
+      Script: {instanceID: 5088}
     - Class: 114
-      Script: {instanceID: 7940}
+      Script: {instanceID: 5100}
     - Class: 114
-      Script: {instanceID: 8208}
+      Script: {instanceID: 5540}
     - Class: 114
-      Script: {instanceID: 9032}
+      Script: {instanceID: 5786}
+    - Class: 114
+      Script: {instanceID: 5864}
+    - Class: 114
+      Script: {instanceID: 5950}
+    - Class: 114
+      Script: {instanceID: 6672}
+    - Class: 114
+      Script: {instanceID: 7266}
+    - Class: 114
+      Script: {instanceID: 7780}
+    - Class: 114
+      Script: {instanceID: 7942}
+    - Class: 114
+      Script: {instanceID: 8210}
+    - Class: 114
+      Script: {instanceID: 9034}
+    - Class: 114
+      Script: {instanceID: 25756}
+    - Class: 114
+      Script: {instanceID: 25758}
+    - Class: 114
+      Script: {instanceID: 25760}
+    - Class: 114
+      Script: {instanceID: 25762}
+    - Class: 114
+      Script: {instanceID: 25768}
+    - Class: 114
+      Script: {instanceID: 25770}
+    - Class: 114
+      Script: {instanceID: 25774}
+    - Class: 114
+      Script: {instanceID: 34486}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1390,7 +1440,91 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 2d9aac93a8daad7e0a104c48d857766f
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixAnimationSynchronizer
+  - hash:
+      serializedVersion: 2
+      Hash: 3ef0c7806060b09fe710cf575802bd34
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixMovementSynchronizer
+  - hash:
+      serializedVersion: 2
+      Hash: 2deb60163e508605b88cb167150430d1
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixReplicator
+  - hash:
+      serializedVersion: 2
+      Hash: 7b2c0f0674f0f44604972765a2d9fd7b
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixReplicatorSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 3c893d73480bffd93707746d5c68e8fb
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixSceneInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 2c18416a58c70bb17a1f6d15e305c983
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixTransformSynchronizer
+  - hash:
+      serializedVersion: 2
+      Hash: 56d20ac508af1b1fa9348a7c94ebf138
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixVehicleMovementSynchronizer
+  - hash:
+      serializedVersion: 2
+      Hash: 1c4f3e32b2d667b951a492239596de82
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixDebugHUD
+  - hash:
+      serializedVersion: 2
+      Hash: 939899757bb8d62c995631a91b0b39c4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StrixEnterRoom
+  - hash:
+      serializedVersion: 2
+      Hash: 11629ac638bddf6e8e903715de8d795c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StrixListView
+  - hash:
+      serializedVersion: 2
+      Hash: aed036f39427bc2838f585727bf16704
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StrixConnectGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 049a137736994ea7c645b0426001aaea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StrixRoomListGUI
+  - hash:
+      serializedVersion: 2
+      Hash: a52d908cb050e39fac6aea8c8fdc6b09
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StrixRoomListItem
+  - hash:
+      serializedVersion: 2
+      Hash: 3bad5c61744b56d7582c32f0ce72810d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Car_On
   platform: 19
   scenePathNames:
-  - Assets/Scenes/a_test.unity
-  playerPath: C:/Users/nwuser.DA/Desktop/New Unity Project.exe
+  - Assets/Scenes/rat1180.unity
+  playerPath: C:/Users/nwuser.DA/Desktop/test/New Unity Project.exe

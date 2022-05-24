@@ -15,6 +15,9 @@ public class GMSystem : MonoBehaviour
     //ランク配列(今は一つ)
     private int[] Rank;
 
+    //コース番号
+    private int CoseNm;
+
     /**************
      ユーザー系変数
     ***************/
@@ -92,11 +95,27 @@ public class GMSystem : MonoBehaviour
 
     //レーススタート
 
+
+    /// <summary>
+    /// チェックポイント割り振り
+    /// </summary>
+    void CPSet(int CPNm)
+    {
+        GameObject CPtmp;
+        for (int i = 0; i < CPNm; i++)
+        {
+            CPtmp = this.transform.Find("CPList").GetComponent<Transform>().transform.GetChild(i).gameObject;
+            CPtmp.GetComponent<CheckPoint>().CPset(i);
+        }
+    }
+
     /***********
      ユーザー系
     ************/
 
-    //ユーザー番号を渡す
+    /// <summary>
+    /// ユーザー番号を渡す
+    /// </summary>
     private void NmSend()
     {
         int Er = User.USER.GetComponent<UserOperation>().InitUser(User.USERNm);
@@ -120,5 +139,8 @@ public class GMSystem : MonoBehaviour
         //エラー
         return -1;
     }
+
+    //順位判定
+
 
 }

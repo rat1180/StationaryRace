@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - CARDBOARD
     - Car
     - Car_On
+    - CheckPoint
     - ERASER_RESIDDUE
     - GMSystem
     - ItemManager
@@ -96,79 +97,81 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1612}
+      Script: {instanceID: 1632}
     - Class: 114
-      Script: {instanceID: 1614}
+      Script: {instanceID: 1634}
     - Class: 114
-      Script: {instanceID: 1810}
+      Script: {instanceID: 1636}
     - Class: 114
-      Script: {instanceID: 1834}
+      Script: {instanceID: 1830}
     - Class: 114
-      Script: {instanceID: 2138}
+      Script: {instanceID: 1854}
     - Class: 114
-      Script: {instanceID: 2372}
+      Script: {instanceID: 2160}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2394}
     - Class: 114
-      Script: {instanceID: 2816}
+      Script: {instanceID: 2796}
     - Class: 114
-      Script: {instanceID: 2926}
+      Script: {instanceID: 2838}
     - Class: 114
-      Script: {instanceID: 2960}
+      Script: {instanceID: 2948}
     - Class: 114
-      Script: {instanceID: 3172}
+      Script: {instanceID: 2982}
     - Class: 114
-      Script: {instanceID: 3224}
+      Script: {instanceID: 2996}
     - Class: 114
-      Script: {instanceID: 3230}
+      Script: {instanceID: 3246}
     - Class: 114
-      Script: {instanceID: 3534}
+      Script: {instanceID: 3252}
     - Class: 114
-      Script: {instanceID: 3740}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 4652}
+      Script: {instanceID: 3556}
     - Class: 114
-      Script: {instanceID: 4780}
+      Script: {instanceID: 3612}
     - Class: 114
-      Script: {instanceID: 5088}
+      Script: {instanceID: 3764}
     - Class: 114
-      Script: {instanceID: 5100}
+      Script: {instanceID: 4680}
     - Class: 114
-      Script: {instanceID: 5540}
+      Script: {instanceID: 4808}
     - Class: 114
-      Script: {instanceID: 5786}
+      Script: {instanceID: 5120}
     - Class: 114
-      Script: {instanceID: 5864}
+      Script: {instanceID: 5132}
     - Class: 114
-      Script: {instanceID: 5950}
+      Script: {instanceID: 5576}
     - Class: 114
-      Script: {instanceID: 6672}
+      Script: {instanceID: 5824}
     - Class: 114
-      Script: {instanceID: 7266}
+      Script: {instanceID: 5894}
     - Class: 114
-      Script: {instanceID: 7780}
+      Script: {instanceID: 5906}
     - Class: 114
-      Script: {instanceID: 7942}
+      Script: {instanceID: 5992}
     - Class: 114
-      Script: {instanceID: 8210}
+      Script: {instanceID: 6076}
     - Class: 114
-      Script: {instanceID: 9034}
+      Script: {instanceID: 6078}
     - Class: 114
-      Script: {instanceID: 25756}
+      Script: {instanceID: 6080}
     - Class: 114
-      Script: {instanceID: 25758}
+      Script: {instanceID: 6082}
     - Class: 114
-      Script: {instanceID: 25760}
+      Script: {instanceID: 6734}
     - Class: 114
-      Script: {instanceID: 25762}
+      Script: {instanceID: 7336}
     - Class: 114
-      Script: {instanceID: 25768}
+      Script: {instanceID: 7850}
     - Class: 114
-      Script: {instanceID: 25770}
+      Script: {instanceID: 8012}
     - Class: 114
-      Script: {instanceID: 25774}
+      Script: {instanceID: 8282}
     - Class: 114
-      Script: {instanceID: 34486}
+      Script: {instanceID: 8866}
+    - Class: 114
+      Script: {instanceID: 9108}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,6 +213,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -258,6 +267,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: SkewTextExample
+  - hash:
+      serializedVersion: 2
+      Hash: a52d908cb050e39fac6aea8c8fdc6b09
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StrixRoomListItem
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -392,6 +407,12 @@ ScriptsOnlyBuild:
     className: ItemManager
   - hash:
       serializedVersion: 2
+      Hash: 939899757bb8d62c995631a91b0b39c4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StrixEnterRoom
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -426,12 +447,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
-  - hash:
-      serializedVersion: 2
-      Hash: ae83e830e7a90c0aff918c4c2e520825
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GraphicRaycaster
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -522,6 +537,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: Benchmark04
+  - hash:
+      serializedVersion: 2
+      Hash: 3bad5c61744b56d7582c32f0ce72810d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Car_On
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -740,6 +761,12 @@ ScriptsOnlyBuild:
     className: DictionaryAsset
   - hash:
       serializedVersion: 2
+      Hash: 11629ac638bddf6e8e903715de8d795c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StrixListView
+  - hash:
+      serializedVersion: 2
       Hash: 6980e81ddc615a861309d2d659cc3760
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -750,6 +777,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Shasin
+  - hash:
+      serializedVersion: 2
+      Hash: 049a137736994ea7c645b0426001aaea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StrixRoomListGUI
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -914,6 +947,12 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
+      Hash: 1c4f3e32b2d667b951a492239596de82
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixDebugHUD
+  - hash:
+      serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -942,6 +981,48 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: firstserect
+  - hash:
+      serializedVersion: 2
+      Hash: 2d9aac93a8daad7e0a104c48d857766f
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixAnimationSynchronizer
+  - hash:
+      serializedVersion: 2
+      Hash: 3ef0c7806060b09fe710cf575802bd34
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixMovementSynchronizer
+  - hash:
+      serializedVersion: 2
+      Hash: 2deb60163e508605b88cb167150430d1
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixReplicator
+  - hash:
+      serializedVersion: 2
+      Hash: 7b2c0f0674f0f44604972765a2d9fd7b
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixReplicatorSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 3c893d73480bffd93707746d5c68e8fb
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixSceneInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 2c18416a58c70bb17a1f6d15e305c983
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixTransformSynchronizer
+  - hash:
+      serializedVersion: 2
+      Hash: 56d20ac508af1b1fa9348a7c94ebf138
+    assemblyName: StrixUnityRuntime.dll
+    namespaceName: SoftGear.Strix.Unity.Runtime
+    className: StrixVehicleMovementSynchronizer
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1280,6 +1361,12 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: aed036f39427bc2838f585727bf16704
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StrixConnectGUI
+  - hash:
+      serializedVersion: 2
       Hash: 893dbdbfe611d62e230a686ea89f1efd
     assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
     namespaceName: UnityEngine.XR.LegacyInputHelpers
@@ -1440,90 +1527,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 2d9aac93a8daad7e0a104c48d857766f
-    assemblyName: StrixUnityRuntime.dll
-    namespaceName: SoftGear.Strix.Unity.Runtime
-    className: StrixAnimationSynchronizer
-  - hash:
-      serializedVersion: 2
-      Hash: 3ef0c7806060b09fe710cf575802bd34
-    assemblyName: StrixUnityRuntime.dll
-    namespaceName: SoftGear.Strix.Unity.Runtime
-    className: StrixMovementSynchronizer
-  - hash:
-      serializedVersion: 2
-      Hash: 2deb60163e508605b88cb167150430d1
-    assemblyName: StrixUnityRuntime.dll
-    namespaceName: SoftGear.Strix.Unity.Runtime
-    className: StrixReplicator
-  - hash:
-      serializedVersion: 2
-      Hash: 7b2c0f0674f0f44604972765a2d9fd7b
-    assemblyName: StrixUnityRuntime.dll
-    namespaceName: SoftGear.Strix.Unity.Runtime
-    className: StrixReplicatorSettings
-  - hash:
-      serializedVersion: 2
-      Hash: 3c893d73480bffd93707746d5c68e8fb
-    assemblyName: StrixUnityRuntime.dll
-    namespaceName: SoftGear.Strix.Unity.Runtime
-    className: StrixSceneInfo
-  - hash:
-      serializedVersion: 2
-      Hash: 2c18416a58c70bb17a1f6d15e305c983
-    assemblyName: StrixUnityRuntime.dll
-    namespaceName: SoftGear.Strix.Unity.Runtime
-    className: StrixTransformSynchronizer
-  - hash:
-      serializedVersion: 2
-      Hash: 56d20ac508af1b1fa9348a7c94ebf138
-    assemblyName: StrixUnityRuntime.dll
-    namespaceName: SoftGear.Strix.Unity.Runtime
-    className: StrixVehicleMovementSynchronizer
-  - hash:
-      serializedVersion: 2
-      Hash: 1c4f3e32b2d667b951a492239596de82
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: SoftGear.Strix.Unity.Runtime
-    className: StrixDebugHUD
-  - hash:
-      serializedVersion: 2
-      Hash: 939899757bb8d62c995631a91b0b39c4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StrixEnterRoom
-  - hash:
-      serializedVersion: 2
-      Hash: 11629ac638bddf6e8e903715de8d795c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StrixListView
-  - hash:
-      serializedVersion: 2
-      Hash: aed036f39427bc2838f585727bf16704
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StrixConnectGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 049a137736994ea7c645b0426001aaea
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StrixRoomListGUI
-  - hash:
-      serializedVersion: 2
-      Hash: a52d908cb050e39fac6aea8c8fdc6b09
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StrixRoomListItem
-  - hash:
-      serializedVersion: 2
-      Hash: 3bad5c61744b56d7582c32f0ce72810d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Car_On
   platform: 19
   scenePathNames:
   - Assets/Scenes/rat1180.unity

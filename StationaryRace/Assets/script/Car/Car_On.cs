@@ -20,7 +20,6 @@ public class Car_On : StrixBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!isLocal) return;
 
         upspeed = 20.0f;
         backspeed = 19.0f;

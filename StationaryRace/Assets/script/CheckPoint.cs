@@ -5,7 +5,7 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
 
-    private int CPNm;
+    public int CPNm;
 
     // Start is called before the first frame update
     void Start()

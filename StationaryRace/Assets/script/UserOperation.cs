@@ -143,7 +143,8 @@ public class UserOperation : MonoBehaviour
 
         ItemNm = NON;
 
-        CPcnt = 0;
+        //スタート前は-1
+        CPcnt = -1;
 
         //本来はシステムからもらう
         CPmax = 5;
@@ -241,6 +242,10 @@ public class UserOperation : MonoBehaviour
             //システムからもらう
             //CPTime = 
 
+            if(CPcnt == 0)
+            {
+
+            }
             Debug.Log("CP通過");
 
             if(CPcnt == CPmax)

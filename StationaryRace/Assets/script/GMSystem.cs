@@ -67,9 +67,11 @@ public class GMSystem : MonoBehaviour
     {
         //レース前のシーンからもらう
         Players = 1;
+        CoseNm = 0;
 
         //スタート前準備
         GameFlg = 1;
+        CoseCheck();
 
         //ランク用変数の生成
         Rank = new int[Players];
@@ -95,6 +97,21 @@ public class GMSystem : MonoBehaviour
 
     //レーススタート
 
+
+    /// <summary>
+    /// コースの確認、読み込み
+    /// </summary>
+    void CoseCheck()
+    {
+        switch (CoseNm)
+        {
+            case 0:
+                CPSet(4);
+                //ここでコースをオン
+                break;
+        }
+        
+    }
 
     /// <summary>
     /// チェックポイント割り振り

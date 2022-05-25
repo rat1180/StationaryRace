@@ -27,6 +27,11 @@ public class Car_On : StrixBehaviour
         accel = 1.001f;
         handle = 0.2f;
         Accelflg = true;
+
+        if (!isLocal)
+        {
+            transform.Find("Main Camera1").gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame

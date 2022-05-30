@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class MainKitai : MonoBehaviour
 {
-    public int MachineNum = 0;         //機体番号
-    private int o_max = 0;             //機体数
+    private int o_max = 2;             //最大機体番号
     private float min_y = -13.0f;
 
     public int Player_Mode = 0;        //機体の状態
-    public int Map_Point = 0;          //現在位置
-    public int Map_Count = 0;          //周回数
 
-    private const int StartRase = 10;     //レース前
-    private const int RaseNow = 20;       //レース中
-    private const int Goal = 30;          //ゴール
-    private const int AttackItem = 40;    //攻撃アイテムが当たった
-    private const int DownStage = 50;     //ステージから落ちた
-    private const int ORIGAMI_CRANE = 60; //鶴の折り紙に変身
+    private const int CharacterChenge =  0;    //キャラ選択
+    private const int StartRace       = 10;    //レース前
+    private const int RaseNow         = 20;    //レース中
+    private const int Goal            = 30;    //ゴール
+    private const int AttackItem      = 40;    //攻撃アイテムが当たった
+    private const int DownStage       = 50;    //ステージから落ちた
+    private const int ORIGAMI_CRANE   = 60;    //鶴の折り紙に変身
 
+    public int MachineNum = 0;         //機体番号
     GameObject[] kitaiObject;          //オブジェクトの割り当て
 
     ////機体の性能
@@ -39,7 +38,7 @@ public class MainKitai : MonoBehaviour
         kitaiObject = new GameObject[o_max];      //インスタンス作成
 
         //全ての子オブジェクトを取得
-        for(int i = 0; i < o_max; i++)
+        for (int i = 0; i < o_max; i++)
         {
             kitaiObject[i] = transform.GetChild(i).gameObject;
         }
@@ -58,13 +57,15 @@ public class MainKitai : MonoBehaviour
     {
         switch (Player_Mode)
         {
+            //キャラ選択
+            case 0:
+                MachineNumber();
+                break;
             //スタート前
             case 10:
-                MachineNumber();
                 break;
             //レース中
             case 20:
-                MapCount();
                 break;
             //ゴール
             case 30:
@@ -75,7 +76,7 @@ public class MainKitai : MonoBehaviour
             case 50:
                 break;
             default:
-                Debug.LogError(Player_Mode);
+                Debug.Log("PlayerModeエラー");
                 break;
         }
     }
@@ -91,7 +92,6 @@ public class MainKitai : MonoBehaviour
         //}
     }
 
-    //ユーザーから機体番号の受け取り
     public void MachineNumber()
     {
         //MachineNum = machine_num;
@@ -105,37 +105,42 @@ public class MainKitai : MonoBehaviour
             //子オブジェクトをすべて切り替えたらまた最初のオブジェクトに戻る
             if (MachineNum == o_max) { MachineNum = 0; }
 
-            switch (MachineNum)
-            {
-                case 0:
-                    //次のオブジェクトをアクティブ化
-                    kitaiObject[MachineNum].SetActive(true);
-                    Debug.Log(MachineNum);
-                    break;
-                case 1:
-                    //次のオブジェクトをアクティブ化
-                    kitaiObject[MachineNum].SetActive(true);
-                    Debug.Log(MachineNum);
-                    break;
-                case 2:
-                    //次のオブジェクトをアクティブ化
-                    kitaiObject[MachineNum].SetActive(true);
-                    Debug.Log(MachineNum);
-                    break;
-                case 3:
-                    break;
-                default:
-                    Debug.LogError("機体番号が呼び出されませんでした");
-                    break;
-            }
+            KitaiChange();
+
+        }
+
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            Player_Mode = 10;
+            Debug.Log("キャラ選択終わり");
         }
     }
 
-    //チェックポイントの受け取り
-    public void CheckCount()
+    //ユーザーから機体番号の受け取り
+    private void KitaiChange()
     {
-        //Map_Count = map_cnt;
-
-
+        switch (MachineNum)
+        {
+            case 0:
+                //次のオブジェクトをアクティブ化
+                kitaiObject[MachineNum].SetActive(true);
+                Debug.Log(MachineNum);
+                break;
+            case 1:
+                //次のオブジェクトをアクティブ化
+                kitaiObject[MachineNum].SetActive(true);
+                Debug.Log(MachineNum);
+                break;
+            case 2:
+                //次のオブジェクトをアクティブ化
+                kitaiObject[MachineNum].SetActive(true);
+                Debug.Log(MachineNum);
+                break;
+            case 3:
+                break;
+            default:
+                Debug.LogError("機体番号が呼び出されませんでした");
+                break;
+        }
     }
 }

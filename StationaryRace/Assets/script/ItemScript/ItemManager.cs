@@ -126,11 +126,6 @@ public class ItemManager : MonoBehaviour
     {
         USER_NUMBER = num;
     }
-    //ユーザー番号を引数にアイテムナンバーを返す関数
-    //public int RETURN_INUM(int USER_NUM)
-    //{
-    //    return USER_HAVE[USER_NUMBER, 1];
-    //}
 
     //ユーザー番号を引数にアイテムナンバーを返す関数
     public int RETURN_INUM(int USER_NUM)
@@ -148,6 +143,8 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.ERASER_RESIDDUE://消しカス.
                 Debug.Log("USE:ERASER_RESIDDUE!");
+                Player.z -= 1;
+                Instantiate(ERASER_RESIDDUE, Player, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.BLACKBOARD_ERASER://黒板けし.
                 Debug.Log("USE:BLACKBOARD_ERASER!");

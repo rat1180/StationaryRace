@@ -5,7 +5,7 @@ using UnityEngine;
 public class itemblock : MonoBehaviour
 {
     int ItemNum = 0;           //アイテムマネージャーに数値を渡す用変数.
-    int USER_NUM = 0;          //ユーザー番号
+    int USER_NUM = 1;          //ユーザー番号
     GameObject ItemMana;       //アイテムマネージャーのゲームオブジェクトを取得する準備.
     GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備. 
     Car ItemHave;         //スクリプトを参照する準備.
@@ -19,7 +19,7 @@ public class itemblock : MonoBehaviour
         //コンポーネント取得.
         audioSource = GetComponent<AudioSource>();  //オーディオソースの取得.
         ItemMana = GameObject.Find("ITEMManager");  //アイテムマネージャーを取得.
-        Player = GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
+        Player = GameObject.Find("Car");            //プレイヤーのゲームオブジェクトを取得.
         ItemHave = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
     }
 
@@ -27,32 +27,40 @@ public class itemblock : MonoBehaviour
     void Update()
     {
     }
-
+    //ステージに当たった際にフラグを切り替える
     void OnCollisionEnter(Collision collision)
     {
-        // 衝突した相手にPlayerタグが付いているとき.
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Stage")
         {
-         AudioSource.PlayClipAtPoint(Dessound, transform.position); //アイテムが破壊された際に効果音を鳴らす
+            {
+                this.GetComponent<Rigidbody>().useGravity = false;//グラビティをなくす
+                this.GetComponent<BoxCollider>().isTrigger = true;//isTriggerをつける
+            }
+        }
+    }
 
-         this.gameObject.SetActive(false); //アイテムブロックのゲームオブジェクトを非表示にする.
-         Instantiate(SetBox_particle, this.transform.position, Quaternion.identity); //パーティクルを生成
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")// 衝突した相手にPlayerタグが付いているとき.
+        {
+         AudioSource.PlayClipAtPoint(Dessound, transform.position); //アイテムが破壊された際に効果音を鳴らす.
+
+         this.gameObject.SetActive(false);                                           //アイテムブロックのゲームオブジェクトを非表示にする.
+         Instantiate(SetBox_particle, this.transform.position, Quaternion.identity); //パーティクルを生成.
 
             if (ItemHave.itemhave == false)//プレイヤーがアイテムを持っていなければアイテムマネージャーに数値を渡す.
             {
-                //USER_NUM = ItemHave.NUMBER_RETURN(); //どのプレイヤーがアイテムを取得したか番号を参照
-                ItemNum = Random.Range(100, 112); //100～111の範囲でランダムな整数値が返る(int型だと後ろは除外される).
-                ItemMana.GetComponent<ItemManager>().Item(USER_NUM,ItemNum);//ItemManagerというスクリプトのItem関数を使う.
-                ItemHave.ItemHave(); //プレーヤースクリプトでアイテムフラグをtrueにする
+                //USER_NUM = ItemHave.NUMBER_RETURN();                         //どのプレイヤーがアイテムを取得したか番号を参照.
+                ItemMana.GetComponent<ItemManager>().Item(USER_NUM); //ItemManagerというスクリプトのItem関数を使う.
+                ItemHave.itemhave = true;                                         //プレーヤースクリプトでアイテムフラグをtrueにする.
             }
-         
             Invoke("Respawn", 3); //3秒後にその場に複製される.
         }
     }
 
     void Respawn()//アイテムボックス復活用関数.
     {
-        Instantiate(SetBox_particle, this.transform.position, Quaternion.identity); //パーティクルを生成
+        Instantiate(SetBox_particle, this.transform.position, Quaternion.identity); //パーティクルを生成.
         this.gameObject.SetActive(true);
     }
 }

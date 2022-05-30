@@ -12,7 +12,7 @@ public class STICKY_NOTE : MonoBehaviour
     void Start()
     {
         durability = Random.Range(2, 6); ; //耐久値を2～6でランダムに決める
-        Player= GameObject.Find("Player");         //プレイヤーのゲームオブジェクトを取得.
+        Player= GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
         //PlayerSc = Player.GetComponent<testplay>(); //プレイヤーのスクリプトを参照する.
     }
 

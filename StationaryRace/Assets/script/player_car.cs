@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class player_car : MonoBehaviour
 {
-    public float speed = 10.0f;        //動く速度
-    public int type = 0;               //テクスチャの選択
-    public Material[] _material;       //テクスチャの割り当て
+    public int joutai = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,31 +15,20 @@ public class player_car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
 
-        //前方向に移動
-        if (Input.GetKey(KeyCode.W))
-            this.transform.Translate(0.0f, 0.0f, 0.03f);
-        //左方向に移動
-        if (Input.GetKey(KeyCode.A))
-            this.transform.Translate(-0.03f, 0.0f, 0.0f);
-        //後方向に移動
-        if (Input.GetKey(KeyCode.S))
-            this.transform.Translate(0.0f, 0.0f, -0.03f);
-        //右方向に移動
-        if (Input.GetKey(KeyCode.D))
-            this.transform.Translate(0.03f, 0.0f, 0.0f);
-
-        //機体のテクスチャ変更
-        switch (type)
-        {
-            case 0:
-                this.GetComponent<Renderer>().material = _material[0];
+    //機体の状態
+    public void State()
+    {
+        switch(joutai){
+            case 0:       //スタート前
                 break;
-            case 1:
-                this.GetComponent<Renderer>().material = _material[1];
+            case 1:       //レース中
                 break;
-            case 2:
-                this.GetComponent<Renderer>().material = _material[2];
+            case -1:      //被弾時
+                break;
+            default:
                 break;
         }
     }

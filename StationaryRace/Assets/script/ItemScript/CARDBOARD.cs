@@ -5,15 +5,21 @@ using UnityEngine;
 public class CARDBOARD : MonoBehaviour
 {
     private int durability;
+
+    private Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         durability = 1;
+        rb.velocity = transform.forward;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (durability == 0)//‘Ï‹v’l‚ª0‚É‚È‚Á‚½‚ç
         {
             Destroy(this.gameObject);

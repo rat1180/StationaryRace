@@ -101,14 +101,15 @@ public class GMSystem : MonoBehaviour
 
     /// <summary>
     /// チェックポイント割り振り
-    /// コースを変えるときは他のCPリストを削除すること！！
+    /// コースを変えるときは他のCPリストを削除or親子から外すこと！！
     /// </summary>
     void CPSet()
     {
         GameObject CPtmp;
-        for (CPmax = 0;CPmax < this.transform.Find("CPList").childCount; CPmax++)
+        GameObject CPlist = this.transform.Find("CPList").gameObject;
+        for (CPmax = 0;CPmax < CPlist.transform.childCount; CPmax++)
         {
-            CPtmp = this.transform.Find("CPList").GetComponent<Transform>().transform.GetChild(CPmax).gameObject;
+            CPtmp = CPlist.transform.GetChild(CPmax).gameObject;
             CPtmp.GetComponent<CheckPoint>().CPset(CPmax);
         }
     }

@@ -109,10 +109,6 @@ public class UI : MonoBehaviour
 
         switch (draw_item)
         {
-            case ITEM.ENPITU:
-                Item_nunber1.SetActive(true);
-                Debug.Log(draw_item);
-                break;
             case ITEM.ERASER_RESIDDUE:
                 Item_nunber2.SetActive(true);
                 Debug.Log(draw_item);

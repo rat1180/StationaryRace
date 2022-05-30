@@ -15,10 +15,15 @@ public class Car : MonoBehaviour
     public float time;          // 時間
 
     //追加
+    #region 追加項目
     private int USER_Num = 0;//ユーザ番号
     public bool itemhave = false;
     ItemManager IManager;//アイテムマネージャー参照準備
     GameObject ItemMana;       //アイテムマネージャーのゲームオブジェクトを取得する準備.
+    private int ItemFront = 1;//アイテムの向き
+    private const int Before = 1;
+    private const int After = 2; 
+    #endregion
 
     // Start is called before the first frame update
     void Start()
@@ -42,11 +47,28 @@ public class Car : MonoBehaviour
         CarMoveHandle();
         //CarMoveDrift();
         //スペースキーでアイテムの使用（テスト）
-        if (Input.GetKey(KeyCode.Space) && itemhave == true) 
+        if(Input.GetKey(KeyCode.Space) && itemhave == true) 
         {
-            IManager.Item_Use(USER_Num);//アイテム使用
+            IManager.Item_Use(USER_Num,ItemFront);//アイテム使用
             itemhave = false;
         }
+
+        //追加
+        //アイテムをもているときに前後を決める
+        if (itemhave == true)
+        {
+            if (Input.GetKey(KeyCode.O) && ItemFront == After)
+            {
+                Debug.Log("前");
+                ItemFront = Before;
+            }
+            if (Input.GetKey(KeyCode.L) && ItemFront == Before)
+            {
+                Debug.Log("後");
+                ItemFront = After;
+            }
+        }
+        
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -219,8 +241,8 @@ public class Car : MonoBehaviour
     //追加
     public void ItemHave()
     {
-        //IManager.USER_NUM(USER_Num);
         itemhave = true;
     }
+
 }
 

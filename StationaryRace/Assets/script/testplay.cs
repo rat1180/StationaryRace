@@ -42,7 +42,7 @@ public class testplay : MonoBehaviour
         //スペースキーでアイテムの使用（テスト）
         if (Input.GetKey(KeyCode.Space))
         {
-            IManager.Item_Use(USER_Num);//
+            //IManager.Item_Use(USER_Num);//
             itemhave = false;
         }
     }

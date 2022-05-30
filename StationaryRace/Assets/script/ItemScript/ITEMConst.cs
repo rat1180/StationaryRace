@@ -5,7 +5,6 @@ namespace ITEMConst
 {
     public static class ITEM {
         public const int ItemNull = -1;             //何もない何もない
-        public const int ENPITU = 100;              //えんぴつ.
         public const int ERASER_RESIDDUE = 101;     //ケシカス.
         public const int KESHIKASU_BOM = 102;       //ケシカス爆弾.
         public const int BLACKBOARD_ERASER = 103;   //黒板けし.
@@ -20,7 +19,7 @@ namespace ITEMConst
         public const int CARDBOARD = 112;           //段ボール☆
 
         //アイテム数値の最大値・最小値
-        public const int ItemMin = 100; //最小の値
+        public const int ItemMin = 101; //最小の値
         public const int ItemMax = 113; //最大の値（最大の値に+1して範囲に入れる）
     }
 }

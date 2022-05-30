@@ -59,10 +59,10 @@ public class UserOperation : MonoBehaviour
     private double CPTime;
 
     //CPの通過数
-    private int CPcnt;
+    public int CPcnt;
 
     //CPの最大数（ゴール）
-    private int CPmax;
+    public int CPmax;
 
     //ゴール判定
     private bool GLflg;
@@ -105,7 +105,10 @@ public class UserOperation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ItemSend();
+        if (ItemManager == null || UI == null)
+        {
+            ItemSend();
+        }
         KeyListener();
         //KeySend();
     }
@@ -145,9 +148,6 @@ public class UserOperation : MonoBehaviour
 
         //スタート前は-1
         CPcnt = -1;
-
-        //本来はシステムからもらう
-        CPmax = 5;
 
         GLflg = false;
 
@@ -244,7 +244,7 @@ public class UserOperation : MonoBehaviour
 
             if(CPcnt == 0)
             {
-
+                Debug.Log("スタート");
             }
             Debug.Log("CP通過");
 
@@ -281,15 +281,14 @@ public class UserOperation : MonoBehaviour
     ****************/
 
     //生成時に割り振ってもらう(関数呼び出しはシステムで)
-    public int InitUser(int nm)
+    public int InitUser(int nm, int CPM)
     {
-        if(nm != null)
-        {
-            //値エラー
-            return 1;
-        }
 
         UserNm = nm;
+
+        //CPMAXの設定
+        CPmax = CPM;
+
         return 0;
 
     }

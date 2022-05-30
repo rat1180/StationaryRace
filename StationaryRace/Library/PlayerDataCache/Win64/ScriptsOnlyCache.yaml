@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - GMSystem
     - ItemManager
     - MECHANICAL_PEN_LEAD
+    - ONSystem
     - ParticleDestory
     - PopItemBlock
     - STICKY_NOTE
@@ -133,9 +134,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3764}
     - Class: 114
-      Script: {instanceID: 4680}
+      Script: {instanceID: 4682}
     - Class: 114
-      Script: {instanceID: 4808}
+      Script: {instanceID: 4810}
     - Class: 114
       Script: {instanceID: 5122}
     - Class: 114
@@ -159,19 +160,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6084}
     - Class: 114
-      Script: {instanceID: 6736}
+      Script: {instanceID: 6272}
     - Class: 114
-      Script: {instanceID: 7338}
+      Script: {instanceID: 6738}
     - Class: 114
-      Script: {instanceID: 7852}
+      Script: {instanceID: 7340}
     - Class: 114
-      Script: {instanceID: 8014}
+      Script: {instanceID: 7854}
     - Class: 114
-      Script: {instanceID: 8284}
+      Script: {instanceID: 8016}
     - Class: 114
-      Script: {instanceID: 8868}
+      Script: {instanceID: 8286}
     - Class: 114
-      Script: {instanceID: 9110}
+      Script: {instanceID: 8870}
+    - Class: 114
+      Script: {instanceID: 9112}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -299,7 +302,7 @@ ScriptsOnlyBuild:
     className: SimpleScript
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: f30c432330b8c0bc777fcd31f359816a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UserOperation
@@ -497,7 +500,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: df4af556704eb53d3516837416aef552
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CheckPoint
@@ -539,7 +542,7 @@ ScriptsOnlyBuild:
     className: Benchmark04
   - hash:
       serializedVersion: 2
-      Hash: 3bad5c61744b56d7582c32f0ce72810d
+      Hash: 129cf4d6aba88ab55a93ed1c75ba71c4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Car_On
@@ -759,12 +762,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: DictionaryAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Camera_on
   - hash:
       serializedVersion: 2
       Hash: 11629ac638bddf6e8e903715de8d795c
@@ -1047,6 +1044,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UIElements
     className: PanelEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 129d8f3603d1d697291159b03dfac306
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ONSystem
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb

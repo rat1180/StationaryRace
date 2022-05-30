@@ -309,6 +309,15 @@ public class UserOperation : MonoBehaviour
         RankSend();
     }
 
+    /// <summary>
+    /// スタート地点に移動
+    /// </summary>
+    /// <param name="SP"></param>
+    public void SPCar(Vector3 SP)
+    {
+        Mashin.transform.position = SP;
+    }
+
     /*
     private double TimeSet()
     {

@@ -52,6 +52,7 @@ public class GMSystem : MonoBehaviour
     void Start()
     {
         InitSet();
+        //Invoke("CarSpawn", 5);
     }
 
     // Update is called once per frame
@@ -98,6 +99,16 @@ public class GMSystem : MonoBehaviour
     }
 
     //レーススタート
+
+    /// <summary>
+    /// ゲーム開始時に移動させる
+    /// </summary>
+    public void CarSpawn()
+    {
+        GameObject SPlist = this.transform.Find("SpawnList").gameObject;
+        Vector3 SP = SPlist.transform.GetChild(User.USERNm).gameObject.GetComponent<Transform>().position;
+        User.USER.GetComponent<UserOperation>().SPCar(SP);
+    }
 
     /// <summary>
     /// チェックポイント割り振り

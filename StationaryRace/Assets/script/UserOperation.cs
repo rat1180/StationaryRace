@@ -40,7 +40,7 @@ public class UserOperation : MonoBehaviour
     private GameObject GMSystem;
 
     //アイテム
-    public GameObject ItemManager;
+    private GameObject ItemManager;
 
     /****************
      その他の変数
@@ -59,7 +59,13 @@ public class UserOperation : MonoBehaviour
     private double CPTime;
 
     //CPの通過数
-    private int CPcnt;
+    public int CPcnt;
+
+    //CPの最大数（ゴール）
+    public int CPmax;
+
+    //ゴール判定
+    private bool GLflg;
 
     //ユーザー番号
     private int UserNm;
@@ -99,7 +105,10 @@ public class UserOperation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ItemSend();
+        if (ItemManager == null || UI == null)
+        {
+            ItemSend();
+        }
         KeyListener();
         //KeySend();
     }
@@ -124,18 +133,23 @@ public class UserOperation : MonoBehaviour
     private void InitSet()
     {
         //システム
-        //GMSystem = transform.parent.gameObject;
+        GMSystem = transform.parent.gameObject;
 
         //機体
-        //Mashin = transform.Find("Player").gameObject;
+        Mashin = transform.Find("Car").gameObject;
 
         //UI
         UI = transform.Find("UI").gameObject;
 
         //アイテム
-        //ItemManager = gameObject.Find("ITEMManager").gameObject;
+        ItemManager = GameObject.Find("ITEMManager").gameObject;
 
         ItemNm = NON;
+
+        //スタート前は-1
+        CPcnt = -1;
+
+        GLflg = false;
 
     }
 
@@ -218,8 +232,29 @@ public class UserOperation : MonoBehaviour
 
     }
 
-    //CP通過時の処理
+    //CP通過時の処理(現状はデバッグ,アルファ版用)
+    public void CP(int CPNm)
+    {
+        if(CPNm == CPcnt + 1)
+        {
+            CPcnt++;
 
+            //システムからもらう
+            //CPTime = 
+
+            if(CPcnt == 0)
+            {
+                Debug.Log("スタート");
+            }
+            Debug.Log("CP通過");
+
+            if(CPcnt == CPmax)
+            {
+                GLflg = true;
+                Debug.Log("ゴール");
+            }
+        }
+    }
 
     /**************
      UIとの通信
@@ -228,7 +263,7 @@ public class UserOperation : MonoBehaviour
     //UIに順位を送る(起動時は-1で表示せず)
     public void RankSend()
     {
-        //UI.GetComponent<UI>().RankingChange(Rank);
+        UI.GetComponent<UI>().RankingChange(Rank);
     }
 
     //UIにアイテムを送る
@@ -246,15 +281,14 @@ public class UserOperation : MonoBehaviour
     ****************/
 
     //生成時に割り振ってもらう(関数呼び出しはシステムで)
-    public int InitUser(int nm)
+    public int InitUser(int nm, int CPM)
     {
-        if(nm != null)
-        {
-            //値エラー
-            return 1;
-        }
 
         UserNm = nm;
+
+        //CPMAXの設定
+        CPmax = CPM;
+
         return 0;
 
     }
@@ -274,6 +308,22 @@ public class UserOperation : MonoBehaviour
 
         RankSend();
     }
+
+    /// <summary>
+    /// スタート地点に移動
+    /// </summary>
+    /// <param name="SP"></param>
+    public void SPCar(Vector3 SP)
+    {
+        Mashin.transform.position = SP;
+    }
+
+    /*
+    private double TimeSet()
+    {
+
+    }
+    */
 
     /******************
      　　エラー系

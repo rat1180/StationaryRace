@@ -15,6 +15,11 @@ public class GMSystem : MonoBehaviour
     //ランク配列(今は一つ)
     private int[] Rank;
 
+    //コース番号
+    private int CoseNm;
+
+    private int CPmax;
+
     /**************
      ユーザー系変数
     ***************/
@@ -47,6 +52,7 @@ public class GMSystem : MonoBehaviour
     void Start()
     {
         InitSet();
+        //Invoke("CarSpawn", 5);
     }
 
     // Update is called once per frame
@@ -64,9 +70,11 @@ public class GMSystem : MonoBehaviour
     {
         //レース前のシーンからもらう
         Players = 1;
+        CoseNm = 0;
 
         //スタート前準備
         GameFlg = 1;
+        CPSet();
 
         //ランク用変数の生成
         Rank = new int[Players];
@@ -92,14 +100,41 @@ public class GMSystem : MonoBehaviour
 
     //レーススタート
 
+    /// <summary>
+    /// ゲーム開始時に移動させる
+    /// </summary>
+    public void CarSpawn()
+    {
+        GameObject SPlist = this.transform.Find("SpawnList").gameObject;
+        Vector3 SP = SPlist.transform.GetChild(User.USERNm).gameObject.GetComponent<Transform>().position;
+        User.USER.GetComponent<UserOperation>().SPCar(SP);
+    }
+
+    /// <summary>
+    /// チェックポイント割り振り
+    /// コースを変えるときは他のCPリストを削除or親子から外すこと！！
+    /// </summary>
+    void CPSet()
+    {
+        GameObject CPtmp;
+        GameObject CPlist = this.transform.Find("CPList").gameObject;
+        for (CPmax = 0;CPmax < CPlist.transform.childCount; CPmax++)
+        {
+            CPtmp = CPlist.transform.GetChild(CPmax).gameObject;
+            CPtmp.GetComponent<CheckPoint>().CPset(CPmax);
+        }
+    }
+
     /***********
      ユーザー系
     ************/
 
-    //ユーザー番号を渡す
+    /// <summary>
+    /// ユーザー番号を渡す
+    /// </summary>
     private void NmSend()
     {
-        int Er = User.USER.GetComponent<UserOperation>().InitUser(User.USERNm);
+        int Er = User.USER.GetComponent<UserOperation>().InitUser(User.USERNm,CPmax - 1);
         if(Er != 0)
         {
             GameFlg = 0;
@@ -120,5 +155,8 @@ public class GMSystem : MonoBehaviour
         //エラー
         return -1;
     }
+
+    //順位判定
+
 
 }

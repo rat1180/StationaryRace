@@ -18,6 +18,8 @@ public class GMSystem : MonoBehaviour
     //コース番号
     private int CoseNm;
 
+    private int CPmax;
+
     /**************
      ユーザー系変数
     ***************/
@@ -71,7 +73,7 @@ public class GMSystem : MonoBehaviour
 
         //スタート前準備
         GameFlg = 1;
-        CoseCheck();
+        CPSet();
 
         //ランク用変数の生成
         Rank = new int[Players];
@@ -97,32 +99,17 @@ public class GMSystem : MonoBehaviour
 
     //レーススタート
 
-
-    /// <summary>
-    /// コースの確認、読み込み
-    /// </summary>
-    void CoseCheck()
-    {
-        switch (CoseNm)
-        {
-            case 0:
-                CPSet(4);
-                //ここでコースをオン
-                break;
-        }
-        
-    }
-
     /// <summary>
     /// チェックポイント割り振り
+    /// コースを変えるときは他のCPリストを削除すること！！
     /// </summary>
-    void CPSet(int CPNm)
+    void CPSet()
     {
         GameObject CPtmp;
-        for (int i = 0; i < CPNm; i++)
+        for (CPmax = 0;CPmax < this.transform.Find("CPList").childCount; CPmax++)
         {
-            CPtmp = this.transform.Find("CPList").GetComponent<Transform>().transform.GetChild(i).gameObject;
-            CPtmp.GetComponent<CheckPoint>().CPset(i);
+            CPtmp = this.transform.Find("CPList").GetComponent<Transform>().transform.GetChild(CPmax).gameObject;
+            CPtmp.GetComponent<CheckPoint>().CPset(CPmax);
         }
     }
 
@@ -135,7 +122,7 @@ public class GMSystem : MonoBehaviour
     /// </summary>
     private void NmSend()
     {
-        int Er = User.USER.GetComponent<UserOperation>().InitUser(User.USERNm);
+        int Er = User.USER.GetComponent<UserOperation>().InitUser(User.USERNm,CPmax - 1);
         if(Er != 0)
         {
             GameFlg = 0;

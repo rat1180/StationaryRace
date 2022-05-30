@@ -17,6 +17,8 @@ public class Car_On : StrixBehaviour
 
     public bool itemhave = false;
 
+    public GameObject User;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,9 @@ public class Car_On : StrixBehaviour
         {
             transform.Find("Main Camera1").gameObject.SetActive(false);
         }
+
+        User = this.transform.parent.gameObject;
+
     }
 
     // Update is called once per frame
@@ -48,6 +53,11 @@ public class Car_On : StrixBehaviour
     {
         ItemSpeedUp();
         ItemHit();
+        if(collision.name == "CP")
+        {
+            int CPNm = collision.GetComponent<CheckPoint>().CheckP();
+            User.GetComponent<UserOperation>().CP(CPNm);
+        }
     }
 
     /*

@@ -53,7 +53,8 @@ public class Car_On : StrixBehaviour
     {
         ItemSpeedUp();
         ItemHit();
-        if(collision.name == "CP")
+        //CP‚ªŠÜ‚Ü‚ê‚Ä‚¢‚ê‚ÎOK
+        if(collision.name.Contains("CP"))
         {
             int CPNm = collision.GetComponent<CheckPoint>().CheckP();
             User.GetComponent<UserOperation>().CP(CPNm);

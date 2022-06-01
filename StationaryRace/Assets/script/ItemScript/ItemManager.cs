@@ -6,16 +6,17 @@ using ITEMConst; //アイテムの定数値を使うために記入.
 
 public class ItemManager : MonoBehaviour
 {
-    public int USER_NUMBER; //ユーザ番号を入れる箱
+    private int USER_NUMBER; //ユーザ番号を入れる箱
     private int USER_ALL = 8;//ユーザの総数を入れる箱
     private int[,] USER_HAVE = new int[10, 2];//ユーザ番号と持っているアイテムを入れる
-    public Vector3 Rocket; //プレイヤーの位置を取得
-    public Vector3 RocketA;
-    public Vector3 RocketB;
+    private Vector3 Rocket; //プレイヤーの位置を取得
+    private Vector3 RocketA;
+    private Vector3 RocketB;
 
     //アイテムのゲームオブジェクト宣言
     public GameObject ERASER_RESIDDUE;
     public GameObject BLACKBOARD_ERASER;
+    public GameObject KESHIKASU_BOM;
     public GameObject MECHANICAL_PEN_LEAD;
     public GameObject STICKY_NOTE;
     public GameObject TAPE_BALL;
@@ -49,6 +50,7 @@ public class ItemManager : MonoBehaviour
     //itemblockが破壊された際にこれを呼ぶ.
     public void Item(int USER_NUM)
     {
+        //int ItemNum = Random.Range(105, 106);
         int ItemNum = Random.Range(ITEMConst.ITEM.ItemMin, ITEMConst.ITEM.ItemMax);//ランダムな整数値が返る(int型だと後ろは除外される).
         //アイテムごとの処理.
         switch (ItemNum)
@@ -133,66 +135,67 @@ public class ItemManager : MonoBehaviour
 
     public void Item_Use(int User_NUM,int Front)//Playerがアイテムを使用した際にこれを呼ぶ.
     {
-        if (Front == 1)//1は前
-        {
-            Rocket = RocketB;
-        }
-        else if (Front == 2)//2は後
-        {
-            Rocket = RocketA;
-        }
+        //前後の変更
+        //if (Front == 1)//1は前
+        //{
+        //    Rocket = RocketB;
+        //}
+        //else if (Front == 2)//2は後
+        //{
+        //    Rocket = RocketA;
+        //}
 
         //アイテムごとの処理.
         switch (USER_HAVE[User_NUM, 1])
         {
             case ITEMConst.ITEM.ERASER_RESIDDUE://消しカス.
                 Debug.Log("USE:ERASER_RESIDDUE!");
-                Instantiate(ERASER_RESIDDUE, Rocket, Quaternion.Euler(90, 0, 0));
+                Instantiate(ERASER_RESIDDUE, RocketA, Quaternion.Euler(90, 0, 0));
                 break;
             case ITEMConst.ITEM.KESHIKASU_BOM://ケシカス爆弾.
                 Debug.Log("USE:KESHIKASU_BOM!");
-                for(int i=0; i < 500; i++)
-                {
-                    Rocket.x += Random.Range(-5, 5);
-                    Rocket.y += Random.Range(1, 10);
-                    Rocket.z += Random.Range(-5, 5);
-                  Instantiate(ERASER_RESIDDUE, Rocket, Quaternion.identity);//ケシカスのプレファブを使いまわす
-                }
+                Instantiate(KESHIKASU_BOM, RocketB, Quaternion.identity);//ケシカスのプレファブを使いまわす
                 break;
             case ITEMConst.ITEM.BLACKBOARD_ERASER://黒板けし.
                 Debug.Log("USE:BLACKBOARD_ERASER!");
+                RocketB.y += 5;
+                Instantiate(BLACKBOARD_ERASER, RocketB, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.MECHANICAL_PEN_LEAD://シャー芯.
-                Instantiate(MECHANICAL_PEN_LEAD, Rocket, Quaternion.identity);
+                Instantiate(MECHANICAL_PEN_LEAD, RocketB, Quaternion.Euler(90, 0, 0));
                 Debug.Log("USE:MECHANICAL_PEN_LEAD!");
                 break;
             case ITEMConst.ITEM.STICKY_NOTE://付箋.
                 Debug.Log("USE:STICKY_NOTE!");
-                RocketB.y += 3;
-                Instantiate(STICKY_NOTE, Rocket, Quaternion.identity);
+                Rocket.y += 10;
+                Instantiate(STICKY_NOTE, RocketB, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.TAPE_BALL://丸めたテープ.
                 Debug.Log("USE:TAPE_BALL!");
-                Instantiate(TAPE_BALL, Rocket, Quaternion.identity);
+                Instantiate(TAPE_BALL, RocketB, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.SCOTCH_TAPE://セロハンテープ.
                 Debug.Log("USE:SCOTCH_TAPE!");
+                Instantiate(SCOTCH_TAPE, RocketA, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.MAGIC_PEN://マジックペン.
                 Debug.Log("USE:MAGIC_PEN!");
+                //Instantiate(MAGIC_PEN, RocketB, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.ORIGAMI_CRANE://鶴の折り紙.
                 Debug.Log("USE:ORIGAMI_CRANE!");
                 break;
             case ITEMConst.ITEM.BIRIBIRI_PEN://ビリビリペン.
                 Debug.Log("USE:BIRIBIRI_PEN!");
+                //Instantiate(BIRIBIRI_PEN, RocketB, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.INDIA_INK://墨汁.
                 Debug.Log("USE:INDIA_INK!");
+                //Instantiate(INDIA_INK, RocketB, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.CARDBOARD://段ボール.
                 Debug.Log("USE:CARDBOARD!");
-                Instantiate(CARDBOARD, Rocket, Quaternion.identity);
+                Instantiate(CARDBOARD, RocketA, Quaternion.identity);
                 break;
             default:
                 break;

@@ -7,7 +7,6 @@ public class Car : MonoBehaviour
 {
     #region 変数
     Rigidbody rb;
-    Rigidbody rb2;
 
     public float upspeed;       // 前進スピード
     public float backspeed;     // 後退スピードorブレーキ
@@ -15,10 +14,10 @@ public class Car : MonoBehaviour
     private float accel;        // 加速値
     public float handle;        // 旋回力
     public float time;          // 時間
-    public float colorR;        // 赤色の値
-    public float colorG;        // 緑色の値
-    public float colorB;        // 青色の値
-    public float clear;         // 色の透明度
+    private float colorR;       // 赤色の値
+    private float colorG;       // 緑色の値
+    private float colorB;       // 青色の値
+    private float clear;        // 色の透明度
 
     private bool Accelflg;      // 機体が動いているか
 
@@ -31,7 +30,6 @@ public class Car : MonoBehaviour
     {
         #region 初期化処理
         rb = this.GetComponent<Rigidbody>();
-        rb2 = this.GetComponent<Rigidbody>();
 
         upspeed = 20.0f;
         backspeed = 19.0f;
@@ -104,7 +102,6 @@ public class Car : MonoBehaviour
             // Time.deltaTimeを掛ける事でfpsの違いによって速度が変わらなくなる
             GetComponent<Rigidbody>().velocity += transform.forward * Time.deltaTime * upspeed;
 
-
             if (upspeed < maxspeed) // upspeedがmaxspeedより小さい間
             {
                 upspeed *= accel;   // 徐々に加速する
@@ -117,17 +114,12 @@ public class Car : MonoBehaviour
             // Time.deltaTimeを掛ける事でfpsの違いによって速度が変わらなくなる
             GetComponent<Rigidbody>().velocity -= transform.forward * Time.deltaTime * backspeed;
 
-            if (backspeed < maxspeed * 0.2) // backspeedがmaxspeedより小さい間
-            {
-                backspeed *= accel;   // accelの値を掛け続ける
-            }
         }
         else  // 何の操作もしていない状態
         {
             upspeed = rb.velocity.magnitude + 20;    // 現在のスピードを取得 + 20することで速さが20より下がらなくする
-            backspeed = rb2.velocity.magnitude + 19; // 現在のスピードを取得 + 19することで速さが20より下がらなくする
         }
-        Debug.Log("現在の速度" + rb.velocity.magnitude);  // ゲームオブジェクトの速さ表示
+        Debug.Log("現在の速度" + rb.velocity.magnitude);  // ゲームオブジェクトの速さ表示 velocityは速度ベクトル magnitudeはベクトルの長さの取得
 
     }
 
@@ -136,7 +128,7 @@ public class Car : MonoBehaviour
     /// </summary>
     private void CarMoveHandle()
     {
-        if (upspeed > backspeed)
+        if (Accelflg == true)
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -148,7 +140,7 @@ public class Car : MonoBehaviour
             }
 
         }
-        else if (backspeed > upspeed)
+        else if (Accelflg == false)
         {
             if (Input.GetKey(KeyCode.A))
             {

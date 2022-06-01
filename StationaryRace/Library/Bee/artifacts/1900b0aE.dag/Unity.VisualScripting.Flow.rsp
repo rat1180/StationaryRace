@@ -120,6 +120,16 @@
 -define:MODULE_PARTICLE_SYSTEM_EXISTS
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Strix/Editor/StrixUnityEditor.dll"
+-r:"Assets/Strix/Plugins/MsgPack.dll"
+-r:"Assets/Strix/Plugins/strix-client-csharp-core.dll"
+-r:"Assets/Strix/Plugins/strix-client-csharp-ingame.dll"
+-r:"Assets/Strix/Plugins/strix-client-csharp-match.dll"
+-r:"Assets/Strix/Plugins/strix-client-csharp-node.dll"
+-r:"Assets/Strix/Plugins/strix-client-csharp-replica.dll"
+-r:"Assets/Strix/Plugins/strix-client-csharp-room.dll"
+-r:"Assets/Strix/Plugins/strix-net-csharp.dll"
+-r:"Assets/Strix/Plugins/StrixUnityRuntime.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"

@@ -4,6 +4,11 @@ ScriptsOnlyBuild:
     - Car
     - ONSystem
     - SoftGear.Strix.Unity.Runtime.StrixDebugHUD
+    - StrixConnectGUI
+    - StrixListView
+    - StrixRoomListGUI
+    - StrixRoomListItem
+    - UniHumanoid.HumanPoseClip
     StrixUnityRuntime.dll:
     - SoftGear.Strix.Unity.Runtime.StrixReplicatorSettings
     - SoftGear.Strix.Unity.Runtime.StrixSceneInfo
@@ -20,11 +25,15 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
@@ -69,37 +78,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1560}
     - Class: 114
-      Script: {instanceID: 1718}
+      Script: {instanceID: 1562}
     - Class: 114
-      Script: {instanceID: 2172}
+      Script: {instanceID: 1720}
     - Class: 114
-      Script: {instanceID: 3244}
+      Script: {instanceID: 1786}
     - Class: 114
-      Script: {instanceID: 3960}
+      Script: {instanceID: 2174}
     - Class: 114
-      Script: {instanceID: 4068}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 4328}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 4416}
+      Script: {instanceID: 3080}
     - Class: 114
-      Script: {instanceID: 4954}
+      Script: {instanceID: 3246}
     - Class: 114
-      Script: {instanceID: 4966}
+      Script: {instanceID: 3962}
     - Class: 114
-      Script: {instanceID: 5038}
+      Script: {instanceID: 4070}
     - Class: 114
-      Script: {instanceID: 5100}
+      Script: {instanceID: 4240}
+    - Class: 114
+      Script: {instanceID: 4298}
+    - Class: 114
+      Script: {instanceID: 4330}
+    - Class: 114
+      Script: {instanceID: 4418}
+    - Class: 114
+      Script: {instanceID: 4956}
+    - Class: 114
+      Script: {instanceID: 4968}
+    - Class: 114
+      Script: {instanceID: 5040}
     - Class: 114
       Script: {instanceID: 5102}
     - Class: 114
-      Script: {instanceID: 5310}
+      Script: {instanceID: 5104}
     - Class: 114
       Script: {instanceID: 5608}
+    - Class: 114
+      Script: {instanceID: 6074}
     - Class: 114
       Script: {instanceID: 6488}
     - Class: 114
       Script: {instanceID: 6838}
+    - Class: 114
+      Script: {instanceID: 7288}
+    - Class: 114
+      Script: {instanceID: 29960}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -111,6 +138,73 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/GOLE.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1558}
+    - Class: 114
+      Script: {instanceID: 1560}
+    - Class: 114
+      Script: {instanceID: 1562}
+    - Class: 114
+      Script: {instanceID: 2598}
+    - Class: 114
+      Script: {instanceID: 3080}
+    - Class: 114
+      Script: {instanceID: 5104}
+    - Class: 114
+      Script: {instanceID: 5608}
+    - Class: 114
+      Script: {instanceID: 6074}
+    - Class: 114
+      Script: {instanceID: 6838}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -125,6 +219,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
@@ -661,7 +761,7 @@ ScriptsOnlyBuild:
     className: TMP_ExampleScript_01
   - hash:
       serializedVersion: 2
-      Hash: 129d8f3603d1d697291159b03dfac306
+      Hash: ff4819881eeff596241c6cf50785dcea
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ONSystem
@@ -881,12 +981,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnDeselectMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 699619b86d9359741a4f58540298c80b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
   - hash:
       serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
@@ -1265,7 +1359,74 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 6cfea30aed32bca77d9c90eaa0d8d3b0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UniHumanoid
+    className: MuscleDebug
+  - hash:
+      serializedVersion: 2
+      Hash: 443bf42d461c43901754562c8bfa9afe
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UniHumanoid
+    className: BoneGizmoDrawer
+  - hash:
+      serializedVersion: 2
+      Hash: 2fe03824118c1b2902cc4c7103c064a6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DepthFirstScheduler
+    className: MainThreadDispatcher
+  - hash:
+      serializedVersion: 2
+      Hash: 62a109b2fcf9cae59e51c5f7b0e53e36
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UniHumanoid
+    className: RuntimeBvhLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 9812910a4f6439866e7faf415f733f1b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UniHumanoid
+    className: HumanPoseClip
+  - hash:
+      serializedVersion: 2
+      Hash: 4849d42b4a28405b62c0895d2974b7c0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UniHumanoid
+    className: HandRig
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UniHumanoid
+    className: MuscleInspector
+  - hash:
+      serializedVersion: 2
+      Hash: 086f32e12317e8f6587fa7d928738129
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UniHumanoid
+    className: BoneMapping
+  - hash:
+      serializedVersion: 2
+      Hash: c0ad9b0b7e6c97d3fb6e80eae43eafa4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UniHumanoid
+    className: HumanPoseTransfer
+  - hash:
+      serializedVersion: 2
+      Hash: 2e1d953babb020af3e7725c0c0357d31
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UniHumanoid
+    className: AvatarDescription
+  - hash:
+      serializedVersion: 2
+      Hash: 897fc7f9d4e09cdd1e624df46834d320
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UniHumanoid
+    className: HumanBuilderTest
   platform: 19
   scenePathNames:
   - Assets/Scenes/Car.unity
+  - Assets/Scenes/GOLE.unity
   playerPath: C:/Users/nwuser.DA/Desktop/New Unity Project.exe

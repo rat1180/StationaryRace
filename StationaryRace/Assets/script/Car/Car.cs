@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Car : MonoBehaviour
@@ -58,7 +59,7 @@ public class Car : MonoBehaviour
     {
         CarMoveAccel();
         CarMoveHandle();
-        //CarMoveDrift();
+        CarMoveDrift();
         CarColor();
     }
 
@@ -261,7 +262,8 @@ public class Car : MonoBehaviour
     {
         if (collision.gameObject.tag == "Wall")  // Wallタグが付いたオブジェクトと当たった時
         {
-            Debug.Log("壁に当たりました");
+            
+            SceneManager.LoadScene("GOAL");  // 後で消す
         }
 
     }
@@ -273,21 +275,23 @@ public class Car : MonoBehaviour
             colorR = 255;
             colorG = 0;
             colorB = 0;
-            hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 赤
+            hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 赤色
         }
         else if(rb.velocity.magnitude >= 30 && rb.velocity.magnitude < 70)
         {
             colorR = 255;
             colorG = 255;
             colorB = 0;
-            hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear); // 黄色
+            hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 黄色
         }
         else
         {
             colorR = 0;
             colorG = 255;
             colorB = 0;
-            hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 緑
+            hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 緑色
         }
+
+
     }
 }

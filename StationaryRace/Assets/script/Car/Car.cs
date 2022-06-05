@@ -22,7 +22,11 @@ public class Car : MonoBehaviour
     GameObject ItemMana;       //アイテムマネージャーのゲームオブジェクトを取得する準備.
     private int ItemFront = 1;//アイテムの向き
     private const int Before = 1;
-    private const int After = 2; 
+    private const int After = 2;
+
+    public GameObject ORIGAMI_CRANE;
+    private float speednow;
+    GameObject Mesh;
     #endregion
 
     // Start is called before the first frame update
@@ -38,6 +42,7 @@ public class Car : MonoBehaviour
         ItemMana = GameObject.Find("ITEMManager");   //アイテムマネージャーを取得.
         IManager = ItemMana.GetComponent<ItemManager>();
         USER_Num = 1; //ユーザー番号（ここでは試験的に1）
+        GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -51,23 +56,24 @@ public class Car : MonoBehaviour
         {
             IManager.Item_Use(USER_Num,ItemFront);//アイテム使用
             itemhave = false;
+            //ORIGAMI_CHANGE();
         }
 
         //追加
         //アイテムをもているときに前後を決める
-        if (itemhave == true)
-        {
-            if (Input.GetKey(KeyCode.O) && ItemFront == After)
-            {
-                Debug.Log("前");
-                ItemFront = Before;
-            }
-            if (Input.GetKey(KeyCode.L) && ItemFront == Before)
-            {
-                Debug.Log("後");
-                ItemFront = After;
-            }
-        }
+        //if (itemhave == true)
+        //{
+        //    if (Input.GetKey(KeyCode.O) && ItemFront == After)
+        //    {
+        //        Debug.Log("前");
+        //        ItemFront = Before;
+        //    }
+        //    if (Input.GetKey(KeyCode.L) && ItemFront == Before)
+        //    {
+        //        Debug.Log("後");
+        //        ItemFront = After;
+        //    }
+        //}
         
     }
 
@@ -243,6 +249,20 @@ public class Car : MonoBehaviour
     {
         itemhave = true;
     }
+    public void ORIGAMI_CHANGE()
+    {
+        ORIGAMI_CRANE.SetActive(true);
+        speednow = upspeed;
+        StartCoroutine("ORIGAMI_SpeedUp");
+    }
 
+    IEnumerator ORIGAMI_SpeedUp()
+    {
+        upspeed = 1000.0f;
+        yield return new WaitForSeconds(3.0f);
+        upspeed = speednow;
+        ORIGAMI_CRANE.SetActive(false);
+    }
+ 
 }
 

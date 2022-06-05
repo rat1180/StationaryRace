@@ -12,6 +12,9 @@ public class ItemManager : MonoBehaviour
     private Vector3 Rocket; //プレイヤーの位置を取得
     private Vector3 RocketA;
     private Vector3 RocketB;
+    GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
+    Car CarSc;
+
 
     //アイテムのゲームオブジェクト宣言
     public GameObject ERASER_RESIDDUE;
@@ -30,8 +33,10 @@ public class ItemManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
+        CarSc = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
         //アイテムの情報を入れる配列の初期化
-        for(int i = 1; i < USER_ALL + 1; i++)
+        for (int i = 1; i < USER_ALL + 1; i++)
         {
             USER_HAVE[i,0] = i;
             USER_HAVE[i, 1] = ITEMConst.ITEM.ItemNull;//全てのユーザのアイテムをヌル(-1)で埋める
@@ -184,6 +189,7 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.ORIGAMI_CRANE://鶴の折り紙.
                 Debug.Log("USE:ORIGAMI_CRANE!");
+                CarSc.ORIGAMI_CHANGE();
                 break;
             case ITEMConst.ITEM.BIRIBIRI_PEN://ビリビリペン.
                 Debug.Log("USE:BIRIBIRI_PEN!");

@@ -24,6 +24,8 @@ public class Car : MonoBehaviour
 
     public GameObject cp;       // チェックポイント
     public GameObject hitbox;
+
+    public GameObject User;
     #endregion
 
     // Start is called before the first frame update
@@ -43,6 +45,7 @@ public class Car : MonoBehaviour
 
         cp = GameObject.Find("CP");
         hitbox = GameObject.Find("HitBox");
+        User = this.transform.parent.gameObject;
 
         colorR = 0;
         colorG = 255;
@@ -120,7 +123,7 @@ public class Car : MonoBehaviour
         {
             upspeed = rb.velocity.magnitude + 20;    // 現在のスピードを取得 + 20することで速さが20より下がらなくする
         }
-        Debug.Log("現在の速度" + rb.velocity.magnitude);  // ゲームオブジェクトの速さ表示 velocityは速度ベクトル magnitudeはベクトルの長さの取得
+        //Debug.Log("現在の速度" + rb.velocity.magnitude);  // ゲームオブジェクトの速さ表示 velocityは速度ベクトル magnitudeはベクトルの長さの取得
 
     }
 
@@ -247,9 +250,11 @@ public class Car : MonoBehaviour
     /// </summary>
     public void CPHit(Collider collision)
     {
-        if (collision.gameObject.tag == "CP") //CPタグの付いたオブジェクトと当たった時に関数を呼ぶ
+        //CPが含まれていればOK
+        if (collision.name.Contains("CP"))
         {
-
+            int CPNm = collision.GetComponent<CheckPoint>().CheckP();
+            User.GetComponent<UserOperation>().CP(CPNm);
         }
         // cp.GetComponent<CheckP>(); // CheckPointスクリプトの関数呼び出し
     }

@@ -157,7 +157,7 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.BIRIBIRI_PEN://ÉrÉäÉrÉäÉyÉì.
                 Debug.Log("USE:BIRIBIRI_PEN!");
-                CarSc.
+                //CarSc.
                 break;
             case ITEMConst.ITEM.INDIA_INK://ñnè`.
                 Debug.Log("USE:INDIA_INK!");

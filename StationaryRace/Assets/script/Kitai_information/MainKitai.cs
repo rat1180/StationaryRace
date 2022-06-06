@@ -105,7 +105,7 @@ public class MainKitai : MonoBehaviour
             //子オブジェクトをすべて切り替えたらまた最初のオブジェクトに戻る
             if (MachineNum == o_max) { MachineNum = 0; }
 
-            KitaiChange();
+            KitaiChange();   //機体変更
 
         }
 
@@ -116,7 +116,7 @@ public class MainKitai : MonoBehaviour
         }
     }
 
-    //ユーザーから機体番号の受け取り
+    //機体番号の受け取りと切り替え
     private void KitaiChange()
     {
         switch (MachineNum)
@@ -124,17 +124,17 @@ public class MainKitai : MonoBehaviour
             case 0:
                 //次のオブジェクトをアクティブ化
                 kitaiObject[MachineNum].SetActive(true);
-                Debug.Log(MachineNum);
+                Debug.Log("機体番号 : "+ MachineNum);
                 break;
             case 1:
                 //次のオブジェクトをアクティブ化
                 kitaiObject[MachineNum].SetActive(true);
-                Debug.Log(MachineNum);
+                Debug.Log("機体番号 : " + MachineNum);
                 break;
             case 2:
                 //次のオブジェクトをアクティブ化
                 kitaiObject[MachineNum].SetActive(true);
-                Debug.Log(MachineNum);
+                Debug.Log("機体番号 : " + MachineNum);
                 break;
             case 3:
                 break;

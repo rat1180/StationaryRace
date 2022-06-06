@@ -53,6 +53,7 @@ public class Car : MonoBehaviour
         CarMoveAccel();
         CarMoveHandle();
         //CarMoveDrift();
+        //追加
         //スペースキーでアイテムの使用（テスト）
         if(Input.GetKey(KeyCode.Space) && itemhave == true) 
         {

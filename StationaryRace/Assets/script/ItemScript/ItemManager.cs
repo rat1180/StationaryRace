@@ -184,7 +184,7 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.ORIGAMI_CRANE://íﬂÇÃê‹ÇËéÜ.
                 Debug.Log("USE:ORIGAMI_CRANE!");
-                CarSc.ORIGAMI_CHANGE();
+                //CarSc.ORIGAMI_CHANGE();
                 break;
             case ITEMConst.ITEM.BIRIBIRI_PEN://ÉrÉäÉrÉäÉyÉì.
                 Debug.Log("USE:BIRIBIRI_PEN!");

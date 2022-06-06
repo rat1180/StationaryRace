@@ -737,6 +737,30 @@ Transform:
   m_Father: {fileID: 586521525}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1290961706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2546234741325753611, guid: 7260664707620914186e137b49445910, type: 3}
+  m_PrefabInstance: {fileID: 2056071276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1290961707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290961706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1762331577, guid: f2c2112f638c5b8489d16403d930373b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NearDistance: 0.02
+  MaxSpeed: 100
+  Acceleration: 100
+  Damping: 0
+  SyncPeriodMin: 50
+  SyncPeriodMax: 200
+  PredictionPeriod: 300
 --- !u!1001 &1303160324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1220,6 +1244,14 @@ PrefabInstance:
       propertyPath: objectType
       value: 1048577
       objectReference: {fileID: 0}
+    - target: {fileID: 7794635936760750860, guid: 7260664707620914186e137b49445910, type: 3}
+      propertyPath: strixBehaviours.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7794635936760750860, guid: 7260664707620914186e137b49445910, type: 3}
+      propertyPath: strixBehaviours.Array.data[1]
+      value: 
+      objectReference: {fileID: 1290961707}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7260664707620914186e137b49445910, type: 3}
 --- !u!4 &2056071277 stripped

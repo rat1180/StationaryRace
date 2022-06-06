@@ -8,10 +8,12 @@ public class ItemManager : MonoBehaviour
 {
     private int USER_NUMBER; //ユーザ番号を入れる箱
     private int USER_ALL = 8;//ユーザの総数を入れる箱
-    private int[,] USER_HAVE = new int[10, 2];//ユーザ番号と持っているアイテムを入れる
     private Vector3 Rocket; //プレイヤーの位置を取得
-    private Vector3 RocketA;
-    private Vector3 RocketB;
+    private Vector3 RocketA;//プレイヤーの前方の位置を取得
+    private Vector3 RocketB;//プレイヤーの後方の位置を取得
+    GameObject R; //プレイヤーの位置を取得
+    GameObject RA;
+    GameObject RB;
     GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
     Car CarSc;
 
@@ -30,128 +32,90 @@ public class ItemManager : MonoBehaviour
     public GameObject INDIA_INK;
     public GameObject CARDBOARD;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
         CarSc = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
-        //アイテムの情報を入れる配列の初期化
-        for (int i = 1; i < USER_ALL + 1; i++)
-        {
-            USER_HAVE[i,0] = i;
-            USER_HAVE[i, 1] = ITEMConst.ITEM.ItemNull;//全てのユーザのアイテムをヌル(-1)で埋める
-        }
+        R = GameObject.Find("Car");//プレイヤーの座標を取得
+        RA = GameObject.Find("ItemRocketA");//アイテムロケットの座標を取得(AはAfter)
+        RB = GameObject.Find("ItemRocketB");//アイテムロケットの座標を取得(BはBefore)
     }
 
     // Update is called once per frame
     void Update()
     {
-        Rocket = GameObject.Find("Car").transform.position;//プレイヤーの座標を取得
-        RocketA = GameObject.Find("ItemRocketA").transform.position;//アイテムロケットの座標を取得(AはAfter)
-        RocketB = GameObject.Find("ItemRocketB").transform.position;//アイテムロケットの座標を取得(BはBefore)
-        //Player = GameObject.Find("Car").transform.forward;
+        Rocket = R.transform.position;
+        RocketA = RA.transform.position;
+        RocketB = RB.transform.position;
     }
 
     //itemblockが破壊された際にこれを呼ぶ.
-    public void Item(int USER_NUM)
+    public void Item()
     {
-        //int ItemNum = Random.Range(105, 106);
         int ItemNum = Random.Range(ITEMConst.ITEM.ItemMin, ITEMConst.ITEM.ItemMax);//ランダムな整数値が返る(int型だと後ろは除外される).
         //アイテムごとの処理.
         switch (ItemNum)
         {
             case ITEMConst.ITEM.ERASER_RESIDDUE://消しカス.
                 Debug.Log("ERASER_RESIDDUE!");
-                USER_HAVE[USER_NUM, 1] = ITEMConst.ITEM.ERASER_RESIDDUE;
+                CarSc.ITEM_NUM = ITEMConst.ITEM.ERASER_RESIDDUE;
                 break;
             case ITEMConst.ITEM.KESHIKASU_BOM://ケシカス爆弾.
                 Debug.Log("KESHIKASU_BOM!");
-                USER_HAVE[USER_NUM, 1] = ITEMConst.ITEM.KESHIKASU_BOM;
+                CarSc.ITEM_NUM = ITEMConst.ITEM.KESHIKASU_BOM;
                 break;
             case ITEMConst.ITEM.BLACKBOARD_ERASER://黒板けし.
                 Debug.Log("BLACKBOARD_ERASER!");
-                USER_HAVE[USER_NUM, 1] = ITEMConst.ITEM.BLACKBOARD_ERASER;
+                CarSc.ITEM_NUM = ITEMConst.ITEM.BLACKBOARD_ERASER;
                 break;
             case ITEMConst.ITEM.MECHANICAL_PEN_LEAD://シャー芯.
                 Debug.Log("MECHANICAL_PEN_LEAD!");
-                USER_HAVE[USER_NUM, 1] = ITEMConst.ITEM.MECHANICAL_PEN_LEAD;
+                CarSc.ITEM_NUM = ITEMConst.ITEM.MECHANICAL_PEN_LEAD;
                 break;
             case ITEMConst.ITEM.STICKY_NOTE://付箋.
                 Debug.Log("STICKY_NOTE!");
-                USER_HAVE[USER_NUM, 1] = ITEMConst.ITEM.STICKY_NOTE;
+                CarSc.ITEM_NUM = ITEMConst.ITEM.STICKY_NOTE;
                 break;
             case ITEMConst.ITEM.TAPE_BALL://丸めたテープ.
                 Debug.Log("TAPE_BALL!");
-                USER_HAVE[USER_NUM, 1] = ITEMConst.ITEM.TAPE_BALL;
+                CarSc.ITEM_NUM = ITEMConst.ITEM.TAPE_BALL;
                 break;
             case ITEMConst.ITEM.SCOTCH_TAPE://セロハンテープ.
                 Debug.Log("SCOTCH_TAPE!");
-                USER_HAVE[USER_NUM, 1] = ITEMConst.ITEM.SCOTCH_TAPE;
+                CarSc.ITEM_NUM = ITEMConst.ITEM.SCOTCH_TAPE;
                 break;
             case ITEMConst.ITEM.MAGIC_PEN://マジックペン.
                 Debug.Log("MAGIC_PEN!");
-                USER_HAVE[USER_NUM, 1] = ITEMConst.ITEM.MAGIC_PEN;
+                CarSc.ITEM_NUM = ITEMConst.ITEM.MAGIC_PEN;
                 break;
             case ITEMConst.ITEM.ORIGAMI_CRANE://鶴の折り紙.
                 Debug.Log("ORIGAMI_CRANE!");
-                USER_HAVE[USER_NUM, 1] = ITEMConst.ITEM.ORIGAMI_CRANE;
+                CarSc.ITEM_NUM = ITEMConst.ITEM.ORIGAMI_CRANE;
                 break;
             case ITEMConst.ITEM.BIRIBIRI_PEN://ビリビリペン.
                 Debug.Log("BIRIBIRI_PEN!");
-                USER_HAVE[USER_NUM, 1] = ITEMConst.ITEM.BIRIBIRI_PEN;
+                CarSc.ITEM_NUM = ITEMConst.ITEM.BIRIBIRI_PEN;
                 break;
             case ITEMConst.ITEM.INDIA_INK://墨汁.
                 Debug.Log("INDIA_INK!");
-                USER_HAVE[USER_NUM, 1] = ITEMConst.ITEM.INDIA_INK;
+                CarSc.ITEM_NUM = ITEMConst.ITEM.INDIA_INK;
                 break;
             case ITEMConst.ITEM.CARDBOARD://段ボール.
                 Debug.Log("CARDBOARD!");
-                USER_HAVE[USER_NUM, 1] = ITEMConst.ITEM.CARDBOARD;
+                CarSc.ITEM_NUM = ITEMConst.ITEM.CARDBOARD;
                 break;
             default:
                 break;
         }
-        //Debug.Log(USER_HAVE[USER_NUM, 1]);
     }
 
-    //起動時にユーザーの数を取得する関数　ゲームマネージャーから取得
-    public void USER_TOTAL(int num)
+    public void Item_Use(int USER_ITEM)//Playerがアイテムを使用した際にこれを呼ぶ.
     {
-        USER_ALL = num;
-    }
-
-    //ユーザー番号を取得する関数
-    public void USER_NUM(int num)
-    {
-        USER_NUMBER = num;
-    }
-    //ユーザー番号を引数にアイテムナンバーを返す関数
-    //public int RETURN_INUM(int USER_NUM)
-    //{
-    //    return USER_HAVE[USER_NUMBER, 1];
-    //}
-
-    //ユーザー番号を引数にアイテムナンバーを返す関数
-
-    public int RETURN_INUM(int USER_NUM)
-    {
-        return USER_HAVE[USER_NUMBER, 1];
-    }
-
-    public void Item_Use(int User_NUM,int Front)//Playerがアイテムを使用した際にこれを呼ぶ.
-    {
-        //前後の変更
-        //if (Front == 1)//1は前
-        //{
-        //    Rocket = RocketB;
-        //}
-        //else if (Front == 2)//2は後
-        //{
-        //    Rocket = RocketA;
-        //}
-
         //アイテムごとの処理.
-        switch (USER_HAVE[User_NUM, 1])
+        switch (USER_ITEM)
         {
             case ITEMConst.ITEM.ERASER_RESIDDUE://消しカス.
                 Debug.Log("USE:ERASER_RESIDDUE!");
@@ -193,7 +157,7 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.BIRIBIRI_PEN://ビリビリペン.
                 Debug.Log("USE:BIRIBIRI_PEN!");
-                //Instantiate(BIRIBIRI_PEN, RocketB, Quaternion.identity);
+                CarSc.
                 break;
             case ITEMConst.ITEM.INDIA_INK://墨汁.
                 Debug.Log("USE:INDIA_INK!");
@@ -206,7 +170,34 @@ public class ItemManager : MonoBehaviour
             default:
                 break;
         }
-        USER_HAVE[USER_NUMBER, 1] = ITEMConst.ITEM.ItemNull;//アイテムを使用（空にする）
-        //Debug.Log(USER_HAVE[USER_NUMBER, 1]);
-    }    
+        CarSc.ITEM_NUM = ITEMConst.ITEM.ItemNull;//アイテムを使用（空にする）
+    }
+
+
+    #region ユーザー番号系
+    //起動時にユーザーの数を取得する関数　ゲームマネージャーから取得
+    public void USER_TOTAL(int num)
+    {
+        USER_ALL = num;
+    }
+
+    //ユーザー番号を取得する関数
+    public void USER_NUM(int num)
+    {
+        USER_NUMBER = num;
+    }
+    //ユーザー番号を引数にアイテムナンバーを返す関数
+    //public int RETURN_INUM(int USER_NUM)
+    //{
+    //    return USER_HAVE[USER_NUMBER, 1];
+    //}
+
+    //ユーザー番号を引数にアイテムナンバーを返す関数
+
+    public int RETURN_INUM(int USER_NUM)
+    {
+        return CarSc.ITEM_NUM;
+    }
+    #endregion
+
 }

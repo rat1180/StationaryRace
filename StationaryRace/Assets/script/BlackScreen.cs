@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class BlackScreen : MonoBehaviour
 {
     Image fadealpha;               //フェードパネルのイメージ取得変数
-    public Text ChttText;
+    public GameObject ChttText;
+    public GameObject ChttText2;
     private float alpha;           //パネルのalpha値取得変数
 
     private bool fadeout;          //フェードアウトのフラグ変数
@@ -38,7 +39,7 @@ public class BlackScreen : MonoBehaviour
         if (alpha >= 0.8)
         {
             fadeout = false;
-            Invoke("FlagOn", 2);
+            ChttText.SetActive(true);
         }
     }
     void FlagOn()

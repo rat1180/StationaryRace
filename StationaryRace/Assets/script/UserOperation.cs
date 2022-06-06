@@ -59,10 +59,10 @@ public class UserOperation : MonoBehaviour
     private double CPTime;
 
     //CPの通過数
-    private int CPcnt;
+    public int CPcnt;
 
     //CPの最大数（ゴール）
-    private int CPmax;
+    public int CPmax;
 
     //ゴール判定
     private bool GLflg;
@@ -105,7 +105,10 @@ public class UserOperation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ItemSend();
+        if (ItemManager == null || UI == null)
+        {
+            ItemSend();
+        }
         KeyListener();
         //KeySend();
     }
@@ -143,10 +146,8 @@ public class UserOperation : MonoBehaviour
 
         ItemNm = NON;
 
-        CPcnt = 0;
-
-        //本来はシステムからもらう
-        CPmax = 5;
+        //スタート前は-1
+        CPcnt = -1;
 
         GLflg = false;
 
@@ -241,6 +242,10 @@ public class UserOperation : MonoBehaviour
             //システムからもらう
             //CPTime = 
 
+            if(CPcnt == 0)
+            {
+                Debug.Log("スタート");
+            }
             Debug.Log("CP通過");
 
             if(CPcnt == CPmax)
@@ -258,7 +263,7 @@ public class UserOperation : MonoBehaviour
     //UIに順位を送る(起動時は-1で表示せず)
     public void RankSend()
     {
-        //UI.GetComponent<UI>().RankingChange(Rank);
+        UI.GetComponent<UI>().RankingChange(Rank);
     }
 
     //UIにアイテムを送る
@@ -276,15 +281,14 @@ public class UserOperation : MonoBehaviour
     ****************/
 
     //生成時に割り振ってもらう(関数呼び出しはシステムで)
-    public int InitUser(int nm)
+    public int InitUser(int nm, int CPM)
     {
-        if(nm != null)
-        {
-            //値エラー
-            return 1;
-        }
 
         UserNm = nm;
+
+        //CPMAXの設定
+        CPmax = CPM;
+
         return 0;
 
     }
@@ -303,6 +307,15 @@ public class UserOperation : MonoBehaviour
         Rank = NewRank;
 
         RankSend();
+    }
+
+    /// <summary>
+    /// スタート地点に移動
+    /// </summary>
+    /// <param name="SP"></param>
+    public void SPCar(Vector3 SP)
+    {
+        Mashin.transform.position = SP;
     }
 
     /*

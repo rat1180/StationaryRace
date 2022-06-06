@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class Car : MonoBehaviour
 {
+    #region 変数
+    Rigidbody rb;
+
     public float upspeed;       // 前進スピード
     public float backspeed;     // 後退スピードorブレーキ
     private float maxspeed;     // 最大加速
     private float accel;        // 加速値
     public float handle;        // 旋回力
-    private bool Accelflg;      // 機体が動いているか
     public float time;          // 時間
+    private float colorR;       // 赤色の値
+    private float colorG;       // 緑色の値
+    private float colorB;       // 青色の値
+    private float clear;        // 色の透明度
+
+    private bool Accelflg;      // 機体が動いているか
+
+    public GameObject cp;       // チェックポイント
+    public GameObject hitbox;
+
+    public GameObject User;
+    #endregion
 
     //追加
     #region 追加項目
@@ -34,17 +48,30 @@ public class Car : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        #region 初期化処理
+        rb = this.GetComponent<Rigidbody>();
+
         upspeed = 20.0f;
         backspeed = 19.0f;
         maxspeed = 100.0f;
         accel = 1.001f;
-        handle = 0.1f;
+        handle = 0.2f;
+        clear = 0.001f;
+
         Accelflg = true;
-        //追加
-        ItemMana = GameObject.Find("ITEMManager");   //アイテムマネージャーを取得.
-        IManager = ItemMana.GetComponent<ItemManager>();
-        USER_Num = 1; //ユーザー番号（ここでは試験的に1）
-        
+
+        cp = GameObject.Find("CP");
+        hitbox = GameObject.Find("HitBox");
+        User = this.transform.parent.gameObject;
+
+        colorR = 0;
+        colorG = 255;
+        colorB = 0;
+
+        // 初期は緑色
+        hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);
+
+        #endregion
     }
 
     // Update is called once per frame
@@ -52,25 +79,29 @@ public class Car : MonoBehaviour
     {
         CarMoveAccel();
         CarMoveHandle();
-        //CarMoveDrift();
+        CarMoveDrift();
+        CarColor();
+
         //追加
         //スペースキーでアイテムの使用（テスト）
-        if(Input.GetKey(KeyCode.Space) && itemhave == true) 
+        if (Input.GetKey(KeyCode.Space) && itemhave == true)
         {
             IManager.Item_Use(ITEM_NUM);//アイテム使用
 
             itemhave = false;
             //ORIGAMI_CHANGE();
         }
-         Pos = this.transform.position;
-
-
-}
+        Pos = this.transform.position;
+    }
 
     private void OnTriggerEnter(Collider collision)
     {
+
         ItemSpeedUp();
         ItemHit();
+        WallHit(collision);
+        CPHit(collision);
+
     }
 
     /*
@@ -90,7 +121,9 @@ public class Car : MonoBehaviour
     } 
     */
 
-    //機体の前進後退
+    /// <summary>
+    /// 機体の前進後退
+    /// </summary>
     private void CarMoveAccel()
     {
 
@@ -113,23 +146,21 @@ public class Car : MonoBehaviour
             // Time.deltaTimeを掛ける事でfpsの違いによって速度が変わらなくなる
             GetComponent<Rigidbody>().velocity -= transform.forward * Time.deltaTime * backspeed;
 
-            if (backspeed < maxspeed * 0.2) // backspeedがmaxspeedより小さい間
-            {
-                backspeed *= accel;   // accelの値を掛け続ける
-            }
         }
         else  // 何の操作もしていない状態
         {
-            upspeed = 20.0f;
-            backspeed = 19.0f;
+            upspeed = rb.velocity.magnitude + 20;    // 現在のスピードを取得 + 20することで速さが20より下がらなくする
         }
+        //Debug.Log("現在の速度" + rb.velocity.magnitude);  // ゲームオブジェクトの速さ表示 velocityは速度ベクトル magnitudeはベクトルの長さの取得
 
     }
 
-    // ハンドル操作
+    /// <summary>
+    /// ハンドル操作
+    /// </summary>
     private void CarMoveHandle()
     {
-        if (upspeed > backspeed)
+        if (Accelflg == true)
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -141,7 +172,7 @@ public class Car : MonoBehaviour
             }
 
         }
-        else if(backspeed > upspeed)
+        else if (Accelflg == false)
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -155,8 +186,9 @@ public class Car : MonoBehaviour
         }
     }
 
-    /*
-    // ドリフト操作
+    /// <summary>
+    /// ドリフト操作
+    /// </summary>
     private void CarMoveDrift()
     {
         if (Input.GetKey(KeyCode.Space)) // スペースキーを押している間
@@ -168,12 +200,13 @@ public class Car : MonoBehaviour
             handle = 0.1f;
         }
     }
-    */
-    
-    // スピードアップ用関数
+
+    /// <summary>
+    /// スピードアップ用関数
+    /// </summary>
     public void ItemSpeedUp()
     {
-        
+
         if (gameObject.name == "STICKY_NOTE") // 付箋
         {
             upspeed = maxspeed;
@@ -184,7 +217,9 @@ public class Car : MonoBehaviour
 
     }
 
-    // アイテムが当たった時の処理
+    /// <summary>
+    /// アイテムが当たった時の処理
+    /// </summary>
     public void ItemHit()
     {
         if (gameObject.name == "ENPITU")
@@ -202,7 +237,7 @@ public class Car : MonoBehaviour
         else if (gameObject.name == "MECHANICAL_PEN_LEAD")
         {
             Debug.Log("MECHANICAL_PEN_LEAD");
-        } 
+        }
         else if (gameObject.name == "TAPE_BALL")
         {
             Debug.Log("TAPE_BALL");
@@ -229,9 +264,68 @@ public class Car : MonoBehaviour
         }
 
     }
+
+    /// <summary>
+    /// 時間カウント用（予定）
+    /// </summary>
     public void CountTime()
     {
         time -= Time.deltaTime;
+    }
+
+    /// <summary>
+    /// チェックポイントと当たった時に呼び出す関数
+    /// </summary>
+    public void CPHit(Collider collision)
+    {
+        //CPが含まれていればOK
+        if (collision.name.Contains("CP"))
+        {
+            int CPNm = collision.GetComponent<CheckPoint>().CheckP();
+            User.GetComponent<UserOperation>().CP(CPNm);
+        }
+        // cp.GetComponent<CheckP>(); // CheckPointスクリプトの関数呼び出し
+    }
+
+    /// <summary>
+    /// 壁と当たった時
+    /// </summary>
+    /// <param name="collision"></param>
+    public void WallHit(Collider collision)
+    {
+        if (collision.gameObject.tag == "Wall")  // Wallタグが付いたオブジェクトと当たった時
+        {
+            
+            SceneManager.LoadScene("GOAL");  // 後で消す
+        }
+
+    }
+
+    public void CarColor()
+    {
+        if(rb.velocity.magnitude >= 70)
+        {
+            colorR = 255;
+            colorG = 0;
+            colorB = 0;
+            hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 赤色
+        }
+        else if(rb.velocity.magnitude >= 30 && rb.velocity.magnitude < 70)
+        {
+            colorR = 255;
+            colorG = 255;
+            colorB = 0;
+            hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 黄色
+        }
+        else
+        {
+            colorR = 0;
+            colorG = 255;
+            colorB = 0;
+            hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 緑色
+        }
+
+
     }
 
     //追加
@@ -253,6 +347,4 @@ public class Car : MonoBehaviour
         upspeed = speednow;
         ORIGAMI_CRANE.SetActive(false);
     }
- 
 }
-

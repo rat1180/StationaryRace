@@ -51,7 +51,7 @@ public class itemblock : MonoBehaviour
             if (ItemHave.itemhave == false)//プレイヤーがアイテムを持っていなければアイテムマネージャーに数値を渡す.
             {
                 //USER_NUM = ItemHave.NUMBER_RETURN();                         //どのプレイヤーがアイテムを取得したか番号を参照.
-                ItemMana.GetComponent<ItemManager>().Item(USER_NUM); //ItemManagerというスクリプトのItem関数を使う.
+                ItemMana.GetComponent<ItemManager>().Item(); //ItemManagerというスクリプトのItem関数を使う.
                 ItemHave.itemhave = true;                                         //プレーヤースクリプトでアイテムフラグをtrueにする.
             }
             Invoke("Respawn", 3); //3秒後にその場に複製される.

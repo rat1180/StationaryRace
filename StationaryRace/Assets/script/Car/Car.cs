@@ -18,15 +18,17 @@ public class Car : MonoBehaviour
     #region 追加項目
     private int USER_Num = 0;//ユーザ番号
     public bool itemhave = false;
+    public int ITEM_NUM = -1;
     ItemManager IManager;//アイテムマネージャー参照準備
     GameObject ItemMana;       //アイテムマネージャーのゲームオブジェクトを取得する準備.
-    private int ItemFront = 1;//アイテムの向き
-    private const int Before = 1;
-    private const int After = 2;
+    //private int ItemFront = 1;//アイテムの向き
+    //private const int Before = 1;
+    //private const int After = 2;
 
     public GameObject ORIGAMI_CRANE;
     private float speednow;
-    GameObject Mesh;
+
+    public Vector3 Pos;
     #endregion
 
     // Start is called before the first frame update
@@ -42,7 +44,7 @@ public class Car : MonoBehaviour
         ItemMana = GameObject.Find("ITEMManager");   //アイテムマネージャーを取得.
         IManager = ItemMana.GetComponent<ItemManager>();
         USER_Num = 1; //ユーザー番号（ここでは試験的に1）
-        GetComponent<MeshRenderer>();
+        
     }
 
     // Update is called once per frame
@@ -54,28 +56,15 @@ public class Car : MonoBehaviour
         //スペースキーでアイテムの使用（テスト）
         if(Input.GetKey(KeyCode.Space) && itemhave == true) 
         {
-            IManager.Item_Use(USER_Num,ItemFront);//アイテム使用
+            IManager.Item_Use(ITEM_NUM);//アイテム使用
+
             itemhave = false;
             //ORIGAMI_CHANGE();
         }
+         Pos = this.transform.position;
 
-        //追加
-        //アイテムをもているときに前後を決める
-        //if (itemhave == true)
-        //{
-        //    if (Input.GetKey(KeyCode.O) && ItemFront == After)
-        //    {
-        //        Debug.Log("前");
-        //        ItemFront = Before;
-        //    }
-        //    if (Input.GetKey(KeyCode.L) && ItemFront == Before)
-        //    {
-        //        Debug.Log("後");
-        //        ItemFront = After;
-        //    }
-        //}
-        
-    }
+
+}
 
     private void OnTriggerEnter(Collider collision)
     {

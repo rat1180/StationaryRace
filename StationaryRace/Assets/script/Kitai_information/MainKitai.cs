@@ -18,38 +18,40 @@ public class MainKitai : MonoBehaviour
     private const int ORIGAMI_CRANE   = 60;    //鶴の折り紙に変身
 
     public int MachineNum = 0;         //機体番号
-    GameObject[] kitaiObject;          //オブジェクトの割り当て
-
-    ////機体の性能
-    //public struct KitaiAblty
-    //{
-
-    //}
-
-    //public struct KitaiNum
-    //{
-    //    public int num;
-    //}
+    public GameObject Skin;          //オブジェクトの割り当て
+    private int SkinNm;
 
     // Start is called before the first frame update
     void Start()
     {
-        o_max = this.transform.childCount;        //子オブジェクトの個数を取得
-        kitaiObject = new GameObject[o_max];      //インスタンス作成
+        Skin = this.transform.Find("Skin").gameObject;
+
+        for (int i = 0; i < Skin.transform.childCount; i++)
+        {
+            Skin.transform.GetChild(i).gameObject.SetActive(false);
+        }
+
+        Skin.transform.GetChild(SkinNm).gameObject.SetActive(true);
+
+        //skin = GameObject.Find("Car01");
+        //skinChild = new Trensform[skin.transform.childCount];
+
+        //o_max = this.transform.childCount;        //子オブジェクトの個数を取得
+        //kitaiObject = new GameObject[o_max];      //インスタンス作成
 
         //全ての子オブジェクトを取得
-        for (int i = 0; i < o_max; i++)
-        {
-            kitaiObject[i] = transform.GetChild(i).gameObject;
-        }
+        //for (int i = 0; i < o_max; i++)
+        //{
+        //    kitaiObject[i] = transform.GetChild(i).gameObject;
+        //}
 
         //全ての子オブジェクトを非アクティブ
-        foreach (GameObject gamObj in kitaiObject)
-        {
-            gamObj.SetActive(false);
-        }
+        //foreach (GameObject gamObj in kitaiObject)
+        //{
+        //    gamObj.SetActive(false);
+        //}
         //一つだけアクティブにする
-        kitaiObject[MachineNum].SetActive(true);
+        //kitaiObject[MachineNum].SetActive(true);
     }
 
     // Update is called once per frame
@@ -84,8 +86,6 @@ public class MainKitai : MonoBehaviour
     //機体の状態の受け取り
     public void MachineMode()
     {
-        //Player_Mode = mode;
-
         //if (Player_Mode == 10)
         //{
         //    MachineNumber();
@@ -98,18 +98,20 @@ public class MainKitai : MonoBehaviour
 
         if (Input.GetKeyDown("q"))
         {
-            //現在のアクティブな子オブジェクトを非アクティブ
-            kitaiObject[MachineNum].SetActive(false);
+            ////現在のアクティブな子オブジェクトを非アクティブ
+            //kitaiObject[MachineNum].SetActive(false);
+            //MachineNum++;
+            Skin.transform.GetChild(MachineNum).gameObject.SetActive(false);
             MachineNum++;
 
             //子オブジェクトをすべて切り替えたらまた最初のオブジェクトに戻る
-            if (MachineNum == o_max) { MachineNum = 0; }
+            if (MachineNum == Skin.transform.childCount) { MachineNum = 0; }
 
             KitaiChange();   //機体変更
 
         }
 
-        if(Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             Player_Mode = 10;
             Debug.Log("キャラ選択終わり");
@@ -123,17 +125,23 @@ public class MainKitai : MonoBehaviour
         {
             case 0:
                 //次のオブジェクトをアクティブ化
-                kitaiObject[MachineNum].SetActive(true);
-                Debug.Log("機体番号 : "+ MachineNum);
+                //kitaiObject[MachineNum].SetActive(true);
+
+                Skin.transform.GetChild(MachineNum).gameObject.SetActive(true);
+                Debug.Log("機体番号 : " + MachineNum);
                 break;
             case 1:
                 //次のオブジェクトをアクティブ化
-                kitaiObject[MachineNum].SetActive(true);
+                //kitaiObject[MachineNum].SetActive(true);
+
+                Skin.transform.GetChild(MachineNum).gameObject.SetActive(true);
                 Debug.Log("機体番号 : " + MachineNum);
                 break;
             case 2:
                 //次のオブジェクトをアクティブ化
-                kitaiObject[MachineNum].SetActive(true);
+                //kitaiObject[MachineNum].SetActive(true);
+
+                Skin.transform.GetChild(MachineNum).gameObject.SetActive(true);
                 Debug.Log("機体番号 : " + MachineNum);
                 break;
             case 3:

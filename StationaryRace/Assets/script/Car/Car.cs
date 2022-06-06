@@ -28,6 +28,23 @@ public class Car : MonoBehaviour
     public GameObject User;
     #endregion
 
+    //追加
+    #region 追加項目
+    private int USER_Num = 0;//ユーザ番号
+    public bool itemhave = false;
+    public int ITEM_NUM = -1;
+    ItemManager IManager;//アイテムマネージャー参照準備
+    GameObject ItemMana;       //アイテムマネージャーのゲームオブジェクトを取得する準備.
+    //private int ItemFront = 1;//アイテムの向き
+    //private const int Before = 1;
+    //private const int After = 2;
+
+    public GameObject ORIGAMI_CRANE;
+    private float speednow;
+
+    public Vector3 Pos;
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +81,17 @@ public class Car : MonoBehaviour
         CarMoveHandle();
         CarMoveDrift();
         CarColor();
+
+        //追加
+        //スペースキーでアイテムの使用（テスト）
+        if (Input.GetKey(KeyCode.Space) && itemhave == true)
+        {
+            IManager.Item_Use(ITEM_NUM);//アイテム使用
+
+            itemhave = false;
+            //ORIGAMI_CHANGE();
+        }
+        Pos = this.transform.position;
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -298,5 +326,25 @@ public class Car : MonoBehaviour
         }
 
 
+    }
+
+    //追加
+    public void ItemHave()
+    {
+        itemhave = true;
+    }
+    public void ORIGAMI_CHANGE()
+    {
+        ORIGAMI_CRANE.SetActive(true);
+        speednow = upspeed;
+        StartCoroutine("ORIGAMI_SpeedUp");
+    }
+
+    IEnumerator ORIGAMI_SpeedUp()
+    {
+        upspeed = 1000.0f;
+        yield return new WaitForSeconds(3.0f);
+        upspeed = speednow;
+        ORIGAMI_CRANE.SetActive(false);
     }
 }

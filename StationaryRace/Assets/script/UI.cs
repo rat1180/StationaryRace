@@ -27,7 +27,7 @@ public class UI : MonoBehaviour
     public GameObject Item_nunber6;
     public GameObject Item_nunber7;
     public GameObject Item_nunber8;
-   // public GameObject Item_nunber9;
+    public GameObject Item_nunber9;
     public GameObject Item_nunber10;
     public GameObject Item_nunber11;
     public GameObject Item_nunber12;
@@ -99,7 +99,7 @@ public class UI : MonoBehaviour
         Item_nunber6.SetActive(false);
         Item_nunber7.SetActive(false);
         Item_nunber8.SetActive(false);
-        //Item_nunber9.SetActive(false);
+        Item_nunber9.SetActive(false);
         Item_nunber10.SetActive(false);
         Item_nunber11.SetActive(false);
         Item_nunber12.SetActive(false);
@@ -132,9 +132,9 @@ public class UI : MonoBehaviour
             case ITEM.CARDBOARD:
                 Item_nunber8.SetActive(true);
                 break;
-            //case ITEM.KESHIKASU_BOM:
-                //Item_nunber9.SetActive(true);
-                //break;
+            case ITEM.KESHIKASU_BOM:
+                Item_nunber9.SetActive(true);
+                break;
             case ITEM.BLACKBOARD_ERASER:
                 Item_nunber10.SetActive(true);
                 Debug.Log(draw_item);

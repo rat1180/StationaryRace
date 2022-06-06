@@ -12,8 +12,8 @@ public class ItemManager : MonoBehaviour
     private Vector3 Rocket; //プレイヤーの位置を取得
     private Vector3 RocketA;
     private Vector3 RocketB;
-    GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
-    Car CarSc;
+   // GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
+   // Car CarSc;
 
 
     //アイテムのゲームオブジェクト宣言
@@ -33,8 +33,8 @@ public class ItemManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
-        CarSc = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
+       // Player = GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
+       // CarSc = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
         //アイテムの情報を入れる配列の初期化
         for (int i = 1; i < USER_ALL + 1; i++)
         {
@@ -46,9 +46,9 @@ public class ItemManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Rocket = GameObject.Find("Car").transform.position;//プレイヤーの座標を取得
-        RocketA = GameObject.Find("ItemRocketA").transform.position;//アイテムロケットの座標を取得(AはAfter)
-        RocketB = GameObject.Find("ItemRocketB").transform.position;//アイテムロケットの座標を取得(BはBefore)
+       // Rocket = GameObject.Find("Car").transform.position;//プレイヤーの座標を取得
+       // RocketA = GameObject.Find("ItemRocketA").transform.position;//アイテムロケットの座標を取得(AはAfter)
+       // RocketB = GameObject.Find("ItemRocketB").transform.position;//アイテムロケットの座標を取得(BはBefore)
         //Player = GameObject.Find("Car").transform.forward;
     }
 

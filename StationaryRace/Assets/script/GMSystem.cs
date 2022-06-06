@@ -41,6 +41,15 @@ public class GMSystem : MonoBehaviour
     //ユーザー人数（通信形態によっては変更）
     private int Players;
 
+    //他ユーザーとの通信用に扱う構造体
+    struct USERTIME
+    {
+        double Time;
+        int CPcnt;
+        int Rap;
+        int UserNm;
+    }
+
     /***************
      アイテム系変数
     ****************/
@@ -155,6 +164,9 @@ public class GMSystem : MonoBehaviour
         //エラー
         return -1;
     }
+
+    //CP通過による処理
+    //public void 
 
     //順位判定
 

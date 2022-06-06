@@ -55,23 +55,25 @@ public class ONSystem : MonoBehaviour
             errorEventHandler: connectError => Debug.LogError("Connection failed.Reason: " + connectError.cause)
         );
 
-#region よくわからん
+        #region よくわからん
         // プライベートルーム
         StrixNetwork.instance.JoinRoom(
           new RoomJoinArgs
           {
-             host = "127.0.0.1",
-             port = 9123,
-             protocol = "TCP",
-             roomId = 1,
+              host = "127.0.0.1",
+              port = 9123,
+              //protocol = "TCP",
+              //key1 = 1,
 
               //password = "Room password"
           },
-          args => {
-             Debug.Log("JoinRoom succeeded");
+          args =>
+          {
+              Debug.Log("JoinRoom succeeded");
           },
-          args => {
-             Debug.Log("JoinRoom failed. error = " + args.cause);
+          args =>
+          {
+              Debug.Log("JoinRoom failed. error = " + args.cause);
           }
         );
     }

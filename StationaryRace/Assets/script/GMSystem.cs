@@ -5,6 +5,13 @@ using ITEMConst;
 
 public class GMSystem : MonoBehaviour
 {
+    #region 変数宣言
+    /*************
+     定義用
+    ***************/
+    const int TRUE = 1;
+    const int FALSE = 0;
+
     /**************
      ゲーム進行変数
     ***************/
@@ -19,6 +26,10 @@ public class GMSystem : MonoBehaviour
     private int CoseNm;
 
     private int CPmax;
+
+    //時間計測用変数
+    public double RaceTime;
+    private int TimerFlg;
 
     /**************
      ユーザー系変数
@@ -35,19 +46,19 @@ public class GMSystem : MonoBehaviour
     }
 
     //ユーザー配列（通信形態によっては変更）
-    //USERINF[] Users;
+    USERTIME[] Users;
     private USERINF User;
 
     //ユーザー人数（通信形態によっては変更）
     private int Players;
 
     //他ユーザーとの通信用に扱う構造体
-    struct USERTIME
+    public struct USERTIME
     {
-        double Time;
-        int CPcnt;
-        int Rap;
-        int UserNm;
+        public double CPTime;
+        public int CPcnt;
+        public int Rap;
+        public int UserNm;
     }
 
     /***************
@@ -56,6 +67,8 @@ public class GMSystem : MonoBehaviour
 
     //アイテムマネージャー
     private GameObject ItemManager;
+
+    #endregion
 
     // Start is called before the first frame update
     void Start()
@@ -67,9 +80,10 @@ public class GMSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Timer();
     }
 
+    #region 起動時処理
     /**************
      起動時処理
     ***************/
@@ -85,14 +99,24 @@ public class GMSystem : MonoBehaviour
         GameFlg = 1;
         CPSet();
 
-        //ランク用変数の生成
+        //ランク用変数と他ユーザー用配列の生成
         Rank = new int[Players];
+        Users = new USERTIME[Players];
         for(int i = 0; i < Players; i++)
         {
             Rank[i] = i;
+            if (i != User.USERNm)
+            {
+                Users[i].UserNm = i;
+            }
+            else
+            {
+                //自分の位置なので情報入れない
+                Users[i].UserNm = -1;
+            }
         }
 
-        //ユーザー(人数分繰り返す)
+        //ユーザー(自分)
         User.USER = transform.Find("User").gameObject;
         User.USERNm = 0;
         User.CPcnt = 0;
@@ -108,6 +132,12 @@ public class GMSystem : MonoBehaviour
     }
 
     //レーススタート
+    public void StartRace()
+    {
+        GameFlg = 2;
+        RaceTime = 0;
+        TimerFlg = TRUE;
+    }
 
     /// <summary>
     /// ゲーム開始時に移動させる
@@ -133,6 +163,10 @@ public class GMSystem : MonoBehaviour
             CPtmp.GetComponent<CheckPoint>().CPset(CPmax);
         }
     }
+
+    #endregion
+
+    #region ユーザー系処理
 
     /***********
      ユーザー系
@@ -165,10 +199,39 @@ public class GMSystem : MonoBehaviour
         return -1;
     }
 
-    //CP通過による処理
-    //public void 
+    //CP通過による処理(他ユーザーからの情報だけ入れる)
+    public void CPpass(USERTIME rUSER)
+    {
+        for(int i = 0; i < Players; i++)
+        {
+            if(Users[i].UserNm == rUSER.UserNm)
+            {
+                Users[i] = rUSER;
+            }
+        }
+    }
 
     //順位判定
 
+    #endregion
+
+    /************
+     システム系
+    *************/
+
+    //時間を計測する
+    private void Timer()
+    {
+        if(TimerFlg == TRUE)
+        {
+            RaceTime += Time.deltaTime;
+        }
+    }
+
+    //経過時間を返す
+    public double TimeGet()
+    {
+        return RaceTime;
+    }
 
 }

@@ -86,7 +86,7 @@ public class UserOperation : MonoBehaviour
     {
         InitSet();
     }
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -200,7 +200,7 @@ public class UserOperation : MonoBehaviour
             Key.HandleKey = NULL;
         }
     }
-
+    
     /**************
      機体との通信
     ***************/
@@ -240,9 +240,9 @@ public class UserOperation : MonoBehaviour
             CPcnt++;
 
             //システムからもらう
-            //CPTime = 
+            CPTime = GMSystem.GetComponent<GMSystem>().TimeGet();
 
-            if(CPcnt == 0)
+            if (CPcnt == 0)
             {
                 Debug.Log("スタート");
             }

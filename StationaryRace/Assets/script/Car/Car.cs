@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class Car : MonoBehaviour
 {
     #region 変数
     Rigidbody rb;
-
+    public int carnum;          // 機体番号
     public float upspeed;       // 前進スピード
     public float backspeed;     // 後退スピードorブレーキ
     private float maxspeed;     // 最大加速
@@ -19,16 +18,20 @@ public class Car : MonoBehaviour
     private float colorG;       // 緑色の値
     private float colorB;       // 青色の値
     private float clear;        // 色の透明度
+    private float goaltime;     // ゴールしたときのタイム
 
     private bool Accelflg;      // 機体が動いているか
+    private bool goalflg;        // ゴールしたかどうか
 
     public GameObject cp;       // チェックポイント
     public GameObject hitbox;
 
-    public GameObject User;
-    #endregion
+    public CountTime counttime;
 
-    //追加
+    int gamestart;
+
+    public GameObject User;
+
     #region 追加項目
     private int USER_Num = 0;//ユーザ番号
     public bool itemhave = false;
@@ -45,24 +48,21 @@ public class Car : MonoBehaviour
     public Vector3 Pos;
     #endregion
 
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
         #region 初期化処理
         rb = this.GetComponent<Rigidbody>();
 
-        upspeed = 20.0f;
-        backspeed = 19.0f;
-        maxspeed = 100.0f;
-        accel = 1.001f;
-        handle = 0.2f;
-        clear = 0.001f;
+        Performance();
 
         Accelflg = true;
 
         cp = GameObject.Find("CP");
         hitbox = GameObject.Find("HitBox");
-        User = this.transform.parent.gameObject;
+        //User = this.transform.parent.gameObject;
 
         colorR = 0;
         colorG = 255;
@@ -77,11 +77,16 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CarMoveAccel();
-        CarMoveHandle();
-        CarMoveDrift();
-        CarColor();
-
+        gamestart = counttime.GetGameStart();
+        //Debug.Log(gamestart);
+        if (gamestart == 1)
+        {
+            //Debug.Log("Start");
+            CarMoveAccel();
+            CarMoveHandle();
+            CarMoveDrift();
+            CarColor();
+        }
         //追加
         //スペースキーでアイテムの使用（テスト）
         if (Input.GetKey(KeyCode.Space) && itemhave == true)
@@ -97,9 +102,8 @@ public class Car : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
 
-        ItemSpeedUp();
         ItemHit();
-        WallHit(collision);
+        GOALHit(collision);
         CPHit(collision);
 
     }
@@ -132,7 +136,7 @@ public class Car : MonoBehaviour
             Accelflg = true;
 
             // Time.deltaTimeを掛ける事でfpsの違いによって速度が変わらなくなる
-            GetComponent<Rigidbody>().velocity += transform.forward * Time.deltaTime * upspeed;
+            rb.velocity += transform.forward * Time.deltaTime * upspeed;
 
             if (upspeed < maxspeed) // upspeedがmaxspeedより小さい間
             {
@@ -149,7 +153,18 @@ public class Car : MonoBehaviour
         }
         else  // 何の操作もしていない状態
         {
-            upspeed = rb.velocity.magnitude + 20;    // 現在のスピードを取得 + 20することで速さが20より下がらなくする
+            if(carnum == 1)
+            {
+                upspeed = rb.velocity.magnitude + 20;    // 現在のスピードを取得 + 20することで速さが20より下がらなくする
+            }
+            if (carnum == 2)
+            {
+                upspeed = rb.velocity.magnitude + 100;    // 現在のスピードを取得 + 20することで速さが20より下がらなくする
+            }
+            if(carnum == 3)
+            {
+                upspeed = rb.velocity.magnitude + 200;    // 現在のスピードを取得 + 20することで速さが20より下がらなくする
+            }
         }
         //Debug.Log("現在の速度" + rb.velocity.magnitude);  // ゲームオブジェクトの速さ表示 velocityは速度ベクトル magnitudeはベクトルの長さの取得
 
@@ -202,22 +217,6 @@ public class Car : MonoBehaviour
     }
 
     /// <summary>
-    /// スピードアップ用関数
-    /// </summary>
-    public void ItemSpeedUp()
-    {
-
-        if (gameObject.name == "STICKY_NOTE") // 付箋
-        {
-            upspeed = maxspeed;
-            maxspeed = 150;
-            upspeed += 20;
-        }
-        Debug.Log("SpeedUp");
-
-    }
-
-    /// <summary>
     /// アイテムが当たった時の処理
     /// </summary>
     public void ItemHit()
@@ -265,20 +264,13 @@ public class Car : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// 時間カウント用（予定）
-    /// </summary>
-    public void CountTime()
-    {
-        time -= Time.deltaTime;
-    }
 
     /// <summary>
     /// チェックポイントと当たった時に呼び出す関数
     /// </summary>
     public void CPHit(Collider collision)
     {
-        //CPが含まれていればOK
+        // CPが含まれていればOK
         if (collision.name.Contains("CP"))
         {
             int CPNm = collision.GetComponent<CheckPoint>().CheckP();
@@ -291,26 +283,32 @@ public class Car : MonoBehaviour
     /// 壁と当たった時
     /// </summary>
     /// <param name="collision"></param>
-    public void WallHit(Collider collision)
+    public void GOALHit(Collider collision)
     {
-        if (collision.gameObject.tag == "Wall")  // Wallタグが付いたオブジェクトと当たった時
+        if (collision.gameObject.tag == "GOAL")  // 指定したタグが付いたオブジェクトと当たった時
         {
-            
-            SceneManager.LoadScene("GOAL");  // 後で消す
+            Debug.Log(goaltime);
+            goalflg = false;
         }
-
+        if (goalflg == true && gamestart == 1)
+        {
+            goaltime++;
+        }
     }
 
+    /// <summary>
+    /// スピードによってHitBoxの色を変化させる
+    /// </summary>
     public void CarColor()
     {
-        if(rb.velocity.magnitude >= 70)
+        if (rb.velocity.magnitude >= 70)
         {
             colorR = 255;
             colorG = 0;
             colorB = 0;
             hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 赤色
         }
-        else if(rb.velocity.magnitude >= 30 && rb.velocity.magnitude < 70)
+        else if (rb.velocity.magnitude >= 30 && rb.velocity.magnitude < 70)
         {
             colorR = 255;
             colorG = 255;
@@ -324,8 +322,44 @@ public class Car : MonoBehaviour
             colorB = 0;
             hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 緑色
         }
+    }
 
-
+    /// <summary>
+    /// 機体の性能
+    /// 1.鉛筆：標準　2.消しゴム：曲がりやすい　3.定規：加速しやすい
+    /// </summary>
+    public void Performance()
+    {
+        carnum = 1;
+        switch(carnum){
+            case 1:  // 鉛筆
+                upspeed = 20.0f;
+                backspeed = 19.0f;
+                maxspeed = 100.0f;
+                accel = 1.001f;
+                handle = 0.2f;
+                clear = 0.001f;
+                break;
+            case 2:  // 消しゴム
+                upspeed = 100.0f;
+                backspeed = 20.0f;
+                maxspeed = 100.0f;
+                accel = 1.001f;
+                handle = 0.2f;
+                clear = 0.001f;
+                break;
+            case 3:  // 定規
+                upspeed = 200.0f;
+                backspeed = 21.0f;
+                maxspeed = 100.0f;
+                accel = 1.001f;
+                handle = 0.2f;
+                clear = 0.001f;
+                break;
+            default:
+                Debug.Log("1～3の番号以外使えません");
+                break;
+        }
     }
 
     //追加

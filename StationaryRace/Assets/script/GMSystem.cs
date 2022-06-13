@@ -27,6 +27,8 @@ public class GMSystem : MonoBehaviour
 
     private int CPmax;
 
+    private int Rapmax;
+
     //時間計測用変数
     public double RaceTime;
     private int TimerFlg;
@@ -74,6 +76,7 @@ public class GMSystem : MonoBehaviour
     void Start()
     {
         InitSet();
+        StartRace();
         //Invoke("CarSpawn", 5);
     }
 
@@ -97,6 +100,7 @@ public class GMSystem : MonoBehaviour
 
         //スタート前準備
         GameFlg = 1;
+        Rapmax = 1;
         CPSet();
 
         //ランク用変数と他ユーザー用配列の生成
@@ -177,7 +181,7 @@ public class GMSystem : MonoBehaviour
     /// </summary>
     private void NmSend()
     {
-        int Er = User.USER.GetComponent<UserOperation>().InitUser(User.USERNm,CPmax - 1);
+        int Er = User.USER.GetComponent<UserOperation>().InitUser(User.USERNm, CPmax - 1, Rapmax) ;
         if(Er != 0)
         {
             GameFlg = 0;
@@ -208,6 +212,19 @@ public class GMSystem : MonoBehaviour
             {
                 Users[i] = rUSER;
             }
+        }
+    }
+
+    //自分が通過したときに呼び出す（通過と同時）
+    public void MyCPpass(int MyCPcnt,int MyRap)
+    {
+        User.CPTime = TimeGet();
+        User.CPcnt = MyCPcnt;
+        User.Rap = MyRap;
+
+        if(MyRap == Rapmax)
+        {
+            Debug.Log("ゴールタイム:" + (User.CPTime).ToString("lf.3"));
         }
     }
 

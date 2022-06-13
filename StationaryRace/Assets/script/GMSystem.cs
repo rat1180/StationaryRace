@@ -48,7 +48,7 @@ public class GMSystem : MonoBehaviour
     }
 
     //ユーザー配列（通信形態によっては変更）
-    USERTIME[] Users;
+    public USERTIME[] Users;
     private USERINF User;
 
     //ユーザー人数（通信形態によっては変更）

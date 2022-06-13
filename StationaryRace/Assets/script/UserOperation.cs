@@ -64,6 +64,12 @@ public class UserOperation : MonoBehaviour
     //CPの最大数（ゴール）
     public int CPmax;
 
+    //Rap数
+    public int Rapcnt;
+
+    //Rap最大数
+    public int Rapmax;
+
     //ゴール判定
     private bool GLflg;
 
@@ -148,6 +154,8 @@ public class UserOperation : MonoBehaviour
 
         //スタート前は-1
         CPcnt = -1;
+
+        Rapcnt = 0;
 
         GLflg = false;
 
@@ -250,9 +258,18 @@ public class UserOperation : MonoBehaviour
 
             if(CPcnt == CPmax)
             {
-                GLflg = true;
-                Debug.Log("ゴール");
+                Rapcnt++;
+                if (Rapcnt == Rapmax)
+                {
+                    GLflg = true;
+                    //ゴール処理はGMでも作成
+                }
+                else
+                {
+                    CPcnt = 0;
+                }
             }
+            GMSystem.GetComponent<GMSystem>().MyCPpass(CPcnt,Rapcnt);
         }
     }
 
@@ -281,13 +298,15 @@ public class UserOperation : MonoBehaviour
     ****************/
 
     //生成時に割り振ってもらう(関数呼び出しはシステムで)
-    public int InitUser(int nm, int CPM)
+    public int InitUser(int nm, int CPM, int RapM)
     {
 
         UserNm = nm;
 
         //CPMAXの設定
         CPmax = CPM;
+
+        Rapmax = RapM;
 
         return 0;
 

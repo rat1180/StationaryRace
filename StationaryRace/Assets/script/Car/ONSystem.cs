@@ -16,6 +16,7 @@ public class ONSystem : MonoBehaviour
     public string applicationId;
     public Level logLevel = Level.INFO;
 
+    #region サーバー接続（今は他で依存）
     void Awake()
     {
         var strixNetwork = StrixNetwork.instance;
@@ -36,7 +37,7 @@ public class ONSystem : MonoBehaviour
                         //password = "66e3f2nk",       // このルームはパスワードで保護されているため、パスワードのないクライアントは参加できません
                         capacity = 10,                 // ルームが保持できるクライアントの最大数
                         key1 = 1,                      // key1を使用してこの試合で使用するNPCの難易度を表すことにします
-                        
+
                     },
                     new RoomMemberProperties
                     {
@@ -49,11 +50,12 @@ public class ONSystem : MonoBehaviour
                     failureHandler: createRoomError => Debug.LogError("Could not create room.Reason: " + createRoomError.cause)
                 );
 
-                
-   
+
+
             },
             errorEventHandler: connectError => Debug.LogError("Connection failed.Reason: " + connectError.cause)
         );
+        #endregion
 
         #region よくわからん
         // プライベートルーム
@@ -106,4 +108,37 @@ public class ONSystem : MonoBehaviour
             Debug.Log("接続");
         }
     }
+
+    #region レース
+
+    void Ready()
+    {
+        if (CheckAllRoomMembersState(1))
+        {
+            //スタート呼び出し
+        }
+    }
+
+    //メンバチェック
+    public static bool CheckAllRoomMembersState(int desiredState)
+    {
+        foreach (var roomMember in StrixNetwork.instance.roomMembers)
+        {
+            if (!roomMember.Value.GetProperties().TryGetValue("state",
+                out object value))
+            {
+                return false;
+            }
+
+            if ((int)value != desiredState)
+            {
+                return false;
+            }
+        }
+
+        Debug.Log("CheckAllRoomMembersState OK");
+        return true;
+    }
+
+    #endregion
 }

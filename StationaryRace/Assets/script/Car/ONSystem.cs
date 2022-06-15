@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using SoftGear.Strix.Client.Core.Auth.Message;
 using SoftGear.Strix.Client.Core.Error;
 using SoftGear.Strix.Client.Core.Model.Manager.Filter;
@@ -16,9 +17,25 @@ public class ONSystem : MonoBehaviour
     public string applicationId;
     public Level logLevel = Level.INFO;
 
+    /// <summary>
+    /// ルームに参加可能な最大人数
+    /// </summary>
+    public int capacity = 4;
+
+    /// <summary>
+    /// ルーム名
+    /// </summary>
     public string roomName = "New Room";
 
-    public int capacity = 4;
+    /// <summary>
+    /// ルーム入室完了時イベント
+    /// </summary>
+    public UnityEvent onRoomEntered;
+
+    /// <summary>
+    /// ルーム入室失敗時イベント
+    /// </summary>
+    public UnityEvent onRoomEnterFailed;
 
     #region サーバー接続（今は他で依存）
     void Awake()
@@ -48,7 +65,8 @@ public class ONSystem : MonoBehaviour
                         name = "testPlayer",           // これがプレイヤーの名前になります
 
                     },
-                    handler: __ => {
+                    handler: __ =>
+                    {
                         Debug.Log("Room created.");
                     },
                     failureHandler: createRoomError => Debug.LogError("Could not create room.Reason: " + createRoomError.cause)
@@ -63,7 +81,7 @@ public class ONSystem : MonoBehaviour
 
         #region よくわからん
         // プライベートルーム
-        CreateRoom();
+        //CreateRoom();
     }
 
     // ICondition…検索結果を絞り込むためのもの  Order…検索結果の並び順を指定するもの  limit…何件表示するか  offset…何件目から表示するか  RequestConfig…タイムアウトの値 nullの場合は30秒
@@ -72,12 +90,12 @@ public class ONSystem : MonoBehaviour
 
     private void OnConnectCallback(StrixNetworkConnectEventArgs args)
     {
-        Debug.Log("接続");
+        //Debug.Log("接続");
     }
 
     private void OnConnectFailedCallback(StrixNetworkConnectFailedEventArgs args)
     {
-        Debug.Log("失敗");
+        //Debug.Log("失敗");
     }
 
     // Start is called before the first frame update
@@ -91,14 +109,22 @@ public class ONSystem : MonoBehaviour
     {
         if (StrixNetwork.instance.masterSession.IsConnected)
         {
-            Debug.Log("接続");
+            //Debug.Log("接続");
         }
+    }
+
+    public void EnterRoom()
+    {
+        StrixNetwork.instance.JoinRandomRoom(StrixNetwork.instance.playerName, args => {
+            onRoomEntered.Invoke();
+        }, args => {
+            CreateRoom();
+        });
     }
 
     private void CreateRoom()
     {
-
-    RoomProperties roomProperties = new RoomProperties
+        RoomProperties roomProperties = new RoomProperties
         {
             capacity = capacity,
             name = roomName
@@ -106,14 +132,18 @@ public class ONSystem : MonoBehaviour
 
         RoomMemberProperties memberProperties = new RoomMemberProperties
         {
-            name = StrixNetwork.instance.playerName
+            name = StrixNetwork.instance.playerName,
+            //追加
+            properties = new Dictionary<string, object>() {
+            { "state", 0 }  // 初期状態は "Not Ready"
+        }
         };
 
 
         StrixNetwork.instance.CreateRoom(roomProperties, memberProperties, args => {
-            Debug.Log("s");
+            onRoomEntered.Invoke();
         }, args => {
-            Debug.Log("f");
+            onRoomEnterFailed.Invoke();
         });
     }
 

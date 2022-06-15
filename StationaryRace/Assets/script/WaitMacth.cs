@@ -23,6 +23,7 @@ public class WaitMacth : StrixBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isLocal) return;
         if (RoomFlg)
         {
             memberWait();

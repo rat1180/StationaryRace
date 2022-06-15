@@ -224,7 +224,8 @@ public class GMSystem : MonoBehaviour
 
         if(MyRap == Rapmax)
         {
-            Debug.Log("ゴールタイム:" + (User.CPTime).ToString("lf.3"));
+            TimerFlg = false;
+            Debug.Log("ゴールタイム:" + (User.CPTime).ToString("f3"));
         }
     }
 

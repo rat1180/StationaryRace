@@ -49,7 +49,11 @@ public class StrixEnterRoom : MonoBehaviour {
         };
 
         RoomMemberProperties memberProperties = new RoomMemberProperties {
-            name = StrixNetwork.instance.playerName
+            name = StrixNetwork.instance.playerName,
+            //追加
+            properties = new Dictionary<string, object>() {
+            { "state", 0 }  // 初期状態は "Not Ready"
+        }
         };
 
 

@@ -11,8 +11,6 @@ public class SelectKitai : MonoBehaviour
     private int MachineNum = 0;         //‹@‘Ì”Ô†
     private int SkinNum = 0;
 
-    public CountTime countTime;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -98,4 +96,9 @@ public class SelectKitai : MonoBehaviour
                 break;
         }
     }
+}
+
+class SceneLoder
+{
+
 }

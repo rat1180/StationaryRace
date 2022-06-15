@@ -16,6 +16,10 @@ public class ONSystem : MonoBehaviour
     public string applicationId;
     public Level logLevel = Level.INFO;
 
+    public string roomName = "New Room";
+
+    public int capacity = 4;
+
     #region サーバー接続（今は他で依存）
     void Awake()
     {
@@ -59,25 +63,7 @@ public class ONSystem : MonoBehaviour
 
         #region よくわからん
         // プライベートルーム
-        StrixNetwork.instance.JoinRoom(
-          new RoomJoinArgs
-          {
-              host = "127.0.0.1",
-              port = 9123,
-              //protocol = "TCP",
-              //key1 = 1,
-
-              //password = "Room password"
-          },
-          args =>
-          {
-              Debug.Log("JoinRoom succeeded");
-          },
-          args =>
-          {
-              Debug.Log("JoinRoom failed. error = " + args.cause);
-          }
-        );
+        CreateRoom();
     }
 
     // ICondition…検索結果を絞り込むためのもの  Order…検索結果の並び順を指定するもの  limit…何件表示するか  offset…何件目から表示するか  RequestConfig…タイムアウトの値 nullの場合は30秒
@@ -107,6 +93,28 @@ public class ONSystem : MonoBehaviour
         {
             Debug.Log("接続");
         }
+    }
+
+    private void CreateRoom()
+    {
+
+    RoomProperties roomProperties = new RoomProperties
+        {
+            capacity = capacity,
+            name = roomName
+        };
+
+        RoomMemberProperties memberProperties = new RoomMemberProperties
+        {
+            name = StrixNetwork.instance.playerName
+        };
+
+
+        StrixNetwork.instance.CreateRoom(roomProperties, memberProperties, args => {
+            Debug.Log("s");
+        }, args => {
+            Debug.Log("f");
+        });
     }
 
     #region レース

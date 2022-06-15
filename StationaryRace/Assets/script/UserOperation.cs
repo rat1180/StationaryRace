@@ -148,7 +148,7 @@ public class UserOperation : MonoBehaviour
         UI = transform.Find("UI").gameObject;
 
         //アイテム
-        ItemManager = GameObject.Find("ITEMManager").gameObject;
+        //ItemManager = GameObject.Find("ITEMManager").gameObject;
 
         ItemNm = NON;
 
@@ -287,7 +287,7 @@ public class UserOperation : MonoBehaviour
     public void ItemSend()
     {
         //アイテム取得（デバッグ）
-        ItemNm = ItemManager.GetComponent<ItemManager>().RETURN_INUM(1);
+        //ItemNm = ItemManager.GetComponent<ItemManager>().RETURN_INUM(1);
 
         //アイテムがあるならその番号、ないなら-1を送る
         UI.GetComponent<UI>().ITEM_CHANGE(ItemNm);

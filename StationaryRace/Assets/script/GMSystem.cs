@@ -31,7 +31,7 @@ public class GMSystem : MonoBehaviour
 
     //時間計測用変数
     public double RaceTime;
-    private int TimerFlg;
+    private bool TimerFlg;
 
     /**************
      ユーザー系変数
@@ -140,7 +140,7 @@ public class GMSystem : MonoBehaviour
     {
         GameFlg = 2;
         RaceTime = 0;
-        TimerFlg = TRUE;
+        TimerFlg = true;
     }
 
     /// <summary>
@@ -240,7 +240,7 @@ public class GMSystem : MonoBehaviour
     //時間を計測する
     private void Timer()
     {
-        if(TimerFlg == TRUE)
+        if(TimerFlg == true)
         {
             RaceTime += Time.deltaTime;
         }

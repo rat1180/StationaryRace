@@ -19,7 +19,7 @@ public class MainKitai : MonoBehaviour
     private int MachineNum = 0;         //機体番号
     private int SkinNum = 0;
 
-    public CountTime countTime;
+    public CountTime countTime;         //CountTimeスクリプトへ参照
     private float Atime = 10;
 
     // Start is called before the first frame update
@@ -34,6 +34,9 @@ public class MainKitai : MonoBehaviour
         PLmode();
     }
 
+    /// <summary>
+    /// プレイヤーの状態管理
+    /// </summary>
     private void PLmode()
     {
         Atime -= Time.deltaTime;

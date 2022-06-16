@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using SoftGear.Strix.Client.Core.Auth.Message;
 using SoftGear.Strix.Client.Core.Error;
 using SoftGear.Strix.Client.Core.Model.Manager.Filter;
@@ -9,7 +10,7 @@ using SoftGear.Strix.Unity.Runtime;
 using SoftGear.Strix.Net.Logging;
 using SoftGear.Strix.Unity.Runtime.Event;
 
-public class WaitMacth : StrixBehaviour
+public class WaitMacth : MonoBehaviour
 {
     public GameObject GMSystem;
     public bool RoomFlg = false;
@@ -23,7 +24,6 @@ public class WaitMacth : StrixBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isLocal) return;
         if (RoomFlg)
         {
             memberWait();
@@ -38,27 +38,28 @@ public class WaitMacth : StrixBehaviour
             this.gameObject.SetActive(false);
         }
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            // ルームメンバーの状態を変更します: 0は「準備中」、1は「準備完了」
-            StrixNetwork.instance.SetRoomMember(
-                StrixNetwork.instance.selfRoomMember.GetPrimaryKey(),
-                new Dictionary<string, object>() {
+    }
+
+    public void ClickBottun()
+    {
+        // ルームメンバーの状態を変更します: 0は「準備中」、1は「準備完了」
+        StrixNetwork.instance.SetRoomMember(
+            StrixNetwork.instance.selfRoomMember.GetPrimaryKey(),
+            new Dictionary<string, object>() {
         { "properties", new Dictionary<string, object>() {
             { "state", 1 }
         } }
-                },
-                args =>
-                {
-                    Debug.Log("SetRoomMember succeeded");
-                },
-                args =>
-                {
-                    Debug.Log("SetRoomMember failed. error = " + args.cause);
-                }
+            },
+            args =>
+            {
+                Debug.Log("SetRoomMember succeeded");
+            },
+            args =>
+            {
+                Debug.Log("SetRoomMember failed. error = " + args.cause);
+            }
 
-            );
-        }
+        );
     }
 
     public static bool CheckAllRoomMembersState(int desiredState)
@@ -84,6 +85,7 @@ public class WaitMacth : StrixBehaviour
     public void RoomIn()
     {
         RoomFlg = true;
+        Debug.Log("In");
     }
 
 }

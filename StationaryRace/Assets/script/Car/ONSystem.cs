@@ -15,6 +15,7 @@ public class ONSystem : MonoBehaviour
     public int roomIDnum;  // ルームIDナンバー
     public string host;
     public string applicationId;
+    public int port = 9122;
     public Level logLevel = Level.INFO;
 
     /// <summary>
@@ -37,60 +38,64 @@ public class ONSystem : MonoBehaviour
     /// </summary>
     public UnityEvent onRoomEnterFailed;
 
-    #region サーバー接続（今は他で依存）
     void Awake()
     {
         var strixNetwork = StrixNetwork.instance;
 
         strixNetwork.applicationId = applicationId;
 
-        // まずマスターサーバーに接続します
-        strixNetwork.ConnectMasterServer(
-            host: host,
-            connectEventHandler: _ => {
-                Debug.Log("Connection established.");
+        #region 接続案１
 
-                // マスターサーバーに接続した後でルームを作成できます
-                strixNetwork.CreateRoom(
-                    new RoomProperties
-                    {
-                        name = "testRoom",
-                        //password = "66e3f2nk",       // このルームはパスワードで保護されているため、パスワードのないクライアントは参加できません
-                        capacity = 10,                 // ルームが保持できるクライアントの最大数
-                        key1 = 1,                      // key1を使用してこの試合で使用するNPCの難易度を表すことにします
+        //// まずマスターサーバーに接続します
+        //strixNetwork.ConnectMasterServer(
+        //    host: host,
+        //    connectEventHandler: _ => {
+        //        Debug.Log("Connection established.");
 
-                    },
-                    new RoomMemberProperties
-                    {
-                        name = "testPlayer",           // これがプレイヤーの名前になります
+        //        //// マスターサーバーに接続した後でルームを作成できます
+        //        //strixNetwork.CreateRoom(
+        //        //    new RoomProperties
+        //        //    {
+        //        //        name = "testRoom",
+        //        //        //password = "66e3f2nk",       // このルームはパスワードで保護されているため、パスワードのないクライアントは参加できません
+        //        //        capacity = 10,                 // ルームが保持できるクライアントの最大数
+        //        //        key1 = 1,                      // key1を使用してこの試合で使用するNPCの難易度を表すことにします
 
-                    },
-                    handler: __ =>
-                    {
-                        Debug.Log("Room created.");
-                    },
-                    failureHandler: createRoomError => Debug.LogError("Could not create room.Reason: " + createRoomError.cause)
-                );
+        //        //    },
+        //        //    new RoomMemberProperties
+        //        //    {
+        //        //        name = "testPlayer",           // これがプレイヤーの名前になります
+
+        //        //    },
+        //        //    handler: __ =>
+        //        //    {
+        //        //        Debug.Log("Room created.");
+        //        //    },
+        //        //    failureHandler: createRoomError => Debug.LogError("Could not create room.Reason: " + createRoomError.cause)
+        //        //);
 
 
 
-            },
-            errorEventHandler: connectError => Debug.LogError("Connection failed.Reason: " + connectError.cause)
-        );
+        //    },
+        //    errorEventHandler: connectError => Debug.LogError("Connection failed.Reason: " + connectError.cause)
+        //);
         #endregion
 
-        #region よくわからん
-        // プライベートルーム
-        //CreateRoom();
+        #region 接続案２(成功)
+        //サーバー接続
+        StrixNetwork.instance.playerName = "TestPlayer";
+        StrixNetwork.instance.ConnectMasterServer(host, port, OnConnectCallback, OnConnectFailedCallback);
+        #endregion
     }
 
     // ICondition…検索結果を絞り込むためのもの  Order…検索結果の並び順を指定するもの  limit…何件表示するか  offset…何件目から表示するか  RequestConfig…タイムアウトの値 nullの場合は30秒
     //private void SearchRoom(ICondition condition, Order order, int limit, int offset, RoomSearchEventHandler handler, FailureEventHandler failureHandler/*, RequestConfig config = null*/);
-    #endregion
+
 
     private void OnConnectCallback(StrixNetworkConnectEventArgs args)
     {
         //Debug.Log("接続");
+        EnterRoom();
     }
 
     private void OnConnectFailedCallback(StrixNetworkConnectFailedEventArgs args)

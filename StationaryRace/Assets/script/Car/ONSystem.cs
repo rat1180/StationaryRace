@@ -18,6 +18,8 @@ public class ONSystem : MonoBehaviour
     public int port = 9122;
     public Level logLevel = Level.INFO;
 
+    public GameObject SystemINF;
+
     /// <summary>
     /// ルームに参加可能な最大人数
     /// </summary>
@@ -129,6 +131,8 @@ public class ONSystem : MonoBehaviour
 
     private void CreateRoom()
     {
+        SystemINF.GetComponent<SystemINF>().USERcntRESET();
+
         RoomProperties roomProperties = new RoomProperties
         {
             capacity = capacity,
@@ -150,6 +154,12 @@ public class ONSystem : MonoBehaviour
         }, args => {
             onRoomEnterFailed.Invoke();
         });
+    }
+
+    public void USERnmGet()
+    {
+        int Usernm = SystemINF.GetComponent<SystemINF>().USERcntSET(1);
+
     }
 
     #region レース

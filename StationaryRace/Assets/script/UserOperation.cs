@@ -332,9 +332,10 @@ public class UserOperation : MonoBehaviour
     /// スタート地点に移動
     /// </summary>
     /// <param name="SP"></param>
-    public void SPCar(Vector3 SP)
+    public void SPCar(Vector3 SPp, Quaternion SPr)
     {
-        Mashin.transform.position = SP;
+        Mashin.transform.position = SPp;
+        Mashin.transform.rotation = SPr;
     }
 
     /*

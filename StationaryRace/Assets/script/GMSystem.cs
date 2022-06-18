@@ -95,7 +95,7 @@ public class GMSystem : MonoBehaviour
     public void InitSet()
     {
         //レース前のシーンからもらう
-        Players = 1;
+        Players = 4; //5-1
         CoseNm = 0;
 
         //スタート前準備
@@ -103,10 +103,20 @@ public class GMSystem : MonoBehaviour
         Rapmax = 1;
         CPSet();
 
+        //ユーザー(自分)
+        User.USER = transform.Find("User").gameObject;
+        User.USERNm = 0;
+        User.CPcnt = 0;
+        User.CPTime = 0;
+        User.Rap = 1;
+        NmSend();
+        //User.USER.GetComponent<UserOperation>().RankSet();
+
         //ランク用変数と他ユーザー用配列の生成
+        //処理手順によって場所を変える
         Rank = new int[Players];
         Users = new USERTIME[Players];
-        for(int i = 0; i < Players; i++)
+        for (int i = 0; i < Players; i++)
         {
             Rank[i] = i;
             if (i != User.USERNm)
@@ -119,17 +129,6 @@ public class GMSystem : MonoBehaviour
                 Users[i].UserNm = -1;
             }
         }
-
-        //ユーザー(自分)
-        User.USER = transform.Find("User").gameObject;
-        User.USERNm = 0;
-        User.CPcnt = 0;
-        User.CPTime = 0;
-        User.Rap = 1;
-        NmSend();
-        User.USER.GetComponent<UserOperation>().RankSet();
-
-
 
         //アイテム
         //ItemManager = transform.Find("ItemManager").gameObject;
@@ -149,8 +148,9 @@ public class GMSystem : MonoBehaviour
     public void CarSpawn()
     {
         GameObject SPlist = this.transform.Find("SpawnList").gameObject;
-        Vector3 SP = SPlist.transform.GetChild(User.USERNm).gameObject.GetComponent<Transform>().position;
-        User.USER.GetComponent<UserOperation>().SPCar(SP);
+        Vector3 SPp = SPlist.transform.GetChild(User.USERNm).gameObject.GetComponent<Transform>().position;
+        Quaternion SPr = SPlist.transform.GetChild(User.USERNm).gameObject.GetComponent<Transform>().rotation;
+        User.USER.GetComponent<UserOperation>().SPCar(SPp,SPr);
     }
 
     /// <summary>

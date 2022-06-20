@@ -226,6 +226,7 @@ public class GMSystem : MonoBehaviour
         {
             TimerFlg = false;
             Debug.Log("ÉSÅ[ÉãÉ^ÉCÉÄ:" + (User.CPTime).ToString("f3"));
+
         }
     }
 

@@ -106,7 +106,7 @@ public class GMSystem : MonoBehaviour
         //ランク用変数と他ユーザー用配列の生成
         Rank = new int[Players];
         Users = new USERTIME[Players];
-        for(int i = 0; i < Players; i++)
+        for (int i = 0; i < Players; i++)
         {
             Rank[i] = i;
             if (i != User.USERNm)
@@ -161,7 +161,7 @@ public class GMSystem : MonoBehaviour
     {
         GameObject CPtmp;
         GameObject CPlist = this.transform.Find("CPList").gameObject;
-        for (CPmax = 0;CPmax < CPlist.transform.childCount; CPmax++)
+        for (CPmax = 0; CPmax < CPlist.transform.childCount; CPmax++)
         {
             CPtmp = CPlist.transform.GetChild(CPmax).gameObject;
             CPtmp.GetComponent<CheckPoint>().CPset(CPmax);
@@ -181,8 +181,8 @@ public class GMSystem : MonoBehaviour
     /// </summary>
     private void NmSend()
     {
-        int Er = User.USER.GetComponent<UserOperation>().InitUser(User.USERNm, CPmax - 1, Rapmax) ;
-        if(Er != 0)
+        int Er = User.USER.GetComponent<UserOperation>().InitUser(User.USERNm, CPmax - 1, Rapmax);
+        if (Er != 0)
         {
             GameFlg = 0;
         }
@@ -206,9 +206,9 @@ public class GMSystem : MonoBehaviour
     //CP通過による処理(他ユーザーからの情報だけ入れる)
     public void CPpass(USERTIME rUSER)
     {
-        for(int i = 0; i < Players; i++)
+        for (int i = 0; i < Players; i++)
         {
-            if(Users[i].UserNm == rUSER.UserNm)
+            if (Users[i].UserNm == rUSER.UserNm)
             {
                 Users[i] = rUSER;
             }
@@ -216,13 +216,13 @@ public class GMSystem : MonoBehaviour
     }
 
     //自分が通過したときに呼び出す（通過と同時）
-    public void MyCPpass(int MyCPcnt,int MyRap)
+    public void MyCPpass(int MyCPcnt, int MyRap)
     {
         User.CPTime = TimeGet();
         User.CPcnt = MyCPcnt;
         User.Rap = MyRap;
 
-        if(MyRap == Rapmax)
+        if (MyRap == Rapmax)
         {
             Debug.Log("ゴールタイム:" + (User.CPTime).ToString("lf.3"));
         }
@@ -239,7 +239,7 @@ public class GMSystem : MonoBehaviour
     //時間を計測する
     private void Timer()
     {
-        if(TimerFlg == TRUE)
+        if (TimerFlg == TRUE)
         {
             RaceTime += Time.deltaTime;
         }

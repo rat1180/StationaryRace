@@ -126,6 +126,45 @@ public class Car : MonoBehaviour
     */
 
     /// <summary>
+    /// 機体の性能
+    /// 1.鉛筆：標準　2.消しゴム：曲がりやすい　3.定規：加速しやすい
+    /// </summary>
+    public void Performance()
+    {
+        carnum = 1;
+        switch (carnum)
+        {
+            case 1:  // 鉛筆
+                upspeed = 20.0f;
+                backspeed = 19.0f;
+                maxspeed = 50.0f;
+                accel = 1.001f;
+                handle = 0.2f;
+                clear = 0.001f;
+                break;
+            case 2:  // 消しゴム
+                upspeed = 100.0f;
+                backspeed = 20.0f;
+                maxspeed = 100.0f;
+                accel = 1.001f;
+                handle = 0.2f;
+                clear = 0.001f;
+                break;
+            case 3:  // 定規
+                upspeed = 200.0f;
+                backspeed = 21.0f;
+                maxspeed = 100.0f;
+                accel = 1.001f;
+                handle = 0.2f;
+                clear = 0.001f;
+                break;
+            default:
+                Debug.Log("1～3の番号以外使えません");
+                break;
+        }
+    }
+
+    /// <summary>
     /// 機体の前進後退
     /// </summary>
     private void CarMoveAccel()
@@ -148,7 +187,7 @@ public class Car : MonoBehaviour
             Accelflg = false;
 
             // Time.deltaTimeを掛ける事でfpsの違いによって速度が変わらなくなる
-            GetComponent<Rigidbody>().velocity -= transform.forward * Time.deltaTime * backspeed;
+            rb.velocity -= transform.forward * Time.deltaTime * backspeed;
 
         }
         else  // 何の操作もしていない状態
@@ -166,7 +205,7 @@ public class Car : MonoBehaviour
                 upspeed = rb.velocity.magnitude + 200;    // 現在のスピードを取得 + 20することで速さが20より下がらなくする
             }
         }
-        //Debug.Log("現在の速度" + rb.velocity.magnitude);  // ゲームオブジェクトの速さ表示 velocityは速度ベクトル magnitudeはベクトルの長さの取得
+        Debug.Log("現在の速度" + rb.velocity.magnitude);  // ゲームオブジェクトの速さ表示 velocityは速度ベクトル magnitudeはベクトルの長さの取得
 
     }
 
@@ -321,44 +360,6 @@ public class Car : MonoBehaviour
             colorG = 255;
             colorB = 0;
             hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 緑色
-        }
-    }
-
-    /// <summary>
-    /// 機体の性能
-    /// 1.鉛筆：標準　2.消しゴム：曲がりやすい　3.定規：加速しやすい
-    /// </summary>
-    public void Performance()
-    {
-        carnum = 1;
-        switch(carnum){
-            case 1:  // 鉛筆
-                upspeed = 20.0f;
-                backspeed = 19.0f;
-                maxspeed = 100.0f;
-                accel = 1.001f;
-                handle = 0.2f;
-                clear = 0.001f;
-                break;
-            case 2:  // 消しゴム
-                upspeed = 100.0f;
-                backspeed = 20.0f;
-                maxspeed = 100.0f;
-                accel = 1.001f;
-                handle = 0.2f;
-                clear = 0.001f;
-                break;
-            case 3:  // 定規
-                upspeed = 200.0f;
-                backspeed = 21.0f;
-                maxspeed = 100.0f;
-                accel = 1.001f;
-                handle = 0.2f;
-                clear = 0.001f;
-                break;
-            default:
-                Debug.Log("1～3の番号以外使えません");
-                break;
         }
     }
 

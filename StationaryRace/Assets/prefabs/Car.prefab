@@ -182,12 +182,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f00d1a448b93854b9e3eef74f7bac62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carnum: 0
   upspeed: 0
   backspeed: 0
   handle: 0
   time: 0
   cp: {fileID: 0}
   hitbox: {fileID: 0}
+  counttime: {fileID: 0}
   User: {fileID: 0}
   itemhave: 0
   ITEM_NUM: -1
@@ -237,6 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strixBehaviours:
+  - {fileID: 2315697663815199718}
   - {fileID: 1469630913225641328}
   objectType: 2
   sendRate: 5

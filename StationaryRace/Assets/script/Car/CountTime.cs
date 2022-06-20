@@ -10,6 +10,7 @@ public class CountTime : MonoBehaviour
     public float cnttime = 3; 
     public GameObject CountText;   // テキストの表示用
     public GameObject panel; // パネルの表示切替
+    public GameObject counttime;
     public bool cntflg;
     public int gamestart = 0;
 
@@ -49,6 +50,8 @@ public class CountTime : MonoBehaviour
             }
             if (cnttime <= -1)
             {
+                Destroy(panel);
+                Destroy(counttime);
                 panel.SetActive(false);
                 cntflg = false;
             }

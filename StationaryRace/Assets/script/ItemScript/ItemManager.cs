@@ -171,7 +171,7 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.INDIA_INK://ñnè`.
                 Debug.Log("USE:INDIA_INK!");
-                
+                InkSc.Animation();
                 break;
             case ITEMConst.ITEM.CARDBOARD://íiÉ{Å[Éã.
                 Debug.Log("USE:CARDBOARD!");

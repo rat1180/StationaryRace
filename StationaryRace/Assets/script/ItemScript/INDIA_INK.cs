@@ -12,16 +12,18 @@ public class INDIA_INK : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        this.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Invoke("FadeOut", 5);
+       
     }
-    //フェードアウト
-    void FaedOut()
+    //フェードイン
+    public void Animation()
     {
-
+        
+        animator.SetTrigger("FadeIn");
     }
 }

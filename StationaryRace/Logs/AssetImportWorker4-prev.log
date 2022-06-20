@@ -15,7 +15,7 @@ C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-63821
+64350
 Successfully changed project path to: C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
 C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 144.90 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 133.83 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.0f1 (4bf1ec4b23c9)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/Resources/UnitySubsystems
@@ -63,174 +63,174 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56824
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56156
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006863 seconds.
+Registered in 0.007583 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 103.20 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 99.97 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.870 seconds
+- Completed reload, in  0.851 seconds
 Domain Reload Profiling:
-	ReloadAssembly (870ms)
-		BeginReloadAssembly (77ms)
+	ReloadAssembly (851ms)
+		BeginReloadAssembly (70ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (473ms)
-			LoadAssemblies (75ms)
+		EndReloadAssembly (467ms)
+			LoadAssemblies (68ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (107ms)
+			SetupTypeCache (100ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (283ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (287ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (103ms)
+				RefreshPlugins (100ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (124ms)
-				ProcessInitializeOnLoadMethodAttributes (47ms)
+				ProcessInitializeOnLoadAttributes (119ms)
+				ProcessInitializeOnLoadMethodAttributes (61ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.011129 seconds.
+Registered in 0.012967 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001E5BEA545A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file data-0000019CCCE70660 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE0B9C60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file data-0000019CCCDE4940 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BF870420 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-0000019CCD15A730 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEA545A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file data-0000019CCCE70660 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEA545A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file data-0000019CCCDCCAE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE8D26D0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file data-0000019CCC7A49C0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEA545A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-0000019CCCE70660 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE8D26D0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file data-0000019CCC7A49C0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BF8C3950 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-0000019CCD45DC20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEAF0010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file data-0000019CCD33B010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFB27E20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-0000019CCD33B010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE8D26D0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file data-0000019CCC7A49C0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE7A5280 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file data-0000019CCDFAA540 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE7A5280 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file data-0000019CCDFAA540 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE7A5280 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file data-0000019CCD473030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA7AC010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file data-0000019CCD67D3E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE8D26D0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file data-0000019CCCDE4940 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BF8F0010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file data-0000019CCD67D3E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE7A5280 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-0000019CCD38B030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEB4EE20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file data-0000019CCCDE4940 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEB4EE20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file data-0000019CCCDE4940 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE1DD480 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-0000019CCCF58020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEB4EE20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file data-0000019CCCDE4940 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEB4EE20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file data-0000019CCCDE4940 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEB4EE20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file data-0000019CCCDE4940 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFA1A420 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file data-0000019CCC8BC030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFA1A420 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file data-0000019CCC8BC030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BF972230 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file data-0000019CCD69D3F0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE1DD480 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file data-0000019CC8BB5240 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEB4EE20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file data-0000019CCCDE4940 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEB4EE20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file data-0000019CCD394080 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE1DD480 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file data-0000019CCCDCCAE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEB4EE20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file data-0000019CCE280E20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFA1A420 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-0000019CCC8E4E40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFA1A420 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-0000019CCC90D450 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BF8D8D60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file data-0000019CCD69D3F0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE0B9C60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file data-0000019CCE10C430 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFA47270 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file data-0000019CC8BC8040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE0B9C60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file data-0000019CCD6A2800 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE0B9C60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file data-0000019CCD6A2800 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BF8D8D60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file data-0000019CCC940480 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFA697A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file data-0000019CCD2B5490 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Package Manager log level set to [2]
 Mono: successfully reloaded assembly
-- Completed reload, in  1.982 seconds
+- Completed reload, in  1.932 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1983ms)
-		BeginReloadAssembly (174ms)
+	ReloadAssembly (1933ms)
+		BeginReloadAssembly (168ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (1708ms)
-			LoadAssemblies (79ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (1665ms)
+			LoadAssemblies (81ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (237ms)
+			SetupTypeCache (228ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (54ms)
-			SetupLoadedEditorAssemblies (1226ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (1193ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (96ms)
-				ProcessInitializeOnLoadAttributes (1020ms)
-				ProcessInitializeOnLoadMethodAttributes (89ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (990ms)
+				ProcessInitializeOnLoadMethodAttributes (88ms)
+				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.96 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4157 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 73 unused Assets / (57.4 KB). Loaded Objects now: 4592.
+Unloading 4158 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (57.4 KB). Loaded Objects now: 4593.
 Memory consumption went from 157.1 MB to 157.1 MB.
-Total: 6.194900 ms (FindLiveObjects: 0.291300 ms CreateObjectMapping: 0.263600 ms MarkObjects: 5.545600 ms  DeleteObjects: 0.093500 ms)
+Total: 6.030100 ms (FindLiveObjects: 0.374800 ms CreateObjectMapping: 0.325300 ms MarkObjects: 5.252200 ms  DeleteObjects: 0.076800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -244,140 +244,396 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 95764.097860 seconds.
-  path: Assets/prefabs/item/INDIA_IND.png
-  artifactKey: Guid(0566e9962d00be2419c7e07317f0b205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/item/INDIA_IND.png using Guid(0566e9962d00be2419c7e07317f0b205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0616b54590782df1fc4598b26e6c9189') in 0.084202 seconds 
+  Time since last request: 401781.157791 seconds.
+  path: Assets/prefabs/item/PencilcaseBox.prefab
+  artifactKey: Guid(f3981ebdcdf333c498df162879384f2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/PencilcaseBox.prefab using Guid(f3981ebdcdf333c498df162879384f2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69dc8800b3b991c8e29cc83c83aafba9') in 0.150843 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 17.252298 seconds.
-  path: Assets/gazou/New Material.mat
-  artifactKey: Guid(0d69c813e7575e248a5fb7e06d6860fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/gazou/New Material.mat using Guid(0d69c813e7575e248a5fb7e06d6860fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24bab7debba3a8431f610f6399df0222') in 0.139902 seconds 
+  Time since last request: 9.681332 seconds.
+  path: Assets/prefabs/item/PencilcaseBox.prefab
+  artifactKey: Guid(f3981ebdcdf333c498df162879384f2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/PencilcaseBox.prefab using Guid(f3981ebdcdf333c498df162879384f2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da22522d0ab7abe5f3cb3c24ab77937f') in 0.015269 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 53.020219 seconds.
-  path: Assets/prefabs/item/INDIA_IND.png
-  artifactKey: Guid(0566e9962d00be2419c7e07317f0b205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/item/INDIA_IND.png using Guid(0566e9962d00be2419c7e07317f0b205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0e9636a181be46896406668b6acac0c') in 0.023212 seconds 
+  Time since last request: 38.658736 seconds.
+  path: Assets/prefabs/item/Pencilcase.prefab
+  artifactKey: Guid(357241925f85c8f409d69d7ba803525b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/Pencilcase.prefab using Guid(357241925f85c8f409d69d7ba803525b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '670b7420d837aee89f7dc786b983c0be') in 0.020335 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 33.280786 seconds.
-  path: Assets/gazou
-  artifactKey: Guid(25cd9899f1b89324a86bae4e88ae97a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/gazou using Guid(25cd9899f1b89324a86bae4e88ae97a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91c1154d8b08441d91ea868a8197949c') in 0.002576 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.944205 seconds.
-  path: Assets/gazou/巣.psd
-  artifactKey: Guid(f373fbba04d2ea448911acee06a82084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/gazou/巣.psd using Guid(f373fbba04d2ea448911acee06a82084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbda2a9e887abb5305d9df9c52bbdead') in 0.015155 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 70.221907 seconds.
-  path: Assets/Matelal/Materials/itemmario.mat
-  artifactKey: Guid(9ae2fc7e9ad185642aa6dc9109962099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Matelal/Materials/itemmario.mat using Guid(9ae2fc7e9ad185642aa6dc9109962099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14d3f3d6eeaae145905c4525d533e8c9') in 0.012347 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.321423 seconds.
-  path: Assets/prefabs/item/INDIA_IND.png
-  artifactKey: Guid(a01ed8f84b0c8204a9bf7e1a9ee334d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/item/INDIA_IND.png using Guid(a01ed8f84b0c8204a9bf7e1a9ee334d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '899a93ca278002bb27e660f7b093aa1a') in 0.014334 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.982194 seconds.
-  path: Assets/prefabs/item/INDIA_IND.png
-  artifactKey: Guid(a01ed8f84b0c8204a9bf7e1a9ee334d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/item/INDIA_IND.png using Guid(a01ed8f84b0c8204a9bf7e1a9ee334d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b370cba242809f4c021811f8db22ee9e') in 0.137380 seconds 
+  Time since last request: 238.607148 seconds.
+  path: Assets/prefabs/item/Pencilcase.prefab
+  artifactKey: Guid(357241925f85c8f409d69d7ba803525b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/Pencilcase.prefab using Guid(357241925f85c8f409d69d7ba803525b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6221a50e0a8f81d048d087f11ee1c4a') in 0.020690 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.009755 seconds.
+Registered in 0.023538 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001E5BE2F14E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file data-0000019CCFD4A010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1B6BC60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file data-0000019CCEB69040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE8A5830 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-0000019CD1864C40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA999B80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file data-0000019CC908E010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE8AC440 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file data-0000019CCD16A670 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE148640 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file data-0000019CCEB69040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA999B80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-0000019CCDFDF590 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1722060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file data-0000019CCE02A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C3359980 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-0000019CD153E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1B80090 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file data-0000019CCE4F7360 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2BEF700 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-0000019CCC722530 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C03547F0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file data-0000019CD17B9D40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E572157010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file data-0000019CD153E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E572157010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file data-0000019CD153E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E572157010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file data-0000019CD5DCF0E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2C1D710 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file data-0000019CCC750540 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C03547F0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file data-0000019CCEB69040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2DCB030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file data-0000019CD0CB0080 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E572157010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-0000019CCF7C0080 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1722060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file data-0000019CCE02A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C03547F0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file data-0000019CCEB69040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C3E2FDB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-0000019CD5875020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C03547F0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file data-0000019CD17B9D40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1722060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file data-0000019CCE02A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1722060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file data-0000019CCE02A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1A6A020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file data-0000019CCFF82020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEA28010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file data-0000019CCC8BC030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2F11010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file data-0000019CCF7C0080 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFAD5010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file data-0000019CCCF0CE30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C03547F0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file data-0000019CD17B9D40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C03547F0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file data-0000019CCEB69040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C506E630 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file data-0000019CD557B630 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C506E630 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file data-0000019CCEB69040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C18B4020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-0000019CD029A010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2E2B010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-0000019CD1789C90 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C506E630 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file data-0000019CCEB69040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2493240 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file data-0000019CCEB69040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2493240 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file data-0000019CD1549230 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1722060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file data-0000019CCE02A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9D8020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file data-0000019CD17B9D40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9D8020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file data-0000019CCEB69040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFAE6530 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file data-0000019CCDFE75A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.281 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2282ms)
+		BeginReloadAssembly (136ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (2049ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (292ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (1502ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (1305ms)
+				ProcessInitializeOnLoadMethodAttributes (96ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4138 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 406 unused Assets / (65.4 KB). Loaded Objects now: 4603.
+Memory consumption went from 160.7 MB to 160.7 MB.
+Total: 6.616100 ms (FindLiveObjects: 0.387400 ms CreateObjectMapping: 0.355600 ms MarkObjects: 5.682300 ms  DeleteObjects: 0.189700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012396 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019CD38D0030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE936660 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE936660 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC91D460 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE2FC010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE936660 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD187E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3B32030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF9C9030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE4F7360 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD5813440 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD38EA840 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE2FC010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE2FC010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCBDBD30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD5DC30E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD38EA840 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD39EF080 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D197FF060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D198080B0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD38EA840 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3B9E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD38EA840 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D198080B0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D198080B0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCFF2E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC8BC030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A21EE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCA91DE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD38EA840 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD38EA840 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE936660 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A29EF0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD05C9030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3B78010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A29EF0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A29EF0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3B80A20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCFDFE020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A29EF0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A29EF0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3B80A20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.314 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2315ms)
+		BeginReloadAssembly (137ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (2076ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (299ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (1520ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (1321ms)
+				ProcessInitializeOnLoadMethodAttributes (94ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4138 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 404 unused Assets / (53.5 KB). Loaded Objects now: 4605.
+Memory consumption went from 160.7 MB to 160.7 MB.
+Total: 6.852100 ms (FindLiveObjects: 0.487800 ms CreateObjectMapping: 0.410500 ms MarkObjects: 5.758000 ms  DeleteObjects: 0.194700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012157 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019CD5A4F010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE4F0380 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCFDFA010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC91D460 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCFC07360 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD50E1A10 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCFBE0010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF834370 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF83B3A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE4F7360 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD39EF080 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE005270 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3615EB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3615EB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3621ED0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCFBE0010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E2A670 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD1560020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD508F820 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF834370 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E2A670 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCFEBC020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE005270 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF834370 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF834370 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCBA5520 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC8BC030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3621ED0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCBCE330 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE005270 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD2726250 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCFDFA010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E2A670 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF97C010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3BBF040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A1D090 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD2726250 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD1598640 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD2D54010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE005270 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD2726250 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD507C8E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
@@ -385,350 +641,460 @@ Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.22 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.250 seconds
+- Completed reload, in  2.158 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2251ms)
-		BeginReloadAssembly (142ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (43ms)
-		EndReloadAssembly (2002ms)
-			LoadAssemblies (101ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (249ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (1405ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (94ms)
-				ProcessInitializeOnLoadAttributes (1199ms)
-				ProcessInitializeOnLoadMethodAttributes (87ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4139 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 404 unused Assets / (57.9 KB). Loaded Objects now: 4712.
-Memory consumption went from 165.0 MB to 164.9 MB.
-Total: 6.059500 ms (FindLiveObjects: 0.300500 ms CreateObjectMapping: 0.379000 ms MarkObjects: 5.209100 ms  DeleteObjects: 0.170200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 158.411909 seconds.
-  path: Assets/225659590.png
-  artifactKey: Guid(adda30c20050b85458d950d181202db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/225659590.png using Guid(adda30c20050b85458d950d181202db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d13ac7c0681e8796ee116726fc56fa8') in 0.053847 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Tree.prefab
-  artifactKey: Guid(888cbaecbc7614e438495de673bb4d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tree.prefab using Guid(888cbaecbc7614e438495de673bb4d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f89d491ca5a9dbf5022deff7c6a23133') in 0.577377 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010631 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000001E5BFDCB010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5B1D650 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA999B80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA8F1010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFAD5010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFC5B010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEA28010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2F89010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C44D2C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C44D2C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C50F0380 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE321500 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C51C1800 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2F19020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2FB7020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5078C40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2FB7020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2FB7020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C0463010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1B80090 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2A0EE30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9C5010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6EA3B90 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C762D010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C13280B0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE0FA010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2FB7020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9D7E10 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6817000 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1D58820 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 3.09 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.229 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2229ms)
-		BeginReloadAssembly (147ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (49ms)
-		EndReloadAssembly (1962ms)
-			LoadAssemblies (89ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (253ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (47ms)
-			SetupLoadedEditorAssemblies (1440ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (97ms)
-				ProcessInitializeOnLoadAttributes (1229ms)
-				ProcessInitializeOnLoadMethodAttributes (86ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.61 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4139 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 404 unused Assets / (53.0 KB). Loaded Objects now: 4736.
-Memory consumption went from 168.6 MB to 168.6 MB.
-Total: 6.253300 ms (FindLiveObjects: 0.306800 ms CreateObjectMapping: 0.308400 ms MarkObjects: 5.356500 ms  DeleteObjects: 0.280600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 506.099096 seconds.
-  path: Assets/prefabs/item/Animation
-  artifactKey: Guid(ff51b4876ad933f45a389499f0a1ea5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/item/Animation using Guid(ff51b4876ad933f45a389499f0a1ea5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67a0cfaa9a82bc15626b4cd688014287') in 0.012559 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 600.501352 seconds.
-  path: Assets/prefabs/item/Animation/INDIA_INK_Fade.anim
-  artifactKey: Guid(cb5e756c53a219b4bb5a59ce013a6b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/item/Animation/INDIA_INK_Fade.anim using Guid(cb5e756c53a219b4bb5a59ce013a6b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8922aed4e1a47538e32b583e6557a639') in 0.014227 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.576736 seconds.
-  path: Assets/prefabs/item/Animation/INDIA_INK_FadeIn.anim
-  artifactKey: Guid(cb5e756c53a219b4bb5a59ce013a6b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/item/Animation/INDIA_INK_FadeIn.anim using Guid(cb5e756c53a219b4bb5a59ce013a6b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aa3a26f5d44d69dbeb89922fd120d2e') in 0.004917 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012626 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000001E5BE2F14E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C72D1770 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C297C040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA999B80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE0FA010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5D5A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C0174010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C3631FB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C3359980 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEA28010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C51C1800 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6EC2B00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2290020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2290020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C517DF70 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE2D14B0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9E0B30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2F89010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6F084F0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C3631FB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9E0B30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2A27F60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C51BB720 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C3631FB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C3631FB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C7475010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1B80090 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5138EA0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9C5010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9E0B30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9E0B30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE30BCF0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9E0B30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E625EFC040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C13280B0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BAA79010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C72D1770 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2A10830 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C3631FB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C7222E80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9E0B30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C50D0C90 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.256 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2256ms)
-		BeginReloadAssembly (133ms)
+	ReloadAssembly (2159ms)
+		BeginReloadAssembly (136ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (39ms)
-		EndReloadAssembly (2021ms)
-			LoadAssemblies (88ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (1922ms)
+			LoadAssemblies (85ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (247ms)
+			SetupTypeCache (234ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (1441ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (79ms)
+				ProcessInitializeOnLoadAttributes (1238ms)
+				ProcessInitializeOnLoadMethodAttributes (99ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4138 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 404 unused Assets / (55.2 KB). Loaded Objects now: 4607.
+Memory consumption went from 160.7 MB to 160.7 MB.
+Total: 6.365800 ms (FindLiveObjects: 0.393800 ms CreateObjectMapping: 0.346200 ms MarkObjects: 5.454900 ms  DeleteObjects: 0.170100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012262 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019CD3D7DDA0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D1A7EE010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC91D460 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC940480 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3FC55E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD187E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCFF0A030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD52D7500 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE4F7360 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3B9E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3FC55E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D195141A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D195141A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD55C6260 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCDD4710 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD522AC40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD11F4060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD53F7030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC950EB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3FC55E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD53F7030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD53F7030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCDEA860 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC8BC030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE3F3F00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF834370 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD5AFD030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD359B790 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D19D93020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE2FC010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3FA53A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCFF0A030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3FC55E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3FA53A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.292 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2293ms)
+		BeginReloadAssembly (134ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (2054ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (292ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (1435ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (1510ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (1313ms)
+				ProcessInitializeOnLoadMethodAttributes (94ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4138 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 404 unused Assets / (56.9 KB). Loaded Objects now: 4609.
+Memory consumption went from 160.7 MB to 160.7 MB.
+Total: 7.031800 ms (FindLiveObjects: 0.444200 ms CreateObjectMapping: 0.455300 ms MarkObjects: 5.917800 ms  DeleteObjects: 0.213500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011766 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019CD3D7DDA0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD38EA030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC91D460 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC940480 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D1A0D5040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD187E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D194F8A70 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCFF2E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE4F7360 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE90A010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF9D5E30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3615EB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3615EB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3BC6E30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CC8E20070 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D193F83E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D197FDE50 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D194F8A70 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC950EB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD272D970 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D194F8A70 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D194F8A70 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCD4BFC40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC8BC030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF9C9030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCA91DE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC81FC40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D1942B240 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3F5D870 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE2FC010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD524C010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D194F8A70 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD35F2ED0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0E29C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCD5CE010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.273 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2274ms)
+		BeginReloadAssembly (134ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (2038ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (271ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (1505ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (1306ms)
+				ProcessInitializeOnLoadMethodAttributes (95ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4138 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 404 unused Assets / (54.3 KB). Loaded Objects now: 4611.
+Memory consumption went from 160.7 MB to 160.7 MB.
+Total: 8.436100 ms (FindLiveObjects: 0.565400 ms CreateObjectMapping: 0.480300 ms MarkObjects: 7.138900 ms  DeleteObjects: 0.249900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012227 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019CD3D7DDA0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D193EE050 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A29030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC91D460 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC940480 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3F36030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A7F100 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D1A50E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD040F370 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE4F7360 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD5050CD0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0CE6030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCDFE75A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCDFE75A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D195201D0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A7F100 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0DFE020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD11F4060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D1A50E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD11C4030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD272D970 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D1A50E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D1A50E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCDEA860 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC8BC030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3621ED0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCA91DE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0CE6030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D193EE050 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A29030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D193EE050 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D1952C520 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE2FC010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CC87CEA60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D193EE050 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD16A3040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D1A50E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0CE6030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D193EE050 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD16A3040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.331 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2332ms)
+		BeginReloadAssembly (132ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (2100ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (280ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (1566ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (16ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
+				RefreshPlugins (2ms)
 				BeforeProcessingInitializeOnLoad (82ms)
-				ProcessInitializeOnLoadAttributes (1225ms)
-				ProcessInitializeOnLoadMethodAttributes (101ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				ProcessInitializeOnLoadAttributes (1356ms)
+				ProcessInitializeOnLoadMethodAttributes (99ms)
+				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4138 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 404 unused Assets / (54.8 KB). Loaded Objects now: 4738.
-Memory consumption went from 168.6 MB to 168.6 MB.
-Total: 6.118000 ms (FindLiveObjects: 0.351000 ms CreateObjectMapping: 0.347100 ms MarkObjects: 5.236700 ms  DeleteObjects: 0.182200 ms)
+Unloading 404 unused Assets / (58.3 KB). Loaded Objects now: 4613.
+Memory consumption went from 160.8 MB to 160.7 MB.
+Total: 7.423800 ms (FindLiveObjects: 0.430900 ms CreateObjectMapping: 0.345600 ms MarkObjects: 6.350100 ms  DeleteObjects: 0.296000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -741,298 +1107,280 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 435.225706 seconds.
+  path: Assets/prefabs/item/Pencilcase.prefab
+  artifactKey: Guid(357241925f85c8f409d69d7ba803525b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/Pencilcase.prefab using Guid(357241925f85c8f409d69d7ba803525b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fbf318cd3b970948be41ad6011eb668') in 0.079815 seconds 
+========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.010210 seconds.
+Registered in 0.010072 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001E5C72F8010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file data-0000019CD3D7DDA0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C72D1770 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE884080 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-0000019CCF934030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA999B80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file data-0000019CCC91D460 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA8F1010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file data-0000019D19BF2020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5D5A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C0174010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-0000019CD187E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5D5A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA999B80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-0000019CCE55A020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEA28010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file data-0000019CCE4F7360 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C590B020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-0000019CD0DFE020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFA6A470 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C361A020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file data-0000019CCDFE75A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C361A020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file data-0000019CCDFE75A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5138EA0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file data-0000019CD3593570 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE2D14B0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file data-0000019CC8E20070 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C7676700 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1D2E010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file data-0000019D19EC1010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA987010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-0000019CD11F4060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5D5A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C7676700 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2A27F60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-0000019CD40AE010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C7222E80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5D5A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5D5A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE8B6A60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file data-0000019D193F3420 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1B80090 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file data-0000019CCC8BC030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5138EA0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file data-0000019CD3621ED0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9C5010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file data-0000019CCCA91DE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFA6A470 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C7676700 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C51EC010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file data-0000019CD50E1A10 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C7676700 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E625EFC040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-0000019CD0072010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C13280B0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-0000019CCE2FC010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BAA79010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file data-0000019CD3542C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C72D1770 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file data-0000019CD5138AB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFA1A010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file data-0000019D19BF2020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6795550 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file data-0000019CD5138AB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C7222E80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file data-0000019CD5138AB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9E0B30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file data-0000019CD5138AB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C51EC010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file data-0000019D1A103100 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.33 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.204 seconds
+- Completed reload, in  2.275 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2205ms)
+	ReloadAssembly (2275ms)
 		BeginReloadAssembly (135ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		EndReloadAssembly (1956ms)
-			LoadAssemblies (93ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (2037ms)
+			LoadAssemblies (84ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (281ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (51ms)
-			SetupLoadedEditorAssemblies (1394ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (71ms)
-				ProcessInitializeOnLoadAttributes (1210ms)
-				ProcessInitializeOnLoadMethodAttributes (90ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.94 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4138 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 404 unused Assets / (52.9 KB). Loaded Objects now: 4740.
-Memory consumption went from 168.6 MB to 168.6 MB.
-Total: 6.488400 ms (FindLiveObjects: 0.388100 ms CreateObjectMapping: 0.341800 ms MarkObjects: 5.590000 ms  DeleteObjects: 0.167400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 539.667276 seconds.
-  path: Assets/script/ItemScript/INDIA_INK.cs
-  artifactKey: Guid(11647b8b288378b439d95e4b462e15b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/script/ItemScript/INDIA_INK.cs using Guid(11647b8b288378b439d95e4b462e15b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31859321ae3e47736d3c576ef30df2b7') in 0.015877 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 31.999310 seconds.
-  path: Assets/script/ItemScript/INDIA_INK.cs
-  artifactKey: Guid(11647b8b288378b439d95e4b462e15b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/script/ItemScript/INDIA_INK.cs using Guid(11647b8b288378b439d95e4b462e15b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e3099d404afc4983be8a81771017db0') in 0.002031 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 33.218024 seconds.
-  path: Assets/INDIA_INK.cs
-  artifactKey: Guid(7065c8db17373a640847410dcddafb16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/INDIA_INK.cs using Guid(7065c8db17373a640847410dcddafb16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44be040af1277fa846075ed511e1b418') in 0.002006 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 13.446884 seconds.
-  path: Assets/INDIA_INK.cs
-  artifactKey: Guid(7065c8db17373a640847410dcddafb16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/INDIA_INK.cs using Guid(7065c8db17373a640847410dcddafb16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff35b0cf704c19e2a3174a47247356ea') in 0.002830 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010740 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000001E5C1A16020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C72D1770 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2021060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C0174010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BFA1A010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5D5A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C0174010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5D5A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C0174010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BEA28010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C51C1800 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA92E8E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C57A1060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C57A1060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA987010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE2D14B0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9E0B30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1D2E010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C361A020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5D5A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9E0B30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C3E2FDB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5952F60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5D5A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5D5A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BF7A0EA0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C1B80090 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C361A020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9C5010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA92E8E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9E0B30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C2021060 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9E0B30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BE06F020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C13280B0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BAA79010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C72D1770 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6DE16E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5D5A040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C5952F60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5BA9E0B30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001E5C6DE16E0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.23 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.150 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2151ms)
-		BeginReloadAssembly (128ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		EndReloadAssembly (1905ms)
-			LoadAssemblies (85ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (239ms)
+			SetupTypeCache (291ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (1399ms)
+			SetupLoadedEditorAssemblies (1491ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (14ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (80ms)
-				ProcessInitializeOnLoadAttributes (1207ms)
-				ProcessInitializeOnLoadMethodAttributes (87ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (1300ms)
+				ProcessInitializeOnLoadMethodAttributes (91ms)
+				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.53 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4138 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 405 unused Assets / (56.3 KB). Loaded Objects now: 4742.
-Memory consumption went from 168.7 MB to 168.6 MB.
-Total: 6.931900 ms (FindLiveObjects: 0.340100 ms CreateObjectMapping: 0.489400 ms MarkObjects: 5.888200 ms  DeleteObjects: 0.213100 ms)
+Unloading 406 unused Assets / (62.9 KB). Loaded Objects now: 4615.
+Memory consumption went from 160.8 MB to 160.7 MB.
+Total: 6.068800 ms (FindLiveObjects: 0.359700 ms CreateObjectMapping: 0.348500 ms MarkObjects: 5.169700 ms  DeleteObjects: 0.189900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013093 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019CD3D7DDA0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D193EE050 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF934030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC91D460 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD159A030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCFF69010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A7F100 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE005270 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF7C0080 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE4F7360 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CC8994030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3FA6F30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD55920A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD55920A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD358A010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3A7F100 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCB9F010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD0DFE020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD55920A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE005270 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCB9F010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D1A2B2010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3FA6F30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE005270 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE005270 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD5D988D0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCC8BC030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3621ED0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCA91DE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3FA6F30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCB9F010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD39B4840 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCB9F010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCF97C010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE2FC010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CC8A96030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D193EE050 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D1A103100 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCE005270 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CD3FA6F30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019CCCB9F010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000019D1A103100 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.305 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2306ms)
+		BeginReloadAssembly (127ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (2081ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (299ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (1478ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (1284ms)
+				ProcessInitializeOnLoadMethodAttributes (92ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4138 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 404 unused Assets / (54.8 KB). Loaded Objects now: 4617.
+Memory consumption went from 160.8 MB to 160.7 MB.
+Total: 6.568300 ms (FindLiveObjects: 0.333100 ms CreateObjectMapping: 0.367100 ms MarkObjects: 5.648100 ms  DeleteObjects: 0.218800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 

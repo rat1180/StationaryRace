@@ -3253,7 +3253,17 @@ MonoBehaviour:
   roomIDnum: 0
   host: 526f90f3b7b216bc4bf5daaa.game.strixcloud.net
   applicationId: aca1df66-dc7c-4d27-a495-f1469fa041cb
+  port: 9122
   logLevel: 2
+  SystemINF: {fileID: 0}
+  capacity: 4
+  roomName: New Room
+  onRoomEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  onRoomEnterFailed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1934040051
 Transform:
   m_ObjectHideFlags: 0
@@ -3494,5 +3504,13 @@ PrefabInstance:
       propertyPath: objectType
       value: 1310721
       objectReference: {fileID: 0}
+    - target: {fileID: 8023468220298864099, guid: a7554719ae1bac84eb642070a64e1805, type: 3}
+      propertyPath: strixBehaviours.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023468220298864099, guid: a7554719ae1bac84eb642070a64e1805, type: 3}
+      propertyPath: strixBehaviours.Array.data[2]
+      value: 
+      objectReference: {fileID: 884253561}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7554719ae1bac84eb642070a64e1805, type: 3}

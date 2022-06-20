@@ -76,7 +76,6 @@ public class GMSystem : MonoBehaviour
     void Start()
     {
         InitSet();
-        StartRace();
         //Invoke("CarSpawn", 5);
     }
 

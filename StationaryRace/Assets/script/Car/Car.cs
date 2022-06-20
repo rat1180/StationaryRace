@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using SoftGear.Strix.Unity.Runtime;
 
-public class Car : MonoBehaviour
+public class Car : StrixBehaviour
 {
     #region 変数
     Rigidbody rb;
@@ -205,7 +206,7 @@ public class Car : MonoBehaviour
                 upspeed = rb.velocity.magnitude + 200;    // 現在のスピードを取得 + 20することで速さが20より下がらなくする
             }
         }
-        Debug.Log("現在の速度" + rb.velocity.magnitude);  // ゲームオブジェクトの速さ表示 velocityは速度ベクトル magnitudeはベクトルの長さの取得
+       // Debug.Log("現在の速度" + rb.velocity.magnitude);  // ゲームオブジェクトの速さ表示 velocityは速度ベクトル magnitudeはベクトルの長さの取得
 
     }
 

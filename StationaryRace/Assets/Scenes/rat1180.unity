@@ -767,7 +767,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 200
     m_FontStyle: 0
     m_BestFit: 0
@@ -1825,7 +1825,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -2223,7 +2223,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2273,6 +2273,7 @@ MonoBehaviour:
   cnttime: 3
   CountText: {fileID: 1084493220}
   panel: {fileID: 519620338}
+  counttime: {fileID: 0}
   cntflg: 0
   gamestart: 0
 --- !u!4 &1881577961
@@ -2372,6 +2373,10 @@ PrefabInstance:
     - target: {fileID: 7794635936760750860, guid: 7260664707620914186e137b49445910, type: 3}
       propertyPath: objectType
       value: 262145
+      objectReference: {fileID: 0}
+    - target: {fileID: 7794635936760750860, guid: 7260664707620914186e137b49445910, type: 3}
+      propertyPath: strixBehaviours.Array.size
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7260664707620914186e137b49445910, type: 3}

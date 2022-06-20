@@ -17,7 +17,7 @@ public class CountTime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cntflg = true;
+        //cntflg = true;
         gamestart = 0;
     }
 
@@ -62,6 +62,11 @@ public class CountTime : MonoBehaviour
     public int GetGameStart()
     {
         return gamestart;
+    }
+
+    public void CountStart()
+    {
+        cntflg = true;
     }
 
 }

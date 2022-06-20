@@ -28,7 +28,7 @@ public class SystemINF : StrixBehaviour
         
     }
 
-    void USERcntRESET()
+    public void USERcntRESET()
     {
         USERcnt = -1;
     }
@@ -38,7 +38,7 @@ public class SystemINF : StrixBehaviour
     /// ˆø”‚Ímode,–ß‚è’l‚Ímode‚É‚æ‚Á‚Ä•Ï“®
     /// 0‚È‚ç‘‚â‚³‚¸•Ô‚·B1‚ª’Êí‚Å‘‚â‚µ‚Ä‚©‚ç•Ô‚·
     /// </summary>
-    int USERcntSET(int mode)
+    public int USERcntSET(int mode)
     {
         USERcnt += mode;
 

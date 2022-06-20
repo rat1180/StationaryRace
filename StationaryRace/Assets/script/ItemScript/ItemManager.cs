@@ -9,14 +9,18 @@ public class ItemManager : MonoBehaviour
     private int USER_NUMBER; //ユーザ番号を入れる箱
     private int USER_ALL = 8;//ユーザの総数を入れる箱
     private Vector3 Rocket; //プレイヤーの位置を取得
-    private Vector3 RocketA;//プレイヤーの前方の位置を取得
-    private Vector3 RocketB;//プレイヤーの後方の位置を取得
+    private Vector3 RocketA;//プレイヤーの後方の位置を取得
+    private Vector3 RocketB;//プレイヤーの前方の位置を取得
+    private Quaternion RocketBQ;
+    private Quaternion RocketAQ;
     GameObject R; //プレイヤーの位置を取得
     GameObject RA;
     GameObject RB;
     GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
     Car CarSc;
-
+    GameObject ItemUI;
+    GameObject INDIA_INK;
+    INDIA_INK InkSc;
 
     //アイテムのゲームオブジェクト宣言
     public GameObject ERASER_RESIDDUE;
@@ -27,9 +31,6 @@ public class ItemManager : MonoBehaviour
     public GameObject TAPE_BALL;
     public GameObject SCOTCH_TAPE;
     public GameObject MAGIC_PEN;
-    public GameObject ORIGAMI_CRANE;
-    public GameObject BIRIBIRI_PEN;
-    public GameObject INDIA_INK;
     public GameObject CARDBOARD;
 
 
@@ -39,6 +40,11 @@ public class ItemManager : MonoBehaviour
     {
         Player = GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
         CarSc = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
+
+        ItemUI = transform.GetChild(0).gameObject;
+        INDIA_INK = ItemUI.GetComponent<Transform>().transform.GetChild(0).gameObject;
+
+        InkSc= INDIA_INK.GetComponent<INDIA_INK>();
         R = GameObject.Find("Car");//プレイヤーの座標を取得
         RA = GameObject.Find("ItemRocketA");//アイテムロケットの座標を取得(AはAfter)
         RB = GameObject.Find("ItemRocketB");//アイテムロケットの座標を取得(BはBefore)
@@ -50,6 +56,8 @@ public class ItemManager : MonoBehaviour
         Rocket = R.transform.position;
         RocketA = RA.transform.position;
         RocketB = RB.transform.position;
+        RocketAQ = RA.transform.rotation;
+        RocketBQ = RB.transform.rotation;
     }
 
     //itemblockが破壊された際にこれを呼ぶ.
@@ -123,21 +131,22 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.KESHIKASU_BOM://ケシカス爆弾.
                 Debug.Log("USE:KESHIKASU_BOM!");
-                Instantiate(KESHIKASU_BOM, RocketB, Quaternion.identity);//ケシカスのプレファブを使いまわす
+                Instantiate(KESHIKASU_BOM, RocketB, RocketBQ);//ケシカスのプレファブを使いまわす
                 break;
             case ITEMConst.ITEM.BLACKBOARD_ERASER://黒板けし.
                 Debug.Log("USE:BLACKBOARD_ERASER!");
-                RocketB.y += 5;
-                Instantiate(BLACKBOARD_ERASER, RocketB, Quaternion.identity);
+                RocketA.y += 5;
+                Instantiate(BLACKBOARD_ERASER, RocketA, RocketAQ);
                 break;
             case ITEMConst.ITEM.MECHANICAL_PEN_LEAD://シャー芯.
-                Instantiate(MECHANICAL_PEN_LEAD, RocketB, Quaternion.Euler(90, 0, 0));
+                RocketB.y += 5;
+                Instantiate(MECHANICAL_PEN_LEAD, RocketB, RocketBQ);
                 Debug.Log("USE:MECHANICAL_PEN_LEAD!");
                 break;
             case ITEMConst.ITEM.STICKY_NOTE://付箋.
                 Debug.Log("USE:STICKY_NOTE!");
-                Rocket.y += 10;
-                Instantiate(STICKY_NOTE, RocketB, Quaternion.identity);
+                //Rocket.y += 10;
+                Instantiate(STICKY_NOTE, RocketB, RocketBQ);
                 break;
             case ITEMConst.ITEM.TAPE_BALL://丸めたテープ.
                 Debug.Log("USE:TAPE_BALL!");
@@ -145,7 +154,7 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.SCOTCH_TAPE://セロハンテープ.
                 Debug.Log("USE:SCOTCH_TAPE!");
-                Instantiate(SCOTCH_TAPE, RocketA, Quaternion.identity);
+                Instantiate(SCOTCH_TAPE, RocketA, RocketAQ);
                 break;
             case ITEMConst.ITEM.MAGIC_PEN://マジックペン.
                 Debug.Log("USE:MAGIC_PEN!");
@@ -157,14 +166,16 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.BIRIBIRI_PEN://ビリビリペン.
                 Debug.Log("USE:BIRIBIRI_PEN!");
-                //CarSc.
+                //CarSc.Pos.y += 10f;
+                CarSc.BIRIBIRI_PEN();
                 break;
             case ITEMConst.ITEM.INDIA_INK://墨汁.
                 Debug.Log("USE:INDIA_INK!");
-                //Instantiate(INDIA_INK, RocketB, Quaternion.identity);
+                
                 break;
             case ITEMConst.ITEM.CARDBOARD://段ボール.
                 Debug.Log("USE:CARDBOARD!");
+                RocketA.y += 5;
                 Instantiate(CARDBOARD, RocketA, Quaternion.identity);
                 break;
             default:

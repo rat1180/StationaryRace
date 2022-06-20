@@ -18,11 +18,14 @@ namespace ITEMConst
         public const int INDIA_INK           = 111; //墨汁.
         public const int ORIGAMI_CRANE       = 112; //鶴の折り紙.☆
 
+        //newアイテム
+        public const int CARDBOARD_WALL      = 113; //段ボールの壁
+
         //順位によってのアイテム数値の最大値・最小値
         //public const int ItemMin = 101; //最小の値
         //public const int ItemMax = 113; //最大の値（最大の値に+1して範囲に入れる）
-        public const int ItemMin = 109; //最小の値
-        public const int ItemMax = 113; //最大の値（最大の値に+1して範囲に入れる）
+        public const int ItemMin = 106; //最小の値
+        public const int ItemMax = 107; //最大の値（最大の値に+1して範囲に入れる）
         public const int UpperMin  = 101; //上位のアイテム最小値
         public const int UpperMax  = 107; //上位のアイテム最大値
         public const int MediumMin = 103; //中位のアイテム最小値

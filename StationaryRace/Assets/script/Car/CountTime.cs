@@ -13,6 +13,7 @@ public class CountTime : MonoBehaviour
     public GameObject counttime;
     public bool cntflg;
     public int gamestart = 0;
+    public GameObject GMSytem;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +51,7 @@ public class CountTime : MonoBehaviour
             }
             if (cnttime <= -1)
             {
+                GMSytem.GetComponent<GMSystem>().StartRace();
                 Destroy(panel);
                 Destroy(counttime);
                 panel.SetActive(false);

@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ITEMConst;
+using SoftGear.Strix.Client.Core.Auth.Message;
+using SoftGear.Strix.Client.Core.Error;
+using SoftGear.Strix.Client.Core.Model.Manager.Filter;
+using SoftGear.Strix.Client.Core;
+using SoftGear.Strix.Unity.Runtime;
+using SoftGear.Strix.Net.Logging;
+using SoftGear.Strix.Unity.Runtime.Event;
 
 public class GMSystem : MonoBehaviour
 {
@@ -19,9 +26,6 @@ public class GMSystem : MonoBehaviour
     //0:停止状態 1:スタート前 2:レース中 3:レース後 
     private int GameFlg;
 
-    //ランク配列(今は一つ)
-    private int[] Rank;
-
     //コース番号
     private int CoseNm;
 
@@ -32,6 +36,9 @@ public class GMSystem : MonoBehaviour
     //時間計測用変数
     public double RaceTime;
     private bool TimerFlg;
+
+    //ゲーム終わり
+    GameObject GAMEOVER;
 
     /**************
      ユーザー系変数
@@ -45,6 +52,7 @@ public class GMSystem : MonoBehaviour
         public double CPTime;
         public int CPcnt;
         public int Rap;
+        public int Rank;
     }
 
     //ユーザー配列（通信形態によっては変更）
@@ -63,6 +71,9 @@ public class GMSystem : MonoBehaviour
         public int UserNm;
     }
 
+    //他ユーザーの情報の保存先
+    private GameObject SystemINF;
+
     /***************
      アイテム系変数
     ****************/
@@ -76,6 +87,8 @@ public class GMSystem : MonoBehaviour
     void Start()
     {
         InitSet();
+        //入退室イベント
+        StrixNetwork.instance.roomSession.roomClient.RoomJoinNotified += PlayerJoined;
         //Invoke("CarSpawn", 5);
     }
 
@@ -94,7 +107,7 @@ public class GMSystem : MonoBehaviour
     public void InitSet()
     {
         //レース前のシーンからもらう
-        Players = 4; //5-1
+        Players = 3; //4-1
         CoseNm = 0;
 
         //スタート前準備
@@ -102,35 +115,32 @@ public class GMSystem : MonoBehaviour
         Rapmax = 1;
         CPSet();
 
+        //他ユーザー情報の確認
+        SystemINF = GameObject.Find("SystemINF");
+        if (SystemINF == null)
+        {
+            Debug.Log("null");
+        }
+
         //ユーザー(自分)
         User.USER = transform.Find("User").gameObject;
-        User.USERNm = 0;
+        User.USERNm = USERnmGet();
         User.CPcnt = 0;
         User.CPTime = 0;
         User.Rap = 1;
+        User.Rank = 1;
         NmSend();
         //User.USER.GetComponent<UserOperation>().RankSet();
 
         //ランク用変数と他ユーザー用配列の生成
         //処理手順によって場所を変える
-        Rank = new int[Players];
         Users = new USERTIME[Players];
-        for (int i = 0; i < Players; i++)
-        {
-            Rank[i] = i;
-            if (i != User.USERNm)
-            {
-                Users[i].UserNm = i;
-            }
-            else
-            {
-                //自分の位置なので情報入れない
-                Users[i].UserNm = -1;
-            }
-        }
 
         //アイテム
         //ItemManager = transform.Find("ItemManager").gameObject;
+
+        //GAMEOVER = GameObject.Find("TimeText");
+        //GAMEOVER.SetActive(false);
     }
 
     //レーススタート
@@ -149,7 +159,7 @@ public class GMSystem : MonoBehaviour
         GameObject SPlist = this.transform.Find("SpawnList").gameObject;
         Vector3 SPp = SPlist.transform.GetChild(User.USERNm).gameObject.GetComponent<Transform>().position;
         Quaternion SPr = SPlist.transform.GetChild(User.USERNm).gameObject.GetComponent<Transform>().rotation;
-        User.USER.GetComponent<UserOperation>().SPCar(SPp,SPr);
+        User.USER.GetComponent<UserOperation>().SPCar(SPp, SPr);
     }
 
     /// <summary>
@@ -160,7 +170,7 @@ public class GMSystem : MonoBehaviour
     {
         GameObject CPtmp;
         GameObject CPlist = this.transform.Find("CPList").gameObject;
-        for (CPmax = 0;CPmax < CPlist.transform.childCount; CPmax++)
+        for (CPmax = 0; CPmax < CPlist.transform.childCount; CPmax++)
         {
             CPtmp = CPlist.transform.GetChild(CPmax).gameObject;
             CPtmp.GetComponent<CheckPoint>().CPset(CPmax);
@@ -180,22 +190,19 @@ public class GMSystem : MonoBehaviour
     /// </summary>
     private void NmSend()
     {
-        int Er = User.USER.GetComponent<UserOperation>().InitUser(User.USERNm, CPmax - 1, Rapmax) ;
-        if(Er != 0)
+        int Er = User.USER.GetComponent<UserOperation>().InitUser(User.USERNm, CPmax - 1, Rapmax);
+        if (Er != 0)
         {
             GameFlg = 0;
         }
     }
 
     //ユーザー番号に応じた順位を返す
-    public int RankGet(int Nm)
+    public int RankGet()
     {
-        for (int i = 0; i < Players; i++)
+        if(User.Rank >= 1 || User.Rank <= 4)
         {
-            if (Rank[i] == Nm)
-            {
-                return i + 1;
-            }
+            return User.Rank;
         }
 
         //エラー
@@ -203,33 +210,62 @@ public class GMSystem : MonoBehaviour
     }
 
     //CP通過による処理(他ユーザーからの情報だけ入れる)
-    public void CPpass(USERTIME rUSER)
+    public void CPpass(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
     {
-        for(int i = 0; i < Players; i++)
+        if (rUSERNm != User.USERNm)
         {
-            if(Users[i].UserNm == rUSER.UserNm)
+            for (int i = 0; i < Players; i++)
             {
-                Users[i] = rUSER;
+                if (Users[i].UserNm == rUSERNm)
+                {
+                    Users[i].CPTime = rUSERTime;
+                    Users[i].CPcnt = rUSERCPcnt;
+                    Users[i].Rap = rUSERRap;
+                }
             }
         }
+        Ranking();
     }
 
     //自分が通過したときに呼び出す（通過と同時）
-    public void MyCPpass(int MyCPcnt,int MyRap)
+    public void MyCPpass(int MyCPcnt, int MyRap)
     {
         User.CPTime = TimeGet();
         User.CPcnt = MyCPcnt;
         User.Rap = MyRap;
 
-        if(MyRap == Rapmax)
+        if (MyRap == Rapmax)
         {
             TimerFlg = false;
             Debug.Log("ゴールタイム:" + (User.CPTime).ToString("f3"));
-
+            //GAMEOVER.SetActive(true);
+            //GAMEOVER.GetComponent<Result>().Decide_Timer(User.CPTime);
         }
+
+        SystemINF.GetComponent<SystemINF>().USERCP(User.USERNm, User.CPTime, User.CPcnt, User.Rap);
     }
 
     //順位判定
+    public void Ranking()
+    {
+        User.Rank = 1;
+        for (int j = 0; j < Players; j++)
+        {
+            if(User.Rap < Users[j].Rap)
+            {
+                User.Rank++;
+            }
+            else if(User.CPcnt < Users[j].CPcnt)
+            {
+                User.Rank++;
+            }
+            else if(User.CPTime < Users[j].CPTime)
+            {
+                User.Rank++;
+            }
+
+        }
+    } 
 
     #endregion
 
@@ -250,6 +286,26 @@ public class GMSystem : MonoBehaviour
     public double TimeGet()
     {
         return RaceTime;
+    }
+
+    //番号の取得
+    public int USERnmGet()
+    {
+        int Usernm = SystemINF.GetComponent<SystemINF>().USERcntSET(1);
+        return Usernm;
+    }
+
+    //参加するたび情報を入れる
+    void PlayerJoined(object sender)
+    {
+        int Usernm = SystemINF.GetComponent<SystemINF>().USERcntSET(0);
+        for(int i = 0; i < Players; i++)
+        {
+            if(Users[i].UserNm == null)
+            {
+                Users[i].UserNm = Usernm;
+            }
+        }
     }
 
 }

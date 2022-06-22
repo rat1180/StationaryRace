@@ -42,6 +42,7 @@ public class ONSystem : MonoBehaviour
 
     void Awake()
     {
+
         var strixNetwork = StrixNetwork.instance;
 
         strixNetwork.applicationId = applicationId;
@@ -154,12 +155,6 @@ public class ONSystem : MonoBehaviour
         }, args => {
             onRoomEnterFailed.Invoke();
         });
-    }
-
-    public void USERnmGet()
-    {
-        int Usernm = SystemINF.GetComponent<SystemINF>().USERcntSET(1);
-
     }
 
     #region ÉåÅ[ÉX

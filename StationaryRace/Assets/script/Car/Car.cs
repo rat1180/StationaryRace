@@ -72,12 +72,18 @@ public class Car : StrixBehaviour
         // ‰Šú‚Í—ÎF
         hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);
 
+        if (!isLocal)
+        {
+            transform.Find("Main Camera1").gameObject.SetActive(false);
+        }
+
         #endregion
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!isLocal) return;
         gamestart = counttime.GetGameStart();
         //Debug.Log(gamestart);
         if (gamestart == 1)

@@ -9,19 +9,22 @@ ScriptsOnlyBuild:
     - ERASER_RESIDDUE
     - GMSystem
     - ItemManager
-    - LastShortCut
     - MAGIC_PEN
     - MECHANICAL_PEN_LEAD
     - ONSystem
+    - ParticleDestory
     - SCOTCH_TAPE
     - STICKY_NOTE
     - SoftGear.Strix.Unity.Runtime.StrixDebugHUD
+    - StrixConnectGUI
+    - StrixEnterRoom
     - SystemINF
     - TAPE_BALL
     - UI
     - UniHumanoid.HumanPoseClip
     - UserOperation
     - WaitMacth
+    - itemblock
     StrixUnityRuntime.dll:
     - SoftGear.Strix.Unity.Runtime.StrixReplicator
     - SoftGear.Strix.Unity.Runtime.StrixReplicatorSettings
@@ -57,11 +60,12 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/Marge.unity:
+    Assets/Scenes/rat1180.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -90,6 +94,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -103,6 +111,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1844}
     - Class: 114
+      Script: {instanceID: 1868}
+    - Class: 114
       Script: {instanceID: 2188}
     - Class: 114
       Script: {instanceID: 2426}
@@ -112,6 +122,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3004}
     - Class: 114
       Script: {instanceID: 3038}
+    - Class: 114
+      Script: {instanceID: 3052}
+    - Class: 114
+      Script: {instanceID: 3314}
     - Class: 114
       Script: {instanceID: 3320}
     - Class: 114
@@ -127,8 +141,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3898}
     - Class: 114
-      Script: {instanceID: 4788}
-    - Class: 114
       Script: {instanceID: 4808}
     - Class: 114
       Script: {instanceID: 4942}
@@ -140,6 +152,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5610}
     - Class: 114
       Script: {instanceID: 5752}
+    - Class: 114
+      Script: {instanceID: 6006}
     - Class: 114
       Script: {instanceID: 6078}
     - Class: 114
@@ -173,6 +187,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9090}
     - Class: 114
+      Script: {instanceID: 9220}
+    - Class: 114
       Script: {instanceID: 9428}
     - Class: 114
       Script: {instanceID: 9784}
@@ -191,6 +207,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -1385,7 +1405,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: 8728302f3e14230fa19ca1fae25d7e99
+      Hash: f1deaacc803b1d7992014626c1e21658
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WaitMacth
@@ -1685,5 +1705,5 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Marge.unity
+  - Assets/Scenes/rat1180.unity
   playerPath: C:/Users/nwuser.DA/Desktop/OnTest/StationeryRace.exe

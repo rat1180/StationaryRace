@@ -14,11 +14,15 @@ public class WaitMacth : MonoBehaviour
 {
     public GameObject GMSystem;
     public bool RoomFlg = false;
+    public GameObject Button;
+    public GameObject CountTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Button = transform.Find("Canvas/RdButton").gameObject;
+        Button.SetActive(false);
+        CountTime = GameObject.Find("CountTime").gameObject;
     }
 
     // Update is called once per frame
@@ -34,7 +38,7 @@ public class WaitMacth : MonoBehaviour
     {
         if (CheckAllRoomMembersState(1))
         {
-            //GMSystem.GetComponent<GMSystem>().StartRace();
+            CountTime.GetComponent<CountTime>().CountStart();
             this.gameObject.SetActive(false);
         }
 
@@ -85,6 +89,7 @@ public class WaitMacth : MonoBehaviour
     public void RoomIn()
     {
         RoomFlg = true;
+        Button.SetActive(true);
         Debug.Log("In");
     }
 

@@ -5,17 +5,23 @@ ScriptsOnlyBuild:
     - Car
     - Car_On
     - CheckPoint
+    - CountTime
     - ERASER_RESIDDUE
     - GMSystem
     - ItemManager
+    - LastShortCut
     - MAGIC_PEN
     - MECHANICAL_PEN_LEAD
+    - ONSystem
     - SCOTCH_TAPE
     - STICKY_NOTE
+    - SoftGear.Strix.Unity.Runtime.StrixDebugHUD
+    - SystemINF
     - TAPE_BALL
     - UI
     - UniHumanoid.HumanPoseClip
     - UserOperation
+    - WaitMacth
     StrixUnityRuntime.dll:
     - SoftGear.Strix.Unity.Runtime.StrixReplicator
     - SoftGear.Strix.Unity.Runtime.StrixReplicatorSettings
@@ -45,12 +51,17 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/margeALL.unity:
+    Assets/Scenes/Marge.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -86,63 +97,85 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1638}
-    - Class: 114
       Script: {instanceID: 1640}
     - Class: 114
-      Script: {instanceID: 2176}
+      Script: {instanceID: 1642}
     - Class: 114
-      Script: {instanceID: 2414}
+      Script: {instanceID: 1844}
     - Class: 114
-      Script: {instanceID: 2832}
+      Script: {instanceID: 2188}
     - Class: 114
-      Script: {instanceID: 2986}
+      Script: {instanceID: 2426}
     - Class: 114
-      Script: {instanceID: 3020}
+      Script: {instanceID: 2848}
     - Class: 114
-      Script: {instanceID: 3300}
+      Script: {instanceID: 3004}
     - Class: 114
-      Script: {instanceID: 3396}
+      Script: {instanceID: 3038}
     - Class: 114
-      Script: {instanceID: 3674}
+      Script: {instanceID: 3320}
     - Class: 114
-      Script: {instanceID: 3874}
+      Script: {instanceID: 3416}
     - Class: 114
-      Script: {instanceID: 4774}
+      Script: {instanceID: 3636}
     - Class: 114
-      Script: {instanceID: 4908}
+      Script: {instanceID: 3694}
     - Class: 114
-      Script: {instanceID: 5258}
+      Script: {instanceID: 3850}
     - Class: 114
-      Script: {instanceID: 5572}
+      Script: {instanceID: 3880}
     - Class: 114
-      Script: {instanceID: 5714}
+      Script: {instanceID: 3898}
     - Class: 114
-      Script: {instanceID: 6140}
+      Script: {instanceID: 4788}
     - Class: 114
-      Script: {instanceID: 6232}
+      Script: {instanceID: 4808}
     - Class: 114
-      Script: {instanceID: 6234}
+      Script: {instanceID: 4942}
     - Class: 114
-      Script: {instanceID: 6236}
+      Script: {instanceID: 5294}
     - Class: 114
-      Script: {instanceID: 6516}
+      Script: {instanceID: 5406}
     - Class: 114
-      Script: {instanceID: 6916}
+      Script: {instanceID: 5610}
     - Class: 114
-      Script: {instanceID: 7324}
+      Script: {instanceID: 5752}
     - Class: 114
-      Script: {instanceID: 7556}
+      Script: {instanceID: 6078}
     - Class: 114
-      Script: {instanceID: 8252}
+      Script: {instanceID: 6090}
     - Class: 114
-      Script: {instanceID: 8534}
+      Script: {instanceID: 6182}
     - Class: 114
-      Script: {instanceID: 9018}
+      Script: {instanceID: 6276}
     - Class: 114
-      Script: {instanceID: 9348}
+      Script: {instanceID: 6278}
     - Class: 114
-      Script: {instanceID: 9696}
+      Script: {instanceID: 6280}
+    - Class: 114
+      Script: {instanceID: 6562}
+    - Class: 114
+      Script: {instanceID: 6966}
+    - Class: 114
+      Script: {instanceID: 7376}
+    - Class: 114
+      Script: {instanceID: 7608}
+    - Class: 114
+      Script: {instanceID: 7950}
+    - Class: 114
+      Script: {instanceID: 8138}
+    - Class: 114
+      Script: {instanceID: 8314}
+    - Class: 114
+      Script: {instanceID: 8422}
+    - Class: 114
+      Script: {instanceID: 8544}
+    - Class: 114
+      Script: {instanceID: 9090}
+    - Class: 114
+      Script: {instanceID: 9428}
+    - Class: 114
+      Script: {instanceID: 9784}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -266,7 +299,7 @@ ScriptsOnlyBuild:
     className: SimpleScript
   - hash:
       serializedVersion: 2
-      Hash: f30c432330b8c0bc777fcd31f359816a
+      Hash: db562fa6f27c65f8a2622d141b54d869
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UserOperation
@@ -326,7 +359,7 @@ ScriptsOnlyBuild:
     className: UnityOnBecameVisibleMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: aa45f58ac23120a6caa25282f1fc2452
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GMSystem
@@ -572,6 +605,12 @@ ScriptsOnlyBuild:
     className: BlackScreen
   - hash:
       serializedVersion: 2
+      Hash: 277c9cc2415da22e88db6792a349d201
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SystemINF
+  - hash:
+      serializedVersion: 2
       Hash: 9812910a4f6439866e7faf415f733f1b
     assemblyName: Assembly-CSharp.dll
     namespaceName: UniHumanoid
@@ -692,7 +731,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 0444b1b8b0a2b8d39f4bb0431e3c6aad
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LastShortCut
@@ -848,7 +887,7 @@ ScriptsOnlyBuild:
     className: TMP_ExampleScript_01
   - hash:
       serializedVersion: 2
-      Hash: ff4819881eeff596241c6cf50785dcea
+      Hash: 5666d84884b86d9c1362cda172642ec3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ONSystem
@@ -1178,12 +1217,6 @@ ScriptsOnlyBuild:
     className: MAGIC_PEN
   - hash:
       serializedVersion: 2
-      Hash: 254580776d23c08a509b81d869772bb0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Ranking
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -1232,6 +1265,12 @@ ScriptsOnlyBuild:
     className: titletenmetu
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: compass
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1242,6 +1281,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_FrameRateCounter
+  - hash:
+      serializedVersion: 2
+      Hash: 53962156c285fc6e5ae2ae21cc5ba6cc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Car
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1340,6 +1385,12 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
+      Hash: 8728302f3e14230fa19ca1fae25d7e99
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WaitMacth
+  - hash:
+      serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1364,6 +1415,12 @@ ScriptsOnlyBuild:
     className: UnityOnScrollRectValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 9fc6f5b9621c1065f5de0152997ed1cf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CountTime
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -1380,12 +1437,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSubmitMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: a8b654e12ee0b3e7f09edf5b971331a2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Car
   - hash:
       serializedVersion: 2
       Hash: a81d4c2c1cf3ad164d277d927a193679
@@ -1634,5 +1685,5 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 19
   scenePathNames:
-  - Assets/Scenes/margeALL.unity
-  playerPath: C:/Users/nwuser.DA/Desktop/StationeryRace.exe
+  - Assets/Scenes/Marge.unity
+  playerPath: C:/Users/nwuser.DA/Desktop/OnTest/StationeryRace.exe

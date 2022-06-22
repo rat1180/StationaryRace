@@ -115,8 +115,6 @@ public class UserOperation : MonoBehaviour
         {
             ItemSend();
         }
-        KeyListener();
-        //KeySend();
     }
 
     /************
@@ -165,49 +163,49 @@ public class UserOperation : MonoBehaviour
      Update処理
     ************/
 
-    private void KeyListener()
-    {
-        //各キーの入力処理
-        if (Input.GetKey(KeyCode.A))
-        {
-            Key.AcceleKey = true;
-        }
-        else
-        {
-            Key.AcceleKey = false;
-        }
+    //private void KeyListener()
+    //{
+    //    //各キーの入力処理
+    //    if (Input.GetKey(KeyCode.A))
+    //    {
+    //        Key.AcceleKey = true;
+    //    }
+    //    else
+    //    {
+    //        Key.AcceleKey = false;
+    //    }
 
-        if (Input.GetKey(KeyCode.B))
-        {
-            Key.BrakeKey = true;
-        }
-        else
-        {
-            Key.BrakeKey = false;
-        }
+    //    if (Input.GetKey(KeyCode.B))
+    //    {
+    //        Key.BrakeKey = true;
+    //    }
+    //    else
+    //    {
+    //        Key.BrakeKey = false;
+    //    }
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Key.ItemKey = true;
-        }
-        else
-        {
-            Key.ItemKey = false;
-        }
+    //    if (Input.GetKey(KeyCode.Space))
+    //    {
+    //        Key.ItemKey = true;
+    //    }
+    //    else
+    //    {
+    //        Key.ItemKey = false;
+    //    }
 
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            Key.HandleKey = RIGHT;
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            Key.HandleKey = LEFT;
-        }
-        else
-        {
-            Key.HandleKey = NULL;
-        }
-    }
+    //    if (Input.GetKey(KeyCode.RightArrow))
+    //    {
+    //        Key.HandleKey = RIGHT;
+    //    }
+    //    else if (Input.GetKey(KeyCode.LeftArrow))
+    //    {
+    //        Key.HandleKey = LEFT;
+    //    }
+    //    else
+    //    {
+    //        Key.HandleKey = NULL;
+    //    }
+    //}
     
     /**************
      機体との通信
@@ -315,7 +313,7 @@ public class UserOperation : MonoBehaviour
     //ゲームが始まった時とCP通過時にシステムからもらう
     public void RankSet()
     {
-        int NewRank = GMSystem.GetComponent<GMSystem>().RankGet(UserNm);
+        int NewRank = GMSystem.GetComponent<GMSystem>().RankGet();
 
         //ランクの変動がなければ行わない
         if (Rank == NewRank)

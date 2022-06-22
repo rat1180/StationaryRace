@@ -692,6 +692,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GMSystem: {fileID: 374231415}
   RoomFlg: 0
+  Button: {fileID: 0}
+  CountTime: {fileID: 0}
 --- !u!4 &819964746
 Transform:
   m_ObjectHideFlags: 0
@@ -767,7 +769,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 200
     m_FontStyle: 0
     m_BestFit: 0
@@ -1825,7 +1827,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -2144,7 +2146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73.1174, y: 13.7095}
+  m_AnchoredPosition: {x: -8, y: -214}
   m_SizeDelta: {x: 306.2349, y: 57.419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1874312238
@@ -2273,9 +2275,10 @@ MonoBehaviour:
   cnttime: 3
   CountText: {fileID: 1084493220}
   panel: {fileID: 519620338}
-  counttime: {fileID: 0}
+  counttime: {fileID: 1084493220}
   cntflg: 0
   gamestart: 0
+  GMSytem: {fileID: 374231415}
 --- !u!4 &1881577961
 Transform:
   m_ObjectHideFlags: 0
@@ -2304,7 +2307,7 @@ PrefabInstance:
       objectReference: {fileID: 1119253667}
     - target: {fileID: 1661868151206153119, guid: 7260664707620914186e137b49445910, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2392126130803540815, guid: 7260664707620914186e137b49445910, type: 3}
       propertyPath: m_RootOrder
@@ -2364,7 +2367,7 @@ PrefabInstance:
       objectReference: {fileID: 1881577960}
     - target: {fileID: 2546234741325753609, guid: 7260664707620914186e137b49445910, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7794635936760750860, guid: 7260664707620914186e137b49445910, type: 3}
       propertyPath: m_Enabled

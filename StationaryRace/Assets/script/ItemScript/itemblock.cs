@@ -20,7 +20,7 @@ public class itemblock : MonoBehaviour
         audioSource = GetComponent<AudioSource>();  //オーディオソースの取得.
         ItemMana = GameObject.Find("ITEMManager");  //アイテムマネージャーを取得.
         Player = GameObject.Find("Car");            //プレイヤーのゲームオブジェクトを取得.
-        //ItemHave = Player.GetComponent<Car_On>(); //プレイヤーのスクリプトを参照する.
+        ItemHave = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
     }
 
     // Update is called once per frame
@@ -48,12 +48,12 @@ public class itemblock : MonoBehaviour
          this.gameObject.SetActive(false);                                           //アイテムブロックのゲームオブジェクトを非表示にする.
          Instantiate(SetBox_particle, this.transform.position, Quaternion.identity); //パーティクルを生成.
 
-            //if (ItemHave.itemhave == false)//プレイヤーがアイテムを持っていなければアイテムマネージャーに数値を渡す.
-            //{
-            //    //USER_NUM = ItemHave.NUMBER_RETURN();                         //どのプレイヤーがアイテムを取得したか番号を参照.
-            //    ItemMana.GetComponent<ItemManager>().Item(USER_NUM); //ItemManagerというスクリプトのItem関数を使う.
-            //    ItemHave.itemhave = true;                                         //プレーヤースクリプトでアイテムフラグをtrueにする.
-            //}
+            if (ItemHave.itemhave == false)//プレイヤーがアイテムを持っていなければアイテムマネージャーに数値を渡す.
+            {
+                //USER_NUM = ItemHave.NUMBER_RETURN();                         //どのプレイヤーがアイテムを取得したか番号を参照.
+                ItemMana.GetComponent<ItemManager>().Item(); //ItemManagerというスクリプトのItem関数を使う.
+                ItemHave.itemhave = true;                                         //プレーヤースクリプトでアイテムフラグをtrueにする.
+            }
             Invoke("Respawn", 3); //3秒後にその場に複製される.
         }
     }

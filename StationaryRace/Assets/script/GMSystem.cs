@@ -76,7 +76,6 @@ public class GMSystem : MonoBehaviour
     void Start()
     {
         InitSet();
-        StartRace();
         //Invoke("CarSpawn", 5);
     }
 
@@ -226,6 +225,7 @@ public class GMSystem : MonoBehaviour
         {
             TimerFlg = false;
             Debug.Log("ÉSÅ[ÉãÉ^ÉCÉÄ:" + (User.CPTime).ToString("f3"));
+
         }
     }
 

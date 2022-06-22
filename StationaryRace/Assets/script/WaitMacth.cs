@@ -34,7 +34,7 @@ public class WaitMacth : MonoBehaviour
     {
         if (CheckAllRoomMembersState(1))
         {
-            GMSystem.GetComponent<GMSystem>().StartRace();
+            //GMSystem.GetComponent<GMSystem>().StartRace();
             this.gameObject.SetActive(false);
         }
 

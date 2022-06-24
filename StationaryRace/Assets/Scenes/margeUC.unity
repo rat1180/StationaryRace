@@ -793,6 +793,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GMSystem: {fileID: 374231415}
   RoomFlg: 0
+  Button: {fileID: 0}
+  CountTime: {fileID: 0}
 --- !u!4 &819964746
 Transform:
   m_ObjectHideFlags: 0
@@ -1979,7 +1981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strixBehaviours:
   - {fileID: 1744646930}
-  objectType: 1310722
+  objectType: 1572866
   sendRate: 5
   syncDestroy: 1
   networkInstanceId: -1
@@ -2288,6 +2290,7 @@ MonoBehaviour:
   counttime: {fileID: 0}
   cntflg: 0
   gamestart: 0
+  GMSytem: {fileID: 0}
 --- !u!4 &1881577961
 Transform:
   m_ObjectHideFlags: 0
@@ -2406,7 +2409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7794635936760750860, guid: 7260664707620914186e137b49445910, type: 3}
       propertyPath: objectType
-      value: 1310721
+      value: 1572865
       objectReference: {fileID: 0}
     - target: {fileID: 7794635936760750860, guid: 7260664707620914186e137b49445910, type: 3}
       propertyPath: strixBehaviours.Array.size

@@ -390,9 +390,7 @@ public class Car : StrixBehaviour
         upspeed = speednow;
         ORIGAMI_CRANE.SetActive(false);
     }
-<<<<<<< HEAD
-}
-=======
+
     public void BIRIBIRI_PEN()
     {
         Pos.y += 1f;
@@ -413,4 +411,3 @@ public class Car : StrixBehaviour
         upspeed = 10f;
     }
 }
->>>>>>> TNC

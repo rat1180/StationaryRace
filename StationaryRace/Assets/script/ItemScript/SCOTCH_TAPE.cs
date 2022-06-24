@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class SCOTCH_TAPE : MonoBehaviour
 {
-    private int durability;
-    public Vector3 Pos;
+    public int durability;//耐久値
+    GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
+    Car CarSc;
+    Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        Player = GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
+        CarSc = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
         durability = 1;
-        Pos = this.transform.position;
     }
 
     // Update is called once per frame
@@ -20,15 +25,34 @@ public class SCOTCH_TAPE : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        Pos.y += 5;
-        Pos.z += 5;
     }
+
+    //ステージに当たった際にフラグを切り替える
     void OnCollisionEnter(Collision collision)
     {
-        // 衝突した相手にPlayerタグが付いているとき.
         if (collision.gameObject.tag == "Player")
+        //if (collision.gameObject.tag == "Stage")
+        {
+            {
+                durability -= 1;
+                CarSc.SpeedDown();
+                //this.GetComponent<BoxCollider>().isTrigger = true;//isTriggerをつける
+            }
+        }
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Stage")
+        {
+            rb.isKinematic = true;
+            this.GetComponent<Rigidbody>().useGravity = false;//グラビティをなくす
+        }
+        // 衝突した相手にPlayerタグが付いているとき.
+        if (collider.gameObject.tag == "Player")
         {
             durability -= 1;
+            CarSc.SpeedDown();
         }
     }
 }

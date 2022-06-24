@@ -60,7 +60,8 @@ public class Car : StrixBehaviour
         Performance();
 
         Accelflg = true;
-
+        ItemMana = GameObject.Find("ITEMManager");
+        IManager = ItemMana.GetComponent<ItemManager>();
         cp = GameObject.Find("CP");
         hitbox = GameObject.Find("HitBox");
         //User = this.transform.parent.gameObject;
@@ -96,7 +97,7 @@ public class Car : StrixBehaviour
         }
         //追加
         //スペースキーでアイテムの使用（テスト）
-        if (Input.GetKey(KeyCode.Space) && itemhave == true)
+        if (Input.GetKey(KeyCode.P) && itemhave == true)
         {
             IManager.Item_Use(ITEM_NUM);//アイテム使用
 
@@ -320,7 +321,7 @@ public class Car : StrixBehaviour
         if (collision.name.Contains("CP"))
         {
             int CPNm = collision.GetComponent<CheckPoint>().CheckP();
-            User.GetComponent<UserOperation>().CP(CPNm);
+            //User.GetComponent<UserOperation>().CP(CPNm);
         }
         // cp.GetComponent<CheckP>(); // CheckPointスクリプトの関数呼び出し
     }
@@ -389,4 +390,27 @@ public class Car : StrixBehaviour
         upspeed = speednow;
         ORIGAMI_CRANE.SetActive(false);
     }
+<<<<<<< HEAD
 }
+=======
+    public void BIRIBIRI_PEN()
+    {
+        Pos.y += 1f;
+        this.transform.position = Pos;
+    }
+
+    //スピードダウン
+    public void SpeedDown()
+    {
+        StartCoroutine("SpeedDownA");
+    }
+    public IEnumerator SpeedDownA()
+    {
+        rb.isKinematic = true;
+        yield return new WaitForSeconds(3.0f);
+
+        rb.isKinematic = false;
+        upspeed = 10f;
+    }
+}
+>>>>>>> TNC

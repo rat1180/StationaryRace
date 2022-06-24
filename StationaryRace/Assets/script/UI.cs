@@ -32,10 +32,21 @@ public class UI : MonoBehaviour
     public GameObject Item_nunber11;
     public GameObject Item_nunber12;
     //public Text ScoreText;
+
+    #region テスト
+    GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
+    Car CarSc;
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
         RankNunber1.SetActive(true);
+
+        #region テスト
+        Player = GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
+        CarSc = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
+        #endregion
     }
 
     // Update is called once per frame
@@ -104,18 +115,19 @@ public class UI : MonoBehaviour
         Item_nunber11.SetActive(false);
         Item_nunber12.SetActive(false);
 
-        switch (draw_item)
+        switch(CarSc.ITEM_NUM)
+        //switch (draw_item)
         {
             case ITEM.ERASER_RESIDDUE:
                 Item_nunber1.SetActive(true);
-                Debug.Log(draw_item);
+                //Debug.Log(draw_item);
                 break;
             case ITEM.BIRIBIRI_PEN:
                 Item_nunber2.SetActive(true);
                 break;
             case ITEM.MECHANICAL_PEN_LEAD:
                 Item_nunber3.SetActive(true);
-                Debug.Log(draw_item);
+                //Debug.Log(draw_item);
                 break;
             case ITEM.STICKY_NOTE:
                 Item_nunber4.SetActive(true);
@@ -137,7 +149,7 @@ public class UI : MonoBehaviour
                 break;
             case ITEM.BLACKBOARD_ERASER:
                 Item_nunber10.SetActive(true);
-                Debug.Log(draw_item);
+                //Debug.Log(draw_item);
                 break;
             case ITEM.ORIGAMI_CRANE:
                 Item_nunber11.SetActive(true);

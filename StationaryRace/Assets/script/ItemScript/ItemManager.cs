@@ -158,7 +158,8 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.MAGIC_PEN://マジックペン.
                 Debug.Log("USE:MAGIC_PEN!");
-                //Instantiate(MAGIC_PEN, RocketB, Quaternion.identity);
+                RocketB.z += 10;
+                Instantiate(MAGIC_PEN, RocketB, RocketBQ);
                 break;
             case ITEMConst.ITEM.ORIGAMI_CRANE://鶴の折り紙.
                 Debug.Log("USE:ORIGAMI_CRANE!");
@@ -166,12 +167,11 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.BIRIBIRI_PEN://ビリビリペン.
                 Debug.Log("USE:BIRIBIRI_PEN!");
-                //CarSc.Pos.y += 10f;
                 CarSc.BIRIBIRI_PEN();
                 break;
             case ITEMConst.ITEM.INDIA_INK://墨汁.
                 Debug.Log("USE:INDIA_INK!");
-                InkSc.Animation();
+                INK();
                 break;
             case ITEMConst.ITEM.CARDBOARD://段ボール.
                 Debug.Log("USE:CARDBOARD!");
@@ -184,6 +184,10 @@ public class ItemManager : MonoBehaviour
         CarSc.ITEM_NUM = ITEMConst.ITEM.ItemNull;//アイテムを使用（空にする）
     }
 
+    public void INK()
+    {
+        InkSc.Animation();
+    }
 
     #region ユーザー番号系
     //起動時にユーザーの数を取得する関数　ゲームマネージャーから取得

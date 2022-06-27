@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MainKitai : MonoBehaviour
 {
-    public int Player_Mode = 10;        //機体の状態
-    public GameObject Skin;            //オブジェクトの割り当て
-
     private const int CharacterChenge =  0;    //キャラ選択
     private const int StartRace       = 10;    //レース前
     private const int RaseNow         = 20;    //レース中
@@ -16,11 +13,11 @@ public class MainKitai : MonoBehaviour
     private const int DownStage       = 50;    //ステージから落ちた
     private const int ORIGAMI_CRANE   = 60;    //鶴の折り紙に変身
 
-    private int MachineNum = 0;         //機体番号
-    private int SkinNum = 0;
+    private float Atime = 10;           //テスト用タイマー
 
+    public int Player_Mode = 10;        //機体の状態
+    public GameObject Skin;             //オブジェクトの割り当て
     public CountTime countTime;         //CountTimeスクリプトへ参照
-    private float Atime = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -63,10 +60,14 @@ public class MainKitai : MonoBehaviour
                 Debug.Log("ゴール");
                 SceneManager.LoadScene("KitaiSelect");
                 break;
+            //攻撃アイテムに衝突
             case 40:
                 break;
             //落下時
             case 50:
+                break;
+            //鶴の折り紙に変身
+            case 60:
                 break;
             default:
                 Debug.Log("PlayerModeエラー");

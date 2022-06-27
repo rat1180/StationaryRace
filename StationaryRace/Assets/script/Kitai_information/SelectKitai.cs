@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SelectKitai : MonoBehaviour
 {
-    private int mode = 0;        //機体の状態
-    public GameObject Skin;            //オブジェクトの割り当て
-
-    private int MachineNum = 0;         //機体番号
+    private int mode = 0;              //機体の状態
+    private int MachineNum = 0;        //機体番号
     private int SkinNum = 0;
+
+    public GameObject Skin;            //オブジェクトの割り当て
 
     // Start is called before the first frame update
     void Start()

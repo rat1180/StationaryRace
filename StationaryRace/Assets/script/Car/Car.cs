@@ -321,7 +321,7 @@ public class Car : StrixBehaviour
         if (collision.name.Contains("CP"))
         {
             int CPNm = collision.GetComponent<CheckPoint>().CheckP();
-            //User.GetComponent<UserOperation>().CP(CPNm);
+            User.GetComponent<UserOperation>().CP(CPNm);
         }
         // cp.GetComponent<CheckP>(); // CheckPointスクリプトの関数呼び出し
     }

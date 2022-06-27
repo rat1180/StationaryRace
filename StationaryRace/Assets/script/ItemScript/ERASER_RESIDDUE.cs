@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SoftGear.Strix.Unity.Runtime;
 
-public class ERASER_RESIDDUE : MonoBehaviour
+public class ERASER_RESIDDUE : StrixBehaviour
 {
     public int durability;//‘Ï‹v’l
     // Start is called before the first frame update
     void Start()
     {
+        if (!isLocal) return;
         Invoke("Des", 5);
     }
 

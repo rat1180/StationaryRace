@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using ITEMConst;
 using SoftGear.Strix.Client.Core.Auth.Message;
 using SoftGear.Strix.Client.Core.Error;
@@ -38,7 +39,7 @@ public class GMSystem : MonoBehaviour
     private bool TimerFlg;
 
     //ゲーム終わり
-    GameObject GAMEOVER;
+    public GameObject GAMEOVER;
 
     /**************
      ユーザー系変数
@@ -238,7 +239,10 @@ public class GMSystem : MonoBehaviour
         {
             TimerFlg = false;
             Debug.Log("ゴールタイム:" + (User.CPTime).ToString("f3"));
-            //GAMEOVER.SetActive(true);
+            GAMEOVER.SetActive(true);
+            string str1 = "ゴール!!" + (User.CPTime).ToString("f3");
+            string str2 = "\n順位" + User.Rank;
+            GAMEOVER.GetComponent<Text>().text = str1 + str2;
             //GAMEOVER.GetComponent<Result>().Decide_Timer(User.CPTime);
         }
 

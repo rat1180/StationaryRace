@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 8395688109973537644}
   - component: {fileID: 7507991501301796635}
   - component: {fileID: 2016153216}
+  - component: {fileID: -578072803225858472}
   m_Layer: 0
   m_Name: BOMB
   m_TagString: Untagged
@@ -127,6 +128,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-578072803225858472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2865717966992746334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1762331577, guid: f2c2112f638c5b8489d16403d930373b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NearDistance: 0.02
+  MaxSpeed: 10
+  Acceleration: 100
+  Damping: 0
+  SyncPeriodMin: 50
+  SyncPeriodMax: 200
+  PredictionPeriod: 300
 --- !u!1 &7251326739703583068
 GameObject:
   m_ObjectHideFlags: 0

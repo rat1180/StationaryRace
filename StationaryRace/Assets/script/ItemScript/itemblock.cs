@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SoftGear.Strix.Unity.Runtime;
 
-public class itemblock : MonoBehaviour
+public class itemblock : StrixBehaviour
 {
     int ItemNum = 0;           //アイテムマネージャーに数値を渡す用変数.
     int USER_NUM = 1;          //ユーザー番号
@@ -16,6 +17,7 @@ public class itemblock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!isLocal) return; 
         //コンポーネント取得.
         audioSource = GetComponent<AudioSource>();  //オーディオソースの取得.
         ItemMana = GameObject.Find("ITEMManager");  //アイテムマネージャーを取得.
@@ -41,20 +43,25 @@ public class itemblock : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Player")// 衝突した相手にPlayerタグが付いているとき.
+        StrixReplicator Check = collider.transform.parent.GetComponent<StrixReplicator>();
+        if (Check == null) return;
+        if (Check.isLocal)
         {
-         AudioSource.PlayClipAtPoint(Dessound, transform.position); //アイテムが破壊された際に効果音を鳴らす.
-
-         this.gameObject.SetActive(false);                                           //アイテムブロックのゲームオブジェクトを非表示にする.
-         Instantiate(SetBox_particle, this.transform.position, Quaternion.identity); //パーティクルを生成.
-
-            if (ItemHave.itemhave == false)//プレイヤーがアイテムを持っていなければアイテムマネージャーに数値を渡す.
+            if (collider.gameObject.tag == "Player")// 衝突した相手にPlayerタグが付いているとき.
             {
-                //USER_NUM = ItemHave.NUMBER_RETURN();                         //どのプレイヤーがアイテムを取得したか番号を参照.
-                ItemMana.GetComponent<ItemManager>().Item(); //ItemManagerというスクリプトのItem関数を使う.
-                ItemHave.itemhave = true;                                         //プレーヤースクリプトでアイテムフラグをtrueにする.
+                AudioSource.PlayClipAtPoint(Dessound, transform.position); //アイテムが破壊された際に効果音を鳴らす.
+
+                this.gameObject.SetActive(false);                                           //アイテムブロックのゲームオブジェクトを非表示にする.
+                Instantiate(SetBox_particle, this.transform.position, Quaternion.identity); //パーティクルを生成.
+
+                if (ItemHave.itemhave == false)//プレイヤーがアイテムを持っていなければアイテムマネージャーに数値を渡す.
+                {
+                    //USER_NUM = ItemHave.NUMBER_RETURN();                         //どのプレイヤーがアイテムを取得したか番号を参照.
+                    ItemMana.GetComponent<ItemManager>().Item(); //ItemManagerというスクリプトのItem関数を使う.
+                    ItemHave.itemhave = true;                                         //プレーヤースクリプトでアイテムフラグをtrueにする.
+                }
+                Invoke("Respawn", 3); //3秒後にその場に複製される.
             }
-            Invoke("Respawn", 3); //3秒後にその場に複製される.
         }
     }
 

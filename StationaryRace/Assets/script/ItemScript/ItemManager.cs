@@ -24,6 +24,7 @@ public class ItemManager : MonoBehaviour
     GameObject ItemUI;
     GameObject INDIA_INK;
     INDIA_INK InkSc;
+    public GameObject InkConlore;
 
     //アイテムのゲームオブジェクト宣言
     public GameObject ERASER_RESIDDUE;
@@ -200,7 +201,8 @@ public class ItemManager : MonoBehaviour
 
     public void INK()
     {
-        InkSc.Animation();
+        //InkSc.Animation();
+        Instantiate(InkConlore, RocketA, RocketAQ);
     }
 
     #region ユーザー番号系

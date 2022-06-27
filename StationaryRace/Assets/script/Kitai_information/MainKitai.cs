@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using SoftGear.Strix.Unity.Runtime;
 
 public class MainKitai : MonoBehaviour
 {
-    private const int CharacterChenge =  0;    //キャラ選択
-    private const int StartRace       = 10;    //レース前
-    private const int RaseNow         = 20;    //レース中
-    private const int Goal            = 30;    //ゴール
-    private const int AttackItem      = 40;    //攻撃アイテムが当たった
-    private const int DownStage       = 50;    //ステージから落ちた
-    private const int ORIGAMI_CRANE   = 60;    //鶴の折り紙に変身
+    private const int CharacterChenge = 0;    //キャラ選択
+    private const int StartRace = 10;    //レース前
+    private const int RaseNow = 20;    //レース中
+    private const int Goal = 30;    //ゴール
+    private const int AttackItem = 40;    //攻撃アイテムが当たった
+    private const int DownStage = 50;    //ステージから落ちた
+    private const int ORIGAMI_CRANE = 60;    //鶴の折り紙に変身
 
     private float Atime = 10;           //テスト用タイマー
 
@@ -28,6 +29,7 @@ public class MainKitai : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (!isLocal) return;
         PLmode();
     }
 
@@ -50,7 +52,7 @@ public class MainKitai : MonoBehaviour
                 break;
             //レース中
             case 20:
-                if(Atime <= 0)
+                if (Atime <= 0)
                 {
                     Player_Mode = 30;
                 }
@@ -83,10 +85,10 @@ public class MainKitai : MonoBehaviour
         //    MachineNumber();
         //}
 
-        if (countTime.gamestart == 1)
-        {
-            Player_Mode = 20;
-            Debug.Log("レース中");
-        }
+        //if (countTime.gamestart == 1)
+        //{
+        //    Player_Mode = 20;
+        //    Debug.Log("レース中");
+        //}
     }
 }

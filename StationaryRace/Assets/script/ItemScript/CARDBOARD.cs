@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SoftGear.Strix.Unity.Runtime;
 
-public class CARDBOARD : MonoBehaviour
+
+public class CARDBOARD : StrixBehaviour
 {
     private int durability;
 
@@ -11,6 +13,7 @@ public class CARDBOARD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!isLocal) return;
         rb = GetComponent<Rigidbody>();
         durability = 1;
         rb.velocity = transform.forward;
@@ -19,7 +22,8 @@ public class CARDBOARD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (!isLocal) return;
         if (durability == 0)//‘Ï‹v’l‚ª0‚É‚È‚Á‚½‚ç
         {
             Destroy(this.gameObject);

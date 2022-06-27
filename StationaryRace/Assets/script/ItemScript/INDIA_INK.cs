@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SoftGear.Strix.Unity.Runtime;
 
 using UnityEngine.UI;//UI‚ðŽg‚¤‚Æ‚«’Ç‰Á
 

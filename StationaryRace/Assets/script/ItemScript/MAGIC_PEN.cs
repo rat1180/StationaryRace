@@ -4,31 +4,54 @@ using UnityEngine;
 
 public class MAGIC_PEN : MonoBehaviour
 {
-    private int durability;
-    public Vector3 Pos;
+
+    private Rigidbody rb;
+    private float speed;
+    public int durability;
+    GameObject ItemMana;
+    ItemManager IMana;
+
     // Start is called before the first frame update
     void Start()
     {
+        ItemMana = GameObject.Find("ITEMManager");  //アイテムマネージャーを取得.
+        IMana = ItemMana.GetComponent<ItemManager>();
+
+        rb = GetComponent<Rigidbody>();
+        speed = 40.0f;
+        //Invoke("Des", 10);
+        rb.velocity = transform.forward * speed;
+
         durability = 1;
-        Pos = this.transform.position;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        rb.velocity = transform.forward * speed;
         if (durability == 0)//耐久値が0になったら
         {
-            Destroy(this.gameObject);
+            IMana.INK();
+            Des();
         }
-        Pos.y += 5;
-        Pos.z += 5;
     }
-    void OnCollisionEnter(Collision collision)
+
+
+
+    void Des()
     {
+        Destroy(this.gameObject);
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        durability -= 1;
         // 衝突した相手にPlayerタグが付いているとき.
-        if (collision.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Player")
         {
-            durability -= 1;
+
         }
     }
 }
+

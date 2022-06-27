@@ -13,9 +13,12 @@ public class ItemManager : MonoBehaviour
     private Vector3 RocketB;//プレイヤーの前方の位置を取得
     private Quaternion RocketBQ;
     private Quaternion RocketAQ;
+    private Vector3 RocketR;//プレイヤーの右方の位置を取得
+    private Quaternion RocketRQ;
     GameObject R; //プレイヤーの位置を取得
     GameObject RA;
     GameObject RB;
+    GameObject RR;
     GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
     Car CarSc;
     GameObject ItemUI;
@@ -32,6 +35,7 @@ public class ItemManager : MonoBehaviour
     public GameObject SCOTCH_TAPE;
     public GameObject MAGIC_PEN;
     public GameObject CARDBOARD;
+    public GameObject CARDBOARD_WALL;
 
 
 
@@ -48,6 +52,7 @@ public class ItemManager : MonoBehaviour
         R = GameObject.Find("Car");//プレイヤーの座標を取得
         RA = GameObject.Find("ItemRocketA");//アイテムロケットの座標を取得(AはAfter)
         RB = GameObject.Find("ItemRocketB");//アイテムロケットの座標を取得(BはBefore)
+        RR = GameObject.Find("ItemRocketR");//アイテムロケットの座標を取得(RはRight)
     }
 
     // Update is called once per frame
@@ -58,6 +63,8 @@ public class ItemManager : MonoBehaviour
         RocketB = RB.transform.position;
         RocketAQ = RA.transform.rotation;
         RocketBQ = RB.transform.rotation;
+        RocketR = RR.transform.position;
+        RocketRQ = RR.transform.rotation;
     }
 
     //itemblockが破壊された際にこれを呼ぶ.
@@ -115,6 +122,10 @@ public class ItemManager : MonoBehaviour
                 Debug.Log("CARDBOARD!");
                 CarSc.ITEM_NUM = ITEMConst.ITEM.CARDBOARD;
                 break;
+            case ITEMConst.ITEM.CARDBOARD_WALL://段ボールの壁.
+                Debug.Log("CARDBOARD_WALL!");
+                CarSc.ITEM_NUM = ITEMConst.ITEM.CARDBOARD_WALL;
+                break;
             default:
                 break;
         }
@@ -139,8 +150,7 @@ public class ItemManager : MonoBehaviour
                 Instantiate(BLACKBOARD_ERASER, RocketA, RocketAQ);
                 break;
             case ITEMConst.ITEM.MECHANICAL_PEN_LEAD://シャー芯.
-                RocketB.y += 5;
-                Instantiate(MECHANICAL_PEN_LEAD, RocketB, RocketBQ);
+                Instantiate(MECHANICAL_PEN_LEAD, RocketR, RocketRQ);
                 Debug.Log("USE:MECHANICAL_PEN_LEAD!");
                 break;
             case ITEMConst.ITEM.STICKY_NOTE://付箋.
@@ -150,7 +160,7 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.TAPE_BALL://丸めたテープ.
                 Debug.Log("USE:TAPE_BALL!");
-                Instantiate(TAPE_BALL, RocketB, Quaternion.identity);
+                Instantiate(TAPE_BALL, RocketB, RocketBQ);
                 break;
             case ITEMConst.ITEM.SCOTCH_TAPE://セロハンテープ.
                 Debug.Log("USE:SCOTCH_TAPE!");
@@ -158,7 +168,7 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.MAGIC_PEN://マジックペン.
                 Debug.Log("USE:MAGIC_PEN!");
-                //Instantiate(MAGIC_PEN, RocketB, Quaternion.identity);
+                Instantiate(MAGIC_PEN, RocketR, RocketRQ);
                 break;
             case ITEMConst.ITEM.ORIGAMI_CRANE://鶴の折り紙.
                 Debug.Log("USE:ORIGAMI_CRANE!");
@@ -166,17 +176,21 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.BIRIBIRI_PEN://ビリビリペン.
                 Debug.Log("USE:BIRIBIRI_PEN!");
-                //CarSc.Pos.y += 10f;
                 CarSc.BIRIBIRI_PEN();
                 break;
             case ITEMConst.ITEM.INDIA_INK://墨汁.
                 Debug.Log("USE:INDIA_INK!");
-                InkSc.Animation();
+                INK();
                 break;
             case ITEMConst.ITEM.CARDBOARD://段ボール.
                 Debug.Log("USE:CARDBOARD!");
                 RocketA.y += 5;
                 Instantiate(CARDBOARD, RocketA, Quaternion.identity);
+                break;
+            case ITEMConst.ITEM.CARDBOARD_WALL://段ボールの壁.
+                Debug.Log("USE:CARDBOARD_WALL!");
+                RocketA.y += 5;
+                Instantiate(CARDBOARD_WALL, RocketA, RocketAQ);
                 break;
             default:
                 break;
@@ -184,6 +198,10 @@ public class ItemManager : MonoBehaviour
         CarSc.ITEM_NUM = ITEMConst.ITEM.ItemNull;//アイテムを使用（空にする）
     }
 
+    public void INK()
+    {
+        InkSc.Animation();
+    }
 
     #region ユーザー番号系
     //起動時にユーザーの数を取得する関数　ゲームマネージャーから取得

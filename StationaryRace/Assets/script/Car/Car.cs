@@ -8,6 +8,10 @@ public class Car : StrixBehaviour
 {
     #region 変数
     Rigidbody rb;
+
+    public GameObject camera01; // 正面カメラ
+    public GameObject camera02; // 後ろ向きカメラ
+
     public int carnum;          // 機体番号
     public float upspeed;       // 前進スピード
     public float backspeed;     // 後退スピードorブレーキ
@@ -87,7 +91,9 @@ public class Car : StrixBehaviour
             CarMoveHandle();
             CarMoveDrift();
             CarColor();
+            Cameraswitc();
         }
+
         //追加
         //スペースキーでアイテムの使用（テスト）
         if (Input.GetKey(KeyCode.Space) && itemhave == true)
@@ -98,6 +104,20 @@ public class Car : StrixBehaviour
             //ORIGAMI_CHANGE();
         }
         Pos = this.transform.position;
+    }
+
+    private void Cameraswitc()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            camera01.SetActive(false);
+            camera02.SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            camera01.SetActive(true);
+            camera02.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider collision)

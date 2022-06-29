@@ -15,7 +15,7 @@ C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58050
+63203
 Successfully changed project path to: C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
 C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 136.96 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 168.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.0f1 (4bf1ec4b23c9)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/Resources/UnitySubsystems
@@ -59,97 +59,94 @@ Direct3D:
     Vendor:   NVIDIA
     VRAM:     8044 MB
     Driver:   30.0.15.1259
-Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
-Shader 'TextMeshPro/Distance Field Overlay': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
-Shader 'TextMeshPro/Distance Field SSD': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56136
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56612
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007171 seconds.
+Registered in 0.011627 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 97.46 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 156.47 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.800 seconds
+- Completed reload, in  1.355 seconds
 Domain Reload Profiling:
-	ReloadAssembly (800ms)
-		BeginReloadAssembly (69ms)
+	ReloadAssembly (1355ms)
+		BeginReloadAssembly (96ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (433ms)
-			LoadAssemblies (67ms)
+		EndReloadAssembly (714ms)
+			LoadAssemblies (92ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (94ms)
+			SetupTypeCache (162ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (264ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (431ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (98ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (118ms)
-				ProcessInitializeOnLoadMethodAttributes (41ms)
+				RefreshPlugins (157ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (195ms)
+				ProcessInitializeOnLoadMethodAttributes (68ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010382 seconds.
+Registered in 0.014670 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.39 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Package Manager log level set to [2]
 Mono: successfully reloaded assembly
-- Completed reload, in  1.935 seconds
+- Completed reload, in  2.787 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1936ms)
-		BeginReloadAssembly (156ms)
+	ReloadAssembly (2788ms)
+		BeginReloadAssembly (231ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (1682ms)
-			LoadAssemblies (78ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (2423ms)
+			LoadAssemblies (110ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (228ms)
+			SetupTypeCache (331ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (51ms)
-			SetupLoadedEditorAssemblies (1228ms)
+			RebuildScriptCaches (73ms)
+			SetupLoadedEditorAssemblies (1757ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (96ms)
-				ProcessInitializeOnLoadAttributes (1027ms)
-				ProcessInitializeOnLoadMethodAttributes (84ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				BeforeProcessingInitializeOnLoad (130ms)
+				ProcessInitializeOnLoadAttributes (1473ms)
+				ProcessInitializeOnLoadMethodAttributes (120ms)
+				AfterProcessingInitializeOnLoad (12ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.02 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 2.62 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4202 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 74 unused Assets / (57.8 KB). Loaded Objects now: 4634.
-Memory consumption went from 157.8 MB to 157.7 MB.
-Total: 6.418800 ms (FindLiveObjects: 0.424300 ms CreateObjectMapping: 0.382600 ms MarkObjects: 5.524300 ms  DeleteObjects: 0.086600 ms)
+Unloading 4203 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 74 unused Assets / (57.2 KB). Loaded Objects now: 4637.
+Memory consumption went from 158.3 MB to 158.2 MB.
+Total: 10.612200 ms (FindLiveObjects: 0.614100 ms CreateObjectMapping: 0.754300 ms MarkObjects: 9.114000 ms  DeleteObjects: 0.128300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,7 +160,1591 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 134295.380669 seconds.
-  path: Assets/EXPORT.CYRKIEL_Material.002_0.asset
-  artifactKey: Guid(bdc31aa85b3920c48b4cb393e01d0b42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EXPORT.CYRKIEL_Material.002_0.asset using Guid(bdc31aa85b3920c48b4cb393e01d0b42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '761f60bcab560b07a71beadf78edcd50') in 0.268273 seconds 
+  Time since last request: 295574.682112 seconds.
+  path: Assets/UniGLTF/doc
+  artifactKey: Guid(99bab09421b7ff04fbdc8885b0e46d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/doc using Guid(99bab09421b7ff04fbdc8885b0e46d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb944673224cbf2b91d6e90f0262a5ec') in 0.008052 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002504 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/NodeImporter.cs
+  artifactKey: Guid(dcc3725a84dcf7f49960c89f1f68534c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/NodeImporter.cs using Guid(dcc3725a84dcf7f49960c89f1f68534c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a9a000f9520f7a64771ddbc916d7f5e') in 0.021667 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003270 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Json/JsonSchemaAttribute.cs
+  artifactKey: Guid(e79a9be81d4b0fc4ebd9ca47d0f20a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Json/JsonSchemaAttribute.cs using Guid(e79a9be81d4b0fc4ebd9ca47d0f20a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53d911aa9913a0d9dee6a3b2ffee41be') in 0.002762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002724 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/IO/Extensions/UnityExtensions.cs
+  artifactKey: Guid(6c4a2b80b74e499428637f36774bbdcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/IO/Extensions/UnityExtensions.cs using Guid(6c4a2b80b74e499428637f36774bbdcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a9f9c8f65313bcb1a7305c93a4350bf') in 0.003594 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003072 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/MuscleDebug.cs
+  artifactKey: Guid(14aaa52c3da53004ea85dbb38e9e4698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/MuscleDebug.cs using Guid(14aaa52c3da53004ea85dbb38e9e4698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aaa625f160b65037ccce437c5cf44a4') in 0.004741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002879 seconds.
+  path: Assets/UniGLTF/LICENSE.md
+  artifactKey: Guid(43de50058826c4b42857c7eadcc32794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/LICENSE.md using Guid(43de50058826c4b42857c7eadcc32794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db5bbce8aa5fef1e6b22135f0bb6f83f') in 0.025498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/UniGLTF/UniUnlit/Editor
+  artifactKey: Guid(15d7ffde211dea549b2a5ad77ef257b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniUnlit/Editor using Guid(15d7ffde211dea549b2a5ad77ef257b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6676126de8c60ec7f382fdf3ef920327') in 0.004267 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002989 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/TextureLoader.cs
+  artifactKey: Guid(4ffd8b31d371e024593b9aff2cf2495b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/TextureLoader.cs using Guid(4ffd8b31d371e024593b9aff2cf2495b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b330e3c8c8de67cd38967abe8d5f831a') in 0.004292 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002844 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/LICENSE
+  artifactKey: Guid(b673d33707cbc5446870804437f3cbea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/LICENSE using Guid(b673d33707cbc5446870804437f3cbea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8e175f967500a08a3523f4bcbad53cb') in 0.004169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001885 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/BoneGizmoDrawer.cs
+  artifactKey: Guid(677492d2843780e40aa2a6c7a6ae8fe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/BoneGizmoDrawer.cs using Guid(677492d2843780e40aa2a6c7a6ae8fe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86a1dc0b16d67e5eea8161a554112993') in 0.003140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001163 seconds.
+  path: Assets/UniGLTF/UniHumanoid/README.md
+  artifactKey: Guid(be513cfaa8530114d85f1e8e0f29708a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/README.md using Guid(be513cfaa8530114d85f1e8e0f29708a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72c06ab2e19215f7a5806090f74406ec') in 0.003265 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000841 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/Editor/DepthFirstScheduler.cs
+  artifactKey: Guid(3003e87b5df13394eadfda925bb816e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/Editor/DepthFirstScheduler.cs using Guid(3003e87b5df13394eadfda925bb816e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c7cd249411adf3c52c6df01ebb417fa') in 0.001805 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001052 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/MainThreadDispatcher.cs
+  artifactKey: Guid(b030a9507e46dd3488c080be0227b219) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/MainThreadDispatcher.cs using Guid(b030a9507e46dd3488c080be0227b219) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1492badd6e100e237fbc4e449b6723a') in 0.003060 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts
+  artifactKey: Guid(0616b2b52c85f3b428b23b5efd4db436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts using Guid(0616b2b52c85f3b428b23b5efd4db436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a975e09e29f288769368d3de4b98b403') in 0.004444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001091 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/Scheduler/StepScheduler.cs
+  artifactKey: Guid(84161938c020c37419bc79f021f849fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/Scheduler/StepScheduler.cs using Guid(84161938c020c37419bc79f021f849fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f611d6d96432ce767fc910a9a77835fb') in 0.002206 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001680 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/TaskChain.cs
+  artifactKey: Guid(38fc7e076ba93a847ad72d3d459d06b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/TaskChain.cs using Guid(38fc7e076ba93a847ad72d3d459d06b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38e5fc6aaec5915dc00eb5655861abf1') in 0.003669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001444 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Extensions/glTFExtensions.cs
+  artifactKey: Guid(870cb47398900534994d90eb1cecace8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Extensions/glTFExtensions.cs using Guid(870cb47398900534994d90eb1cecace8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e5b06bba1f98e95c34f90bf9c751f26') in 0.002487 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001788 seconds.
+  path: Assets/UniGLTF/UniHumanoid/PoseModifier/HandPose.cs
+  artifactKey: Guid(14d18bc5a296a894eb7154d3f5f0e18b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/PoseModifier/HandPose.cs using Guid(14d18bc5a296a894eb7154d3f5f0e18b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16337723dddcca5dab8ce746d06e93d5') in 0.002236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003252 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/FormatterExtensions.cs
+  artifactKey: Guid(eb87cc122742d7544b818c171b15f746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/FormatterExtensions.cs using Guid(eb87cc122742d7544b818c171b15f746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa67e00122fc31c44949aa4b3b191e71') in 0.002648 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000899 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/ShaderPropExporter/ShaderProps.cs
+  artifactKey: Guid(279964035c950b24cb745511298855dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/ShaderPropExporter/ShaderProps.cs using Guid(279964035c950b24cb745511298855dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25ae7b8b005ade53b32f65555a3c7d74') in 0.001920 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001036 seconds.
+  path: Assets/UniGLTF/doc/duck.png
+  artifactKey: Guid(b34f47033ccb0ed47b5596fd0ebe7bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/doc/duck.png using Guid(b34f47033ccb0ed47b5596fd0ebe7bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90dc1afd7969c9eaef484745d9c57ded') in 0.090068 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002173 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scenes/RuntimeBvhLoader.cs
+  artifactKey: Guid(7b994e1476323bf4fbe1ae28bea164f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scenes/RuntimeBvhLoader.cs using Guid(7b994e1476323bf4fbe1ae28bea164f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0f8d6f1a3d55acd9feb855cfa05c8f9') in 0.002640 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001464 seconds.
+  path: Assets/UniGLTF/UniHumanoid/doc/bvh_bonemapping.png
+  artifactKey: Guid(06577ef88ae5dea4189cb3022681fa9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/doc/bvh_bonemapping.png using Guid(06577ef88ae5dea4189cb3022681fa9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f8a2806fded2827669abd2529c3732d') in 0.018211 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002025 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/TriangleUtil.cs
+  artifactKey: Guid(3d3209540c7379646b36b389bea94f6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/TriangleUtil.cs using Guid(3d3209540c7379646b36b389bea94f6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '341b6df9eb1d435f30f4e7d63ec3a68f') in 0.002407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000353 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Resources
+  artifactKey: Guid(a08b9442580085048afabee1b9291bfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Resources using Guid(a08b9442580085048afabee1b9291bfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cfbcd7883c477dbd031849c54349f23') in 0.002809 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/Editor
+  artifactKey: Guid(c6e2c87aebae81f48b084abfb3b6142c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/Editor using Guid(c6e2c87aebae81f48b084abfb3b6142c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88cc8acec11a3b5adf1d188ff15c758e') in 0.002188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001265 seconds.
+  path: Assets/UniGLTF/UniHumanoid/doc/humanoid.gif
+  artifactKey: Guid(81969f93770cf844eab1f4137fefe07e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/doc/humanoid.gif using Guid(81969f93770cf844eab1f4137fefe07e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '742e2689cbaf2fe67e001668a9d22216') in 0.013780 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003425 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/IStore/IStore.cs
+  artifactKey: Guid(558419bba2d829e4884fca9c2046fc3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/IStore/IStore.cs using Guid(558419bba2d829e4884fca9c2046fc3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10c2f0284de133ee7d301417ad450dde') in 0.002338 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002152 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/Scheduler/ThreadPoolScheduler.cs
+  artifactKey: Guid(d8a8d78a486bbdf4b95ae83d02b480d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/Scheduler/ThreadPoolScheduler.cs using Guid(d8a8d78a486bbdf4b95ae83d02b480d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '617bf93fe05e9ef7de9fe342be1e54fb') in 0.003237 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001927 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Editor/UniGLTFVersionMenu.cs
+  artifactKey: Guid(49d23365a29018d4cb142227a01e662d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Editor/UniGLTFVersionMenu.cs using Guid(49d23365a29018d4cb142227a01e662d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e61b6c63a95058c3536b94a4429c04') in 0.003633 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002007 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/JsonFormatterTest.cs
+  artifactKey: Guid(3defb263d8925164683447a978248b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/JsonFormatterTest.cs using Guid(3defb263d8925164683447a978248b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd3735ee713e84b70d2e3789afc1ad8c') in 0.003454 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002295 seconds.
+  path: Assets/UniGLTF/Core/Scripts/PreExportShaderProps/Unlit_Transparent.cs
+  artifactKey: Guid(b98a8ee8ca13abb43809305cc4e5571a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/PreExportShaderProps/Unlit_Transparent.cs using Guid(b98a8ee8ca13abb43809305cc4e5571a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c46689e168aa6db66171d6336207e43') in 0.003834 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001762 seconds.
+  path: Assets/UniGLTF/doc/duck_prefab.png
+  artifactKey: Guid(8106b49706f1aaf49b8493e00d32820d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/doc/duck_prefab.png using Guid(8106b49706f1aaf49b8493e00d32820d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '636a05b5b9441dbf265e0f221746d9fe') in 0.015453 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003903 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/IStorage.cs
+  artifactKey: Guid(9cb8b6f878e36a74f90d172daee60bed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/IStorage.cs using Guid(9cb8b6f878e36a74f90d172daee60bed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa06d1622a91c30dc88077a64fbd9315') in 0.003553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003774 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/IEnumeratorExtensions.cs
+  artifactKey: Guid(4719fc9e6319c654b8a4818bef2c3a85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/IEnumeratorExtensions.cs using Guid(4719fc9e6319c654b8a4818bef2c3a85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a04049e04db2456555846ee4dad3ae8d') in 0.004863 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000392 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Extensions/ArraySegmentExtensions.cs
+  artifactKey: Guid(12d3e22e2e62d4948a5aff4bc42208e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Extensions/ArraySegmentExtensions.cs using Guid(12d3e22e2e62d4948a5aff4bc42208e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1269bd09b8c909140c0ad7eb068f0ced') in 0.003383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002593 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonStringValidator.cs
+  artifactKey: Guid(0256cc9f46a4e6744826cf5ca0aa1b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonStringValidator.cs using Guid(0256cc9f46a4e6744826cf5ca0aa1b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c0804bed92fac080752c7c5b3b65872') in 0.003480 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000368 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Extensions
+  artifactKey: Guid(3b461d3fe79c3b64a95cd956c087fb94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Extensions using Guid(3b461d3fe79c3b64a95cd956c087fb94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38f06bb3534aa51fbb40459f911e75ac') in 0.004163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002779 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/JsonFormatter.cs
+  artifactKey: Guid(b80a7ee38e762de44a90d60d9d4ff4dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/JsonFormatter.cs using Guid(b80a7ee38e762de44a90d60d9d4ff4dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e166df3c631d856967437d203d186638') in 0.004329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002987 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/Schedulable.cs
+  artifactKey: Guid(45e21e7db278f344fbaeffc4c4b82b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/Schedulable.cs using Guid(45e21e7db278f344fbaeffc4c4b82b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd3f26d181b84b509a6513970a524150') in 0.007977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler
+  artifactKey: Guid(2f1162ef5fc7bce45874794b4b033cc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler using Guid(2f1162ef5fc7bce45874794b4b033cc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12d0da450fbe5679db5eea3bc4f88c82') in 0.007458 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004819 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/glTFMesh.cs
+  artifactKey: Guid(20634c83ea30c99449cd85ef46368b13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/glTFMesh.cs using Guid(20634c83ea30c99449cd85ef46368b13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1edec77639d517fc6c1035d3c571a80') in 0.010667 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003966 seconds.
+  path: Assets/UniGLTF/Resources
+  artifactKey: Guid(97d3b6ee78368b64fb287c743f0dd052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Resources using Guid(97d3b6ee78368b64fb287c743f0dd052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2d20d95348faf2c82b9400313840301') in 0.007682 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000106 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO
+  artifactKey: Guid(38329e6dc9f48584bb31dc7339671684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO using Guid(38329e6dc9f48584bb31dc7339671684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d57765d4290f6275aa75330788a215d') in 0.005839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000810 seconds.
+  path: Assets/UniGLTF
+  artifactKey: Guid(f07d1ae093b5e6648a430c9c11602482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF using Guid(f07d1ae093b5e6648a430c9c11602482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6ffc44876bdbf059d74c81d29c447b4') in 0.006393 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003248 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/Editor/MuscleInspectorEditor.cs
+  artifactKey: Guid(0d2c3401d1adf41488c19ec4d47386a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/Editor/MuscleInspectorEditor.cs using Guid(0d2c3401d1adf41488c19ec4d47386a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85d9aa95df5daa2208c218d23edec7bb') in 0.005787 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002138 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack
+  artifactKey: Guid(8d3e36a0e56b3184d8f035e168ad0bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack using Guid(8d3e36a0e56b3184d8f035e168ad0bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66a6870e7add9d314f1cf3dd399ecabf') in 0.006473 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003606 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/glTFNode.cs
+  artifactKey: Guid(655775a9435baed4281c569519829362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/glTFNode.cs using Guid(655775a9435baed4281c569519829362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c64a96510087c08e14e9082736f4b9d5') in 0.006790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003444 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/HumanPoseClip.cs
+  artifactKey: Guid(4fdf4ef744a103a4ca01657c00d7fec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/HumanPoseClip.cs using Guid(4fdf4ef744a103a4ca01657c00d7fec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b5462db572b1e957cc80497cebd5b94') in 0.007314 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000794 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/IStore
+  artifactKey: Guid(ef0e8097cad95ba469fa1c1725af6468) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/IStore using Guid(ef0e8097cad95ba469fa1c1725af6468) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ff559d3c285574f234dcd77bd44e398') in 0.004965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005777 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/Functor.cs
+  artifactKey: Guid(c320f3f577dde634a871dc88266c2a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/Functor.cs using Guid(c320f3f577dde634a871dc88266c2a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60a1e7f5bc0e52c799c6ca69aead9eb4') in 0.005749 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001477 seconds.
+  path: Assets/UniGLTF/doc/SciFiHelmet.png
+  artifactKey: Guid(af8ae648cfa51a340ac40fe7462cab62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/doc/SciFiHelmet.png using Guid(af8ae648cfa51a340ac40fe7462cab62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '377e4583b68ecc930abeb0a10f205872') in 0.024033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005132 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonObjectValidator.cs
+  artifactKey: Guid(1bdf39f36f58f584daee6d67f7ab446f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonObjectValidator.cs using Guid(1bdf39f36f58f584daee6d67f7ab446f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '594224a2a1ce740852e24d8f15b9fe87') in 0.006134 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003718 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/gltfImporter.cs
+  artifactKey: Guid(31723631f70a88f47ba90c044e220849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/gltfImporter.cs using Guid(31723631f70a88f47ba90c044e220849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '351ebbcadcf5c2871e19b29af6138453') in 0.006169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.006839 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/glTFAssets.cs
+  artifactKey: Guid(1b759a27457c3cb49adea3fba807e447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/glTFAssets.cs using Guid(1b759a27457c3cb49adea3fba807e447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a76e3dc80f0f5f602578904f9f78650') in 0.006021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003415 seconds.
+  path: Assets/UniGLTF/doc/duck_assets.png
+  artifactKey: Guid(4b45d82a9b6f6f944a4e697c39a57fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/doc/duck_assets.png using Guid(4b45d82a9b6f6f944a4e697c39a57fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b67a8682bd09ad784cab31a9f19a2d8') in 0.024445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005010 seconds.
+  path: Assets/UniGLTF/UniHumanoid/doc/humanpose_transfer.png
+  artifactKey: Guid(8dd213e4a507dac4585f174f27fcd677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/doc/humanpose_transfer.png using Guid(8dd213e4a507dac4585f174f27fcd677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1bec7cdeacbc8500eac467c40ad2a91') in 0.022879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007716 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Resources/T-Pose.pose.asset
+  artifactKey: Guid(879e332f84a378c4da3b87af13da3e85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Resources/T-Pose.pose.asset using Guid(879e332f84a378c4da3b87af13da3e85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2da55d8d93097fdc3af45859f4dc4e0c') in 0.011737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003578 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/IO/ImporterContext.cs
+  artifactKey: Guid(6c6231d0aafc9554ca596f35e8f395c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/IO/ImporterContext.cs using Guid(6c6231d0aafc9554ca596f35e8f395c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2b23a5826b98710c3c3e90ae9e65b96') in 0.007178 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003196 seconds.
+  path: Assets/UniGLTF/Core/Scripts/PreExportShaderProps/Standard.cs
+  artifactKey: Guid(54043e349b047bf4b8f127cd919a757d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/PreExportShaderProps/Standard.cs using Guid(54043e349b047bf4b8f127cd919a757d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51110935be374a1057f4da5ea8449ff4') in 0.005668 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003557 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/AnimationImporter.cs
+  artifactKey: Guid(d602384685dd4f179350052013659720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/AnimationImporter.cs using Guid(d602384685dd4f179350052013659720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a3c34c83a44caeb45753af8b9403988') in 0.007569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008031 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/glTFCamera.cs
+  artifactKey: Guid(a4ff02eb93400b142a5ff47d1067bd8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/glTFCamera.cs using Guid(a4ff02eb93400b142a5ff47d1067bd8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87a7bfa49e2469c5d8518246e32e1ce3') in 0.006037 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001352 seconds.
+  path: Assets/UniGLTF/UniHumanoid/PoseModifier/HandRig.cs
+  artifactKey: Guid(45d55d80a64783c41ace70d5d81db454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/PoseModifier/HandRig.cs using Guid(45d55d80a64783c41ace70d5d81db454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a2cfad446ca7e205a2d790b5f7b864b') in 0.002168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001476 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackParser.cs
+  artifactKey: Guid(96621564d26fc294291143738c163a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackParser.cs using Guid(96621564d26fc294291143738c163a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3a8eae5488284579f7f169bf9a9bef7') in 0.002374 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001236 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/gltfExporter.cs
+  artifactKey: Guid(a82bf73539bdd2d4c81595b5108819ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/gltfExporter.cs using Guid(a82bf73539bdd2d4c81595b5108819ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a779042490a6f5dbd5460d5e7d422b3') in 0.002174 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001518 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Json/JsonValue.cs
+  artifactKey: Guid(0b59a66ed8e7b1c419d69f7ee07900c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Json/JsonValue.cs using Guid(0b59a66ed8e7b1c419d69f7ee07900c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c08702a9821a589409ef8a81885001f') in 0.003833 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004730 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/TextureExportManager.cs
+  artifactKey: Guid(435499f173753ac418331fe0f967b789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/TextureExportManager.cs using Guid(435499f173753ac418331fe0f967b789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1db4652d51c3898c3de26a9c9d06497b') in 0.001921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001198 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/UnityPath.cs
+  artifactKey: Guid(7b7af908694806c469d62ce0b5b2f06a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/UnityPath.cs using Guid(7b7af908694806c469d62ce0b5b2f06a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b187c367b33ebf131ca575247bba0722') in 0.003156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001444 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/MeshWithMaterials.cs
+  artifactKey: Guid(04f2758551c076e4e9060e3117817e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/MeshWithMaterials.cs using Guid(04f2758551c076e4e9060e3117817e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbfe9d5bd051a70449ec399ed0631ca9') in 0.002370 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003062 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/AnimationKeyframeData.cs
+  artifactKey: Guid(e27ef4fb768e49f591c2bb5eadd3b19b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/AnimationKeyframeData.cs using Guid(e27ef4fb768e49f591c2bb5eadd3b19b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd77639e4687e3c5eb8dbbdf999848346') in 0.003501 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001810 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/IStore/BytesStore.cs
+  artifactKey: Guid(d49a52418427394499c901cb23f13d30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/IStore/BytesStore.cs using Guid(d49a52418427394499c901cb23f13d30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d52c02c406623a5930a70cc692fa4d2') in 0.003417 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002501 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/MuscleInspector.cs
+  artifactKey: Guid(d2cc8a27b7978e54d9226bc91e53a502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/MuscleInspector.cs using Guid(d2cc8a27b7978e54d9226bc91e53a502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f906ca96c33476db41ad714ded6f078d') in 0.002850 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002409 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/glTFAnimation.cs
+  artifactKey: Guid(f571aa160b9de354c8f5fcc6a38e41f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/glTFAnimation.cs using Guid(f571aa160b9de354c8f5fcc6a38e41f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64be5ea6d8c3a888a91745355983bbbf') in 0.002486 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format
+  artifactKey: Guid(1baf38fdf71aad3408845f2a519e6688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format using Guid(1baf38fdf71aad3408845f2a519e6688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '470beea11e0c659425d75a60de3d54c9') in 0.003079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001362 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonSchemaValidatorFactory.cs
+  artifactKey: Guid(9fef66d39a7b22b499bea68e0b22d000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonSchemaValidatorFactory.cs using Guid(9fef66d39a7b22b499bea68e0b22d000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e868efc33d8c0f0dfd2fc6b9967de0b8') in 0.001728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001093 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackTypeExtensions.cs
+  artifactKey: Guid(6e803181a063cd940b8272f45497b506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackTypeExtensions.cs using Guid(6e803181a063cd940b8272f45497b506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '983938083dcef8cef016becf9da63ea7') in 0.002515 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001274 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/Editor/Tests/BvhLoaderTests.cs
+  artifactKey: Guid(568764cb60017fc44ad4361d5a18b478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/Editor/Tests/BvhLoaderTests.cs using Guid(568764cb60017fc44ad4361d5a18b478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09ded7a035f40430ae18ffac64c44d42') in 0.002480 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000941 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scenes/PoseTransfer.unity
+  artifactKey: Guid(ae847f673eb3e6f4a95f61b4658b806a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scenes/PoseTransfer.unity using Guid(ae847f673eb3e6f4a95f61b4658b806a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5585a1f914fa9cba5de3ae8857f1b703') in 0.002400 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002229 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/FloatTest.cs
+  artifactKey: Guid(51cdc6be3b73a34429cae41cd020c71c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/FloatTest.cs using Guid(51cdc6be3b73a34429cae41cd020c71c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a9fd1ac84c2b215994f53f990172c61') in 0.002299 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002607 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/ShaderStore.cs
+  artifactKey: Guid(75aae8e866422d24180458afaacb2c1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/ShaderStore.cs using Guid(75aae8e866422d24180458afaacb2c1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '018a307da171148d15225115d3b16e23') in 0.002886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000944 seconds.
+  path: Assets/UniGLTF/UniHumanoid/PoseModifier
+  artifactKey: Guid(56e99c78c991f3646a06b29731feb51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/PoseModifier using Guid(56e99c78c991f3646a06b29731feb51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15fa316a7e5d8317745f47e7cb68b9fb') in 0.003914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002233 seconds.
+  path: Assets/UniGLTF/UniUnlit/Editor/UniUnlitEditor.cs
+  artifactKey: Guid(4c70714358bb2fb4fa96ef08640763fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniUnlit/Editor/UniUnlitEditor.cs using Guid(4c70714358bb2fb4fa96ef08640763fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '828b2ea3047e4f72a9d189725e9a6a4d') in 0.005059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001862 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras/glTFNode.cs
+  artifactKey: Guid(eef0405c0c9670947ab6fa2034f0343f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras/glTFNode.cs using Guid(eef0405c0c9670947ab6fa2034f0343f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '193a7faa014e5b102a1a4ed5ba672f49') in 0.003202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001925 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/Editor/bvhAssetPostprocessor.cs
+  artifactKey: Guid(4283558adf39c194cb6c5d66d5a348de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/Editor/bvhAssetPostprocessor.cs using Guid(4283558adf39c194cb6c5d66d5a348de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '460ef41ae21b64cedcd4bb66eb7fcdef') in 0.003253 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000657 seconds.
+  path: Assets/UniGLTF/UniUnlit/Scripts/Utils.cs
+  artifactKey: Guid(e96cbbd810384352a6799dd731533178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniUnlit/Scripts/Utils.cs using Guid(e96cbbd810384352a6799dd731533178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '972f01f8e8db124d4d6f6e5aac24ffe3') in 0.001553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001606 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonEnumValidator.cs
+  artifactKey: Guid(f503fff7ab8dcf74abc9dd8073aa9062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonEnumValidator.cs using Guid(f503fff7ab8dcf74abc9dd8073aa9062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d2868a45d01e80a83e8ca8ca7a54be5') in 0.002409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001450 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/IntTest.cs
+  artifactKey: Guid(8d6f5e40bc0825b449887d877c0ad5c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/IntTest.cs using Guid(8d6f5e40bc0825b449887d877c0ad5c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b45b714957e2dc40a82caf238eb2961c') in 0.001784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001056 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/IStore/StreamStore.cs
+  artifactKey: Guid(b87313b5306b62d4ea4f743055ae60f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/IStore/StreamStore.cs using Guid(b87313b5306b62d4ea4f743055ae60f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49d02c1de2fb05f1da15f03fc6ee9be7') in 0.001764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001264 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/SkeletonEstimator.cs
+  artifactKey: Guid(4f0d2728cd7343f4ab2e7f7c2b961d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/SkeletonEstimator.cs using Guid(4f0d2728cd7343f4ab2e7f7c2b961d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '875d230338a69989579efbb304737818') in 0.002158 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002710 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/README.md
+  artifactKey: Guid(1231fa531fdd33f4baccc935c18c0872) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/README.md using Guid(1231fa531fdd33f4baccc935c18c0872) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7d3742b221a90a15f71d71de8862933') in 0.002214 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/UniGLTF/Core/Editor
+  artifactKey: Guid(2ec70026dc1e040489e80f190dc93349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Editor using Guid(2ec70026dc1e040489e80f190dc93349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70eba19fa0299259999bf0111b028b9d') in 0.002411 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/ShaderPropExporter
+  artifactKey: Guid(a34bc15bfc4997e499a365aa04024acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/ShaderPropExporter using Guid(a34bc15bfc4997e499a365aa04024acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6512e83b4dc1e931abddd18196bb46ae') in 0.002026 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002360 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/ActionDisposer.cs
+  artifactKey: Guid(ff15446e31b14ac409251c931b7c2038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/ActionDisposer.cs using Guid(ff15446e31b14ac409251c931b7c2038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '562eaf285358448c5046f9be9e41c392') in 0.002249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002008 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Json/JsonSchema.cs
+  artifactKey: Guid(4d98ef4e469916e428284c9155f29059) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Json/JsonSchema.cs using Guid(4d98ef4e469916e428284c9155f29059) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cecab27990e5916a0b59cea9d0426956') in 0.001855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002352 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/BoneMapping.cs
+  artifactKey: Guid(44f5895a2095a2848ba2c9627a5c1ad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/BoneMapping.cs using Guid(44f5895a2095a2848ba2c9627a5c1ad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e6e185fd2c51e2e52e127f28c96fab') in 0.001938 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001193 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonNumberValidator.cs
+  artifactKey: Guid(fb1d83ccd68b93c47821000b53471eae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonNumberValidator.cs using Guid(fb1d83ccd68b93c47821000b53471eae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e5b553b1461767815849d684577a833') in 0.002096 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001304 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/BvhBone.cs
+  artifactKey: Guid(c1a88b26726f137419428078debd253f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/BvhBone.cs using Guid(c1a88b26726f137419428078debd253f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dc2a19e742ab07482a6388dbb56a92d') in 0.002565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001153 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/MapTest.cs
+  artifactKey: Guid(87a626e93589db14fbe4526c9880b110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/MapTest.cs using Guid(87a626e93589db14fbe4526c9880b110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc4b2691e88832403dfeb7f1eea2a2ed') in 0.002080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002156 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Editor/ImporterMenu.cs
+  artifactKey: Guid(ae2833922b06981439883d1e924b4cd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Editor/ImporterMenu.cs using Guid(ae2833922b06981439883d1e924b4cd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1585450c6d5d67e9365a968d627293ce') in 0.002142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001290 seconds.
+  path: Assets/UniGLTF/UniUnlit/Resources
+  artifactKey: Guid(fb17b55208b43d44ca91f29f4caf48df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniUnlit/Resources using Guid(fb17b55208b43d44ca91f29f4caf48df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b211d804d0a6bcdee647b9b2bdbbe62b') in 0.001741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001424 seconds.
+  path: Assets/UniGLTF/UniHumanoid/doc/BoneMappingGizmo.png
+  artifactKey: Guid(f4993bbf703729441869ce8186574f2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/doc/BoneMappingGizmo.png using Guid(f4993bbf703729441869ce8186574f2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13cbe01f2b81ebaa9929d8d39aa9a895') in 0.011074 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001848 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/IFormatter.cs
+  artifactKey: Guid(5fb858fc98e29c54d87df97ead98608e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/IFormatter.cs using Guid(5fb858fc98e29c54d87df97ead98608e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59109bd9959fd437ec31e32089da980e') in 0.002207 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001852 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras/glTFExtensions.cs
+  artifactKey: Guid(356f989283db8c848b851b82c34086d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras/glTFExtensions.cs using Guid(356f989283db8c848b851b82c34086d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1420a57a806a0126796ee104bee699fb') in 0.001897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001373 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/IO/Extensions/BvhExtensions.cs
+  artifactKey: Guid(30d4db9a01d6aee4db9a77d762e608f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/IO/Extensions/BvhExtensions.cs using Guid(30d4db9a01d6aee4db9a77d762e608f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb00c26e3f41e08c9550c686d52c7ba0') in 0.002580 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005511 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras/KHR_draco_mesh_compression.cs
+  artifactKey: Guid(2d21c7591557c7744a6fa34a7acace91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras/KHR_draco_mesh_compression.cs using Guid(2d21c7591557c7744a6fa34a7acace91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18edcdb46fd645c5c9000fe8f8754aef') in 0.002364 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts
+  artifactKey: Guid(1f7c3fee1a544e342ad2a3b54e88319a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts using Guid(1f7c3fee1a544e342ad2a3b54e88319a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd89e86e03b8035186ed96364147def55') in 0.003123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002793 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/AnimationCurveData.cs
+  artifactKey: Guid(1af21722605d44f58deebfcfca642b32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/AnimationCurveData.cs using Guid(1af21722605d44f58deebfcfca642b32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79c9898c20dc084f55f41a7ca18334f0') in 0.003005 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001714 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/glbTypes.cs
+  artifactKey: Guid(9238dc0c44df9484bbdca85d818c9b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/glbTypes.cs using Guid(9238dc0c44df9484bbdca85d818c9b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afbc0877986bc5091ef6af65f42358fe') in 0.003481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001970 seconds.
+  path: Assets/UniGLTF/UniJSON/LICENSE
+  artifactKey: Guid(d0cd28905c8909143a42de7256c727e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/LICENSE using Guid(d0cd28905c8909143a42de7256c727e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f407a6424b4dc5482217ed3026beb3bb') in 0.004403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003888 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/MaterialImporter.cs
+  artifactKey: Guid(7ce22d10dc7cdc647b05c0449173ce71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/MaterialImporter.cs using Guid(7ce22d10dc7cdc647b05c0449173ce71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21251a9874eeb2e1c59160a4692a36aa') in 0.005946 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003136 seconds.
+  path: Assets/UniGLTF/UniHumanoid/doc/mesh.png
+  artifactKey: Guid(7e153a45f4c3fab428c47e3d6509252d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/doc/mesh.png using Guid(7e153a45f4c3fab428c47e3d6509252d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4973c34d8a94c9f60ba017a27788e348') in 0.024772 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005393 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/Editor/HumanPoseTransferEditor.cs
+  artifactKey: Guid(d51cc8ca343beb647bc6d8e23600dd66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/Editor/HumanPoseTransferEditor.cs using Guid(d51cc8ca343beb647bc6d8e23600dd66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50289600af9b0974403e6b54c786b695') in 0.005857 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003576 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/TextureIO.cs
+  artifactKey: Guid(eca1330a83e17a14eb99fc6ea1697922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/TextureIO.cs using Guid(eca1330a83e17a14eb99fc6ea1697922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91dfa941a5966fecf320a0dce65b0957') in 0.005994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000500 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Extensions
+  artifactKey: Guid(faf0d6563437a564db16140b0a430ecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Extensions using Guid(faf0d6563437a564db16140b0a430ecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e015310c36474d11c0b0a1c7783e5c3') in 0.005078 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003049 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonDictionaryValidator.cs
+  artifactKey: Guid(ccee0323c35d40d498d45b207124fe7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonDictionaryValidator.cs using Guid(ccee0323c35d40d498d45b207124fe7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5307dd5c69d5e55ba0dea87d5234970') in 0.005913 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002957 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonBoolValidator.cs
+  artifactKey: Guid(2a6454bbd9b910d499702d2ba8270ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonBoolValidator.cs using Guid(2a6454bbd9b910d499702d2ba8270ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50b2579c90d3047ca98d7d3d64aad31d') in 0.005788 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003131 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/IStore/StringBuilderStore.cs
+  artifactKey: Guid(74639d64f5620dd45a1a8edc65f48aab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/IStore/StringBuilderStore.cs using Guid(74639d64f5620dd45a1a8edc65f48aab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '941d5a94cbb68f169e169b389ecfc8a9') in 0.006082 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003585 seconds.
+  path: Assets/UniGLTF/UniUnlit/Resources/UniUnlit.shader
+  artifactKey: Guid(8c17b56f4bf084c47872edcb95237e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniUnlit/Resources/UniUnlit.shader using Guid(8c17b56f4bf084c47872edcb95237e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43e26aae3962fd1981ac14254414fac8') in 0.011567 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/UniGLTF/Core
+  artifactKey: Guid(c58d4fecae00fc94594e9f1c29d05d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core using Guid(c58d4fecae00fc94594e9f1c29d05d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d989058875170f2f89fe0696aa3471d') in 0.005978 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004870 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Editor/gltfAssetPostprocessor.cs
+  artifactKey: Guid(7bbb264b34e75dd438622e1f29f0f46c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Editor/gltfAssetPostprocessor.cs using Guid(7bbb264b34e75dd438622e1f29f0f46c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dedff093339bd4bdc9130554de5ee56') in 0.005637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003289 seconds.
+  path: Assets/UniGLTF/Core/Editor/MaterialTests.cs
+  artifactKey: Guid(37dbc1bc37728a44f8e33ad44e407c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Editor/MaterialTests.cs using Guid(37dbc1bc37728a44f8e33ad44e407c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '152c3e372ac4018f440a332b90f2f131') in 0.006606 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.006208 seconds.
+  path: Assets/UniGLTF/UniHumanoid/doc/bvh_gameobject.png
+  artifactKey: Guid(65ce8e194a35af1449cbc70c76e385ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/doc/bvh_gameobject.png using Guid(65ce8e194a35af1449cbc70c76e385ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9718d9cc790cb12368017a105a2e7d1e') in 0.022148 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.118100 seconds.
+  path: Assets/UniGLTF/Core/Editor/UniGLTFTests.cs
+  artifactKey: Guid(164dff9806a684447ae2c9d679ae730b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Editor/UniGLTFTests.cs using Guid(164dff9806a684447ae2c9d679ae730b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b1d2c6875ccdabca67c4bb8a4dca562') in 0.002599 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000756 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/LockQueue.cs
+  artifactKey: Guid(f6b1eb436e400704ab6e2ad6eff29f4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/LockQueue.cs using Guid(f6b1eb436e400704ab6e2ad6eff29f4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '378507f5f79fbe27ee47e0016fd3263c') in 0.001635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001047 seconds.
+  path: Assets/UniGLTF/Core/Scripts/PreExportShaderProps/Unlit_Transparent_Cutout.cs
+  artifactKey: Guid(844490f13976543478d82efe28251941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/PreExportShaderProps/Unlit_Transparent_Cutout.cs using Guid(844490f13976543478d82efe28251941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b40d5e7cdb6838d1f340b0553596f4f3') in 0.003096 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001302 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/AnimationExporter.cs
+  artifactKey: Guid(015ae41bf6cb4428b8257ead79772908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/AnimationExporter.cs using Guid(015ae41bf6cb4428b8257ead79772908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e5134556a5bbf5e5d171f9500d6512b') in 0.002095 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001152 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/ValidatorTests.cs
+  artifactKey: Guid(16d778a50d1c9374894ef42f892210dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/ValidatorTests.cs using Guid(16d778a50d1c9374894ef42f892210dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e0ac6ba2d8e2a604adce7cf0239ffa7') in 0.002014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001333 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/Scheduler/ThreadScheduler.cs
+  artifactKey: Guid(8df1de98bdc0b534bbe68e8f2f8a858f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/Scheduler/ThreadScheduler.cs using Guid(8df1de98bdc0b534bbe68e8f2f8a858f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bb8f32e85062682e0e43f782f4b2125') in 0.003243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/Editor/Tests
+  artifactKey: Guid(7e4d85070f9d6a94bb3185f18df312cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/Editor/Tests using Guid(7e4d85070f9d6a94bb3185f18df312cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af39b0ffb83279a978d1afb2a3eb76ef') in 0.002168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001636 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/ZipArchiveStorage.cs
+  artifactKey: Guid(b5aadac20fc53d04abe0492399479ce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/ZipArchiveStorage.cs using Guid(b5aadac20fc53d04abe0492399479ce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8eec0f6f87521b68fbcfc56bc9360b1') in 0.002112 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001564 seconds.
+  path: Assets/UniGLTF/Core/Scripts/PreExportShaderProps/Unlit_Color.cs
+  artifactKey: Guid(4f91421c5846d5d48933d2ee4ffeeceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/PreExportShaderProps/Unlit_Color.cs using Guid(4f91421c5846d5d48933d2ee4ffeeceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd70b741064f264330d19cdbde23201ca') in 0.002631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001063 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/JsonSerializableBase.cs
+  artifactKey: Guid(d169186adbfc59b4b882611d37f0a282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/JsonSerializableBase.cs using Guid(d169186adbfc59b4b882611d37f0a282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '064bda94e40b0e23ad496af0860fd079') in 0.002138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001427 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/glTFMaterial.cs
+  artifactKey: Guid(f6315a9155238724c9b221c155c73f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/glTFMaterial.cs using Guid(f6315a9155238724c9b221c155c73f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55f172af14f632daf8fb0af7a2225bda') in 0.002911 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001502 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/glTFSkin.cs
+  artifactKey: Guid(592c03928131f494f99dca5ef46a8ba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/glTFSkin.cs using Guid(592c03928131f494f99dca5ef46a8ba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad8d675581ac681421c46be989654cab') in 0.002215 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator
+  artifactKey: Guid(053d0efcc44fd3b488a77b71ee00a0ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator using Guid(053d0efcc44fd3b488a77b71ee00a0ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa9d85bd5920015279d542e9ea297342') in 0.002097 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002338 seconds.
+  path: Assets/UniGLTF/doc/animation.gif
+  artifactKey: Guid(e92d02ac9e1e5ec4798e64701d980023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/doc/animation.gif using Guid(e92d02ac9e1e5ec4798e64701d980023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8c8f21dc4f59e8b865bfd0035fc4bf7') in 0.011194 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000926 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/IO/Extensions
+  artifactKey: Guid(533cc74251421204585b524f2b1eb619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/IO/Extensions using Guid(533cc74251421204585b524f2b1eb619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5dea2959031f56bc1346897bf50799b') in 0.001908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001779 seconds.
+  path: Assets/UniGLTF/Core/Scripts/UniGLTFVersion.cs
+  artifactKey: Guid(caf06572635c12c4cb85d6ee09ab8f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/UniGLTFVersion.cs using Guid(caf06572635c12c4cb85d6ee09ab8f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '048123dd5c9ec87168dd0df836fcee0a') in 0.002842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002145 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/AnimationClipUtility.cs
+  artifactKey: Guid(e13984a5449ddb843b03e21c3409df67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/AnimationClipUtility.cs using Guid(e13984a5449ddb843b03e21c3409df67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f3c262c4ff8e425eb9abcf5286f0e07') in 0.002916 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001162 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/MsgPack/EndianConverter.cs
+  artifactKey: Guid(2d72520a65b562f4f862ac0760306215) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/MsgPack/EndianConverter.cs using Guid(2d72520a65b562f4f862ac0760306215) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf7781b454d61c27d154063eec65e3c9') in 0.003638 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002406 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackType.cs
+  artifactKey: Guid(4c6d91a562e590e438f0baa988389d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackType.cs using Guid(4c6d91a562e590e438f0baa988389d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d63648fa1971dfe602b22a86628d38a') in 0.003535 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001786 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scenes/target.mat
+  artifactKey: Guid(94b4b45712e88334c9e7c5ecc53c50e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scenes/target.mat using Guid(94b4b45712e88334c9e7c5ecc53c50e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fd1104f30c46501255cf43eb5b7ef7a') in 0.212166 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000489 seconds.
+  path: Assets/UniGLTF/UniUnlit/Scripts
+  artifactKey: Guid(a51213680337be14089c1f6a99334dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniUnlit/Scripts using Guid(a51213680337be14089c1f6a99334dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16ff3bd10a723f5c153b40feb0b18f4e') in 0.001824 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001879 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/HumanPoseTransfer.cs
+  artifactKey: Guid(e5548e4785b76854cbbf3f6d9a8e9c1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/HumanPoseTransfer.cs using Guid(e5548e4785b76854cbbf3f6d9a8e9c1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ec2338262d03bf2add8bdc06b6aaa7f') in 0.002614 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001407 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/glTF.cs
+  artifactKey: Guid(317adeaa75a118a4f857721c90946933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/glTF.cs using Guid(317adeaa75a118a4f857721c90946933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '679d3523f4802bfdbf7a81a839204e11') in 0.003747 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001127 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/MeshImporter.cs
+  artifactKey: Guid(cbd062b14ca5eba4da4a5653b85e2151) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/MeshImporter.cs using Guid(cbd062b14ca5eba4da4a5653b85e2151) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dc95dd58d84a978456f1a710a24f662') in 0.002630 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001144 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Json/JsonNode.cs
+  artifactKey: Guid(e5df80e0a6a40384b8c8018e1581ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Json/JsonNode.cs using Guid(e5df80e0a6a40384b8c8018e1581ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f2efbc53f84aa91450e6f0344d5e762') in 0.002589 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001252 seconds.
+  path: Assets/UniGLTF/Core/Scripts/UniGLTFVersion_partial.cs
+  artifactKey: Guid(40d707af2901e3f4781e20d8326723e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/UniGLTFVersion_partial.cs using Guid(40d707af2901e3f4781e20d8326723e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88af7124f2241246e353abde45808e27') in 0.001688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001270 seconds.
+  path: Assets/UniGLTF/UniHumanoid/doc/bvh_prefab.png
+  artifactKey: Guid(0f274a7a8cb1663479e10b9b1820156d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/doc/bvh_prefab.png using Guid(0f274a7a8cb1663479e10b9b1820156d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ea0f610a252a750c870bc01cccd33ba') in 0.012014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001773 seconds.
+  path: Assets/UniGLTF/doc/metalroughness.png
+  artifactKey: Guid(9562eeb01fd74dd45a551d868c32b1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/doc/metalroughness.png using Guid(9562eeb01fd74dd45a551d868c32b1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfbe49e070a50f455bd7ac58138dfd20') in 0.009964 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001471 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/IO/BvhAnimationClip.cs
+  artifactKey: Guid(45951aadbd5e6b34282cd17ee163f58b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/IO/BvhAnimationClip.cs using Guid(45951aadbd5e6b34282cd17ee163f58b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd97d26f51d80da86aa3bc12cbd562f6') in 0.001945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/UniGLTF/UniHumanoid
+  artifactKey: Guid(6d526601ba6343b4b86931c9957691b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid using Guid(6d526601ba6343b4b86931c9957691b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd843bf1a189d48580e2bc8b70d69251a') in 0.001947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001573 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/Format/Bvh.cs
+  artifactKey: Guid(2e7bf08c7b7056e4ea1f50b1e008cb7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/Format/Bvh.cs using Guid(2e7bf08c7b7056e4ea1f50b1e008cb7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f83979848f442f5522eac3dfe85a6019') in 0.002564 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003229 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Extensions/ArrayExtensions.cs
+  artifactKey: Guid(e843bb7270bc9f54f8495e1e35f82e8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Extensions/ArrayExtensions.cs using Guid(e843bb7270bc9f54f8495e1e35f82e8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d9123e13efd4e9b6f32de22882fedb6') in 0.003510 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001513 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/glTFBuffer.cs
+  artifactKey: Guid(50888f361f18c3140a23e9bfdcf43557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/glTFBuffer.cs using Guid(50888f361f18c3140a23e9bfdcf43557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cb79ca09fd4c901bb9a9276622304d6') in 0.002118 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001165 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/StringTest.cs
+  artifactKey: Guid(3942810073614d946a76d87cbbfb222c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/StringTest.cs using Guid(3942810073614d946a76d87cbbfb222c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3f2aab95f8601a3bc3920cc2ce19981') in 0.002106 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002001 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/IStore/ByteUnion.cs
+  artifactKey: Guid(90602a3805f09cb46a2e25d5e9cb3cf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/IStore/ByteUnion.cs using Guid(90602a3805f09cb46a2e25d5e9cb3cf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f19db3f0ab65af07c50d347bb3f73a8c') in 0.001599 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000947 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/IWriteStreamTest.cs
+  artifactKey: Guid(bda1e03d682e63749a6b114fd6cc0add) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/IWriteStreamTest.cs using Guid(bda1e03d682e63749a6b114fd6cc0add) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78c086769a6e5cc73c3f5b81031e87a4') in 0.001827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001175 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scenes/RuntimeBvhLoader.unity
+  artifactKey: Guid(99665560be9c32e4d9f7813b076c92ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scenes/RuntimeBvhLoader.unity using Guid(99665560be9c32e4d9f7813b076c92ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5551448b30ee98133ba182ed77f4947') in 0.002858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001905 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/AvatarDescription.cs
+  artifactKey: Guid(976e99d37c093ce4c9b249c81c2cbdd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/AvatarDescription.cs using Guid(976e99d37c093ce4c9b249c81c2cbdd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d84d43e28b5994870bbf92efd37ddf9') in 0.002534 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001106 seconds.
+  path: Assets/UniGLTF/Core/Scripts/UniGLTFException.cs
+  artifactKey: Guid(34c865b003bc1f44abcdb95dc99979cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/UniGLTFException.cs using Guid(34c865b003bc1f44abcdb95dc99979cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ee293ca3215a7d9e073b3c21c62309b') in 0.002488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002739 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Extensions/StringExtensions.cs
+  artifactKey: Guid(54b33d3e5f599eb419fae2bbf00f1613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Extensions/StringExtensions.cs using Guid(54b33d3e5f599eb419fae2bbf00f1613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7eaf1cb39cb472d1f9d4289b159a8a7') in 0.003371 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001721 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras/KHR_materials_unlit.cs
+  artifactKey: Guid(2c95b5ebe597e924fa2e7fcce3a65f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras/KHR_materials_unlit.cs using Guid(2c95b5ebe597e924fa2e7fcce3a65f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c5465b619224e562e3024d1a3810f2c') in 0.003376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001620 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/MonoBehaviourComparator.cs
+  artifactKey: Guid(7cee53236ca4f234ab42ba8e92afd178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/MonoBehaviourComparator.cs using Guid(7cee53236ca4f234ab42ba8e92afd178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cafe89c009821632fa357d19eedffbc9') in 0.003142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000935 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/BooleanTest.cs
+  artifactKey: Guid(d0f19e48b365cd446982ed0b7ba6251e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/BooleanTest.cs using Guid(d0f19e48b365cd446982ed0b7ba6251e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '819599065d203640cf4e23a86c99cba9') in 0.002326 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001365 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/MonitorQueue.cs
+  artifactKey: Guid(5e968e04ff53e1c4a9a2869b7cf76055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/MonitorQueue.cs using Guid(5e968e04ff53e1c4a9a2869b7cf76055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9895dcd0c97fc6d9fd2b45e94f7793ca') in 0.002158 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests
+  artifactKey: Guid(8074c6fea81d7d34389ced5f5db00da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests using Guid(8074c6fea81d7d34389ced5f5db00da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2272d686cda5488533adde093b908798') in 0.001904 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001084 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/Unit.cs
+  artifactKey: Guid(98bd42f8c3a895d4bac6cbcf523878bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/Unit.cs using Guid(98bd42f8c3a895d4bac6cbcf523878bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e30c9b766011d1e3431ddad71e54e119') in 0.002597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001502 seconds.
+  path: Assets/UniGLTF/UniHumanoid/doc/BoneMappingInspector.png
+  artifactKey: Guid(1e5ed0d1eaae21c46b59beeeb761a357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/doc/BoneMappingInspector.png using Guid(1e5ed0d1eaae21c46b59beeeb761a357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b009c8a4478a0590b8113038f593e061') in 0.015434 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005663 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/ImporterContext.cs
+  artifactKey: Guid(8d2d07b67753fb0489decee9926ab2da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/ImporterContext.cs using Guid(8d2d07b67753fb0489decee9926ab2da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2b9f9f539a4669f9f88627a159e003c') in 0.003767 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002018 seconds.
+  path: Assets/UniGLTF/UniJSON/README.md
+  artifactKey: Guid(aacd90cc96ffbef4bb472bcb90b2620d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/README.md using Guid(aacd90cc96ffbef4bb472bcb90b2620d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a8af7c724a6d20de6b029be432348c6') in 0.003629 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001139 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/IJsonSchemaValidator.cs
+  artifactKey: Guid(c35476cdb8e1a4541b2f06b9b11141d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/IJsonSchemaValidator.cs using Guid(c35476cdb8e1a4541b2f06b9b11141d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b44fbaf574d48dc4cedbf71261fe6230') in 0.002962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000900 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/MsgPack/Exceptions.cs
+  artifactKey: Guid(bc09dae63ba521545a0b9a8ef120b95a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/MsgPack/Exceptions.cs using Guid(bc09dae63ba521545a0b9a8ef120b95a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80d0e29e42d58f5afaacc9635cc5dc97') in 0.002345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000820 seconds.
+  path: Assets/UniGLTF/UniJSON
+  artifactKey: Guid(b61e52d3da638794da582603d7e4d9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON using Guid(b61e52d3da638794da582603d7e4d9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e19e9c7b971d03cfc6110fa9e5eb46e1') in 0.002546 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001197 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/Skeleton.cs
+  artifactKey: Guid(883d8b6e07cbda24384ce65d613d128e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/Skeleton.cs using Guid(883d8b6e07cbda24384ce65d613d128e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4deadd1683f0438aa448240004cae9d') in 0.002406 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003327 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/MaterialExporter.cs
+  artifactKey: Guid(99662edfbf59e8f458bcba3b62b13050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/MaterialExporter.cs using Guid(99662edfbf59e8f458bcba3b62b13050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66d00cfa30f1d74380636728e2a1a611') in 0.003033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001238 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/glbImporter.cs
+  artifactKey: Guid(4a51e78bfa249be4c88e7612ed05eb6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/glbImporter.cs using Guid(4a51e78bfa249be4c88e7612ed05eb6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e21c7059f380c2e474acd3b2e4c5db01') in 0.002474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001109 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras/glTFCameraExtensions.cs
+  artifactKey: Guid(38f59c64e05855b41be64595c570e366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras/glTFCameraExtensions.cs using Guid(38f59c64e05855b41be64595c570e366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b44a9ede71a3b921667f8dd5e05aa213') in 0.002671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001141 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Json/Exceptions.cs
+  artifactKey: Guid(d9ec26dc9d2db2a45980e06a951e6796) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Json/Exceptions.cs using Guid(d9ec26dc9d2db2a45980e06a951e6796) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44ca2472a7e9dae6511f51104b470634') in 0.001924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001213 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/SchemaTests.cs
+  artifactKey: Guid(d4dfd16b1b05c8640898b955df61c51b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/SchemaTests.cs using Guid(d4dfd16b1b05c8640898b955df61c51b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d64c239f8e5f1ec852c233a9519df6b') in 0.002108 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000955 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Extensions/ObjectExtensions.cs
+  artifactKey: Guid(37a382c6f3b047940afc0e3e1f3e53db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Extensions/ObjectExtensions.cs using Guid(37a382c6f3b047940afc0e3e1f3e53db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '353bcf72642a58c9617be8609a931b89') in 0.002128 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Json
+  artifactKey: Guid(58f288c3e74d92645b55a9b2af4ace40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Json using Guid(58f288c3e74d92645b55a9b2af4ace40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fc2b699a7138e8775b54861a1b271c2') in 0.002157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001079 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scenes/HumanBuilderTest.cs
+  artifactKey: Guid(dfdcf658d2da05649974b59b849de74c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scenes/HumanBuilderTest.cs using Guid(dfdcf658d2da05649974b59b849de74c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cac5a270e2e6a8a0eeb1a08f7b0f789') in 0.002129 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001053 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/TextureItem.cs
+  artifactKey: Guid(09cdeb503b1e8234faf528b6ae134e7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/TextureItem.cs using Guid(09cdeb503b1e8234faf528b6ae134e7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92fb0d4aa31b1e208e8ec5ac22571f18') in 0.001999 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001262 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/Editor/BoneMappingEditor.cs
+  artifactKey: Guid(06b3418a97f8c204da34a849fa86a7c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/Editor/BoneMappingEditor.cs using Guid(06b3418a97f8c204da34a849fa86a7c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89263233fe174908e63d22fef23b5b7d') in 0.002117 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000825 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/IFileSystemAccessor.cs
+  artifactKey: Guid(865a0727ffe095a40abbb2b8d799e720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/IFileSystemAccessor.cs using Guid(865a0727ffe095a40abbb2b8d799e720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '557b265bf7ab4ecebdcf111dc26f898d') in 0.002412 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001287 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/IO
+  artifactKey: Guid(c6057a51320659649bce151bb00efb1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/IO using Guid(c6057a51320659649bce151bb00efb1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '859c802378ee906fbe548722d8082cc1') in 0.001516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras
+  artifactKey: Guid(7575878526aebe349a5a6b4f3ec99386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras using Guid(7575878526aebe349a5a6b4f3ec99386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dbf5e6dc991601cfd659f936a6af10a') in 0.004202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001322 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/glEnum.cs
+  artifactKey: Guid(378358a997cd2e9418f180593fb04a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/glEnum.cs using Guid(378358a997cd2e9418f180593fb04a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61eb59a0943c98512212945ec96c1597') in 0.002121 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000927 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackNode.cs
+  artifactKey: Guid(9ef0f2d1f5d6369438e968b16dab2b65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackNode.cs using Guid(9ef0f2d1f5d6369438e968b16dab2b65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ff4a92cda750c4c9542dcd7ab5d9a75') in 0.002310 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/Scheduler
+  artifactKey: Guid(0d3438c44f955904ebeb8b0d5f374863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/Scheduler using Guid(0d3438c44f955904ebeb8b0d5f374863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'feb11fa24788b6d4f7bab3bc05f5b439') in 0.003685 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/UniGLTF/Core/Scripts/PreExportShaderProps
+  artifactKey: Guid(01fae25f65cc4ac47be72aca6b05eb49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/PreExportShaderProps using Guid(01fae25f65cc4ac47be72aca6b05eb49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2006935ccea1bc4c11ba81af8292ca2b') in 0.002433 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002084 seconds.
+  path: Assets/UniGLTF/Resources/Shaders/NormalMapDecoder.shader
+  artifactKey: Guid(53762a37d0a403e42a4921e3e3b84915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Resources/Shaders/NormalMapDecoder.shader using Guid(53762a37d0a403e42a4921e3e3b84915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '497ff18b4c31e7b3f536bca84b07f687') in 0.002322 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001726 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/SkeletonMeshUtility.cs
+  artifactKey: Guid(92bf6005e8d6db94b8b55c67caea9ddd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/SkeletonMeshUtility.cs using Guid(92bf6005e8d6db94b8b55c67caea9ddd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4aebc5e6ece28ae16ff57bd7fd3cd46') in 0.003139 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001180 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Extensions/ByteExtensions.cs
+  artifactKey: Guid(aa32ad3ea4c1ec540a03225c0d520af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Extensions/ByteExtensions.cs using Guid(aa32ad3ea4c1ec540a03225c0d520af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42b1cd361923d7bd338937aaa1d575ea') in 0.004183 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001043 seconds.
+  path: Assets/UniGLTF/Resources/Shaders/NormalMapEncoder.shader
+  artifactKey: Guid(3e39586253f31b34f87fa7e133449b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Resources/Shaders/NormalMapEncoder.shader using Guid(3e39586253f31b34f87fa7e133449b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4baaff82c1905ef67108ea354c25488') in 0.003410 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000936 seconds.
+  path: Assets/UniGLTF/Core/Scripts/PreExportShaderProps/Unlit_Texture.cs
+  artifactKey: Guid(8273e1e61ad8e914baae94d06836f2ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/PreExportShaderProps/Unlit_Texture.cs using Guid(8273e1e61ad8e914baae94d06836f2ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b76d70bfc703020886c7ee8c9491635') in 0.002156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001488 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonSchemaValidator.cs
+  artifactKey: Guid(9ff35fccc1467f341b052622fedcb3ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonSchemaValidator.cs using Guid(9ff35fccc1467f341b052622fedcb3ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18e99b98579a42ff36fde3e3f4505671') in 0.002713 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002170 seconds.
+  path: Assets/UniGLTF/UniHumanoid/doc/assets.png
+  artifactKey: Guid(f998ebae6d907c94b87d25d0d24939d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/doc/assets.png using Guid(f998ebae6d907c94b87d25d0d24939d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '928c443cfee474878d4155d121f04504') in 0.009322 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001944 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/ArrayTest.cs
+  artifactKey: Guid(4b485b0360ebfd246ac90bbe8ad1895b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/ArrayTest.cs using Guid(4b485b0360ebfd246ac90bbe8ad1895b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b25302e2b21e5012ea72aa30fbf2c284') in 0.002966 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001489 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/Scheduler/CurrentThreadScheduler.cs
+  artifactKey: Guid(21979cc7137a17d4ea8b6202381a02d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/Scheduler/CurrentThreadScheduler.cs using Guid(21979cc7137a17d4ea8b6202381a02d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8405f7bed30ba01f74c77e4121534906') in 0.002358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002715 seconds.
+  path: Assets/UniGLTF/doc/pbr_to_standard.png
+  artifactKey: Guid(300c7a0839ab0e24bb25c7f268696f2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/doc/pbr_to_standard.png using Guid(300c7a0839ab0e24bb25c7f268696f2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b55a66bd00b1ebde719733e7d399a61c') in 0.016362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003852 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/BytesBuffer.cs
+  artifactKey: Guid(33b0000c5446b7547bcad1da1e9768ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/BytesBuffer.cs using Guid(33b0000c5446b7547bcad1da1e9768ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6a6ffba4a3ffc54ca31c9a705f08d14') in 0.002973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000783 seconds.
+  path: Assets/UniGLTF/Resources/Shaders
+  artifactKey: Guid(a5abcb49b49699641bdc73d00fd14390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Resources/Shaders using Guid(a5abcb49b49699641bdc73d00fd14390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e9a93e83168e34ab55672c27fbec022') in 0.001847 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001299 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/Scheduler.cs
+  artifactKey: Guid(5a160dc164df4094dbbc892055ac82ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/Scheduler.cs using Guid(5a160dc164df4094dbbc892055ac82ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96a04da76774d65abfa9d9b2b9c2c4ee') in 0.001601 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002445 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/IBone.cs
+  artifactKey: Guid(c9c2e3ee9fe29a84cb902e54a90c5dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/IBone.cs using Guid(c9c2e3ee9fe29a84cb902e54a90c5dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12e880891af96bc7fbbd25225596ef4f') in 0.002809 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001063 seconds.
+  path: Assets/UniGLTF/UniHumanoid/LICENSE.md
+  artifactKey: Guid(3ea85fd858590174f98cc2cd4c3e083f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/LICENSE.md using Guid(3ea85fd858590174f98cc2cd4c3e083f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c132e7af2c33ef1c3330ca808f8a576') in 0.002335 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000110 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scenes
+  artifactKey: Guid(484fc100208aafc49b704e7ec2fcedde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scenes using Guid(484fc100208aafc49b704e7ec2fcedde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44e018592dafcf16e3e33abcd1653c46') in 0.002348 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000833 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Extensions/UnityExtensions.cs
+  artifactKey: Guid(5294813527b3278458026afc820dd63d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Extensions/UnityExtensions.cs using Guid(5294813527b3278458026afc820dd63d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe8a44661f15696ef837e7fa27d63c73') in 0.002020 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000892 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Extensions/JsonParserExtensions.cs
+  artifactKey: Guid(d0a724a200cc85b4887efa87292c6626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Extensions/JsonParserExtensions.cs using Guid(d0a724a200cc85b4887efa87292c6626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c298a3af7f9cf9ea1277a81720cfb0ff') in 0.002245 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001184 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/JsonParserTest.cs
+  artifactKey: Guid(4af58e17f98c9a141b9fef25dabbd9ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/JsonParserTest.cs using Guid(4af58e17f98c9a141b9fef25dabbd9ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b644198f4aec668e881f7d6fbad4c7dc') in 0.002660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000923 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Extensions/TypeExtensions.cs
+  artifactKey: Guid(2fb728ca27f90c947890313df5f94d4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Extensions/TypeExtensions.cs using Guid(2fb728ca27f90c947890313df5f94d4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '532cbde35937dfe557303f53e4bf37b5') in 0.002778 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000840 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/JsonDiffTests.cs
+  artifactKey: Guid(bafda51ddeeb2b84b920b119176499b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/JsonDiffTests.cs using Guid(bafda51ddeeb2b84b920b119176499b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4159193c49aa0f37d85f9ffedbb31919') in 0.001880 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002099 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/StaticMeshIntegrator.cs
+  artifactKey: Guid(5d049a3daed1255499aaec8b6d1a2afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/StaticMeshIntegrator.cs using Guid(5d049a3daed1255499aaec8b6d1a2afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04569d6955920e86462308d00e82626c') in 0.001776 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002631 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/TextureConverter.cs
+  artifactKey: Guid(5d2d27884d6c4780b08c745e5cc5c5b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/TextureConverter.cs using Guid(5d2d27884d6c4780b08c745e5cc5c5b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97dcc4404fc8af271769bb8575defd9c') in 0.002506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/MsgPack
+  artifactKey: Guid(83304e106805b9443b6b1e764bd73a99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/MsgPack using Guid(83304e106805b9443b6b1e764bd73a99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c766633fe20f441590f24ccc16772a4d') in 0.001452 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002210 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/IValueNode.cs
+  artifactKey: Guid(fc3261d7aa4200942bfa09eeaabe5a0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/IValueNode.cs using Guid(fc3261d7aa4200942bfa09eeaabe5a0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '155e146f76c141827f17888869fe928f') in 0.002051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001428 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Json/JsonParser.cs
+  artifactKey: Guid(3ab6245869fe6f7448aa8f4e84286cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Json/JsonParser.cs using Guid(3ab6245869fe6f7448aa8f4e84286cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeeb8677dc31a2e99d44ab4680489f1f') in 0.002263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001072 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/ShaderPropExporter/PreShaderPropExporter.cs
+  artifactKey: Guid(50935dd2f9f3fa445a687f30d4dd663b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/ShaderPropExporter/PreShaderPropExporter.cs using Guid(50935dd2f9f3fa445a687f30d4dd663b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f1ea77eff28ac2a3ddb3949c2337a01') in 0.002118 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000328 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/Format
+  artifactKey: Guid(01b0c7b007b35a544a023b969da6fa97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/Format using Guid(01b0c7b007b35a544a023b969da6fa97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2beda25322bf0c8867303962a614159') in 0.001569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000905 seconds.
+  path: Assets/UniGLTF/UniHumanoid/doc/humanpose_transfer_inspector.png
+  artifactKey: Guid(0091e5f38ae478b47ba5b2aec91e1598) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/doc/humanpose_transfer_inspector.png using Guid(0091e5f38ae478b47ba5b2aec91e1598) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97856b160b753389c5769243e1c4e4d7') in 0.018021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003183 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/BytesReader.cs
+  artifactKey: Guid(ecae7b7664269624ba8e03025a53819e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/BytesReader.cs using Guid(ecae7b7664269624ba8e03025a53819e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4254e309abfaa4cc8b37482378cc9797') in 0.003216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001477 seconds.
+  path: Assets/UniGLTF/UniHumanoid/Scripts/IO/BvhImporter.cs
+  artifactKey: Guid(da8ccd6cbe1692448872063195e5c71b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/Scripts/IO/BvhImporter.cs using Guid(da8ccd6cbe1692448872063195e5c71b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b17fe5185565163428be87cf0f0a5fb7') in 0.002475 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000908 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Json/JsonFormatter.cs
+  artifactKey: Guid(9968766fe6cce164a8c7e950200cbb11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Json/JsonFormatter.cs using Guid(9968766fe6cce164a8c7e950200cbb11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5dc7f3125b9881b02008c408162fc0a') in 0.002147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor
+  artifactKey: Guid(78922867f02b9314fab33f822b80a819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor using Guid(78922867f02b9314fab33f822b80a819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '397d9b90ec11cf303728221992ec61bd') in 0.002272 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/UniGLTF/UniUnlit
+  artifactKey: Guid(fd8427d33ce1e4b46b317b76261a83bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniUnlit using Guid(fd8427d33ce1e4b46b317b76261a83bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c58ac60f01a2b72c3022f1e3fc0a7856') in 0.002492 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000802 seconds.
+  path: Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/RawTest.cs
+  artifactKey: Guid(331bd613923afe5438ef4ff3a59fc5b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Editor/Tests/MsgPack/RawTest.cs using Guid(331bd613923afe5438ef4ff3a59fc5b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '781785c03a15109bcf311ca0325fea9b') in 0.001825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001313 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/glTFTexture.cs
+  artifactKey: Guid(5eabe858953de424787a21d633fedda0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/glTFTexture.cs using Guid(5eabe858953de424787a21d633fedda0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8937e79abaf6c8a7ee6a74c257c11505') in 0.002919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000681 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackFormatter.cs
+  artifactKey: Guid(41153eff97391fd46a31361bac5804fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackFormatter.cs using Guid(41153eff97391fd46a31361bac5804fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4187dab072164f7e166bba85ddb89c39') in 0.002075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/UniGLTF/Core/Scripts
+  artifactKey: Guid(53bb334d2e485454c8ba06832f27078c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts using Guid(53bb334d2e485454c8ba06832f27078c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a6764ac167606f276322ed3d95db9b1') in 0.002252 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/UniGLTF/DepthFirstScheduler/Editor
+  artifactKey: Guid(250531df82a522444bf10b033668d42a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/DepthFirstScheduler/Editor using Guid(250531df82a522444bf10b033668d42a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c99bebf56c9b12d846807ca317c9cbcd') in 0.002075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000899 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Extensions/EnumExtensions.cs
+  artifactKey: Guid(d8691eccccb3e214db8bc5b86179f428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Extensions/EnumExtensions.cs using Guid(d8691eccccb3e214db8bc5b86179f428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c3891f2308b024e5fdba462fe90b9ef') in 0.002263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003243 seconds.
+  path: Assets/UniGLTF/Core/Scripts/IO/TextureSamplerUtil.cs
+  artifactKey: Guid(f3929edbda61f9346906bfab93411b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/IO/TextureSamplerUtil.cs using Guid(f3929edbda61f9346906bfab93411b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '541e8407584d3c620957d2d1828cae51') in 0.002464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001864 seconds.
+  path: Assets/UniGLTF/UniHumanoid/PoseModifier/IPoseModifier.cs
+  artifactKey: Guid(973f36da309a48d4ea3c5526a51e957f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/PoseModifier/IPoseModifier.cs using Guid(973f36da309a48d4ea3c5526a51e957f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe0b37ccc0679fc1311e5c8762f31ae1') in 0.001803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002410 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras/glTFMesh.Primitives.extras.targetNames.cs
+  artifactKey: Guid(e95762d0b18d11243b32a56f21cef862) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Format/ExtensionsAndExtras/glTFMesh.Primitives.extras.targetNames.cs using Guid(e95762d0b18d11243b32a56f21cef862) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02163ec1b11d07ef5bd41339793787d2') in 0.002244 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000847 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackValue.cs
+  artifactKey: Guid(e201eb676758d5d419ae0629fda171ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackValue.cs using Guid(e201eb676758d5d419ae0629fda171ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd61849d177c0bb86b4de3f70f019ebb0') in 0.004356 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000656 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Json/JsonString.cs
+  artifactKey: Guid(04a331b0f78f87e4d928172d735672d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Json/JsonString.cs using Guid(04a331b0f78f87e4d928172d735672d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '922da143b390e2d85188fc0d90a67706') in 0.002568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001811 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonArrayValidator.cs
+  artifactKey: Guid(6144a646f2f535641885a006024771a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/JsonSchemaValidator/JsonArrayValidator.cs using Guid(6144a646f2f535641885a006024771a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49ff2a74a55048bd525ade190e19ea2b') in 0.002236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001584 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Extensions/StringExtensions.cs
+  artifactKey: Guid(7885c3bbd2800ea45b052ae72ab9cda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Extensions/StringExtensions.cs using Guid(7885c3bbd2800ea45b052ae72ab9cda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd519e1169ca42838e93c3a6ac2cf656a') in 0.001516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002371 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/Json/SimpleJSON.cs
+  artifactKey: Guid(f4a9e51b1918ea6428a7d794b655b2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/Json/SimpleJSON.cs using Guid(f4a9e51b1918ea6428a7d794b655b2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43ea4221d9fad7e9b471a6ed5bc8bcdf') in 0.002134 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001253 seconds.
+  path: Assets/UniGLTF/README.md
+  artifactKey: Guid(c97bd2ee06a25534f9947292d562aecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/README.md using Guid(c97bd2ee06a25534f9947292d562aecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b124272d2be5dae939a958c56187041') in 0.002557 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000843 seconds.
+  path: Assets/UniGLTF/Core/Scripts/Editor
+  artifactKey: Guid(c990e946b340eab4cbed2eced88106f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/Editor using Guid(c990e946b340eab4cbed2eced88106f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b5aadab9546adc1b38bbc8a59cb2b4e') in 0.001813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000997 seconds.
+  path: Assets/UniGLTF/UniHumanoid/doc
+  artifactKey: Guid(242d0233147ccef4389d9983b3c66a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniHumanoid/doc using Guid(242d0233147ccef4389d9983b3c66a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f73065635ef0994b091f8416771f899d') in 0.002010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001687 seconds.
+  path: Assets/UniGLTF/Resources/Shaders/StandardVColor.shader
+  artifactKey: Guid(5ef7bdb14a8f23043805e41692d10787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Resources/Shaders/StandardVColor.shader using Guid(5ef7bdb14a8f23043805e41692d10787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be521b2253b5e215c9cf2ae6f1da93ae') in 0.003824 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/UniGLTF/UniJSON/Scripts/StringSegment.cs
+  artifactKey: Guid(50bb40bf57fb1574b98b811e4f3a1598) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/UniJSON/Scripts/StringSegment.cs using Guid(50bb40bf57fb1574b98b811e4f3a1598) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e849476f76a828d2a17d1162ebf8823') in 0.002878 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002370 seconds.
+  path: Assets/UniGLTF/Core/Scripts/PreExportShaderProps/UniGLTF_UniUnlit.cs
+  artifactKey: Guid(ad4b6b115b83ecd48a513f697afc95f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniGLTF/Core/Scripts/PreExportShaderProps/UniGLTF_UniUnlit.cs using Guid(ad4b6b115b83ecd48a513f697afc95f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd10504d63f3d0c6c04da6f15ae8530b') in 0.003555 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 295.013761 seconds.
+  path: Assets/gazou/5745.png
+  artifactKey: Guid(ca90a11d94e36c648a15b34d21b1780f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/gazou/5745.png using Guid(ca90a11d94e36c648a15b34d21b1780f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebed49812a6c1bf419a9899cbdc323af') in 0.080072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/gazou/ikemen2.png
+  artifactKey: Guid(052ab85dd2951864fb207dd46306c66f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/gazou/ikemen2.png using Guid(052ab85dd2951864fb207dd46306c66f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3864730f4e92eb6b2934f7973d01192b') in 0.084579 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/gazou/ikemen3.png
+  artifactKey: Guid(5a045282b1374c1418f12259bfd0c023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/gazou/ikemen3.png using Guid(5a045282b1374c1418f12259bfd0c023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d77c9c21bc54d5a454dc97e3734cccd') in 0.063034 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/gazou/kizetu.png
+  artifactKey: Guid(a4a35f96433f91b408f7a0237eb72f4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/gazou/kizetu.png using Guid(a4a35f96433f91b408f7a0237eb72f4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfbba450911e27d4092b2209aa9f29cc') in 0.034991 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/gazou/S__32612357.jpg
+  artifactKey: Guid(ebc4c2fceb770f54e82609b25bd24ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/gazou/S__32612357.jpg using Guid(ebc4c2fceb770f54e82609b25bd24ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84d15cdca609e23416fd72a6d40a6c46') in 0.036119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/gazou/ikemen.png
+  artifactKey: Guid(d869bfd6df108da4a86bddc02ccf6e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/gazou/ikemen.png using Guid(d869bfd6df108da4a86bddc02ccf6e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '924262ffc79394e94157a5a7e66aded7') in 0.058639 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/gazou/New Material.mat
+  artifactKey: Guid(0d69c813e7575e248a5fb7e06d6860fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/gazou/New Material.mat using Guid(0d69c813e7575e248a5fb7e06d6860fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24bab7debba3a8431f610f6399df0222') in 0.015774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/gazou/food_chikuwa.png
+  artifactKey: Guid(22920b3d09c3cbc44a79678d9d7578ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/gazou/food_chikuwa.png using Guid(22920b3d09c3cbc44a79678d9d7578ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '418a7090ef0c97bcdb442cdad7643211') in 0.067395 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.881602 seconds.
+  path: Assets/Scenes/Result.unity
+  artifactKey: Guid(0da721f931c926f42b97414789496109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Result.unity using Guid(0da721f931c926f42b97414789496109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c121d8c630b7b968fde435e739a6f39') in 0.003669 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.026948 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.812 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3813ms)
+		BeginReloadAssembly (201ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (60ms)
+		EndReloadAssembly (3420ms)
+			LoadAssemblies (127ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (390ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (2599ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (118ms)
+				ProcessInitializeOnLoadAttributes (2280ms)
+				ProcessInitializeOnLoadMethodAttributes (161ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4229 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 472 unused Assets / (96.9 KB). Loaded Objects now: 5541.
+Memory consumption went from 179.5 MB to 179.4 MB.
+Total: 11.902400 ms (FindLiveObjects: 0.415300 ms CreateObjectMapping: 0.360900 ms MarkObjects: 10.862200 ms  DeleteObjects: 0.262800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

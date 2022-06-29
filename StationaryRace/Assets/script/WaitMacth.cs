@@ -39,6 +39,7 @@ public class WaitMacth : MonoBehaviour
         if (CheckAllRoomMembersState(1))
         {
             CountTime.GetComponent<CountTime>().CountStart();
+            GMSystem.GetComponent<GMSystem>().CarSpawn();
             this.gameObject.SetActive(false);
         }
 

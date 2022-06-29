@@ -126,9 +126,10 @@ public class GMSystem : MonoBehaviour
         //ÉÜÅ[ÉUÅ[(é©ï™)
         User.USER = transform.Find("User").gameObject;
         User.USERNm = USERnmGet();
+        Debug.Log(User.USERNm);
         User.CPcnt = 0;
         User.CPTime = 0;
-        User.Rap = 1;
+        User.Rap = 3;
         User.Rank = 1;
         NmSend();
         //User.USER.GetComponent<UserOperation>().RankSet();
@@ -157,6 +158,7 @@ public class GMSystem : MonoBehaviour
     /// </summary>
     public void CarSpawn()
     {
+        
         GameObject SPlist = this.transform.Find("SpawnList").gameObject;
         Vector3 SPp = SPlist.transform.GetChild(User.USERNm).gameObject.GetComponent<Transform>().position;
         Quaternion SPr = SPlist.transform.GetChild(User.USERNm).gameObject.GetComponent<Transform>().rotation;

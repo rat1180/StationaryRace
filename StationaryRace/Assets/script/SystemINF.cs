@@ -14,7 +14,7 @@ public class SystemINF : StrixBehaviour
 
     //UserNmを割り振るたびに増やしてくことで重なりをなくす
     [StrixSyncField]
-    public int USERcnt;
+    public static int USERcnt;
 
     //他ユーザーとの通信用に扱う構造体
     public struct USERTIME
@@ -33,6 +33,10 @@ public class SystemINF : StrixBehaviour
     void Start()
     {
         GMSystem = GameObject.Find("GMSystem");
+        if (isLocal)
+        {
+            USERcntRESET();
+        }
     }
 
     // Update is called once per frame

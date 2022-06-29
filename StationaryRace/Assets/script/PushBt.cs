@@ -19,6 +19,6 @@ public class PushBt : MonoBehaviour
     }
     public void SceneTrip()
     {
-        SceneManager.LoadScene("stage");
+        SceneManager.LoadScene("Marge");
     }
 }

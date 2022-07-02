@@ -33,6 +33,9 @@ public class SystemINF : StrixBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //入退室イベント
+        StrixNetwork.instance.roomSession.roomClient.RoomJoinNotified += RoomJoinNotified;
+
         GMSystem = GameObject.Find("GMSystem");
         if (isLocal)
         {
@@ -61,6 +64,15 @@ public class SystemINF : StrixBehaviour
         USERcnt += mode;
 
         return USERcnt;
+    }
+
+    /// <summary>
+    /// 誰かが入るたびに各GMSystemに入ったUserの番号を入力させる
+    /// </summary>
+    [StrixRpc]
+    public void RoomJoinNotified(object sender)
+    {
+        GMSystem.GetComponent<GMSystem>().PlayerJoin();
     }
 
     /// <summary>

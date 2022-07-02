@@ -73,7 +73,7 @@ public class GMSystem : MonoBehaviour
     }
 
     //他ユーザーの情報の保存先
-    private GameObject SystemINF;
+    public GameObject SystemINF = null;
     public GameObject SystemINF_POP;
 
     /***************
@@ -88,9 +88,9 @@ public class GMSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //入室時に起動
         //InitSet();
-        //入退室イベント
-        StrixNetwork.instance.roomSession.roomClient.RoomJoinNotified += PlayerJoined;
+        
         //Invoke("CarSpawn", 5);
     }
 
@@ -293,24 +293,32 @@ public class GMSystem : MonoBehaviour
     public int USERnmGet()
     {
         //他ユーザー情報の確認
-        SystemINF = GameObject.Find("SystemINF");
-        if (SystemINF = null)
+        SystemINF = GameObject.Find("SystemINF(Clone)");
+
+        //ルームオーナー証明
+        if (SystemINF == null)
         {
-            SystemINF = Instantiate(SystemINF_POP,transform);
+            //オーナーのみ生成
+            SystemINF = Instantiate(SystemINF_POP);
+            SystemINF.GetComponent<SystemINF>().USERcntRESET();
+            Debug.Log("生成");
         }
+
         int Usernm = SystemINF.GetComponent<SystemINF>().USERcntSET(1);
         return Usernm;
     }
 
     //参加するたび情報を入れる
-    void PlayerJoined(object sender)
+    public void PlayerJoin()
     {
         int Usernm = SystemINF.GetComponent<SystemINF>().USERcntSET(0);
+        if (Usernm == User.USERNm) return;
         for(int i = 0; i < Players; i++)
         {
             if(Users[i].UserNm == null)
             {
                 Users[i].UserNm = Usernm;
+                break;
             }
         }
     }

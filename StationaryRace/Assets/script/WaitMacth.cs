@@ -16,6 +16,7 @@ public class WaitMacth : MonoBehaviour
     public bool RoomFlg = false;
     public GameObject Button;
     public GameObject CountTime;
+    public bool WaitFlg = true;
 
     // Start is called before the first frame update
     void Start()
@@ -36,11 +37,12 @@ public class WaitMacth : MonoBehaviour
 
     void memberWait()
     {
-        if (CheckAllRoomMembersState(1))
+        if (CheckAllRoomMembersState(1) && WaitFlg)
         {
             CountTime.GetComponent<CountTime>().CountStart();
             GMSystem.GetComponent<GMSystem>().CarSpawn();
             this.gameObject.SetActive(false);
+            WaitFlg = false;
         }
 
     }
@@ -69,6 +71,7 @@ public class WaitMacth : MonoBehaviour
 
     public static bool CheckAllRoomMembersState(int desiredState)
     {
+
         foreach (var roomMember in StrixNetwork.instance.roomMembers)
         {
             if (!roomMember.Value.GetProperties().TryGetValue("state",
@@ -87,11 +90,18 @@ public class WaitMacth : MonoBehaviour
         return true;
     }
 
+    //ëºÇÃÉÜÅ[ÉUÅ[ì«Ç›çûÇ›Ç…1ïbë“Ç¬
+    public void WaitRoomIn()
+    {
+        Invoke("RoomIn", 1f);
+    }
+
     public void RoomIn()
     {
         RoomFlg = true;
         Button.SetActive(true);
         Debug.Log("In");
+        GMSystem.GetComponent<GMSystem>().InitSet();
     }
 
 }

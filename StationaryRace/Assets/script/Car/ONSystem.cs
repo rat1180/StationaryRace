@@ -19,6 +19,7 @@ public class ONSystem : MonoBehaviour
     public Level logLevel = Level.INFO;
 
     public GameObject SystemINF;
+    public GameObject WaitMacth;
 
     /// <summary>
     /// ルームに参加可能な最大人数
@@ -132,7 +133,7 @@ public class ONSystem : MonoBehaviour
 
     private void CreateRoom()
     {
-        SystemINF.GetComponent<SystemINF>().USERcntRESET();
+        //SystemINF.GetComponent<SystemINF>().USERcntRESET();
 
         RoomProperties roomProperties = new RoomProperties
         {
@@ -157,9 +158,32 @@ public class ONSystem : MonoBehaviour
         });
     }
 
-    #region レース
+    public void SetNotRady()
+    {
+        // ルームメンバーの状態を変更します: 0は「準備中」、1は「準備完了」
+        StrixNetwork.instance.SetRoomMember(
+            StrixNetwork.instance.selfRoomMember.GetPrimaryKey(),
+                new Dictionary<string, object>() {
+        { "properties", new Dictionary<string, object>() {
+            { "state", 0 }
+        } }
+                },
+                args =>
+                {
+                    Debug.Log("SetRoomMember succeeded");
+                },
+                args =>
+                {
+                    Debug.Log("SetRoomMember failed. error = " + args.cause);
+                }
 
-    void Ready()
+            );
+        WaitMacth.GetComponent<WaitMacth>().WaitRoomIn();
+    }
+
+#region レース
+
+void Ready()
     {
         if (CheckAllRoomMembersState(1))
         {

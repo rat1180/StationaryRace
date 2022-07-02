@@ -43,26 +43,25 @@ public class itemblock : StrixBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        StrixReplicator Check = collider.transform.parent.GetComponent<StrixReplicator>();
-        if (Check == null) return;
-        if (Check.isLocal)
+
+        if (collider.gameObject.tag == "Player")// 衝突した相手にPlayerタグが付いているとき.
         {
-            if (collider.gameObject.tag == "Player")// 衝突した相手にPlayerタグが付いているとき.
+            StrixReplicator Check = collider.transform.parent.GetComponent<StrixReplicator>();
+            if (Check == null || !(Check.isLocal)) return;
+            AudioSource.PlayClipAtPoint(Dessound, transform.position); //アイテムが破壊された際に効果音を鳴らす.
+
+            this.gameObject.SetActive(false);                                           //アイテムブロックのゲームオブジェクトを非表示にする.
+            Instantiate(SetBox_particle, this.transform.position, Quaternion.identity); //パーティクルを生成.
+
+            if (ItemHave.itemhave == false)//プレイヤーがアイテムを持っていなければアイテムマネージャーに数値を渡す.
             {
-                AudioSource.PlayClipAtPoint(Dessound, transform.position); //アイテムが破壊された際に効果音を鳴らす.
-
-                this.gameObject.SetActive(false);                                           //アイテムブロックのゲームオブジェクトを非表示にする.
-                Instantiate(SetBox_particle, this.transform.position, Quaternion.identity); //パーティクルを生成.
-
-                if (ItemHave.itemhave == false)//プレイヤーがアイテムを持っていなければアイテムマネージャーに数値を渡す.
-                {
-                    //USER_NUM = ItemHave.NUMBER_RETURN();                         //どのプレイヤーがアイテムを取得したか番号を参照.
-                    ItemMana.GetComponent<ItemManager>().Item(); //ItemManagerというスクリプトのItem関数を使う.
-                    ItemHave.itemhave = true;                                         //プレーヤースクリプトでアイテムフラグをtrueにする.
-                }
-                Invoke("Respawn", 3); //3秒後にその場に複製される.
+                //USER_NUM = ItemHave.NUMBER_RETURN();                         //どのプレイヤーがアイテムを取得したか番号を参照.
+                ItemMana.GetComponent<ItemManager>().Item(); //ItemManagerというスクリプトのItem関数を使う.
+                ItemHave.itemhave = true;                                         //プレーヤースクリプトでアイテムフラグをtrueにする.
             }
+            Invoke("Respawn", 3); //3秒後にその場に複製される.
         }
+       
     }
 
     void Respawn()//アイテムボックス復活用関数.

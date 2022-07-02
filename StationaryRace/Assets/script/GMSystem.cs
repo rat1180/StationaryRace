@@ -74,6 +74,7 @@ public class GMSystem : MonoBehaviour
 
     //他ユーザーの情報の保存先
     private GameObject SystemINF;
+    public GameObject SystemINF_POP;
 
     /***************
      アイテム系変数
@@ -87,7 +88,7 @@ public class GMSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InitSet();
+        //InitSet();
         //入退室イベント
         StrixNetwork.instance.roomSession.roomClient.RoomJoinNotified += PlayerJoined;
         //Invoke("CarSpawn", 5);
@@ -116,12 +117,6 @@ public class GMSystem : MonoBehaviour
         Rapmax = 1;
         CPSet();
 
-        //他ユーザー情報の確認
-        SystemINF = GameObject.Find("SystemINF");
-        if (SystemINF == null)
-        {
-            Debug.Log("null");
-        }
 
         //ユーザー(自分)
         User.USER = transform.Find("User").gameObject;
@@ -297,6 +292,12 @@ public class GMSystem : MonoBehaviour
     //番号の取得
     public int USERnmGet()
     {
+        //他ユーザー情報の確認
+        SystemINF = GameObject.Find("SystemINF");
+        if (SystemINF = null)
+        {
+            SystemINF = Instantiate(SystemINF_POP,transform);
+        }
         int Usernm = SystemINF.GetComponent<SystemINF>().USERcntSET(1);
         return Usernm;
     }

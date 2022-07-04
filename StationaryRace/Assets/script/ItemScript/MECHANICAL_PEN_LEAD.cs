@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SoftGear.Strix.Unity.Runtime;
 
-public class MECHANICAL_PEN_LEAD : MonoBehaviour
+public class MECHANICAL_PEN_LEAD : StrixBehaviour
 {
 
     private Rigidbody rb;

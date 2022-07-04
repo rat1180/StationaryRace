@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SoftGear.Strix.Unity.Runtime;
 
-public class SCOTCH_TAPE : MonoBehaviour
+public class SCOTCH_TAPE : StrixBehaviour
 {
     public int durability;//耐久値
     GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
@@ -36,6 +37,7 @@ public class SCOTCH_TAPE : MonoBehaviour
             {
                 durability -= 1;
                 CarSc.SpeedDown();
+                Destroy(this.gameObject);
                 //this.GetComponent<BoxCollider>().isTrigger = true;//isTriggerをつける
             }
         }

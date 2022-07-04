@@ -41,6 +41,9 @@ public class GMSystem : MonoBehaviour
     //ゲーム終わり
     public GameObject GAMEOVER;
 
+    
+    GameObject CPlist;
+
     /**************
      ユーザー系変数
     ***************/
@@ -115,6 +118,7 @@ public class GMSystem : MonoBehaviour
         //スタート前準備
         GameFlg = 1;
         Rapmax = 1;
+        CPlist = this.transform.Find("CPList").gameObject;
         CPSet();
 
 
@@ -167,7 +171,6 @@ public class GMSystem : MonoBehaviour
     void CPSet()
     {
         GameObject CPtmp;
-        GameObject CPlist = this.transform.Find("CPList").gameObject;
         for (CPmax = 0; CPmax < CPlist.transform.childCount; CPmax++)
         {
             CPtmp = CPlist.transform.GetChild(CPmax).gameObject;
@@ -229,7 +232,9 @@ public class GMSystem : MonoBehaviour
     public void MyCPpass(int MyCPcnt, int MyRap)
     {
         User.CPTime = TimeGet();
+        CPlist.transform.GetChild(User.CPcnt).gameObject.GetComponent<MeshRenderer>().enabled = false;
         User.CPcnt = MyCPcnt;
+        CPlist.transform.GetChild(User.CPcnt + 1).gameObject.GetComponent<MeshRenderer>().enabled = true;
         User.Rap = MyRap;
 
         if (MyRap == Rapmax)

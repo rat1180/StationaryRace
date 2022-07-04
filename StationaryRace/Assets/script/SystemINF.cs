@@ -80,6 +80,7 @@ public class SystemINF : StrixBehaviour
     /// ÇªÇÃå„Ç…äeGMSystemÇ…ëóêMÇ∑ÇÈ
     /// </summary>
     /// <param name="rUSER"></param>
+    [StrixRpc]
     public void USERCP(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
     {
         for (int i = 0; i < 4; i++)

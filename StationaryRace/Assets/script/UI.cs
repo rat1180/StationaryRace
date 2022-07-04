@@ -31,6 +31,7 @@ public class UI : MonoBehaviour
     public GameObject Item_nunber10;
     public GameObject Item_nunber11;
     public GameObject Item_nunber12;
+    public GameObject Item_nunber13;
     //public Text ScoreText;
 
     #region ƒeƒXƒg
@@ -114,8 +115,9 @@ public class UI : MonoBehaviour
         Item_nunber10.SetActive(false);
         Item_nunber11.SetActive(false);
         Item_nunber12.SetActive(false);
+        Item_nunber13.SetActive(false);
 
-        switch(CarSc.ITEM_NUM)
+        switch (CarSc.ITEM_NUM)
         //switch (draw_item)
         {
             case ITEM.ERASER_RESIDDUE:
@@ -156,6 +158,9 @@ public class UI : MonoBehaviour
                 break;
             case ITEM.INDIA_INK:
                 Item_nunber12.SetActive(true);
+                break;
+            case ITEM.CARDBOARD_WALL:
+                Item_nunber13.SetActive(true);
                 break;
             default:
                 break;

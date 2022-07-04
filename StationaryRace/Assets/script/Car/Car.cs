@@ -281,7 +281,7 @@ public class Car : StrixBehaviour
         {
             if (handle < handle_state * 1.1)
             {
-                handle = handle * 1.001f;
+                handle = handle * 1.003f;
             }
             maxspeed = maxspeed_state * 0.8f;
         }

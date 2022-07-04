@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using SoftGear.Strix.Unity.Runtime;
 
-public class SelectKitai : MonoBehaviour
+public class SelectKitai : StrixBehaviour
 {
     private int mode = 0;              //機体の状態
     private int MachineNum = 0;        //機体番号
@@ -14,6 +15,7 @@ public class SelectKitai : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!isLocal) return;
         Skin = this.transform.Find("Skin").gameObject;
 
         //Skin内の全ての子オブジェクトを非アクティブ
@@ -29,6 +31,7 @@ public class SelectKitai : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isLocal) return;
         switch (mode)
         {
             //キャラ選択

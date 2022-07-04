@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SoftGear.Strix.Unity.Runtime;
 
-public class MAGIC_PEN : MonoBehaviour
+public class MAGIC_PEN : StrixBehaviour
 {
 
     private Rigidbody rb;

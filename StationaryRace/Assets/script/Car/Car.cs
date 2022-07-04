@@ -16,8 +16,10 @@ public class Car : StrixBehaviour
     public float upspeed;       // 前進スピード
     public float backspeed;     // 後退スピードorブレーキ
     private float maxspeed;     // 最大加速
+    private float maxspeed_state;//最大加速の元の値
     private float accel;        // 加速値
     public float handle;        // 旋回力
+    private float handle_state; // 旋回力の元の値
     public float time;          // 時間
     private float colorR;       // 赤色の値
     private float colorG;       // 緑色の値
@@ -67,7 +69,7 @@ public class Car : StrixBehaviour
         ItemMana = GameObject.Find("ITEMManager");
         IManager = ItemMana.GetComponent<ItemManager>();
         cp = GameObject.Find("CP");
-        hitbox = GameObject.Find("HitBox");
+        hitbox = transform.Find("HitBox").gameObject;
         //User = this.transform.parent.gameObject;
 
         colorR = 0;
@@ -129,7 +131,7 @@ public class Car : StrixBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-
+        if (!isLocal) return;
         ItemHit();
         GOALHit(collision);
         CPHit(collision);
@@ -163,33 +165,35 @@ public class Car : StrixBehaviour
         switch (carnum)
         {
             case 1:  // 鉛筆
-                upspeed = 20.0f;
+                upspeed = 30.0f;
                 backspeed = 19.0f;
-                maxspeed = 50.0f;
-                accel = 1.001f;
-                handle = 0.2f;
+                maxspeed_state = 90.0f;
+                accel = 1.0011f;
+                handle_state = 0.15f;
                 clear = 0.001f;
                 break;
             case 2:  // 消しゴム
-                upspeed = 100.0f;
+                upspeed = 40.0f;
                 backspeed = 20.0f;
-                maxspeed = 100.0f;
-                accel = 1.001f;
-                handle = 0.2f;
+                maxspeed_state = 70.0f;
+                accel = 1.0007f;
+                handle_state = 0.25f;
                 clear = 0.001f;
                 break;
             case 3:  // 定規
-                upspeed = 200.0f;
+                upspeed = 25.0f;
                 backspeed = 21.0f;
-                maxspeed = 100.0f;
-                accel = 1.001f;
-                handle = 0.2f;
+                maxspeed_state = 80.0f;
+                accel = 1.0015f;
+                handle_state = 0.07f;
                 clear = 0.001f;
                 break;
             default:
                 Debug.Log("1～3の番号以外使えません");
                 break;
         }
+        handle = handle_state;
+        maxspeed = maxspeed_state;
     }
 
     /// <summary>
@@ -197,7 +201,7 @@ public class Car : StrixBehaviour
     /// </summary>
     private void CarMoveAccel()
     {
-
+        if (!isLocal) return;
         if (Input.GetKey(KeyCode.W)) // Wキーを押している間
         {
             Accelflg = true;
@@ -275,11 +279,16 @@ public class Car : StrixBehaviour
     {
         if (Input.GetKey(KeyCode.Space)) // スペースキーを押している間
         {
-            handle = 0.3f;
+            if (handle < handle_state * 1.1)
+            {
+                handle = handle * 1.001f;
+            }
+            maxspeed = maxspeed_state * 0.8f;
         }
         else
         {
-            handle = 0.1f;
+            handle = handle_state;
+            maxspeed = maxspeed_state;
         }
     }
 
@@ -337,6 +346,7 @@ public class Car : StrixBehaviour
     /// </summary>
     public void CPHit(Collider collision)
     {
+        if (!isLocal) return;
         // CPが含まれていればOK
         if (collision.name.Contains("CP"))
         {
@@ -368,6 +378,7 @@ public class Car : StrixBehaviour
     /// </summary>
     public void CarColor()
     {
+        if (!isLocal) return;
         if (rb.velocity.magnitude >= 70)
         {
             colorR = 255;

@@ -35,6 +35,9 @@ public class SelectKitai : MonoBehaviour
             case 0:
                 KeyProcess();
                 break;
+            case 1:
+                SelectOff();
+                break;
             default:
                 Debug.Log("PlayerModeエラー");
                 break;
@@ -63,8 +66,9 @@ public class SelectKitai : MonoBehaviour
         //Enterキー押下
         if (Input.GetKeyDown(KeyCode.Return))
         {
-                //スタート前へシーン切り替え
-                SceneManager.LoadScene("Kitai");
+            //スタート前へシーン切り替え
+            //SceneManager.LoadScene("Kitai");
+            mode = 1;
                 Debug.Log("キャラ選択終わり");
         }
     }
@@ -95,6 +99,11 @@ public class SelectKitai : MonoBehaviour
                 Debug.LogError("機体番号が呼び出されませんでした");
                 break;
         }
+    }
+
+    public void SelectOff()
+    {
+        this.GetComponent<SelectKitai>().enabled = false;
     }
 }
 

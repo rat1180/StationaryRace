@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SoftGear.Strix.Unity.Runtime;
 
-public class STICKY_NOTE : MonoBehaviour
+public class STICKY_NOTE : StrixBehaviour
 {
     private int durability;//‘Ï‹v’l
     private float SpeedNow;

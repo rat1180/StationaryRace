@@ -111,9 +111,13 @@ public class UserOperation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ItemManager == null || UI == null)
+        if (ItemManager != null || UI != null)
         {
             ItemSend();
+        }
+        if(UI != null)
+        {
+            RankSet();
         }
     }
 

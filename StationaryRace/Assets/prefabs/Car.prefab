@@ -76,8 +76,8 @@ GameObject:
   - component: {fileID: 2315697663815199719}
   - component: {fileID: 2315697663815199718}
   - component: {fileID: 2315697663815199717}
+  - component: {fileID: 6332635399644592925}
   - component: {fileID: 2431171159929713826}
-  - component: {fileID: 1469630913225641328}
   - component: {fileID: 8023468220298864099}
   m_Layer: 0
   m_Name: Car
@@ -183,6 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f00d1a448b93854b9e3eef74f7bac62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera01: {fileID: 0}
+  camera02: {fileID: 0}
   carnum: 0
   upspeed: 0
   backspeed: 0
@@ -209,6 +211,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6332635399644592925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2315697663815199716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f503fe2696e483749930752a0c0d219b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skin: {fileID: 0}
 --- !u!114 &2431171159929713826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,24 +239,6 @@ MonoBehaviour:
   Player_Mode: 10
   Skin: {fileID: 0}
   countTime: {fileID: 0}
---- !u!114 &1469630913225641328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2315697663815199716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 538f85edbb542904e87003a81519730d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  upspeed: 0
-  backspeed: 0
-  handle: 0
-  time: 0
-  itemhave: 0
-  User: {fileID: 0}
 --- !u!114 &8023468220298864099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,7 +253,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strixBehaviours:
   - {fileID: 2315697663815199718}
-  - {fileID: 1469630913225641328}
   objectType: 2
   sendRate: 5
   syncDestroy: 1

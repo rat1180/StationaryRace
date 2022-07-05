@@ -27,7 +27,7 @@ public class SystemINF : StrixBehaviour
 
     public USERTIME[] USERS = new USERTIME[4];
 
-    private GameObject GMSystem;
+    public GameObject GMSystem;
 
 
     // Start is called before the first frame update

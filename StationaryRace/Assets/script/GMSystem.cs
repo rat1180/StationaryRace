@@ -59,13 +59,6 @@ public class GMSystem : MonoBehaviour
         public int Rank;
     }
 
-    //ユーザー配列（通信形態によっては変更）
-    public USERTIME[] Users;
-    private USERINF User;
-
-    //ユーザー人数（通信形態によっては変更）
-    private int Players;
-
     //他ユーザーとの通信用に扱う構造体
     public struct USERTIME
     {
@@ -74,6 +67,13 @@ public class GMSystem : MonoBehaviour
         public int Rap;
         public int UserNm;
     }
+
+    //ユーザー配列（通信形態によっては変更）
+    public USERTIME[] Users;
+    public USERINF User;
+
+    //ユーザー人数（通信形態によっては変更）
+    private int Players;
 
     //他ユーザーの情報の保存先
     public GameObject SystemINF = null;
@@ -112,7 +112,7 @@ public class GMSystem : MonoBehaviour
     public void InitSet()
     {
         //レース前のシーンからもらう
-        Players = 3; //4-1
+        Players = 4;
         CoseNm = 0;
 
         //スタート前準備
@@ -121,6 +121,17 @@ public class GMSystem : MonoBehaviour
         CPlist = this.transform.Find("CPList").gameObject;
         CPSet();
 
+        //ランク用変数と他ユーザー用配列の生成
+        //処理手順によって場所を変える
+        Users = new USERTIME[Players];
+
+        for (int i = 0; i < Players; i++)
+        {
+            Users[i].UserNm = i;
+            Users[i].CPcnt = 0;
+            Users[i].CPTime = 0f;
+            Users[i].Rap = 0;
+        }
 
         //ユーザー(自分)
         User.USER = transform.Find("User").gameObject;
@@ -128,14 +139,10 @@ public class GMSystem : MonoBehaviour
         Debug.Log(User.USERNm);
         User.CPcnt = 0;
         User.CPTime = 0;
-        User.Rap = 3;
+        User.Rap = 0;
         User.Rank = 1;
         NmSend();
         //User.USER.GetComponent<UserOperation>().RankSet();
-
-        //ランク用変数と他ユーザー用配列の生成
-        //処理手順によって場所を変える
-        Users = new USERTIME[Players];
 
         //アイテム
         //ItemManager = transform.Find("ItemManager").gameObject;
@@ -234,7 +241,10 @@ public class GMSystem : MonoBehaviour
         User.CPTime = TimeGet();
         CPlist.transform.GetChild(User.CPcnt).gameObject.GetComponent<MeshRenderer>().enabled = false;
         User.CPcnt = MyCPcnt;
-        CPlist.transform.GetChild(User.CPcnt + 1).gameObject.GetComponent<MeshRenderer>().enabled = true;
+        if (User.CPcnt + 1 < CPmax)
+        {
+            CPlist.transform.GetChild(User.CPcnt + 1).gameObject.GetComponent<MeshRenderer>().enabled = true;
+        }
         User.Rap = MyRap;
 
         if (MyRap == Rapmax)
@@ -248,7 +258,7 @@ public class GMSystem : MonoBehaviour
             //GAMEOVER.GetComponent<Result>().Decide_Timer(User.CPTime);
         }
 
-        SystemINF.GetComponent<SystemINF>().USERCP(User.USERNm, User.CPTime, User.CPcnt, User.Rap);
+        SystemINF.GetComponent<SystemINF>().USERCP_RPC(User.USERNm, User.CPTime, User.CPcnt, User.Rap);
     }
 
     //順位判定
@@ -257,6 +267,7 @@ public class GMSystem : MonoBehaviour
         User.Rank = 1;
         for (int j = 0; j < Players; j++)
         {
+            if (Users[j].UserNm == null) return;
             if(User.Rap < Users[j].Rap)
             {
                 User.Rank++;
@@ -265,7 +276,7 @@ public class GMSystem : MonoBehaviour
             {
                 User.Rank++;
             }
-            else if(User.CPTime < Users[j].CPTime)
+            else if(User.CPTime > Users[j].CPTime)
             {
                 User.Rank++;
             }
@@ -309,23 +320,32 @@ public class GMSystem : MonoBehaviour
             Debug.Log("生成");
         }
 
-        int Usernm = SystemINF.GetComponent<SystemINF>().USERcntSET(1);
+        int Usernm = SystemINF.GetComponent<SystemINF>().USERcntSET();
+        //SystemINF.GetComponent<SystemINF>().RoomJoinNotified_RPC();
         return Usernm;
     }
 
     //参加するたび情報を入れる
     public void PlayerJoin()
     {
-        int Usernm = SystemINF.GetComponent<SystemINF>().USERcntSET(0);
+        int Usernm = SystemINF.GetComponent<SystemINF>().USERcntGET();
         if (Usernm == User.USERNm) return;
         for(int i = 0; i < Players; i++)
         {
+            Debug.Log(i);
+            Debug.Log(Users[i].UserNm);
             if(Users[i].UserNm == null)
             {
                 Users[i].UserNm = Usernm;
                 break;
             }
         }
+        Debug.Log("NewNm" + Usernm);
+    }
+
+    public void PlayerJoinWait()
+    {
+        Invoke("PlayerJoin", 1);
     }
 
 }

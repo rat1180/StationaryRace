@@ -34,12 +34,12 @@ public class SystemINF : StrixBehaviour
     void Start()
     {
         //入退室イベント
-        StrixNetwork.instance.roomSession.roomClient.RoomJoinNotified += RoomJoinNotified;
+        //StrixNetwork.instance.roomSession.roomClient.RoomJoinNotified += RoomJoinNotified_RPC;
 
         GMSystem = GameObject.Find("GMSystem");
         if (isLocal)
         {
-            USERcntRESET();
+            //USERcntRESET();
         }
     }
 
@@ -55,25 +55,38 @@ public class SystemINF : StrixBehaviour
     }
 
     /// <summary>
-    /// Usercntを引数分増やして値を返す
-    /// 引数はmode,戻り値はmodeによって変動
-    /// 0なら増やさず返す。1が通常で増やしてから返す
+    /// Usercntを1増やして返す
     /// </summary>
-    public int USERcntSET(int mode)
+    public int USERcntSET()
     {
-        USERcnt += mode;
+        USERcnt++;
 
         return USERcnt;
     }
 
     /// <summary>
-    /// 誰かが入るたびに各GMSystemに入ったUserの番号を入力させる
+    /// Usercntを返す
     /// </summary>
-    [StrixRpc]
-    public void RoomJoinNotified(object sender)
+    /// <returns></returns>
+    public int USERcntGET()
     {
-        GMSystem.GetComponent<GMSystem>().PlayerJoin();
+        return USERcnt;
     }
+
+    ///// <summary>
+    ///// 誰かが入るたびに各GMSystemに入ったUserの番号を入力させる
+    ///// </summary>
+    //[StrixRpc]
+    //public void RoomJoinNotified()
+    //{
+    //    GMSystem.GetComponent<GMSystem>().PlayerJoin();
+    //}
+
+    
+    //public void RoomJoinNotified_RPC()
+    //{
+    //    RpcToAll("RoomJoinNotified");
+    //}
 
     /// <summary>
     /// CP通過時に情報を入れる（呼び出しは各ユーザー）
@@ -92,7 +105,13 @@ public class SystemINF : StrixBehaviour
                 USERS[i].Rap = rUSERRap;
             }
         }
+
         GMSystem.GetComponent<GMSystem>().CPpass(rUSERNm,rUSERTime,rUSERCPcnt,rUSERRap);
+    }
+
+    public void USERCP_RPC(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
+    {
+        RpcToAll("USERCP", rUSERNm, rUSERTime, rUSERCPcnt, rUSERRap);
     }
 
 }

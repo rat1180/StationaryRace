@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bf8d6dcc3a447469b231358d67a66c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GMSystem: {fileID: 0}
+  INFtoGM: {fileID: 0}
+  INFtoGM_POP: {fileID: 1163770204531246656, guid: bebefbc280263d24aa8a38a765046e1c, type: 3}
 --- !u!114 &7617844582286631112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,9 +62,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strixBehaviours:
   - {fileID: 7617844582286631115}
-  objectType: 10
+  objectType: 15
   sendRate: 5
   syncDestroy: 1
   networkInstanceId: -1
-  InstantiableBy: 0
+  InstantiableBy: 1
   ConnectionClosedBehaviour: 0

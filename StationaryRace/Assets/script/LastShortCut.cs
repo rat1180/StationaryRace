@@ -7,6 +7,7 @@ public class LastShortCut : MonoBehaviour
     public GameObject Break_wall;
     public GameObject Break_wall2;
     private float speed = 10.0f;
+    private bool BreakFlg = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +17,14 @@ public class LastShortCut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(BreakFlg == true)
+        {
+            transform.position += transform.up * speed * Time.deltaTime;
+        }
     }
     public void Bomber()
     {
-        transform.position += transform.up * speed * Time.deltaTime;
+        BreakFlg = true;
 
         Break_wall.SetActive(false);
         Break_wall2.SetActive(false);

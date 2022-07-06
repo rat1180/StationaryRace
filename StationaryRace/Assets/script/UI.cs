@@ -115,7 +115,7 @@ public class UI : MonoBehaviour
         Item_nunber10.SetActive(false);
         Item_nunber11.SetActive(false);
         Item_nunber12.SetActive(false);
-        Item_nunber13.SetActive(false);
+        //Item_nunber13.SetActive(false);
 
         switch (CarSc.ITEM_NUM)
         //switch (draw_item)
@@ -160,7 +160,7 @@ public class UI : MonoBehaviour
                 Item_nunber12.SetActive(true);
                 break;
             case ITEM.CARDBOARD_WALL:
-                Item_nunber13.SetActive(true);
+                //Item_nunber13.SetActive(true);
                 break;
             default:
                 break;

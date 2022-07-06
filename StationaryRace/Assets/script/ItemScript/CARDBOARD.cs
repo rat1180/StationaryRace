@@ -6,8 +6,8 @@ using SoftGear.Strix.Unity.Runtime;
 
 public class CARDBOARD : StrixBehaviour
 {
+    public GameObject SOUND;
     private int durability;
-
     private Rigidbody rb;
 
     // Start is called before the first frame update
@@ -17,6 +17,7 @@ public class CARDBOARD : StrixBehaviour
         rb = GetComponent<Rigidbody>();
         durability = 1;
         rb.velocity = transform.forward;
+        Instantiate(SOUND, this.transform.position, Quaternion.identity);
     }
 
     // Update is called once per frame

@@ -83,7 +83,7 @@ public class Car : StrixBehaviour
         {
             transform.Find("Main Camera1").gameObject.SetActive(false);
         }
-
+        gamestart = 1;
         #endregion
     }
 
@@ -91,7 +91,7 @@ public class Car : StrixBehaviour
     void Update()
     {
         if (!isLocal) return;
-        gamestart = counttime.GetGameStart();
+        //gamestart = counttime.GetGameStart();
         //Debug.Log(gamestart);
         if (gamestart == 1)
         {

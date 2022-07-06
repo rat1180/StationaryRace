@@ -38,6 +38,8 @@ public class ItemManager : MonoBehaviour
     public GameObject CARDBOARD;
     public GameObject CARDBOARD_WALL;
 
+    public GameObject[] ItemPrefabs = new GameObject[15];
+
 
 
     // Start is called before the first frame update
@@ -128,6 +130,7 @@ public class ItemManager : MonoBehaviour
                 CarSc.ITEM_NUM = ITEMConst.ITEM.CARDBOARD_WALL;
                 break;
             default:
+                print("ha?");
                 break;
         }
     }
@@ -185,12 +188,11 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.CARDBOARD://段ボール.
                 Debug.Log("USE:CARDBOARD!");
-                RocketA.y += 5;
                 Instantiate(CARDBOARD, RocketA, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.CARDBOARD_WALL://段ボールの壁.
                 Debug.Log("USE:CARDBOARD_WALL!");
-                RocketA.y += 5;
+                RocketA.y += 3;
                 Instantiate(CARDBOARD_WALL, RocketA, RocketAQ);
                 break;
             default:

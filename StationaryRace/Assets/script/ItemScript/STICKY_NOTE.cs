@@ -5,11 +5,12 @@ using SoftGear.Strix.Unity.Runtime;
 
 public class STICKY_NOTE : StrixBehaviour
 {
-    private int durability;//耐久値
+    public int durability;//耐久値
     private float SpeedNow;
     GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
     Car CarSc;
     public Rigidbody rb;
+    public GameObject SOUND;
 
     //testplay PlayerSc; //プレイヤーの関数を呼ぶための準備
     // Start is called before the first frame update
@@ -24,7 +25,7 @@ public class STICKY_NOTE : StrixBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (durability == 0)//耐久値が0になったら
+        if (durability <= 0)//耐久値が0になったら
         {
             Destroy(this.gameObject);
         }
@@ -39,6 +40,7 @@ public class STICKY_NOTE : StrixBehaviour
             {
                 SpeedNow = CarSc.upspeed;
                 durability -= 1;
+                Instantiate(SOUND, this.transform.position, Quaternion.identity);
                 StartCoroutine("SpeedUp");
                 //this.GetComponent<BoxCollider>().isTrigger = true;//isTriggerをつける
             }
@@ -57,7 +59,8 @@ public class STICKY_NOTE : StrixBehaviour
        {
          SpeedNow = CarSc.upspeed;
          durability -= 1;
-         StartCoroutine("SpeedUp");
+            Instantiate(SOUND, this.transform.position, Quaternion.identity);
+            StartCoroutine("SpeedUp");
        }
     }
     //スピードアップ

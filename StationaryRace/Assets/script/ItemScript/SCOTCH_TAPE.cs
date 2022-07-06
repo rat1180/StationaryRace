@@ -9,6 +9,8 @@ public class SCOTCH_TAPE : StrixBehaviour
     GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
     Car CarSc;
     Rigidbody rb;
+    public GameObject Sound_Object;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,7 @@ public class SCOTCH_TAPE : StrixBehaviour
     {
         if (durability == 0)//耐久値が0になったら
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 
@@ -35,6 +37,7 @@ public class SCOTCH_TAPE : StrixBehaviour
         //if (collision.gameObject.tag == "Stage")
         {
             {
+                Instantiate(Sound_Object, this.transform.position, Quaternion.identity); //アイテムが破壊された際に効果音を鳴らす.
                 durability -= 1;
                 CarSc.SpeedDown();
                 Destroy(this.gameObject);
@@ -55,6 +58,7 @@ public class SCOTCH_TAPE : StrixBehaviour
         {
             durability -= 1;
             CarSc.SpeedDown();
+            
         }
     }
 }

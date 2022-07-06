@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using ITEMConst;
+using UnityEngine.SceneManagement;
 using SoftGear.Strix.Client.Core.Auth.Message;
 using SoftGear.Strix.Client.Core.Error;
 using SoftGear.Strix.Client.Core.Model.Manager.Filter;
@@ -43,6 +44,7 @@ public class GMSystem : MonoBehaviour
 
     
     GameObject CPlist;
+    GameObject CPlist_Last;
 
     /**************
      ユーザー系変数
@@ -117,8 +119,9 @@ public class GMSystem : MonoBehaviour
 
         //スタート前準備
         GameFlg = 1;
-        Rapmax = 1;
+        Rapmax = 3;
         CPlist = this.transform.Find("CPList").gameObject;
+        CPlist_Last = this.transform.Find("CPList_Last").gameObject;
         CPSet();
 
         //ランク用変数と他ユーザー用配列の生成
@@ -178,10 +181,14 @@ public class GMSystem : MonoBehaviour
     void CPSet()
     {
         GameObject CPtmp;
+        GameObject CPtmp_Last;
         for (CPmax = 0; CPmax < CPlist.transform.childCount; CPmax++)
         {
             CPtmp = CPlist.transform.GetChild(CPmax).gameObject;
             CPtmp.GetComponent<CheckPoint>().CPset(CPmax);
+
+            CPtmp_Last = CPlist_Last.transform.GetChild(CPmax).gameObject;
+            CPtmp_Last.GetComponent<CheckPoint>().CPset(CPmax);
         }
     }
 
@@ -247,6 +254,11 @@ public class GMSystem : MonoBehaviour
         }
         User.Rap = MyRap;
 
+        if(MyRap == Rapmax - 1)
+        {
+            SystemINF.GetComponent<SystemINF>().Bomber_RPC();
+        }
+
         if (MyRap == Rapmax)
         {
             TimerFlg = false;
@@ -267,7 +279,7 @@ public class GMSystem : MonoBehaviour
         User.Rank = 1;
         for (int j = 0; j < Players; j++)
         {
-            if (Users[j].UserNm == null) return;
+            //if (Users[j].UserNm == User.USERNm) return;
             if(User.Rap < Users[j].Rap)
             {
                 User.Rank++;
@@ -320,7 +332,8 @@ public class GMSystem : MonoBehaviour
             Debug.Log("生成");
         }
 
-        int Usernm = SystemINF.GetComponent<SystemINF>().USERcntSET();
+        int Usernm = StrixNetwork.instance.room.GetMemberCount() - 1;
+            //SystemINF.GetComponent<SystemINF>().USERcntSET();
         //SystemINF.GetComponent<SystemINF>().RoomJoinNotified_RPC();
         return Usernm;
     }
@@ -346,6 +359,11 @@ public class GMSystem : MonoBehaviour
     public void PlayerJoinWait()
     {
         Invoke("PlayerJoin", 1);
+    }
+
+    public void TitleBack()
+    {
+        SceneManager.LoadScene("title");
     }
 
 }

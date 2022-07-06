@@ -28,6 +28,11 @@ public class SystemINF : StrixBehaviour
     public USERTIME[] USERS = new USERTIME[4];
 
     public GameObject GMSystem;
+    public GameObject INFtoGM;
+    public GameObject INFtoGM_POP;
+    public GameObject LastShortCut;
+    public bool BreakFlg = false;
+
 
 
     // Start is called before the first frame update
@@ -41,6 +46,8 @@ public class SystemINF : StrixBehaviour
         {
             //USERcntRESET();
         }
+
+        
     }
 
     // Update is called once per frame
@@ -82,7 +89,7 @@ public class SystemINF : StrixBehaviour
     //    GMSystem.GetComponent<GMSystem>().PlayerJoin();
     //}
 
-    
+
     //public void RoomJoinNotified_RPC()
     //{
     //    RpcToAll("RoomJoinNotified");
@@ -93,25 +100,49 @@ public class SystemINF : StrixBehaviour
     /// ÇªÇÃå„Ç…äeGMSystemÇ…ëóêMÇ∑ÇÈ
     /// </summary>
     /// <param name="rUSER"></param>
-    [StrixRpc]
-    public void USERCP(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
-    {
-        for (int i = 0; i < 4; i++)
-        {
-            if (USERS[i].UserNm == rUSERNm)
-            {
-                USERS[i].CPTime = rUSERTime;
-                USERS[i].CPcnt = rUSERCPcnt;
-                USERS[i].Rap = rUSERRap;
-            }
-        }
+    //[StrixRpc]
+    //public void USERCP(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
+    //{
+    //    for (int i = 0; i < 4; i++)
+    //    {
+    //        if (USERS[i].UserNm == rUSERNm)
+    //        {
+    //            USERS[i].CPTime = rUSERTime;
+    //            USERS[i].CPcnt = rUSERCPcnt;
+    //            USERS[i].Rap = rUSERRap;
+    //        }
+    //    }
 
-        GMSystem.GetComponent<GMSystem>().CPpass(rUSERNm,rUSERTime,rUSERCPcnt,rUSERRap);
-    }
+    //    GMSystem.GetComponent<GMSystem>().CPpass(rUSERNm, rUSERTime, rUSERCPcnt, rUSERRap);
+    //}
 
     public void USERCP_RPC(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
     {
-        RpcToAll("USERCP", rUSERNm, rUSERTime, rUSERCPcnt, rUSERRap);
+        //RpcToAll("USERCP", rUSERNm, rUSERTime, rUSERCPcnt, rUSERRap);
+        RpcToAll("POP_RPC", rUSERNm, rUSERTime, rUSERCPcnt, rUSERRap);
+    }
+
+    [StrixRpc]
+    public void POP_RPC(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
+    {
+        INFtoGM = Instantiate(INFtoGM_POP);
+        INFtoGM.GetComponent<INFtoGM>().RPC(rUSERNm, rUSERTime, rUSERCPcnt, rUSERRap);
+    }
+
+    [StrixRpc]
+    public void Bomber()
+    {
+        BreakFlg = true;
+        LastShortCut = GameObject.Find("Break_Obj");
+        LastShortCut.GetComponent<LastShortCut>().Bomber();
+    }
+
+    public void Bomber_RPC()
+    {
+        if(BreakFlg == false)
+        {
+            RpcToAll("Bomber");
+        }
     }
 
 }

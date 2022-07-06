@@ -114,7 +114,8 @@ GameObject:
   - component: {fileID: 2038916632341060687}
   - component: {fileID: 7421302148753463006}
   - component: {fileID: 496390356908295616}
-  - component: {fileID: 7177196858329170618}
+  - component: {fileID: 1525775824882565420}
+  - component: {fileID: -5325129872861698062}
   m_Layer: 0
   m_Name: MAGIC_PEN
   m_TagString: Untagged
@@ -217,7 +218,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &7177196858329170618
+--- !u!114 &1525775824882565420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3660418317624038744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1308000454, guid: f2c2112f638c5b8489d16403d930373b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strixBehaviours:
+  - {fileID: -5325129872861698062}
+  objectType: 1
+  sendRate: 5
+  syncDestroy: 1
+  networkInstanceId: -1
+  InstantiableBy: 1
+  ConnectionClosedBehaviour: 1
+--- !u!114 &-5325129872861698062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

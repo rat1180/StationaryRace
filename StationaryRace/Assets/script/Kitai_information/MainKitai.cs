@@ -38,8 +38,6 @@ public class MainKitai : MonoBehaviour
     /// </summary>
     private void PLmode()
     {
-        Atime -= Time.deltaTime;
-
         switch (Player_Mode)
         {
             ////キャラ選択
@@ -52,10 +50,7 @@ public class MainKitai : MonoBehaviour
                 break;
             //レース中
             case 20:
-                if (Atime <= 0)
-                {
-                    Player_Mode = 30;
-                }
+                Player_Mode = 30;
                 break;
             //ゴール
             case 30:

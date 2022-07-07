@@ -795,6 +795,7 @@ MonoBehaviour:
   RoomFlg: 0
   Button: {fileID: 0}
   CountTime: {fileID: 0}
+  WaitFlg: 1
 --- !u!4 &819964746
 Transform:
   m_ObjectHideFlags: 0
@@ -1773,6 +1774,7 @@ MonoBehaviour:
   port: 9122
   logLevel: 2
   SystemINF: {fileID: 1744646928}
+  WaitMacth: {fileID: 0}
   capacity: 4
   roomName: New Room
   onRoomEntered:
@@ -1981,7 +1983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strixBehaviours:
   - {fileID: 1744646930}
-  objectType: 1572866
+  objectType: 524290
   sendRate: 5
   syncDestroy: 1
   networkInstanceId: -1
@@ -1999,7 +2001,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bf8d6dcc3a447469b231358d67a66c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  USERcnt: 0
 --- !u!4 &1744646931
 Transform:
   m_ObjectHideFlags: 0
@@ -2306,17 +2307,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2141084847 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1661868151206153119, guid: 7260664707620914186e137b49445910, type: 3}
-  m_PrefabInstance: {fileID: 2392126131358329007}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 538f85edbb542904e87003a81519730d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2141084849 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2546234741325753609, guid: 7260664707620914186e137b49445910, type: 3}
@@ -2409,7 +2399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7794635936760750860, guid: 7260664707620914186e137b49445910, type: 3}
       propertyPath: objectType
-      value: 1572865
+      value: 524289
       objectReference: {fileID: 0}
     - target: {fileID: 7794635936760750860, guid: 7260664707620914186e137b49445910, type: 3}
       propertyPath: strixBehaviours.Array.size
@@ -2422,6 +2412,17 @@ PrefabInstance:
     - target: {fileID: 7794635936760750860, guid: 7260664707620914186e137b49445910, type: 3}
       propertyPath: strixBehaviours.Array.data[1]
       value: 
-      objectReference: {fileID: 2141084847}
+      objectReference: {fileID: 2392126131358329008}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7260664707620914186e137b49445910, type: 3}
+--- !u!114 &2392126131358329008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6095344573019848178, guid: 7260664707620914186e137b49445910, type: 3}
+  m_PrefabInstance: {fileID: 2392126131358329007}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f503fe2696e483749930752a0c0d219b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

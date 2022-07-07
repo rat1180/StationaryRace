@@ -6,6 +6,7 @@ public class LastShortCut : MonoBehaviour
 {
     public GameObject Break_wall;
     public GameObject Break_wall2;
+
     private float speed = 10.0f;
     // Start is called before the first frame update
     void Start()

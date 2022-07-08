@@ -91,7 +91,8 @@ public class Car : StrixBehaviour
     void Update()
     {
         if (!isLocal) return;
-        gamestart = counttime.GetGameStart();
+        //gamestart = counttime.GetGameStart();
+        gamestart = 1;
         //Debug.Log(gamestart);
         if (gamestart == 1)
         {

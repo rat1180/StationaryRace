@@ -39,7 +39,7 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DRAW_SCORE();
+        //DRAW_SCORE();
         DRAW_ITEM();
     }
     public void RankingChange(int ranker) // 他スクリプトから値を受け取る 

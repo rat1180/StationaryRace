@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 93540196945131448}
   - component: {fileID: 2613241142030330637}
   - component: {fileID: 5786266355187352918}
+  - component: {fileID: 6923107243371898595}
   m_Layer: 0
   m_Name: MECHANICAL_PEN_LEAD
   m_TagString: Untagged
@@ -128,3 +129,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   durability: 0
+--- !u!114 &6923107243371898595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228542396162766303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1308000454, guid: f2c2112f638c5b8489d16403d930373b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strixBehaviours:
+  - {fileID: 5786266355187352918}
+  objectType: 10
+  sendRate: 5
+  syncDestroy: 1
+  networkInstanceId: -1
+  InstantiableBy: 1
+  ConnectionClosedBehaviour: 1

@@ -13,19 +13,44 @@ public class SystemINF : StrixBehaviour
 {
 
     //UserNmを割り振るたびに増やしてくことで重なりをなくす
-    [StrixSyncField]
+    //[StrixSyncField]
     public static int USERcnt;
 
     //他ユーザーとの通信用に扱う構造体
+    
     public struct USERTIME
     {
+        [StrixSyncField]
         public double CPTime;
+        [StrixSyncField]
         public int CPcnt;
+        [StrixSyncField]
         public int Rap;
+        [StrixSyncField]
         public int UserNm;
+        [StrixSyncField]
+        public int Rank;
     }
 
-    public USERTIME[] USERS = new USERTIME[4];
+    //配列構造体が共有と相性悪いので分ける
+    //[StrixSyncField]
+    //USERTIME USER0;
+
+    //[StrixSyncField]
+    //USERTIME USER1;
+
+    //[StrixSyncField]
+    //USERTIME USER2;
+
+    //[StrixSyncField]
+    //USERTIME USER3;
+
+    //[StrixSyncField]
+    public USERTIME[] USERS = { new USERTIME { CPTime = 0, CPcnt = 0, Rap = 0, UserNm = 0, Rank = 1 },
+                                new USERTIME { CPTime = 0, CPcnt = 0, Rap = 0, UserNm = 1, Rank = 1 },
+                                new USERTIME { CPTime = 0, CPcnt = 0, Rap = 0, UserNm = 2, Rank = 1 },
+                                new USERTIME { CPTime = 0, CPcnt = 0, Rap = 0, UserNm = 3, Rank = 1 },};
+
 
     public GameObject GMSystem;
     public GameObject INFtoGM;
@@ -42,18 +67,20 @@ public class SystemINF : StrixBehaviour
         //StrixNetwork.instance.roomSession.roomClient.RoomJoinNotified += RoomJoinNotified_RPC;
 
         GMSystem = GameObject.Find("GMSystem");
-        if (isLocal)
+        if (!isLocal)
         {
+            return;
             //USERcntRESET();
         }
-
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //USER0 = USERS[0];
+        //USER1 = USERS[1];
+        //USER2 = USERS[2];
+        //USER3 = USERS[3];
     }
 
     public void USERcntRESET()
@@ -82,6 +109,7 @@ public class SystemINF : StrixBehaviour
 
     ///// <summary>
     ///// 誰かが入るたびに各GMSystemに入ったUserの番号を入力させる
+    ///// おそらく使わない
     ///// </summary>
     //[StrixRpc]
     //public void RoomJoinNotified()
@@ -95,26 +123,50 @@ public class SystemINF : StrixBehaviour
     //    RpcToAll("RoomJoinNotified");
     //}
 
-    /// <summary>
-    /// CP通過時に情報を入れる（呼び出しは各ユーザー）
-    /// その後に各GMSystemに送信する
-    /// </summary>
-    /// <param name="rUSER"></param>
-    //[StrixRpc]
-    //public void USERCP(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
-    //{
-    //    for (int i = 0; i < 4; i++)
-    //    {
-    //        if (USERS[i].UserNm == rUSERNm)
-    //        {
-    //            USERS[i].CPTime = rUSERTime;
-    //            USERS[i].CPcnt = rUSERCPcnt;
-    //            USERS[i].Rap = rUSERRap;
-    //        }
-    //    }
-
-    //    GMSystem.GetComponent<GMSystem>().CPpass(rUSERNm, rUSERTime, rUSERCPcnt, rUSERRap);
-    //}
+    ///// <summary>
+    ///// CP通過時に情報を入れる（呼び出しは各ユーザー）
+    ///// その後に各GMSystemに送信する
+    ///// </summary>
+    ///// <param name = "rUSER" ></ param >
+    
+    public int USERCP(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (USERS[i].UserNm == rUSERNm)
+            {
+                USERS[i].CPTime = rUSERTime;
+                USERS[i].CPcnt = rUSERCPcnt;
+                USERS[i].Rap = rUSERRap;
+                USERS[i].Rank = 1;
+                for(int j = 0; j < 4; j++)
+                {
+                    if(USERS[i].UserNm != USERS[j].UserNm)
+                    {
+                        if (USERS[i].Rap < USERS[j].Rap)
+                        {
+                            USERS[i].Rank++;
+                            Debug.Log("RapRank");
+                        }
+                        else if (USERS[i].CPcnt < USERS[j].CPcnt)
+                        {
+                            USERS[i].Rank++;
+                            Debug.Log("CPRank");
+                        }
+                        else if (USERS[i].CPTime > USERS[j].CPTime)
+                        {
+                            USERS[i].Rank++;
+                            Debug.Log("TimeRank");
+                        }
+                    }
+                }
+                return USERS[i].Rank;
+            }
+            
+        }
+        return 1;
+        //GMSystem.GetComponent<GMSystem>().CPpass(rUSERNm, rUSERTime, rUSERCPcnt, rUSERRap);
+    }
 
     public void USERCP_RPC(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
     {
@@ -143,6 +195,22 @@ public class SystemINF : StrixBehaviour
         {
             RpcToAll("Bomber");
         }
+    }
+
+    public void USER_RESET()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            USERS[i].CPcnt = 0;
+            USERS[i].CPTime = 99;
+            USERS[i].Rank = 1;
+            USERS[i].Rap = 0;
+            USERS[i].UserNm = i;
+        }
+        //USER0 = USERS[0];
+        //USER1 = USERS[1];
+        //USER2 = USERS[2];
+        //USER3 = USERS[3];
     }
 
 }

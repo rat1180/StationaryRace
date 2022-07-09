@@ -40,7 +40,7 @@ public class UI : MonoBehaviour
     void Update()
     {
         //DRAW_SCORE();
-        DRAW_ITEM();
+        //DRAW_ITEM();
     }
     public void RankingChange(int ranker) // 他スクリプトから値を受け取る 
     {

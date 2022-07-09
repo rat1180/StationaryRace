@@ -270,7 +270,7 @@ public class GMSystem : MonoBehaviour
             //GAMEOVER.GetComponent<Result>().Decide_Timer(User.CPTime);
         }
 
-        SystemINF.GetComponent<SystemINF>().USERCP_RPC(User.USERNm, User.CPTime, User.CPcnt, User.Rap);
+        User.Rank = SystemINF.GetComponent<SystemINF>().USERCP(User.USERNm, User.CPTime, User.CPcnt, User.Rap);
     }
 
     //順位判定
@@ -329,6 +329,7 @@ public class GMSystem : MonoBehaviour
             //オーナーのみ生成
             SystemINF = Instantiate(SystemINF_POP);
             SystemINF.GetComponent<SystemINF>().USERcntRESET();
+            SystemINF.GetComponent<SystemINF>().USER_RESET();
             Debug.Log("生成");
         }
 

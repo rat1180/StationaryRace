@@ -25,6 +25,7 @@ public class DEBUGLOGS : MonoBehaviour
         txtCP = transform.GetChild(1).gameObject;
         txtTIME = transform.GetChild(2).gameObject;
         txtRap = transform.GetChild(3).gameObject;
+        txtRank = transform.GetChild(4).gameObject;
     }
 
     // Update is called once per frame
@@ -40,6 +41,7 @@ public class DEBUGLOGS : MonoBehaviour
         txtCP.GetComponent<Text>().text = "CP" + CP;
         txtTIME.GetComponent<Text>().text = "TIME" + TIME;
         txtRap.GetComponent<Text>().text = "Rap" + Rap;
+        txtRank.GetComponent<Text>().text = "Rank" + Rank;
 
     }
 }

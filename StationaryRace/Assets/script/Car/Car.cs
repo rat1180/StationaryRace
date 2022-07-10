@@ -280,7 +280,7 @@ public class Car : StrixBehaviour
     {
         if (Input.GetKey(KeyCode.Space)) // スペースキーを押している間
         {
-            if (handle < handle_state * 1.1)
+            if (handle < handle_state * 1.5)
             {
                 handle = handle * 1.003f;
             }

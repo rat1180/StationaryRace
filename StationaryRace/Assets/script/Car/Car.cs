@@ -32,6 +32,8 @@ public class Car : StrixBehaviour
 
     public GameObject cp;       // チェックポイント
     public GameObject hitbox;
+    public GameObject particlespeed01; // 機体のスピードが早いときに呼び出すパーティクル
+    public GameObject particlespeed02; // 機体のスピードが早いときに呼び出すパーティクル
 
     public CountTime counttime;
 
@@ -381,10 +383,13 @@ public class Car : StrixBehaviour
         if (!isLocal) return;
         if (rb.velocity.magnitude >= 70)
         {
+
             colorR = 255;
             colorG = 0;
             colorB = 0;
             hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 赤色
+            particlespeed01.SetActive(true);
+            particlespeed02.SetActive(false);
         }
         else if (rb.velocity.magnitude >= 30 && rb.velocity.magnitude < 70)
         {
@@ -392,6 +397,8 @@ public class Car : StrixBehaviour
             colorG = 255;
             colorB = 0;
             hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 黄色
+            particlespeed01.SetActive(false);
+            particlespeed02.SetActive(true);
         }
         else
         {
@@ -399,6 +406,8 @@ public class Car : StrixBehaviour
             colorG = 255;
             colorB = 0;
             hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);   // 緑色
+            particlespeed01.SetActive(false);
+            particlespeed02.SetActive(false);
         }
     }
 

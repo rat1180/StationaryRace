@@ -51,11 +51,11 @@ public class CountTime : MonoBehaviour
             }
             if (cnttime <= -1)
             {
-                GMSytem.GetComponent<GMSystem>().StartRace();
                 Destroy(panel);
                 Destroy(counttime);
                 panel.SetActive(false);
                 cntflg = false;
+                GMSytem.GetComponent<GMSystem>().StartRace();
             }
         }
         return gamestart;

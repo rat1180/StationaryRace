@@ -32,19 +32,6 @@ public class SystemINF : StrixBehaviour
         public int Rank;
     }
 
-    //îzóÒç\ë¢ëÃÇ™ã§óLÇ∆ëäê´à´Ç¢ÇÃÇ≈ï™ÇØÇÈ
-    //[StrixSyncField]
-    //USERTIME USER0;
-
-    //[StrixSyncField]
-    //USERTIME USER1;
-
-    //[StrixSyncField]
-    //USERTIME USER2;
-
-    //[StrixSyncField]
-    //USERTIME USER3;
-
     //[StrixSyncField]
     public USERTIME[] USERS = { new USERTIME { CPTime = 0, CPcnt = 0, Rap = 0, UserNm = 0, Rank = 1 },
                                 new USERTIME { CPTime = 0, CPcnt = 0, Rap = 0, UserNm = 1, Rank = 1 },
@@ -131,6 +118,7 @@ public class SystemINF : StrixBehaviour
     
     public int USERCP(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
     {
+        Debug.Log(rUSERCPcnt);
         for (int i = 0; i < 4; i++)
         {
             if (USERS[i].UserNm == rUSERNm)

@@ -265,7 +265,7 @@ public class GMSystem : MonoBehaviour
             Debug.Log("ゴールタイム:" + (User.CPTime).ToString("f3"));
             GAMEOVER.SetActive(true);
             string str1 = "ゴール!!" + (User.CPTime).ToString("f3");
-            string str2 = "\n順位" + User.Rank;
+            string str2 = "\n順位" + 1;//User.Rank;
             GAMEOVER.GetComponent<Text>().text = str1 + str2;
             //GAMEOVER.GetComponent<Result>().Decide_Timer(User.CPTime);
         }

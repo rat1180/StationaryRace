@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 7507991501301796635}
   - component: {fileID: 2016153216}
   - component: {fileID: -578072803225858472}
+  - component: {fileID: 1597097837455830898}
   m_Layer: 0
   m_Name: BOMB
   m_TagString: Untagged
@@ -112,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ERASER_RESIDDUE: {fileID: 4850310480805618989, guid: 2d595aa803d60054c82184a0a8deadc3, type: 3}
+  SOUND: {fileID: 3962925830952079570, guid: bf1fac597ac48d242bce587a68eaa81d, type: 3}
 --- !u!54 &2016153216
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -147,6 +149,27 @@ MonoBehaviour:
   SyncPeriodMin: 50
   SyncPeriodMax: 200
   PredictionPeriod: 300
+--- !u!114 &1597097837455830898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2865717966992746334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1308000454, guid: f2c2112f638c5b8489d16403d930373b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strixBehaviours:
+  - {fileID: 7507991501301796635}
+  - {fileID: -578072803225858472}
+  objectType: 1
+  sendRate: 5
+  syncDestroy: 1
+  networkInstanceId: -1
+  InstantiableBy: 1
+  ConnectionClosedBehaviour: 1
 --- !u!1 &7251326739703583068
 GameObject:
   m_ObjectHideFlags: 0

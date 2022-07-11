@@ -17,7 +17,7 @@ public class MECHANICAL_PEN_LEAD : StrixBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        speed = 40.0f;
+        speed = 50.0f;
         Invoke("Des", 20);
         rb.velocity = transform.forward * speed;
         durability = 1;
@@ -29,18 +29,8 @@ public class MECHANICAL_PEN_LEAD : StrixBehaviour
     void Update()
     {
         rb.velocity = transform.forward * speed;
-        if (durability == 0)
-        {
-            Des();
-        }
     }
 
-
-
-    void Des()
-    {
-        Destroy(this.gameObject);
-    }
 
     //ステージに当たった際にフラグを切り替える
     void OnCollisionEnter(Collision collision)
@@ -48,8 +38,8 @@ public class MECHANICAL_PEN_LEAD : StrixBehaviour
         if (collision.gameObject.tag == "Player")
         {
             {
-                durability -= 1;
                 CarSc.SpeedDown();
+                Destroy(this.gameObject);
             }
         }
     }
@@ -64,8 +54,8 @@ public class MECHANICAL_PEN_LEAD : StrixBehaviour
         // 衝突した相手にPlayerタグが付いているとき.
         if (collider.gameObject.tag == "Player")
         {
-            durability -= 1;
             CarSc.SpeedDown();
+            Destroy(this.gameObject);
         }
     }
 }

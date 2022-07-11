@@ -13,6 +13,7 @@ using SoftGear.Strix.Unity.Runtime.Event;
 
 public class GMSystem : MonoBehaviour
 {
+    public GameObject BGM_Prefab;
     #region 変数宣言
     /*************
      定義用
@@ -93,14 +94,16 @@ public class GMSystem : MonoBehaviour
     {
         //入室時に起動
         //InitSet();
-        
+
         //Invoke("CarSpawn", 5);
+        BGM_Prefab.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         Timer();
+        BGM();
     }
 
     #region 起動時処理
@@ -245,6 +248,7 @@ public class GMSystem : MonoBehaviour
             string str1 = "ゴール!!" + (User.CPTime).ToString("f3");
             string str2 = "\n順位" + User.Rank;
             GAMEOVER.GetComponent<Text>().text = str1 + str2;
+            GameFlg = 3;
             //GAMEOVER.GetComponent<Result>().Decide_Timer(User.CPTime);
         }
 
@@ -327,5 +331,15 @@ public class GMSystem : MonoBehaviour
             }
         }
     }
-
+    void BGM()
+    {
+        if (GameFlg == 2)
+        {
+            BGM_Prefab.SetActive(true);
+        }
+        else
+        {
+            BGM_Prefab.SetActive(false);
+        }
+    }
 }

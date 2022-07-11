@@ -11,10 +11,14 @@ public class SelectKitai : StrixBehaviour
     private int SkinNum = 0;
 
     public GameObject Skin;            //オブジェクトの割り当て
+    public AudioClip Select;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent< AudioSource > ();
+
         if (!isLocal) return;
         Skin = this.transform.Find("Skin").gameObject;
 
@@ -64,6 +68,7 @@ public class SelectKitai : StrixBehaviour
 
             KitaiChange();   //機体変更
 
+            audioSource.PlayOneShot(Select); // キャラ変更時(nyu)を再生
         }
 
         //Enterキー押下
@@ -108,9 +113,4 @@ public class SelectKitai : StrixBehaviour
     {
         this.GetComponent<SelectKitai>().enabled = false;
     }
-}
-
-class SceneLoder
-{
-
 }

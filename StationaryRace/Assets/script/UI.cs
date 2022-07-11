@@ -145,7 +145,8 @@ public class UI : MonoBehaviour
                 Item_nunber.SetActive(true);
                 break;
             case ITEM.CARDBOARD_WALL:
-                //Item_nunber13.SetActive(true);
+                Item_nunber.GetComponent<Image>().sprite = ItemUI[12];
+                Item_nunber.SetActive(true);
                 break;
             default:
                 break;

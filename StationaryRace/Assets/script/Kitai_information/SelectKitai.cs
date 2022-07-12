@@ -7,6 +7,7 @@ using SoftGear.Strix.Unity.Runtime;
 public class SelectKitai : StrixBehaviour
 {
     private int mode = 0;              //機体の状態
+    [StrixSyncField]
     private int MachineNum = 0;        //機体番号
     private int SkinNum = 0;
 
@@ -15,7 +16,6 @@ public class SelectKitai : StrixBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!isLocal) return;
         Skin = this.transform.Find("Skin").gameObject;
 
         //Skin内の全ての子オブジェクトを非アクティブ
@@ -52,6 +52,7 @@ public class SelectKitai : StrixBehaviour
     /// </summary>
     private void KeyProcess()
     {
+        if (!isLocal) return;
         //Qキー押下
         if (Input.GetKeyDown("q"))
         {
@@ -62,7 +63,7 @@ public class SelectKitai : StrixBehaviour
             //子オブジェクトをすべて切り替えたらまた最初のオブジェクトに戻る
             if (MachineNum == Skin.transform.childCount) { MachineNum = 0; }
 
-            KitaiChange();   //機体変更
+            RpcToAll("KitaiChange",MachineNum);   //機体変更
 
         }
 
@@ -79,20 +80,25 @@ public class SelectKitai : StrixBehaviour
     /// <summary>
     /// 機体のテクスチャと性能の切り替え
     /// </summary>
-    private void KitaiChange()
+    [StrixRpc]
+    private void KitaiChange(int tmpNum)
     {
+        MachineNum = tmpNum;
         switch (MachineNum)
         {
             case 0:
                 //次のオブジェクトをアクティブ化
+                Skin.transform.GetChild(MachineNum+2).gameObject.SetActive(false);
                 Skin.transform.GetChild(MachineNum).gameObject.SetActive(true);
                 Debug.Log("機体番号 : " + MachineNum);
                 break;
             case 1:
+                Skin.transform.GetChild(MachineNum-1).gameObject.SetActive(false);
                 Skin.transform.GetChild(MachineNum).gameObject.SetActive(true);
                 Debug.Log("機体番号 : " + MachineNum);
                 break;
             case 2:
+                Skin.transform.GetChild(MachineNum-1).gameObject.SetActive(false);
                 Skin.transform.GetChild(MachineNum).gameObject.SetActive(true);
                 Debug.Log("機体番号 : " + MachineNum);
                 break;

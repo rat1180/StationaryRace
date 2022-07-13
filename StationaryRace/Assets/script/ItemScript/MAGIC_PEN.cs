@@ -19,7 +19,7 @@ public class MAGIC_PEN : StrixBehaviour
         IMana = ItemMana.GetComponent<ItemManager>();
 
         rb = GetComponent<Rigidbody>();
-        speed = 40.0f;
+        speed = 100.0f;
         //Invoke("Des", 10);
         rb.velocity = transform.forward * speed;
 

@@ -164,7 +164,7 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.TAPE_BALL://丸めたテープ.
                 Debug.Log("USE:TAPE_BALL!");
-                Instantiate(TAPE_BALL, RocketB, RocketBQ);
+                Instantiate(TAPE_BALL, RocketA, RocketAQ);
                 break;
             case ITEMConst.ITEM.SCOTCH_TAPE://セロハンテープ.
                 Debug.Log("USE:SCOTCH_TAPE!");

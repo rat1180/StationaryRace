@@ -17,7 +17,7 @@ public class KESHIKASU_BOM : StrixBehaviour
     {
         if (!isLocal) return;
         rb = GetComponent<Rigidbody>();
-        speed = 30.0f;
+        speed = 100.0f;
         Invoke("Des", 1);
     }
 

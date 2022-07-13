@@ -17,7 +17,7 @@ public class MECHANICAL_PEN_LEAD : StrixBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        speed = 50.0f;
+        speed = 100.0f;
         Invoke("Des", 20);
         rb.velocity = transform.forward * speed;
         durability = 1;

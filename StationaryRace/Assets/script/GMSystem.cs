@@ -46,6 +46,10 @@ public class GMSystem : MonoBehaviour
     GameObject CPlist;
     GameObject CPlist_Last;
 
+    public GameObject Raptxt;
+
+    public GameObject BGM_Prefab; //BGMというプレファブを入れる
+
     /**************
      ユーザー系変数
     ***************/
@@ -103,6 +107,7 @@ public class GMSystem : MonoBehaviour
     void Update()
     {
         Timer();
+        BGM();
     }
 
     #region 起動時処理
@@ -252,6 +257,7 @@ public class GMSystem : MonoBehaviour
         {
             CPlist.transform.GetChild(User.CPcnt + 1).gameObject.GetComponent<MeshRenderer>().enabled = true;
         }
+
         User.Rap = MyRap;
 
         if(MyRap == Rapmax - 1)
@@ -268,6 +274,9 @@ public class GMSystem : MonoBehaviour
             //string str2 = "\n順位" + 1;//User.Rank;
             GAMEOVER.GetComponent<Text>().text = str1;// + str2;
             //GAMEOVER.GetComponent<Result>().Decide_Timer(User.CPTime);
+        }else if(MyCPcnt == 1)
+        {
+            Raptxt.GetComponent<RapPOP>().GetRap(MyRap);
         }
 
         User.Rank = SystemINF.GetComponent<SystemINF>().USERCP(User.USERNm, User.CPTime, User.CPcnt, User.Rap);
@@ -328,8 +337,8 @@ public class GMSystem : MonoBehaviour
         {
             //オーナーのみ生成
             SystemINF = Instantiate(SystemINF_POP);
-            SystemINF.GetComponent<SystemINF>().USERcntRESET();
-            SystemINF.GetComponent<SystemINF>().USER_RESET();
+            //SystemINF.GetComponent<SystemINF>().USERcntRESET();
+            //SystemINF.GetComponent<SystemINF>().USER_RESET();
             Debug.Log("生成");
         }
 
@@ -365,6 +374,18 @@ public class GMSystem : MonoBehaviour
     public void TitleBack()
     {
         SceneManager.LoadScene("title");
+    }
+
+    void BGM()
+    {
+        if (GameFlg == 2)//レース中
+        {
+            BGM_Prefab.SetActive(true);
+        }
+        else
+        {
+            BGM_Prefab.SetActive(false);
+        }
     }
 
 }

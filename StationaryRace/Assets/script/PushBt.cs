@@ -19,6 +19,9 @@ public class PushBt : MonoBehaviour
     }
     public void SceneTrip()
     {
-        SceneManager.LoadScene("Marge");
+        //現在のシーンのインデックス番号を取得
+        int nowSceneIndexNumber = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(++nowSceneIndexNumber);
     }
 }

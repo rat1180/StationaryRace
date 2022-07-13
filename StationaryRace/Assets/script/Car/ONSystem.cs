@@ -99,7 +99,8 @@ public class ONSystem : MonoBehaviour
     private void OnConnectCallback(StrixNetworkConnectEventArgs args)
     {
         //Debug.Log("ê⁄ë±");
-        EnterRoom();
+        //EnterRoom();
+        CreateRoom();
     }
 
     private void OnConnectFailedCallback(StrixNetworkConnectFailedEventArgs args)

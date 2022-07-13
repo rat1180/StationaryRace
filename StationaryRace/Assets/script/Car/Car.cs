@@ -420,6 +420,7 @@ public class Car : StrixBehaviour
     public void ORIGAMI_CHANGE()
     {
         ORIGAMI_CRANE.SetActive(true);
+        this.transform.Find("Skin").gameObject.SetActive(false);
         speednow = upspeed;
         StartCoroutine("ORIGAMI_SpeedUp");
     }
@@ -430,6 +431,7 @@ public class Car : StrixBehaviour
         yield return new WaitForSeconds(3.0f);
         upspeed = speednow;
         ORIGAMI_CRANE.SetActive(false);
+        this.transform.Find("Skin").gameObject.SetActive(true);
     }
 
     public void BIRIBIRI_PEN()

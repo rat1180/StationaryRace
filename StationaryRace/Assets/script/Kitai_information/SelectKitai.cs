@@ -12,12 +12,14 @@ public class SelectKitai : StrixBehaviour
     private int SkinNum = 0;
 
     public GameObject Skin;            //オブジェクトの割り当て
+    public AudioClip Select;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         Skin = this.transform.Find("Skin").gameObject;
-
+        audioSource = GetComponent<AudioSource>();
         //Skin内の全ての子オブジェクトを非アクティブ
         for (int i = 0; i < Skin.transform.childCount; i++)
         {
@@ -64,7 +66,7 @@ public class SelectKitai : StrixBehaviour
             if (MachineNum == Skin.transform.childCount) { MachineNum = 0; }
 
             RpcToAll("KitaiChange",MachineNum);   //機体変更
-
+            audioSource.PlayOneShot(Select); // キャラ変更時(nyu)を再生
         }
 
         //Enterキー押下
@@ -81,26 +83,29 @@ public class SelectKitai : StrixBehaviour
     /// 機体のテクスチャと性能の切り替え
     /// </summary>
     [StrixRpc]
-    private void KitaiChange(int tmpNum)
+    private void KitaiChange(int Num)
     {
-        MachineNum = tmpNum;
-        switch (MachineNum)
+        for(int i = 0; i < Skin.transform.childCount; i++)
+        {
+            Skin.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        switch (Num)
         {
             case 0:
                 //次のオブジェクトをアクティブ化
-                Skin.transform.GetChild(MachineNum+2).gameObject.SetActive(false);
-                Skin.transform.GetChild(MachineNum).gameObject.SetActive(true);
-                Debug.Log("機体番号 : " + MachineNum);
+                //Skin.transform.GetChild(MachineNum+2).gameObject.SetActive(false);
+                Skin.transform.GetChild(Num).gameObject.SetActive(true);
+                Debug.Log("機体番号 : " + Num);
                 break;
             case 1:
-                Skin.transform.GetChild(MachineNum-1).gameObject.SetActive(false);
-                Skin.transform.GetChild(MachineNum).gameObject.SetActive(true);
-                Debug.Log("機体番号 : " + MachineNum);
+                //Skin.transform.GetChild(MachineNum-1).gameObject.SetActive(false);
+                Skin.transform.GetChild(Num).gameObject.SetActive(true);
+                Debug.Log("機体番号 : " + Num);
                 break;
             case 2:
-                Skin.transform.GetChild(MachineNum-1).gameObject.SetActive(false);
-                Skin.transform.GetChild(MachineNum).gameObject.SetActive(true);
-                Debug.Log("機体番号 : " + MachineNum);
+                //Skin.transform.GetChild(MachineNum-1).gameObject.SetActive(false);
+                Skin.transform.GetChild(Num).gameObject.SetActive(true);
+                Debug.Log("機体番号 : " + Num);
                 break;
             case 3:
                 break;

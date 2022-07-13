@@ -33,13 +33,13 @@ public class SystemINF : StrixBehaviour
     }
 
     [StrixSyncField]
-    public double[] CPTimes = new double[4];
+    public double[] CPTimes;
     [StrixSyncField]
-    public int[] CPcnts = new int[4];
+    public int[] CPcnts;
     [StrixSyncField]
-    public int[] Raps = new int[4];
+    public int[] Raps;
     [StrixSyncField]
-    public int[] Ranks = new int[4];
+    public int[] Ranks;
 
     
     public USERTIME[] USERS = { new USERTIME { CPTime = 0, CPcnt = 0, Rap = 0, UserNm = 0, Rank = 1 },
@@ -63,20 +63,26 @@ public class SystemINF : StrixBehaviour
         //StrixNetwork.instance.roomSession.roomClient.RoomJoinNotified += RoomJoinNotified_RPC;
 
         GMSystem = GameObject.Find("GMSystem");
-        if (!isLocal)
+        if (isLocal)
         {
-            return;
-            //USERcntRESET();
+            CPTimes = new double[4];
+            CPcnts = new int[4];
+            Raps = new int[4];
+            Ranks = new int[4];
+            USER_RESET();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //USER0 = USERS[0];
-        //USER1 = USERS[1];
-        //USER2 = USERS[2];
-        //USER3 = USERS[3];
+        //for (int i = 0; i < 4; i++)
+        //{
+        //    Raps[i] = USERS[i].Rap;
+        //    CPcnts[i] = USERS[i].CPcnt;
+        //    CPTimes[i] = USERS[i].CPTime;
+        //    Ranks[i] = USERS[i].Rank;
+        //}
     }
 
     public void USERcntRESET()
@@ -127,35 +133,54 @@ public class SystemINF : StrixBehaviour
 
     public int USERCP(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
     {
+        RpcToAll("POP_RPC", rUSERNm, rUSERTime, rUSERCPcnt, rUSERRap);
+        int USERNm = rUSERNm;
         Debug.Log(rUSERCPcnt);
-            USERS[rUSERNm].CPTime = rUSERTime;
-            USERS[rUSERNm].CPcnt = rUSERCPcnt;
-            USERS[rUSERNm].Rap = rUSERRap;
-            USERS[rUSERNm].Rank = 1;
-            for (int j = 0; j < 4; j++)
+        USERS[rUSERNm].CPTime = rUSERTime;
+        USERS[rUSERNm].CPcnt = rUSERCPcnt;
+        USERS[rUSERNm].Rap = rUSERRap;
+        USERS[rUSERNm].Rank = 1;
+        for (int j = 0; j < 4; j++)
+        {
+            if (USERS[rUSERNm].UserNm != USERS[j].UserNm)
             {
-                if (USERS[rUSERNm].UserNm != USERS[j].UserNm)
+                if (USERS[rUSERNm].Rap < USERS[j].Rap)
                 {
-                    if (USERS[rUSERNm].Rap < USERS[j].Rap)
-                    {
-                        USERS[rUSERNm].Rank++;
-                        Debug.Log("RapRank");
-                    }
-                    else if (USERS[rUSERNm].CPcnt < USERS[j].CPcnt)
-                    {
-                        USERS[rUSERNm].Rank++;
-                        Debug.Log("CPRank");
-                    }
-                    else if (USERS[rUSERNm].CPTime > USERS[j].CPTime)
-                    {
-                        USERS[rUSERNm].Rank++;
-                        Debug.Log("TimeRank");
-                    }
+                    USERS[rUSERNm].Rank++;
+                    Debug.Log("RapRank");
+                }
+                else if (USERS[rUSERNm].CPcnt < USERS[j].CPcnt)
+                {
+                    USERS[rUSERNm].Rank++;
+                    Debug.Log("CPRank");
+                }
+                else if (USERS[rUSERNm].CPcnt == USERS[j].CPcnt && USERS[rUSERNm].CPTime > USERS[j].CPTime)
+                {
+                    USERS[rUSERNm].Rank++;
+                    Debug.Log("TimeRank");
                 }
             }
+        }
         return USERS[rUSERNm].Rank;
         //GMSystem.GetComponent<GMSystem>().CPpass(rUSERNm, rUSERTime, rUSERCPcnt, rUSERRap);
-        //for(int i = 0;)
+        //Ranks[USERNm] = 1;
+        //Raps[USERNm] = rUSERRap;
+        //CPcnts[USERNm] = rUSERCPcnt;
+        //CPTimes[USERNm] = rUSERTime;
+        //for(int i = 0; i < 4; i++)
+        //{
+        //    if(Raps[USERNm] < Raps[i])
+        //    {
+        //        Ranks[USERNm]++;
+        //    }else if(CPcnts[USERNm] < CPcnts[i])
+        //    {
+        //        Ranks[USERNm]++;
+        //    }else if(CPTimes[USERNm] > CPTimes[i])
+        //    {
+        //        Ranks[USERNm]++;
+        //    }
+        //}
+        //return Ranks[USERNm];
     }
 
     public void USERCP_RPC(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
@@ -167,8 +192,9 @@ public class SystemINF : StrixBehaviour
     [StrixRpc]
     public void POP_RPC(int rUSERNm, double rUSERTime, int rUSERCPcnt, int rUSERRap)
     {
-        INFtoGM = Instantiate(INFtoGM_POP);
-        INFtoGM.GetComponent<INFtoGM>().RPC(rUSERNm, rUSERTime, rUSERCPcnt, rUSERRap);
+            USERS[rUSERNm].CPTime = rUSERTime;
+            USERS[rUSERNm].CPcnt = rUSERCPcnt;
+            USERS[rUSERNm].Rap = rUSERRap;
     }
 
     [StrixRpc]
@@ -200,7 +226,7 @@ public class SystemINF : StrixBehaviour
             CPTimes[i] = 99;
             CPcnts[i] = 0;
             Ranks[i] = i;
-            Raps[i] = i;
+            Raps[i] = 0;
         }
         //USER0 = USERS[0];
         //USER1 = USERS[1];

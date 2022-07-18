@@ -9,6 +9,7 @@ using SoftGear.Strix.Client.Core;
 using SoftGear.Strix.Unity.Runtime;
 using SoftGear.Strix.Net.Logging;
 using SoftGear.Strix.Unity.Runtime.Event;
+using SoftGear.Strix.Client.Core.Model.Manager.Filter.Builder;
 
 public class ONSystem : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class ONSystem : MonoBehaviour
 
     void Awake()
     {
+        capacity = PushBt.GAMEMODE;
 
         var strixNetwork = StrixNetwork.instance;
 
@@ -99,8 +101,15 @@ public class ONSystem : MonoBehaviour
     private void OnConnectCallback(StrixNetworkConnectEventArgs args)
     {
         //Debug.Log("Ú‘±");
-        //EnterRoom();
-        CreateRoom();
+        if (capacity == 1)
+        {
+           
+            CreateRoom();
+        }
+        else
+        {
+            EnterRoom();
+        }
     }
 
     private void OnConnectFailedCallback(StrixNetworkConnectFailedEventArgs args)
@@ -125,22 +134,12 @@ public class ONSystem : MonoBehaviour
 
     public void EnterRoom()
     {
-        StrixNetwork.instance.JoinRandomRoom(StrixNetwork.instance.playerName, args => {
-            onRoomEntered.Invoke();
-        }, args => {
-            CreateRoom();
-        });
-    }
-
-    private void CreateRoom()
-    {
-        //SystemINF.GetComponent<SystemINF>().USERcntRESET();
-
-        RoomProperties roomProperties = new RoomProperties
-        {
-            capacity = capacity,
-            name = roomName
-        };
+        //StrixNetwork.instance.JoinRandomRoom(StrixNetwork.instance.playerName, args => {
+        //    onRoomEntered.Invoke();
+        //}, args => {
+        //    CreateRoom();
+        //});
+        var strixNetwork = StrixNetwork.instance;
 
         RoomMemberProperties memberProperties = new RoomMemberProperties
         {
@@ -150,13 +149,105 @@ public class ONSystem : MonoBehaviour
             { "state", 0 }  // ‰Šúó‘Ô‚Í "Not Ready"
         }
         };
+        Debug.Log(PushBt.PASS);
+        strixNetwork.SearchRoom(
+                            condition: ConditionBuilder.Builder().Field("name").EqualTo(PushBt.PASS).Build(),  //uMy Game Roomv‚Æ‚¢‚¤–¼‘O‚Ì‚·‚×‚Ä‚Ì•”‰®‚ðŒŸõ‚µ‚Ü‚·
+                            limit: 1,                                                                            // Œ‹‰Ê‚ð10Œ‚Ì‚ÝŽæ“¾‚µ‚Ü‚·
+                            offset: 0,                                                                            // Œ‹‰Ê‚ðæ“ª‚©‚çŽæ“¾‚µ‚Ü‚·
+                            handler: searchResults => {
+                                Debug.Log(searchResults.roomInfoCollection.Count + " rooms found.");
+                                if(searchResults.roomInfoCollection.Count == 0)
+                                {
+                                    CreateRoom();
+                                }
+                                foreach (var roomInfo in searchResults.roomInfoCollection)
+                                {
+                                    StrixNetwork.instance.JoinRoom(
+
+    new RoomJoinArgs
+    {
+        host = roomInfo.host,
+        port = roomInfo.port,
+        roomId = roomInfo.roomId,
+        memberProperties = memberProperties
+    },
+    args =>
+    {
+        PushBt.GAMEMODE = roomInfo.capacity;
+        onRoomEntered.Invoke();
+        Debug.Log("JoinRoom succeeded");
+    },
+    args =>
+    {
+        CreateRoom();
+        Debug.Log("JoinRoom failed. error = " + args.cause);
+    }
+);
+                                }
+
+                            },
+
+                            failureHandler: searchError => Debug.LogError("Search failed.Reason: " + searchError.cause));
+
+        
+    }
+
+    private void CreateRoom()
+    {
+        //SystemINF.GetComponent<SystemINF>().USERcntRESET();
+
+        if (PushBt.GAMEMODE == 1)
+        {
+            RoomProperties roomProperties = new RoomProperties
+            {
+                capacity = capacity,
+                name = roomName
+            };
+
+            RoomMemberProperties memberProperties = new RoomMemberProperties
+            {
+                name = StrixNetwork.instance.playerName,
+                //’Ç‰Á
+                properties = new Dictionary<string, object>() {
+            { "state", 0 }  // ‰Šúó‘Ô‚Í "Not Ready"
+        }
+            };
+            StrixNetwork.instance.CreateRoom(roomProperties, memberProperties, args =>
+            {
+                onRoomEntered.Invoke();
+            }, args =>
+            {
+                onRoomEnterFailed.Invoke();
+            });
 
 
-        StrixNetwork.instance.CreateRoom(roomProperties, memberProperties, args => {
-            onRoomEntered.Invoke();
-        }, args => {
-            onRoomEnterFailed.Invoke();
-        });
+        }
+        else
+        {
+            RoomProperties roomProperties = new RoomProperties
+            {
+                capacity = PushBt.GAMEMODE,
+                name = PushBt.PASS
+            };
+
+            RoomMemberProperties memberProperties = new RoomMemberProperties
+            {
+                name = StrixNetwork.instance.playerName,
+                //’Ç‰Á
+                properties = new Dictionary<string, object>() {
+            { "state", 0 }  // ‰Šúó‘Ô‚Í "Not Ready"
+                   
+        }
+            };
+            StrixNetwork.instance.CreateRoom(roomProperties, memberProperties, args =>
+            {
+                onRoomEntered.Invoke();
+            }, args =>
+            {
+                onRoomEnterFailed.Invoke();
+            });
+        }
+        
     }
 
     public void SetNotRady()

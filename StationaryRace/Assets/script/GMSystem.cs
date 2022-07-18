@@ -119,7 +119,7 @@ public class GMSystem : MonoBehaviour
     public void InitSet()
     {
         //レース前のシーンからもらう
-        Players = 4;
+        Players = PushBt.GAMEMODE;
         CoseNm = 0;
 
         //スタート前準備
@@ -150,6 +150,7 @@ public class GMSystem : MonoBehaviour
         User.Rap = 0;
         User.Rank = 1;
         NmSend();
+        CarSpawn();
         //User.USER.GetComponent<UserOperation>().RankSet();
 
         //アイテム
@@ -271,8 +272,8 @@ public class GMSystem : MonoBehaviour
             Debug.Log("ゴールタイム:" + (User.CPTime).ToString("f3"));
             GAMEOVER.SetActive(true);
             string str1 = "ゴール!!" + (User.CPTime).ToString("f3");
-            //string str2 = "\n順位" + 1;//User.Rank;
-            GAMEOVER.GetComponent<Text>().text = str1;// + str2;
+            string str2 = "\n順位" + User.Rank;
+            GAMEOVER.GetComponent<Text>().text = str1 + str2;
             //GAMEOVER.GetComponent<Result>().Decide_Timer(User.CPTime);
         }else if(MyCPcnt == 1)
         {

@@ -8,9 +8,9 @@ public class firstserect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        button = GameObject.Find("Canvas/Panel/Button").GetComponent<Button>();
-        //ボタンが選択された状態になる
-        button.Select();
+        //button = GameObject.Find("Canvas/Panel/Button").GetComponent<Button>();
+        ////ボタンが選択された状態になる
+        //button.Select();
     }
 
     // Update is called once per frame

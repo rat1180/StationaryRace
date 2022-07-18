@@ -140,7 +140,7 @@ public class SystemINF : StrixBehaviour
         USERS[rUSERNm].CPcnt = rUSERCPcnt;
         USERS[rUSERNm].Rap = rUSERRap;
         USERS[rUSERNm].Rank = 1;
-        for (int j = 0; j < 4; j++)
+        for (int j = 0; j < PushBt.GAMEMODE; j++)
         {
             if (USERS[rUSERNm].UserNm != USERS[j].UserNm)
             {

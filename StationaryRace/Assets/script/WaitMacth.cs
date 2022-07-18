@@ -43,6 +43,24 @@ public class WaitMacth : MonoBehaviour
             GMSystem.GetComponent<GMSystem>().CarSpawn();
             this.gameObject.SetActive(false);
             WaitFlg = false;
+            GameObject SystemINF = GameObject.Find("SystemINF(Clone)");
+            if(SystemINF != null)
+            {
+                if (SystemINF.GetComponent<StrixReplicator>().isLocal)
+                {
+                    var strixNetwork = StrixNetwork.instance;
+
+                    strixNetwork.SetRoom(
+                            roomId: strixNetwork.roomSession.room.GetPrimaryKey(),   // The ID of the current room
+                            roomProperties: new RoomProperties
+                            {
+                                isJoinable = false
+                            },
+                            handler: setRoomResult => Debug.Log("RoomLock succeeded"),
+                            failureHandler: setRoomError => Debug.LogError("RoomLock failed")
+                        );
+                }
+            }
         }
 
     }

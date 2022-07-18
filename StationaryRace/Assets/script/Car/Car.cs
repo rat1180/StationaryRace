@@ -62,6 +62,11 @@ public class Car : StrixBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!isLocal)
+        {
+            transform.Find("Main Camera1").gameObject.SetActive(false);
+            return;
+        }
         #region 初期化処理
         rb = this.GetComponent<Rigidbody>();
 
@@ -72,7 +77,8 @@ public class Car : StrixBehaviour
         IManager = ItemMana.GetComponent<ItemManager>();
         cp = GameObject.Find("CP");
         hitbox = transform.Find("HitBox").gameObject;
-        //User = this.transform.parent.gameObject;
+        User = this.transform.parent.gameObject;
+        //counttime = GameObject.Find("Counttime").GetComponent<CountTime>();
 
         colorR = 0;
         colorG = 255;
@@ -81,10 +87,7 @@ public class Car : StrixBehaviour
         // 初期は緑色
         hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);
 
-        if (!isLocal)
-        {
-            transform.Find("Main Camera1").gameObject.SetActive(false);
-        }
+        
 
         #endregion
     }
@@ -227,7 +230,8 @@ public class Car : StrixBehaviour
         }
         else  // 何の操作もしていない状態
         {
-            if(carnum == 1)
+            Accelflg = true;
+            if (carnum == 1)
             {
                 upspeed = rb.velocity.magnitude + 20;    // 現在のスピードを取得 + 20することで速さが20より下がらなくする
             }
@@ -427,7 +431,7 @@ public class Car : StrixBehaviour
 
     IEnumerator ORIGAMI_SpeedUp()
     {
-        upspeed = 300.0f;
+        upspeed = 180.0f;
         yield return new WaitForSeconds(3.0f);
         upspeed = speednow;
         ORIGAMI_CRANE.SetActive(false);

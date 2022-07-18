@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SoftGear.Strix.Unity.Runtime;
 
-public class itemblock : StrixBehaviour
+public class itemblock : MonoBehaviour
 {
     int ItemNum = 0;           //アイテムマネージャーに数値を渡す用変数.
     int USER_NUM = 1;          //ユーザー番号
@@ -17,7 +17,6 @@ public class itemblock : StrixBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!isLocal) return; 
         //コンポーネント取得.
         audioSource = GetComponent<AudioSource>();  //オーディオソースの取得.
         ItemMana = GameObject.Find("ITEMManager");  //アイテムマネージャーを取得.

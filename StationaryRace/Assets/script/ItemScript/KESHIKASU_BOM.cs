@@ -6,6 +6,7 @@ using SoftGear.Strix.Unity.Runtime;
 public class KESHIKASU_BOM : StrixBehaviour
 {
     public GameObject ERASER_RESIDDUE;
+    public GameObject Effect;
     public GameObject SOUND;
     private Rigidbody rb;
     private float speed;
@@ -31,6 +32,7 @@ public class KESHIKASU_BOM : StrixBehaviour
     void Des()
     {
         Pos = this.transform.position;
+        Instantiate(Effect, Pos, Quaternion.identity);
         Instantiate(SOUND, Pos, Quaternion.identity);
         for (i = 0; i < 33; i++)
         {

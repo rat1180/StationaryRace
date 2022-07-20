@@ -1,0 +1,1050 @@
+Using pre-set license
+Built from '2021.2/release' branch; Version is '2021.2.0f1 (4bf1ec4b23c9) revision 4977132'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.906; Version 2009; 64bit' Language: 'ja' Physical Memory: 32585 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.2.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+51785
+Successfully changed project path to: C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
+C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 124.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.2.0f1 (4bf1ec4b23c9)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/nwuser.DA/Documents/StationaryRace/StationaryRace/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 Laptop GPU (ID=0x249d)
+    Vendor:   NVIDIA
+    VRAM:     8044 MB
+    Driver:   30.0.14.9717
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56888
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006845 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 148.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.917 seconds
+Domain Reload Profiling:
+	ReloadAssembly (917ms)
+		BeginReloadAssembly (68ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (530ms)
+			LoadAssemblies (66ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (98ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (336ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (148ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (128ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.010775 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000020F4E53FC30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F502BB640 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FD00A30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4A8FE340 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F502BB640 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FFE4C40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4F02E820 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4A904F50 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FFE4C40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4F043C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4E832020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FD0F020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FFE4C40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4E890E30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4E890E30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FD17030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FD59C00 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4F1E6870 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4A74A220 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FD6EC10 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4F1E6870 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4F1E6870 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC70040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4F1E6870 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4F1E6870 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4F1E6870 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC80050 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC80050 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FD6EC10 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4ECA8E60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FD00A30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FD00A30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4ACAAE30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EFE0240 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4A83C820 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4ECF4AC0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FD75C20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EFE0240 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4A864E30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EFE0240 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EFE0240 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EFE0240 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EFE0240 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Package Manager log level set to [2]
+Mono: successfully reloaded assembly
+- Completed reload, in  2.018 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2019ms)
+		BeginReloadAssembly (169ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (1747ms)
+			LoadAssemblies (82ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (249ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (1254ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (98ms)
+				ProcessInitializeOnLoadAttributes (1044ms)
+				ProcessInitializeOnLoadMethodAttributes (89ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.94 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4205 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 74 unused Assets / (57.4 KB). Loaded Objects now: 4642.
+Memory consumption went from 158.9 MB to 158.9 MB.
+Total: 5.864100 ms (FindLiveObjects: 0.308700 ms CreateObjectMapping: 0.349900 ms MarkObjects: 5.112800 ms  DeleteObjects: 0.091900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 517681.790189 seconds.
+  path: Assets/title_sozai/newwill.mp4
+  artifactKey: Guid(f368d6dde4e179b49a991f641fe03b52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/title_sozai/newwill.mp4 using Guid(f368d6dde4e179b49a991f641fe03b52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4197084b17f26cec779fd5d8904e7e78') in 0.059377 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/prefabs/item/BOMB.prefab
+  artifactKey: Guid(5bf3cec27cdbbd94d86c5aa17f712357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/BOMB.prefab using Guid(5bf3cec27cdbbd94d86c5aa17f712357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98e77be599fefc58d9b52aaced5fd01e') in 0.205186 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.744121 seconds.
+  path: Assets/effect/FX/Prefabs/BOMEffect.prefab
+  artifactKey: Guid(df1ae246b5548bc47a94d04d25e2c342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/effect/FX/Prefabs/BOMEffect.prefab using Guid(df1ae246b5548bc47a94d04d25e2c342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c2dc8b6a39fc69f1f26d1d247cd1d50') in 0.027449 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011093 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000020F5555BE60 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AC36120 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F502B9C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F5002B010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4ECF6CC0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EB761C0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F5002B010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4ECF6CC0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC5B620 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F53303030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F514B2470 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F51458420 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AC36120 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4ECF6CC0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4ECF6CC0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F53303030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F51BE5850 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AC36120 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F52832030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F51486430 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC5B620 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AC36120 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F509B4030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EB761C0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC5B620 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC5B620 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F52894020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F51752040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F53303030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4ADE9010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AC36120 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AC36120 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FF13640 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AC36120 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F51EE8020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F53303030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F50721760 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AC36120 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F533D9010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC5B620 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AC36120 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AC36120 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4A90C5F0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.792 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2793ms)
+		BeginReloadAssembly (131ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (2556ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (308ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (1979ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (82ms)
+				ProcessInitializeOnLoadAttributes (1757ms)
+				ProcessInitializeOnLoadMethodAttributes (110ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4216 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1537 unused Assets / (262.1 KB). Loaded Objects now: 5199.
+Memory consumption went from 166.4 MB to 166.1 MB.
+Total: 9.542500 ms (FindLiveObjects: 0.568500 ms CreateObjectMapping: 0.667200 ms MarkObjects: 7.444900 ms  DeleteObjects: 0.859800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010226 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000020F542A6010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4FF6D010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F533D9010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4ADB3320 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F533D9010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F55CD0770 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4ADB3320 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F533D9010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F55CD0770 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F53491A30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F514B2470 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4ECCDEB0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F55CD0770 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC50010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC50010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F53303030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4ADB3320 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4F258C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F52894020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F51482C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC5B220 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F5148BC80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F518E6050 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC5B220 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC5B220 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC5B220 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F55972020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F52F5A020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F528C6E80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F5599AE30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EC5B220 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4F258C30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F528C6E80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F5148BC80 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F51F83020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AB7D040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AB7D040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AB82450 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F53491A30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F559ADC30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F559ADC30 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F5739A820 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F523C6C90 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.525 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2526ms)
+		BeginReloadAssembly (143ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (2264ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (256ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (1679ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (1473ms)
+				ProcessInitializeOnLoadMethodAttributes (86ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4218 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1513 unused Assets / (273.9 KB). Loaded Objects now: 5266.
+Memory consumption went from 166.8 MB to 166.5 MB.
+Total: 6.955800 ms (FindLiveObjects: 0.463900 ms CreateObjectMapping: 0.372300 ms MarkObjects: 5.542200 ms  DeleteObjects: 0.576700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010854 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000020F542A6010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F9C116380 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Purchasing.Common.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F9C116380 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4E8F8310 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F53638030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F9C116380 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4E8F8310 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F55CC8020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F9C116380 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F5211D010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F514B2470 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F5028E020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F9C116380 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F55CC8020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F55CC8020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F533D9010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4E8F8310 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F9C116380 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AB0B030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F53303030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F523CFCE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F523CFCE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F521F3040 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F523CFCE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F523CFCE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.WinRTStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F523CFCE0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F55A96020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F52F5A020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F5532A010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F514380A0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F9C116380 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F9C116380 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AB33E40 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F53638030 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.Welcome.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F51EE8020 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F5532A010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F533D9010 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F5144AEA0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4EB5F1C0 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Monetization.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AB36C50 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Purchasing.AppleStub.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F4AB36C50 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F51901070 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020F55330A20 doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nwuser.DA\Documents\StationaryRace\StationaryRace\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.995 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2996ms)
+		BeginReloadAssembly (143ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (2714ms)
+			LoadAssemblies (116ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (315ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (2055ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (90ms)
+				ProcessInitializeOnLoadAttributes (1817ms)
+				ProcessInitializeOnLoadMethodAttributes (117ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4215 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1513 unused Assets / (275.1 KB). Loaded Objects now: 5268.
+Memory consumption went from 166.6 MB to 166.3 MB.
+Total: 12.063900 ms (FindLiveObjects: 0.852900 ms CreateObjectMapping: 0.996400 ms MarkObjects: 9.246900 ms  DeleteObjects: 0.966200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1282.915100 seconds.
+  path: Assets/prefabs/Kitai_Prefab/pencil.prefab
+  artifactKey: Guid(bc143666a92243b439926f0bc84c2a3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/Kitai_Prefab/pencil.prefab using Guid(bc143666a92243b439926f0bc84c2a3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efe2760d7dd618c262bbeede55dd1f84') in 0.093979 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 96.295243 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_windline1_add.mat
+  artifactKey: Guid(cdf91b60c0a4f463d9079ca1bb2924cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_windline1_add.mat using Guid(cdf91b60c0a4f463d9079ca1bb2924cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9332b137cc0abcfed7a59ada940f8a14') in 0.118882 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000738 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_snow1.png
+  artifactKey: Guid(90f320b9affc64fc5aec9f06a27725ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_snow1.png using Guid(90f320b9affc64fc5aec9f06a27725ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '765a7bea93f623fd70f564df58078c22') in 0.100611 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000486 seconds.
+  path: Assets/prefabs/item/effect/FX/Models/eff_shock_cone1.FBX
+  artifactKey: Guid(ed86fc9283df2413a885a39bc0c4a50c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Models/eff_shock_cone1.FBX using Guid(ed86fc9283df2413a885a39bc0c4a50c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27a5f9955117fa7b98f001a026fc21d2') in 0.034238 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000830 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_ring3.png
+  artifactKey: Guid(88a05b0823a814ca9854f5e11501de6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_ring3.png using Guid(88a05b0823a814ca9854f5e11501de6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eec1b3ce7137b71a3c908e76f8c8daeb') in 0.008029 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004926 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_windline1_alpha.mat
+  artifactKey: Guid(5f08162b9a25449439252aec6c464f53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_windline1_alpha.mat using Guid(5f08162b9a25449439252aec6c464f53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dad9d7424555a55440a7ebbd82e5adb') in 0.009607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004717 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_lightning1_add.mat
+  artifactKey: Guid(79241ccbff19b4b52b473eb8b8697469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_lightning1_add.mat using Guid(79241ccbff19b4b52b473eb8b8697469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce8ccbb5088e082131f8539c5241717b') in 0.008730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007376 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials
+  artifactKey: Guid(f40786e881f87493fb6ad4b622400d48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials using Guid(f40786e881f87493fb6ad4b622400d48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '531b5a40b8df9128e206d7ea032c8445') in 0.001782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000743 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_star1_add.mat
+  artifactKey: Guid(2ade794e2d7a8472f82fb113a4fd855b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_star1_add.mat using Guid(2ade794e2d7a8472f82fb113a4fd855b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f62cfb3fbd2f308eb72aaac06a24828') in 0.009524 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001034 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_parline1_add.mat
+  artifactKey: Guid(39648cce8c18241a4b5a9a95850186a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_parline1_add.mat using Guid(39648cce8c18241a4b5a9a95850186a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd89533bd158e6568dc8f4cef47710416') in 0.009152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000892 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_parline2_add.mat
+  artifactKey: Guid(0c6ed09f7efe14e819c0a31539d6a071) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_parline2_add.mat using Guid(0c6ed09f7efe14e819c0a31539d6a071) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ec980611e7e9dc8bf1dd791522e757c') in 0.008302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008639 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_parline2.png
+  artifactKey: Guid(e5575501ce5be4b9abfbe95547c0268e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_parline2.png using Guid(e5575501ce5be4b9abfbe95547c0268e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4481851cfcef15033c3f73441e659006') in 0.007895 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005781 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_wind1_add.mat
+  artifactKey: Guid(5c5078134b74b4229862095d2ad92cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_wind1_add.mat using Guid(5c5078134b74b4229862095d2ad92cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd03b36f86accf2dbf1dfa48e32e8282f') in 0.008966 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003830 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_water2_add.mat
+  artifactKey: Guid(0f13c6ad822504c9eb9785fa8150e634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_water2_add.mat using Guid(0f13c6ad822504c9eb9785fa8150e634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6663ef071aef875323c7b40dd30afc18') in 0.008143 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005616 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_parline1.png
+  artifactKey: Guid(9b3ce67d3c76c4db3b168ccee36be1a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_parline1.png using Guid(9b3ce67d3c76c4db3b168ccee36be1a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd1122944523a2fbfd04c1d936ae8f95') in 0.008772 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000490 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_par3_add.mat
+  artifactKey: Guid(641a2693191a54c1fadbd6995d4e7204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_par3_add.mat using Guid(641a2693191a54c1fadbd6995d4e7204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8783ca4c29b112e8974fd090894228cc') in 0.008195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/prefabs/item/effect/FX/Models
+  artifactKey: Guid(32474d7ecd07e40dd95f1049610dec62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Models using Guid(32474d7ecd07e40dd95f1049610dec62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be5bc051653840a5fe8e045f74810a2c') in 0.001894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000499 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_par3.png
+  artifactKey: Guid(2dc9f65c6e2184ef9a6e78f0631b1cfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_par3.png using Guid(2dc9f65c6e2184ef9a6e78f0631b1cfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c25a8e55be414a9cb864521d375f0000') in 0.009007 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003718 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_aura1_add.mat
+  artifactKey: Guid(55a4448aede1d4539ab28c1c395f8396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_aura1_add.mat using Guid(55a4448aede1d4539ab28c1c395f8396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c18c10a96e51acf8669a86163ad5984') in 0.009473 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000677 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_ring3_add.mat
+  artifactKey: Guid(e83e139bdf16c48f9a90ea29e7ed6671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_ring3_add.mat using Guid(e83e139bdf16c48f9a90ea29e7ed6671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94ec4f0b44cf3ad29e49db34dac59477') in 0.008036 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.010016 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures
+  artifactKey: Guid(3f311e44116b94eaab5b3e296cf19e95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures using Guid(3f311e44116b94eaab5b3e296cf19e95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db948948ebbb676ab391b0c2e577e41b') in 0.001358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000344 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_glitter1.png
+  artifactKey: Guid(0dff6e0f6b1294e4a9a57b41d712bce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_glitter1.png using Guid(0dff6e0f6b1294e4a9a57b41d712bce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47fad7f1008d71a973f8e6f3ec3c1cef') in 0.007133 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001161 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_petal1.png
+  artifactKey: Guid(91c9170d3823b4402a71d7f959fa84f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_petal1.png using Guid(91c9170d3823b4402a71d7f959fa84f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cde77ca5935fdc4079ad6951e0799dc4') in 0.008077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004014 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_lightning2_add.mat
+  artifactKey: Guid(3e081f23f30664a668f8622f0b9bde81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_lightning2_add.mat using Guid(3e081f23f30664a668f8622f0b9bde81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98c16c7c741534a5021b3a845a85f000') in 0.008061 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.018881 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_water1.png
+  artifactKey: Guid(013763170fd3e4e2abbe24014d2072cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_water1.png using Guid(013763170fd3e4e2abbe24014d2072cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b2721b5bfddff66d162a7c682cc09ea') in 0.008023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.006409 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_ring1_alpha.mat
+  artifactKey: Guid(968d0c181527d4f31955bc579a2e0b65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_ring1_alpha.mat using Guid(968d0c181527d4f31955bc579a2e0b65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fea6e44207caf37539d67d1946ec7b7') in 0.008437 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000914 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_ring2.png
+  artifactKey: Guid(c7ff94b18177b4c61bddf5117fedbccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_ring2.png using Guid(c7ff94b18177b4c61bddf5117fedbccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '288ff5c5016e49b3a368ba9eacdd6e8f') in 0.009099 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000449 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_water1_add.mat
+  artifactKey: Guid(06d31add080b044bcadc575258f22c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_water1_add.mat using Guid(06d31add080b044bcadc575258f22c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '266b4ac97a61b77ad03a3716f201a227') in 0.009204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000463 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_ring2_add.mat
+  artifactKey: Guid(6f52f96a53217481db042b8d048d2560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_ring2_add.mat using Guid(6f52f96a53217481db042b8d048d2560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e90860c3e4db9804e6d498535b5214a') in 0.008386 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007285 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_ring1.png
+  artifactKey: Guid(07c93d5317a874f28abac0250eefeabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_ring1.png using Guid(07c93d5317a874f28abac0250eefeabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05bc5a4ba627d663e578e1ba97eaca06') in 0.009905 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000907 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_shock1_alpha.mat
+  artifactKey: Guid(b9fcb757917e047cba2bed943f413df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_shock1_alpha.mat using Guid(b9fcb757917e047cba2bed943f413df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c93d3cdb3b94f90db9677bcfccb96c44') in 0.008516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009038 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_lightning1.png
+  artifactKey: Guid(de2828d182c0547f6b5d34e7d3501f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_lightning1.png using Guid(de2828d182c0547f6b5d34e7d3501f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dde21378ebc7dcef3583bc4105a56aa') in 0.007630 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001516 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_par2_alpha.mat
+  artifactKey: Guid(ff7b15ead407842ef8e41180087462a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_par2_alpha.mat using Guid(ff7b15ead407842ef8e41180087462a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eda0348100d83533ef57210819f954d') in 0.008647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001189 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_glitter1_alpha.mat
+  artifactKey: Guid(e2946586310fc4fc68969c32cd825911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_glitter1_alpha.mat using Guid(e2946586310fc4fc68969c32cd825911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2cc81adb06ba345631b614b0b45ffe5') in 0.010025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001209 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_clear1.png
+  artifactKey: Guid(cd3a4eafc705e4e8a8b14bbff778dd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_clear1.png using Guid(cd3a4eafc705e4e8a8b14bbff778dd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bd8221847660d83a45167ec0aed57dd') in 0.008278 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004488 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_aura1.png
+  artifactKey: Guid(1e9ff56799d6244c8bcb759bcbab8eb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_aura1.png using Guid(1e9ff56799d6244c8bcb759bcbab8eb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7c3975463305dfc74463ad3914f6f38') in 0.009109 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000603 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_windline1.png
+  artifactKey: Guid(88d10a48492104579999d8b613e31223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_windline1.png using Guid(88d10a48492104579999d8b613e31223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b29b6ee99762baed2eeb2ca314fab732') in 0.010076 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000842 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_magic_circle2_add.mat
+  artifactKey: Guid(8a1a4e2c797ca40e389ba5b93cd5eff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_magic_circle2_add.mat using Guid(8a1a4e2c797ca40e389ba5b93cd5eff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3118a2532b18d316e7554f4081434856') in 0.009510 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000525 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_smoke1_add.mat
+  artifactKey: Guid(fab309bc8a6a3466596c82c312c928de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_smoke1_add.mat using Guid(fab309bc8a6a3466596c82c312c928de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '328c39b3c18447103e0dd49520089e55') in 0.008624 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001017 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_par1_add.mat
+  artifactKey: Guid(56e6f4cb1d27e4442a785c8b9ab80d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_par1_add.mat using Guid(56e6f4cb1d27e4442a785c8b9ab80d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e60a4a711caf94b23a3209d99340f7') in 0.008485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001145 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_magic_circle1_add.mat
+  artifactKey: Guid(f26a9c605737d4c728f6cf888260a10b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_magic_circle1_add.mat using Guid(f26a9c605737d4c728f6cf888260a10b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfd8694361953ad0fb0a91938f3bf748') in 0.010529 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001445 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_lightning2.png
+  artifactKey: Guid(816c6f3cb88fd4b2c965eb7311f4f1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_lightning2.png using Guid(816c6f3cb88fd4b2c965eb7311f4f1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99c02eae4b49f4c9b5ff720539d5b010') in 0.008142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001209 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_shock1_add.mat
+  artifactKey: Guid(85a93620ae4d441cdac4665006cfceae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_shock1_add.mat using Guid(85a93620ae4d441cdac4665006cfceae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc22a32e5a864cc558b6cf61140a991f') in 0.009858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000881 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_snow1_alpha.mat
+  artifactKey: Guid(2f92a527455da47d6992cc3cb78af94b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_snow1_alpha.mat using Guid(2f92a527455da47d6992cc3cb78af94b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c27976a7e972d5d9b9178a4dd25bf48') in 0.008782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001074 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_clear_add.mat
+  artifactKey: Guid(f041e19e50ab842999895323d92cada7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_clear_add.mat using Guid(f041e19e50ab842999895323d92cada7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12af27701d0bf598a1073089af623f6b') in 0.008532 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005113 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_petal1_alpha.mat
+  artifactKey: Guid(0e287276d5896420ebb9b2a7471a73d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_petal1_alpha.mat using Guid(0e287276d5896420ebb9b2a7471a73d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a3a595ff97172fb424aa099517a884b') in 0.008791 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001503 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_shock_1.png
+  artifactKey: Guid(727ea50d35ee141e4b6e3942cf76c064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_shock_1.png using Guid(727ea50d35ee141e4b6e3942cf76c064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceff6b46773c2a43811f9107fa22c896') in 0.008328 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000959 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_par2.png
+  artifactKey: Guid(678dbfaf7ec1b483cadf3168cf72f5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_par2.png using Guid(678dbfaf7ec1b483cadf3168cf72f5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18b2e05ea6901922b19e7e7a92b84df9') in 0.008158 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000772 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_parline1_alpha.mat
+  artifactKey: Guid(5d3e84962d77e4aa0a44ea27475b0804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_parline1_alpha.mat using Guid(5d3e84962d77e4aa0a44ea27475b0804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d41175a1b27f648fe46956e57f5e0a5') in 0.008260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005516 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_ring1_add.mat
+  artifactKey: Guid(a804ec44f6d1a49a8951c335c4372bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_ring1_add.mat using Guid(a804ec44f6d1a49a8951c335c4372bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fd7a5d0070446ece6ca69cb1fb4b1d7') in 0.008423 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.018578 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_wind1.png
+  artifactKey: Guid(fc576a1d93f1c4df5b03d53efb90b4bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_wind1.png using Guid(fc576a1d93f1c4df5b03d53efb90b4bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7e235ab2ea94c96aca87ce621d8018e') in 0.007923 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005346 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_magic_circle1.png
+  artifactKey: Guid(ff8f90ecf83cc447780f185ec88073b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_magic_circle1.png using Guid(ff8f90ecf83cc447780f185ec88073b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b01a1ddee668e3a75c531cb5eec9de2') in 0.009496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005380 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_par1_alpha.mat
+  artifactKey: Guid(4ed428a28ff154697af97bef40812cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_par1_alpha.mat using Guid(4ed428a28ff154697af97bef40812cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb255bb62dbded8a8ff0b3b029b3514d') in 0.008786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.015033 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_magic_circle2.png
+  artifactKey: Guid(7981aa8d9e162473681623fd62e78ac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_magic_circle2.png using Guid(7981aa8d9e162473681623fd62e78ac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a3b9a0b75cccdeda65f60b1234501b2') in 0.008932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.024900 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_water2_alpha.mat
+  artifactKey: Guid(3ffd409be9e5e4f5bb4cdfe791802a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_water2_alpha.mat using Guid(3ffd409be9e5e4f5bb4cdfe791802a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c8f8450f4142aec9f78f5669429b17b') in 0.009031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_water2.png
+  artifactKey: Guid(3688e3b732f674de5ac5c0769fbfb9ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_water2.png using Guid(3688e3b732f674de5ac5c0769fbfb9ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b7acbc44aaa7ca6df2ca850f0e7de61') in 0.007792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000785 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_par1.png
+  artifactKey: Guid(864b7953ac3884b3aa03265b680a2e4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_par1.png using Guid(864b7953ac3884b3aa03265b680a2e4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '765b3937b2bd18208625fe3a611570c8') in 0.008066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001275 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_star1.png
+  artifactKey: Guid(83a74d74e87084ee9b3b3d20c343e236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_star1.png using Guid(83a74d74e87084ee9b3b3d20c343e236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee8869d34ee2f6b6e6bb38b799db28cc') in 0.008406 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000578 seconds.
+  path: Assets/prefabs/item/effect/FX/Materials/eff_clear_alpha.mat
+  artifactKey: Guid(a6b06cb5dbf85458186e6658de6da6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Materials/eff_clear_alpha.mat using Guid(a6b06cb5dbf85458186e6658de6da6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f41b2e9c7958f39ab985344e5b4d35') in 0.007899 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000503 seconds.
+  path: Assets/prefabs/item/effect/FX/Textures/eff_smoke1.png
+  artifactKey: Guid(2d3f0e7f6295648a7b7d21fd2288950c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prefabs/item/effect/FX/Textures/eff_smoke1.png using Guid(2d3f0e7f6295648a7b7d21fd2288950c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca8fdc5cf0a1c44df33900f3214f0d5') in 0.008053 seconds 

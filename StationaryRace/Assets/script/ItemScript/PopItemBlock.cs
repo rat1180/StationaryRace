@@ -14,7 +14,7 @@ public class PopItemBlock : MonoBehaviour
         //ItemBlock.transform.Translate(7.1f, 0.02f, -0.329999f);
         //GameObject itemblock = (GameObject)Resources.Load("itemblock");
         // Cubeプレハブを元に、インスタンスを生成.
-       Instantiate(ItemBlock, item01,Quaternion.identity);
+       //Instantiate(ItemBlock, item01,Quaternion.identity);
        Instantiate(ItemBlock, new Vector3(1.5f,2.2f,2.0f), Quaternion.identity);
     }
 

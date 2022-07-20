@@ -13,7 +13,6 @@ public class MainKitai : MonoBehaviour
     private const int AttackItem = 40;    //攻撃アイテムが当たった
     private const int DownStage = 50;    //ステージから落ちた
     private const int ORIGAMI_CRANE = 60;    //鶴の折り紙に変身
-
     private float Atime = 10;           //テスト用タイマー
 
     public int Player_Mode = 10;        //機体の状態

@@ -68,7 +68,7 @@ public class SelectKitai : StrixBehaviour
 
             KitaiChange();   //機体変更
 
-            audioSource.PlayOneShot(Select); // キャラ変更時(nyu)を再生
+            audioSource.PlayOneShot(Select); // キャラ変更時(Select)を再生
         }
 
         //Enterキー押下

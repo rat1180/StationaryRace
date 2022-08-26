@@ -320,12 +320,12 @@ public class UserOperation : MonoBehaviour
         //int NewRank = GMSystem.GetComponent<GMSystem>().RankGet();
         //Debug.Log(NewRank);
         //ƒ‰ƒ“ƒN‚Ì•Ï“®‚ª‚È‚¯‚ê‚Îs‚í‚È‚¢
-        if (Rank == NewRank)
-        {
-            return;
-        }
+        //if (Rank == NewRank)
+        //{
+        //    return;
+        //}
 
-        Rank = NewRank;
+        //Rank = NewRank;
 
         RankSend();
     }

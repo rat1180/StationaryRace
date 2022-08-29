@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 using ITEMConst; //アイテムの定数値を使うために記入.
 
 public class ItemManager : MonoBehaviour
 {
     private int USER_NUMBER; //ユーザ番号を入れる箱
     private int USER_ALL = 8;//ユーザの総数を入れる箱
+    bool ItemIconflg;
+    public GameObject ItemHIt;//アイテムが当たった際の通知用
+    public float HitIconTime = 0;
 
     #region アイテム発射の位置・回転取得
     //startでfind取得するための宣言
@@ -53,6 +58,9 @@ public class ItemManager : MonoBehaviour
     /// </summary>
     public GameObject[] ItemPrefabs = new GameObject[10];
 
+    public GameObject ItemSprite;//アイテム画像の表示用
+    public Sprite[] ItemSprites = new Sprite[13]; // アイテムの画像の配列
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +87,8 @@ public class ItemManager : MonoBehaviour
         RocketR = RR.transform.position;//プレイヤーの右方位置を取得.
         RocketRQ = RR.transform.rotation;//プレイヤーの右方回転を取得.
         #endregion
+
+        if(ItemIconflg)PushItemHit();//ItemIconflgが正ならアイコンを表示
     }
     /// <summary>
     /// itemblockが破壊された際にこれを呼ぶ
@@ -224,6 +234,76 @@ public class ItemManager : MonoBehaviour
         Instantiate(InkConlore, RocketA, RocketAQ);
     }
 
+    /// <summary>
+    /// 自分にアイテムが当たった際、何が当たったかを通知する
+    /// </summary>
+    void PushItemHit()
+    {
+        if (HitIconTime <= 5)
+        {
+            HitIconTime += Time.deltaTime;
+            ItemHIt.SetActive(true);//ヒット通知を出す.
+            ItemSprite.SetActive(true);//ヒット通知を出す.
+        }
+        else
+        {
+            ItemIconflg = false;
+            print("aaa");
+            HitIconTime = 0;
+            ItemHIt.SetActive(false);//ヒット通知を消す.
+            ItemSprite.SetActive(false);//ヒット通知を消す.
+        }
+
+    }
+    public void ItemIcon(int num)
+    {
+        switch (num)
+        {
+            case ITEMConst.ITEM.ERASER_RESIDDUE:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[0];
+                break;
+            case ITEMConst.ITEM.BIRIBIRI_PEN:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[1];
+                break;
+            case ITEMConst.ITEM.MECHANICAL_PEN_LEAD:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[2];
+                break;
+            case ITEMConst.ITEM.STICKY_NOTE:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[3];
+                break;
+            case ITEMConst.ITEM.TAPE_BALL:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[4];
+                break;
+            case ITEMConst.ITEM.SCOTCH_TAPE:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[5];
+                break;
+            case ITEMConst.ITEM.MAGIC_PEN:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[6];
+                break;
+            case ITEMConst.ITEM.CARDBOARD:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[7];
+                break;
+            case ITEMConst.ITEM.KESHIKASU_BOM:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[8];
+                break;
+            case ITEMConst.ITEM.BLACKBOARD_ERASER:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[9];
+                break;
+            case ITEMConst.ITEM.ORIGAMI_CRANE:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[10];
+                break;
+            case ITEMConst.ITEM.INDIA_INK:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[11];
+                break;
+            case ITEMConst.ITEM.CARDBOARD_WALL:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[12];
+                break;
+            default:
+                break;
+        }
+        ItemIconflg = true;
+    }
+    
     #region ユーザー番号系
     //起動時にユーザーの数を取得する関数　ゲームマネージャーから取得
     public void USER_TOTAL(int num)

@@ -5,7 +5,6 @@ using SoftGear.Strix.Unity.Runtime;
 
 public class MAGIC_PEN : StrixBehaviour
 {
-
     private Rigidbody rb;
     private float speed;
     public int durability;
@@ -41,6 +40,7 @@ public class MAGIC_PEN : StrixBehaviour
     void Des()
     {
         Destroy(this.gameObject);
+        IMana.ItemIcon(ITEMConst.ITEM.MAGIC_PEN);
     }
 
     void OnTriggerEnter(Collider collider)

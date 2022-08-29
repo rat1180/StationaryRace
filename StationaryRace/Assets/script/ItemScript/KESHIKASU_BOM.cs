@@ -7,6 +7,7 @@ public class KESHIKASU_BOM : StrixBehaviour
 {
     public GameObject ERASER_RESIDDUE;//ケシカスのプレファブを使う
     public GameObject SOUND;          //爆発音を鳴らすプレファブを入れる
+    public GameObject Effect;
     private Rigidbody rb;             //Rigidbodyを使用するための宣言
     private float speed;              //速度を入れる変数
     private Vector3 Pos;              //現在地取得用
@@ -29,8 +30,9 @@ public class KESHIKASU_BOM : StrixBehaviour
     }
     void Des()
     {
-        Pos = this.transform.position;               //現在地を取得
-        Instantiate(SOUND, Pos, Quaternion.identity);//爆発音を鳴らす
+        Pos = this.transform.position;               //現在地を取得.
+        Instantiate(SOUND, Pos, Quaternion.identity);//爆発音を鳴らす.
+        Instantiate(Effect,Pos, Quaternion.identity);//エフェクト表示.
         for (i = 0; i < 33; i++)                     //ケシカスを99個生成
         {
             Instantiate(ERASER_RESIDDUE, Pos, Quaternion.Euler(90, 0, 0));

@@ -21,10 +21,10 @@ public class INDIA_INK : MonoBehaviour
     {
        
     }
+
     //フェードイン
     public void Animation()
     {
-        
         animator.SetTrigger("FadeIn");
     }
 }

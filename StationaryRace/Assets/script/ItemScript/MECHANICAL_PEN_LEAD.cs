@@ -12,6 +12,8 @@ public class MECHANICAL_PEN_LEAD : StrixBehaviour
     Quaternion kai;
     GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
     Car CarSc;
+    GameObject IManager; //アイテムマネージャーのゲームオブジェクトを取得する準備.
+    ItemManager IMSc;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,8 @@ public class MECHANICAL_PEN_LEAD : StrixBehaviour
         durability = 1;
         Player = GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
         CarSc = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
+        IManager = GameObject.Find("ITEMManager");    //アイテムマネージャーのゲームオブジェクトを取得.
+        IMSc = IManager.GetComponent<ItemManager>(); //アイテムマネージャーのスクリプトを参照する.
     }
 
     // Update is called once per frame
@@ -55,6 +59,7 @@ public class MECHANICAL_PEN_LEAD : StrixBehaviour
         if (collider.gameObject.tag == "Player")
         {
             CarSc.SpeedDown();
+            IMSc.ItemIcon(ITEMConst.ITEM.MECHANICAL_PEN_LEAD);
             Destroy(this.gameObject);
         }
     }

@@ -2,45 +2,64 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 using ITEMConst; //アイテムの定数値を使うために記入.
 
 public class ItemManager : MonoBehaviour
 {
     private int USER_NUMBER; //ユーザ番号を入れる箱
     private int USER_ALL = 8;//ユーザの総数を入れる箱
-    private Vector3 Rocket; //プレイヤーの位置を取得
-    private Vector3 RocketA;//プレイヤーの後方の位置を取得
-    private Vector3 RocketB;//プレイヤーの前方の位置を取得
-    private Quaternion RocketBQ;
-    private Quaternion RocketAQ;
-    private Vector3 RocketR;//プレイヤーの右方の位置を取得
-    private Quaternion RocketRQ;
-    GameObject R; //プレイヤーの位置を取得
-    GameObject RA;
-    GameObject RB;
-    GameObject RR;
-    GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
-    Car CarSc;
-    GameObject ItemUI;
-    GameObject INDIA_INK;
-    INDIA_INK InkSc;
+    bool ItemIconflg;
+    public GameObject ItemHIt;//アイテムが当たった際の通知用
+    public float HitIconTime = 0;
+
+    #region アイテム発射の位置・回転取得
+    //startでfind取得するための宣言
+    GameObject RA;//プレイヤーの後方位置取得
+    GameObject RB;//プレイヤーの前方位置取得
+    GameObject RR;//プレイヤーの右方位置取得
+    //updateで常に書き換える
+    private Vector3 Rocket;      //プレイヤーの位置を取得
+    private Vector3 RocketA;     //プレイヤーの後方の位置を取得
+    private Vector3 RocketB;     //プレイヤーの前方の位置を取得
+    private Quaternion RocketBQ; //プレイヤーの前方の回転を取得
+    private Quaternion RocketAQ; //プレイヤーの前方の回転を取得
+    private Vector3 RocketR;     //プレイヤーの右方の位置を取得
+    private Quaternion RocketRQ; //プレイヤー右の回転を取得
+    #endregion
+
+    #region スクリプト参照の準備
+    GameObject Player;   //プレイヤーのゲームオブジェクトを取得する準備.
+    Car CarSc;           //Carのスクリプトを取得する準備.
+    GameObject ItemUI;   //ItemUIのゲームオブジェクトを取得する準備.
+    GameObject INDIA_INK;//INDIA_INKのゲームオブジェクトを取得する準備.
+    INDIA_INK InkSc;     //INDIA_INKのスクリプトを取得する準備.
+    #endregion
+
     public GameObject InkConlore;
 
     //アイテムのゲームオブジェクト宣言
-    public GameObject ERASER_RESIDDUE;
-    public GameObject BLACKBOARD_ERASER;
-    public GameObject KESHIKASU_BOM;
-    public GameObject MECHANICAL_PEN_LEAD;
-    public GameObject STICKY_NOTE;
-    public GameObject TAPE_BALL;
-    public GameObject SCOTCH_TAPE;
-    public GameObject MAGIC_PEN;
-    public GameObject CARDBOARD;
-    public GameObject CARDBOARD_WALL;
+    //public GameObject ERASER_RESIDDUE;
+    //public GameObject BLACKBOARD_ERASER;
+    //public GameObject KESHIKASU_BOM;
+    //public GameObject MECHANICAL_PEN_LEAD;
+    //public GameObject STICKY_NOTE;
+    //public GameObject TAPE_BALL;
+    //public GameObject SCOTCH_TAPE;
+    //public GameObject MAGIC_PEN;
+    //public GameObject CARDBOARD;
+    //public GameObject CARDBOARD_WALL;
 
-    public GameObject[] ItemPrefabs = new GameObject[15];
+    /// <summary>
+    /// アイテムのプレファブを格納している配列
+    /// 0→消しカス　1→黒板けし 2→ケシカス爆弾 3→シャー芯　4→ふせん　5→テープボール
+    /// 6→セロハン 7→マジックペン 8→ 段ボール 9→段ボールの壁
+    /// </summary>
+    public GameObject[] ItemPrefabs = new GameObject[10];
 
-
+    public GameObject ItemSprite;//アイテム画像の表示用
+    public Sprite[] ItemSprites = new Sprite[13]; // アイテムの画像の配列
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +71,6 @@ public class ItemManager : MonoBehaviour
         INDIA_INK = ItemUI.GetComponent<Transform>().transform.GetChild(0).gameObject;
 
         InkSc= INDIA_INK.GetComponent<INDIA_INK>();
-        R = GameObject.Find("Car");//プレイヤーの座標を取得
         RA = GameObject.Find("ItemRocketA");//アイテムロケットの座標を取得(AはAfter)
         RB = GameObject.Find("ItemRocketB");//アイテムロケットの座標を取得(BはBefore)
         RR = GameObject.Find("ItemRocketR");//アイテムロケットの座標を取得(RはRight)
@@ -61,16 +79,21 @@ public class ItemManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Rocket = R.transform.position;
-        RocketA = RA.transform.position;
-        RocketB = RB.transform.position;
-        RocketAQ = RA.transform.rotation;
-        RocketBQ = RB.transform.rotation;
-        RocketR = RR.transform.position;
-        RocketRQ = RR.transform.rotation;
-    }
+        #region プレイヤーの発射位置・回転の取得
+        RocketA = RA.transform.position;//プレイヤーの後方方位置を取得.
+        RocketB = RB.transform.position;//プレイヤーの前方位置を取得.
+        RocketAQ = RA.transform.rotation;//プレイヤーの後方回転を取得.
+        RocketBQ = RB.transform.rotation;//プレイヤーの前方回転を取得.
+        RocketR = RR.transform.position;//プレイヤーの右方位置を取得.
+        RocketRQ = RR.transform.rotation;//プレイヤーの右方回転を取得.
+        #endregion
 
-    //itemblockが破壊された際にこれを呼ぶ.
+        if(ItemIconflg)PushItemHit();//ItemIconflgが正ならアイコンを表示
+    }
+    /// <summary>
+    /// itemblockが破壊された際にこれを呼ぶ
+    /// CarScで定義しているITEM_NUMにアイテム番号を代入する処理を行う
+    /// </summary>
     public void Item()
     {
         int ItemNum = Random.Range(ITEMConst.ITEM.ItemMin, ITEMConst.ITEM.ItemMax);//ランダムな整数値が返る(int型だと後ろは除外される).
@@ -134,45 +157,49 @@ public class ItemManager : MonoBehaviour
                 break;
         }
     }
-
-    public void Item_Use(int USER_ITEM)//Playerがアイテムを使用した際にこれを呼ぶ.
+    /// <summary>
+    /// Playerがアイテムを使用した際にこれを呼ぶ
+    /// CarScから引数でアイテム番号が送られてくるので、その番号によって処理を分岐させる
+    /// </summary>
+    /// <param name="USER_ITEM"></param>
+    public void Item_Use(int USER_ITEM)
     {
         //アイテムごとの処理.
         switch (USER_ITEM)
         {
             case ITEMConst.ITEM.ERASER_RESIDDUE://消しカス.
                 Debug.Log("USE:ERASER_RESIDDUE!");
-                Instantiate(ERASER_RESIDDUE, RocketA, Quaternion.Euler(90, 0, 0));
+                Instantiate(ItemPrefabs[0], RocketA, Quaternion.Euler(90, 0, 0));
                 break;
             case ITEMConst.ITEM.KESHIKASU_BOM://ケシカス爆弾.
                 Debug.Log("USE:KESHIKASU_BOM!");
-                Instantiate(KESHIKASU_BOM, RocketB, RocketBQ);//ケシカスのプレファブを使いまわす
+                Instantiate(ItemPrefabs[2], RocketB, RocketBQ);//ケシカスのプレファブを使いまわす
                 break;
             case ITEMConst.ITEM.BLACKBOARD_ERASER://黒板けし.
                 Debug.Log("USE:BLACKBOARD_ERASER!");
                 RocketA.y += 5;
-                Instantiate(BLACKBOARD_ERASER, RocketA, RocketAQ);
+                Instantiate(ItemPrefabs[1], RocketA, RocketAQ);
                 break;
             case ITEMConst.ITEM.MECHANICAL_PEN_LEAD://シャー芯.
-                Instantiate(MECHANICAL_PEN_LEAD, RocketR, RocketRQ);
+                Instantiate(ItemPrefabs[3], RocketR, RocketRQ);
                 Debug.Log("USE:MECHANICAL_PEN_LEAD!");
                 break;
             case ITEMConst.ITEM.STICKY_NOTE://付箋.
                 Debug.Log("USE:STICKY_NOTE!");
                 //Rocket.y += 10;
-                Instantiate(STICKY_NOTE, RocketB, RocketBQ);
+                Instantiate(ItemPrefabs[4], RocketB, RocketBQ);
                 break;
             case ITEMConst.ITEM.TAPE_BALL://丸めたテープ.
                 Debug.Log("USE:TAPE_BALL!");
-                Instantiate(TAPE_BALL, RocketA, RocketAQ);
+                Instantiate(ItemPrefabs[5], RocketA, RocketAQ);
                 break;
             case ITEMConst.ITEM.SCOTCH_TAPE://セロハンテープ.
                 Debug.Log("USE:SCOTCH_TAPE!");
-                Instantiate(SCOTCH_TAPE, RocketA, RocketAQ);
+                Instantiate(ItemPrefabs[6], RocketA, RocketAQ);
                 break;
             case ITEMConst.ITEM.MAGIC_PEN://マジックペン.
                 Debug.Log("USE:MAGIC_PEN!");
-                Instantiate(MAGIC_PEN, RocketR, RocketRQ);
+                Instantiate(ItemPrefabs[7], RocketR, RocketRQ);
                 break;
             case ITEMConst.ITEM.ORIGAMI_CRANE://鶴の折り紙.
                 Debug.Log("USE:ORIGAMI_CRANE!");
@@ -188,12 +215,12 @@ public class ItemManager : MonoBehaviour
                 break;
             case ITEMConst.ITEM.CARDBOARD://段ボール.
                 Debug.Log("USE:CARDBOARD!");
-                Instantiate(CARDBOARD, RocketA, Quaternion.identity);
+                Instantiate(ItemPrefabs[8], RocketA, Quaternion.identity);
                 break;
             case ITEMConst.ITEM.CARDBOARD_WALL://段ボールの壁.
                 Debug.Log("USE:CARDBOARD_WALL!");
                 RocketA.y += 3;
-                Instantiate(CARDBOARD_WALL, RocketA, RocketAQ);
+                Instantiate(ItemPrefabs[9], RocketA, RocketAQ);
                 break;
             default:
                 break;
@@ -207,6 +234,76 @@ public class ItemManager : MonoBehaviour
         Instantiate(InkConlore, RocketA, RocketAQ);
     }
 
+    /// <summary>
+    /// 自分にアイテムが当たった際、何が当たったかを通知する
+    /// </summary>
+    void PushItemHit()
+    {
+        if (HitIconTime <= 5)
+        {
+            HitIconTime += Time.deltaTime;
+            ItemHIt.SetActive(true);//ヒット通知を出す.
+            ItemSprite.SetActive(true);//ヒット通知を出す.
+        }
+        else
+        {
+            ItemIconflg = false;
+            print("aaa");
+            HitIconTime = 0;
+            ItemHIt.SetActive(false);//ヒット通知を消す.
+            ItemSprite.SetActive(false);//ヒット通知を消す.
+        }
+
+    }
+    public void ItemIcon(int num)
+    {
+        switch (num)
+        {
+            case ITEMConst.ITEM.ERASER_RESIDDUE:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[0];
+                break;
+            case ITEMConst.ITEM.BIRIBIRI_PEN:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[1];
+                break;
+            case ITEMConst.ITEM.MECHANICAL_PEN_LEAD:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[2];
+                break;
+            case ITEMConst.ITEM.STICKY_NOTE:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[3];
+                break;
+            case ITEMConst.ITEM.TAPE_BALL:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[4];
+                break;
+            case ITEMConst.ITEM.SCOTCH_TAPE:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[5];
+                break;
+            case ITEMConst.ITEM.MAGIC_PEN:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[6];
+                break;
+            case ITEMConst.ITEM.CARDBOARD:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[7];
+                break;
+            case ITEMConst.ITEM.KESHIKASU_BOM:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[8];
+                break;
+            case ITEMConst.ITEM.BLACKBOARD_ERASER:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[9];
+                break;
+            case ITEMConst.ITEM.ORIGAMI_CRANE:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[10];
+                break;
+            case ITEMConst.ITEM.INDIA_INK:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[11];
+                break;
+            case ITEMConst.ITEM.CARDBOARD_WALL:
+                ItemSprite.GetComponent<Image>().sprite = ItemSprites[12];
+                break;
+            default:
+                break;
+        }
+        ItemIconflg = true;
+    }
+    
     #region ユーザー番号系
     //起動時にユーザーの数を取得する関数　ゲームマネージャーから取得
     public void USER_TOTAL(int num)

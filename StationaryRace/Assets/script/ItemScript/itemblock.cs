@@ -9,7 +9,7 @@ public class itemblock : MonoBehaviour
     int USER_NUM = 1;          //ユーザー番号
     GameObject ItemMana;       //アイテムマネージャーのゲームオブジェクトを取得する準備.
     GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備. 
-    Car ItemHave;         //スクリプトを参照する準備.
+    Car ItemHave;              //スクリプトを参照する準備.
     public AudioClip Dessound; //CDみたいなもの.
     AudioSource audioSource;   //CDプレイヤーみたいなもの.
     public GameObject SetBox_particle; //アイテムボックスが破壊されたらパーティクルを生成
@@ -21,7 +21,7 @@ public class itemblock : MonoBehaviour
         audioSource = GetComponent<AudioSource>();  //オーディオソースの取得.
         ItemMana = GameObject.Find("ITEMManager");  //アイテムマネージャーを取得.
         Player = GameObject.Find("Car");            //プレイヤーのゲームオブジェクトを取得.
-        ItemHave = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
+        ItemHave = Player.GetComponent<Car>();      //プレイヤーのスクリプトを参照する.
     }
 
     // Update is called once per frame

@@ -6,11 +6,15 @@ public class TAPE_BALL : MonoBehaviour
 {
     private int durability;
     public Vector3 Pos;
+    GameObject IManager; //アイテムマネージャーのゲームオブジェクトを取得する準備.
+    ItemManager IMSc;
     // Start is called before the first frame update
     void Start()
     {
         durability = 1;
         Pos = this.transform.position;
+        IManager = GameObject.Find("ITEMManager");    //アイテムマネージャーのゲームオブジェクトを取得.
+        IMSc = IManager.GetComponent<ItemManager>(); //アイテムマネージャーのスクリプトを参照する.
     }
 
     // Update is called once per frame
@@ -18,6 +22,7 @@ public class TAPE_BALL : MonoBehaviour
     {
         if (durability == 0)//耐久値が0になったら
         {
+            IMSc.ItemIcon(ITEMConst.ITEM.TAPE_BALL);
             Destroy(this.gameObject);
         }
         Pos.y += 5;

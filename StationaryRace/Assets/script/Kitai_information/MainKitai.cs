@@ -6,6 +6,7 @@ using SoftGear.Strix.Unity.Runtime;
 
 public class MainKitai : MonoBehaviour
 {
+    #region 変数宣言
     private const int CharacterChenge = 0;    //キャラ選択
     private const int StartRace = 10;    //レース前
     private const int RaseNow = 20;    //レース中
@@ -14,16 +15,18 @@ public class MainKitai : MonoBehaviour
     private const int DownStage = 50;    //ステージから落ちた
     private const int ORIGAMI_CRANE = 60;    //鶴の折り紙に変身
 
-    private float Atime = 10;           //テスト用タイマー
+    private float Atime;           //テスト用タイマー
 
-    public int Player_Mode = 10;        //機体の状態
+    public int Player_Mode;        //機体の状態
     public GameObject Skin;             //オブジェクトの割り当て
     public CountTime countTime;         //CountTimeスクリプトへ参照
+    #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Atime = 10;
+        Player_Mode = 10;
     }
 
     // Update is called once per frame
@@ -42,10 +45,10 @@ public class MainKitai : MonoBehaviour
 
         switch (Player_Mode)
         {
-            ////キャラ選択
-            //case 0:
-            //    KeyProcess();
-            //    break;
+            //キャラ選択
+            case 0:
+                //KeyProcess();
+                break;
             //スタート前
             case 10:
                 MachineMode();
@@ -77,18 +80,15 @@ public class MainKitai : MonoBehaviour
         }
     }
 
-    //機体の状態の受け取り
+    /// <summary>
+    /// 機体の状態の受け取り
+    /// </summary>
     private void MachineMode()
     {
-        //if (Player_Mode == 0)
-        //{
-        //    MachineNumber();
-        //}
-
-        //if (countTime.gamestart == 1)
-        //{
-        //    Player_Mode = 20;
-        //    Debug.Log("レース中");
-        //}
+        if (countTime.gamestart == 1)
+        {
+            Player_Mode = 20;
+            Debug.Log("レース中");
+        }
     }
 }

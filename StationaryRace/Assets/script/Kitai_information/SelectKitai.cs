@@ -12,7 +12,7 @@ public class SelectKitai : StrixBehaviour
     private int SkinNum = 0;
 
     public GameObject Skin;            //オブジェクトの割り当て
-    public AudioClip Select;
+    public AudioClip Select;           //効果音
     AudioSource audioSource;
 
     // Start is called before the first frame update
@@ -55,6 +55,7 @@ public class SelectKitai : StrixBehaviour
     private void KeyProcess()
     {
         if (!isLocal) return;
+
         //Qキー押下
         if (Input.GetKeyDown("q"))
         {
@@ -65,8 +66,8 @@ public class SelectKitai : StrixBehaviour
             //子オブジェクトをすべて切り替えたらまた最初のオブジェクトに戻る
             if (MachineNum == Skin.transform.childCount) { MachineNum = 0; }
 
-            RpcToAll("KitaiChange",MachineNum);   //機体変更
-            audioSource.PlayOneShot(Select); // キャラ変更時(nyu)を再生
+            RpcToAll("KitaiChange",MachineNum);   // 機体変更
+            audioSource.PlayOneShot(Select);      // キャラ変更時(nyu)を再生
         }
 
         //Enterキー押下
@@ -93,17 +94,14 @@ public class SelectKitai : StrixBehaviour
         {
             case 0:
                 //次のオブジェクトをアクティブ化
-                //Skin.transform.GetChild(MachineNum+2).gameObject.SetActive(false);
                 Skin.transform.GetChild(Num).gameObject.SetActive(true);
                 Debug.Log("機体番号 : " + Num);
                 break;
             case 1:
-                //Skin.transform.GetChild(MachineNum-1).gameObject.SetActive(false);
                 Skin.transform.GetChild(Num).gameObject.SetActive(true);
                 Debug.Log("機体番号 : " + Num);
                 break;
             case 2:
-                //Skin.transform.GetChild(MachineNum-1).gameObject.SetActive(false);
                 Skin.transform.GetChild(Num).gameObject.SetActive(true);
                 Debug.Log("機体番号 : " + Num);
                 break;
@@ -119,9 +117,4 @@ public class SelectKitai : StrixBehaviour
     {
         this.GetComponent<SelectKitai>().enabled = false;
     }
-}
-
-class SceneLoder
-{
-
 }

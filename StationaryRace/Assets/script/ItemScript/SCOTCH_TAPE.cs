@@ -58,7 +58,6 @@ public class SCOTCH_TAPE : StrixBehaviour
         {
             durability -= 1;
             CarSc.SpeedDown();
-            
         }
     }
 }

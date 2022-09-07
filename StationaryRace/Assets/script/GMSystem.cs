@@ -374,7 +374,7 @@ public class GMSystem : MonoBehaviour
 
     public void TitleBack()
     {
-        SceneManager.LoadScene("title");
+        Application.Quit();
     }
 
     void BGM()

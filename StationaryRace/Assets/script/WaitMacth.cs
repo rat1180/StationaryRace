@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using SoftGear.Strix.Client.Core.Auth.Message;
 using SoftGear.Strix.Client.Core.Error;
@@ -16,6 +17,8 @@ public class WaitMacth : MonoBehaviour
     public bool RoomFlg = false;
     public GameObject Button;
     public GameObject CountTime;
+    public GameObject RdText;
+    public int Rdmenber;
     public bool WaitFlg = true;
 
     // Start is called before the first frame update
@@ -23,6 +26,8 @@ public class WaitMacth : MonoBehaviour
     {
         Button = transform.Find("Canvas/RdButton").gameObject;
         Button.SetActive(false);
+        RdText = transform.Find("Canvas/Rdtext").gameObject;
+        RdText.SetActive(false);
         CountTime = GameObject.Find("CountTime").gameObject;
     }
 
@@ -37,7 +42,9 @@ public class WaitMacth : MonoBehaviour
 
     void memberWait()
     {
-        if (CheckAllRoomMembersState(1) && WaitFlg)
+        Rdmenber = CheckAllRoomMembersState(1);
+
+        if ((Rdmenber == PushBt.GAMEMODE) && WaitFlg)
         {
             CountTime.GetComponent<CountTime>().CountStart();
             GMSystem.GetComponent<GMSystem>().CarSpawn();
@@ -87,25 +94,26 @@ public class WaitMacth : MonoBehaviour
         );
     }
 
-    public static bool CheckAllRoomMembersState(int desiredState)
+    public static int CheckAllRoomMembersState(int desiredState)
     {
-
+        int Rdmenber = 0;
         foreach (var roomMember in StrixNetwork.instance.roomMembers)
         {
             if (!roomMember.Value.GetProperties().TryGetValue("state",
                 out object value))
             {
-                return false;
+                continue;
             }
 
             if ((int)value != desiredState)
             {
-                return false;
+                continue;
             }
+            Rdmenber++;
         }
 
         Debug.Log("CheckAllRoomMembersState OK");
-        return true;
+        return Rdmenber;
     }
 
     //他のユーザー読み込みに1秒待つ
@@ -114,12 +122,21 @@ public class WaitMacth : MonoBehaviour
         Invoke("RoomIn", 1f);
     }
 
+    
+
     public void RoomIn()
     {
         RoomFlg = true;
         Button.SetActive(true);
+        RdText.SetActive(true);
+        Rdmenber = 0;
         Debug.Log("In");
         GMSystem.GetComponent<GMSystem>().InitSet();
+    }
+
+    public void RdmenberText()
+    {
+        RdText.GetComponent<Text>().text = Rdmenber + "人のプレイヤーが待っています！";
     }
 
 }

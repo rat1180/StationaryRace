@@ -43,6 +43,7 @@ public class WaitMacth : MonoBehaviour
     void memberWait()
     {
         Rdmenber = CheckAllRoomMembersState(1);
+        RdmenberText();
 
         if ((Rdmenber == PushBt.GAMEMODE) && WaitFlg)
         {

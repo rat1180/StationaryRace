@@ -141,7 +141,7 @@ public class UserOperation : MonoBehaviour
     private void InitSet()
     {
         //システム
-        //GMSystem = transform.parent.gameObject;
+        GMSystem = transform.parent.gameObject;
 
         //機体
         Mashin = transform.Find("Car").gameObject;

@@ -77,8 +77,8 @@ public class Car : StrixBehaviour
         IManager = ItemMana.GetComponent<ItemManager>();
         cp = GameObject.Find("CP");
         hitbox = transform.Find("HitBox").gameObject;
-       // User = this.transform.parent.gameObject;
-        //counttime = GameObject.Find("Counttime").GetComponent<CountTime>();
+        User = this.transform.parent.gameObject;
+        counttime = GameObject.Find("CountTime").GetComponent<CountTime>();
 
         colorR = 0;
         colorG = 255;
@@ -91,14 +91,14 @@ public class Car : StrixBehaviour
 
         #endregion
 
-        gamestart = 1;//アイテム制作用
+        //gamestart = 1;//アイテム制作用
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!isLocal) return;
-        //gamestart = counttime.GetGameStart();
+        gamestart = counttime.GetGameStart();
         //gamestart = 1;
         //Debug.Log(gamestart);
         if (gamestart == 1)

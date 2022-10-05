@@ -7,8 +7,8 @@ public class CountTime : MonoBehaviour
 {
     public static CountTime instance;
 
-    AudioSource audiosource;
-    public AudioClip startsound;
+    //AudioSource audiosource;
+    //public AudioClip startsound;
 
     public float cnttime = 3; 
     public GameObject CountText;   // テキストの表示用
@@ -21,7 +21,7 @@ public class CountTime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audiosource = GetComponent<AudioSource>();
+        //audiosource = GetComponent<AudioSource>();
         //cntflg = true;
         gamestart = 0;
     }
@@ -41,7 +41,7 @@ public class CountTime : MonoBehaviour
     {
         if (cntflg == true)
         {
-            AudioSource.PlayClipAtPoint(startsound, transform.position);
+            //AudioSource.PlayClipAtPoint(startsound, transform.position);
 
             cnttime -= Time.deltaTime; // カウントダウン
 

@@ -62,6 +62,8 @@ public class Car : StrixBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gamestart = 1;
+
         if (!isLocal)
         {
             transform.Find("Main Camera1").gameObject.SetActive(false);
@@ -108,7 +110,8 @@ public class Car : StrixBehaviour
             CarMoveHandle();
             CarMoveDrift();
             CarColor();
-            Cameraswitc();
+            CameraSwitc();
+            PadConnect();
         }
 
         //追加
@@ -123,14 +126,17 @@ public class Car : StrixBehaviour
         Pos = this.transform.position;
     }
 
-    private void Cameraswitc()
+    /// <summary>
+    /// カメラ切り替え
+    /// </summary>
+    private void CameraSwitc()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetButtonDown("CameraSwitc"))  // PC → Cキー ・ PS4 → △ボタン
         {
             camera01.SetActive(false);
             camera02.SetActive(true);
         }
-        if (Input.GetKeyUp(KeyCode.C))
+        if (Input.GetButtonUp("CameraSwitc"))  // PC → Cキー ・ PS4 → △ボタン
         {
             camera01.SetActive(true);
             camera02.SetActive(false);
@@ -140,7 +146,7 @@ public class Car : StrixBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         if (!isLocal) return;
-        ItemHit();
+
         GOALHit(collision);
         CPHit(collision);
 
@@ -210,7 +216,7 @@ public class Car : StrixBehaviour
     private void CarMoveAccel()
     {
         if (!isLocal) return;
-        if (Input.GetKey(KeyCode.W)) // Wキーを押している間
+        if (Input.GetButton("Up")) // PC → Wキー ・ PS4 → R2ボタンを押している間
         {
             Accelflg = true;
 
@@ -222,7 +228,7 @@ public class Car : StrixBehaviour
                 upspeed *= accel;   // 徐々に加速する
             }
         }
-        else if (Input.GetKey(KeyCode.S)) // Sキーを押している間
+        else if (Input.GetButton("Down")) // PC → Sキー ・ PS4 → L2ボタンを押している間
         {
             Accelflg = false;
 
@@ -255,13 +261,16 @@ public class Car : StrixBehaviour
     /// </summary>
     private void CarMoveHandle()
     {
+        float x = Input.GetAxis("Horizontal");
+        //float y = Input.GetAxis("Vertical");
+
         if (Accelflg == true)
         {
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) || x == -1)
             {
                 transform.Rotate(0, -handle, 0);
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D) || x == 1)
             {
                 transform.Rotate(0, handle, 0);
             }
@@ -269,11 +278,11 @@ public class Car : StrixBehaviour
         }
         else if (Accelflg == false)
         {
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) || x == -1)
             {
                 transform.Rotate(0, handle, 0);
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D) || x == 1)
             {
                 transform.Rotate(0, -handle, 0);
 
@@ -286,7 +295,7 @@ public class Car : StrixBehaviour
     /// </summary>
     private void CarMoveDrift()
     {
-        if (Input.GetKey(KeyCode.Space)) // スペースキーを押している間
+        if (Input.GetButton("Drift")) // PC → Spaceキー ・ PS4 → R1ボタンを押している間
         {
             if (handle < handle_state * 1.5)
             {
@@ -300,55 +309,6 @@ public class Car : StrixBehaviour
             maxspeed = maxspeed_state;
         }
     }
-
-    /// <summary>
-    /// アイテムが当たった時の処理
-    /// </summary>
-    public void ItemHit()
-    {
-        if (gameObject.name == "ENPITU")
-        {
-            Debug.Log("ENPITU");
-        }
-        else if (gameObject.name == "ERASER_RESIDDUE")
-        {
-            Debug.Log("ERASER_RESIDDUE");
-        }
-        else if (gameObject.name == "BLACKBOARD_ERASER")
-        {
-            Debug.Log("BLACKBOARD_ERASER");
-        }
-        else if (gameObject.name == "MECHANICAL_PEN_LEAD")
-        {
-            Debug.Log("MECHANICAL_PEN_LEAD");
-        }
-        else if (gameObject.name == "TAPE_BALL")
-        {
-            Debug.Log("TAPE_BALL");
-        }
-        else if (gameObject.name == "SCOTCH_TAPE")
-        {
-            Debug.Log("SCOTCH_TAPE");
-        }
-        else if (gameObject.name == "MAGIC_PEN")
-        {
-            Debug.Log("MAGIC_PEN");
-        }
-        else if (gameObject.name == "ORIGAMI_CRANE")
-        {
-            Debug.Log("ORIGAMI_CRANE");
-        }
-        else if (gameObject.name == "BIRIBIRI_PEN")
-        {
-            Debug.Log("BIRIBIRI_PEN");
-        }
-        else if (gameObject.name == "INDIA_INK")
-        {
-            Debug.Log("INDIA_INK");
-        }
-
-    }
-
 
     /// <summary>
     /// チェックポイントと当たった時に呼び出す関数
@@ -451,6 +411,7 @@ public class Car : StrixBehaviour
     {
         StartCoroutine("SpeedDownA");
     }
+
     public IEnumerator SpeedDownA()
     {
         rb.isKinematic = true;
@@ -458,5 +419,15 @@ public class Car : StrixBehaviour
 
         rb.isKinematic = false;
         upspeed = 10f;
+    }
+
+    /// <summary>
+    /// コントローラー接続
+    /// </summary>
+    void PadConnect()
+    {
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+        Debug.Log(x+"x, y" +y);
     }
 }

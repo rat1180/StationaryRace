@@ -8,6 +8,10 @@ public class PushBt : MonoBehaviour
 {
     public AudioClip Push; // Œø‰Ê‰¹
     public static int GAMEMODE;
+    public int selectButton;
+    public int nowButton;
+    public int HButton;
+    GameObject nowObject;
     public bool PushFlg;
     public static string PASS;
     AudioSource audioSource;
@@ -15,17 +19,34 @@ public class PushBt : MonoBehaviour
     public GameObject PASSInput;
     public GameObject Players;
     public GameObject InputSpace;
+    InputField RoomInputField;
 
     void Start()
     {
 		audioSource = GetComponent<AudioSource>();
         PushFlg = false;
         GAMEMODE = 1;
+        selectButton = 0;
+        nowButton = 0;
+        HButton = 0;
         PASS = "";
 	}
 
     void Update()
     {
+        switch (selectButton)
+        {
+            case 0:
+                nowObject = transform.GetChild(0).gameObject;
+                selectmode();
+                break;
+            case 1:
+                nowObject = transform.GetChild(1).gameObject;
+                RoomInputField = nowObject.transform.GetChild(0).gameObject.GetComponent<InputField>();
+                selectMalti();
+                break;
+        }
+
         switch (GAMEMODE)
         {
             case 1:
@@ -47,6 +68,124 @@ public class PushBt : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+
+    void selectmode()
+    {
+        //“ñ‚Â‚µ‚©‚È‚¢‚Ì‚Å“¯‚¶
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            nowButton = (0 == nowButton) ? 1 : 0;
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            nowButton = (0 == nowButton) ? 1 : 0; 
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if(nowButton == 0)
+            {
+                ReturnPushBtSolo();
+            }
+            else
+            {
+                PushMalti();
+            }
+        }
+
+        if(nowButton == 0)
+        {
+            nowObject.transform.GetChild(0).GetComponent<Image>().color = Color.yellow;
+            nowObject.transform.GetChild(1).GetComponent<Image>().color = Color.white;
+        }
+        else
+        {
+            nowObject.transform.GetChild(1).GetComponent<Image>().color = Color.yellow;
+            nowObject.transform.GetChild(0).GetComponent<Image>().color = Color.white;
+        }
+    }
+
+    void selectMalti()
+    {
+        nowObject.transform.GetChild(0).gameObject.GetComponent<Outline>().enabled = false;
+        for(int i=0;i< nowObject.transform.GetChild(3).gameObject.transform.childCount; i++)
+        {
+            nowObject.transform.GetChild(3).gameObject.transform.GetChild(i).gameObject.GetComponent<Outline>().enabled = false;
+        }
+        nowObject.transform.GetChild(1).GetComponent<Image>().color = Color.white;
+        nowObject.transform.GetChild(2).GetComponent<Image>().color = Color.white;
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            nowButton++;
+            if (nowButton > 2) nowButton = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            nowButton--;
+            if (nowButton < 0) nowButton = 2;
+        }
+
+        switch (nowButton)
+        {
+            case 0:
+                for (int i = 0; i < nowObject.transform.GetChild(3).gameObject.transform.childCount; i++)
+                {
+                    nowObject.transform.GetChild(3).gameObject.transform.GetChild(i).gameObject.GetComponent<Outline>().enabled = true;
+                }
+                if (Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    GAMEMODE++;
+                    if (GAMEMODE > 4) GAMEMODE = 0;
+                }
+                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    GAMEMODE--;
+                    if (GAMEMODE < 0) GAMEMODE = 4;
+                }
+                break;
+
+            case 1:
+                RoomInputField.Select();
+                nowObject.transform.GetChild(0).gameObject.GetComponent<Outline>().enabled = true;
+                break;
+
+            case 2:
+                if (Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    HButton++;
+                    if (HButton > 2) HButton = 0;
+                }
+                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    HButton--;
+                    if (HButton < 0) HButton = 1;
+                }
+
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    if (HButton == 0)
+                    {
+                        PushBack();
+                    }
+                    else
+                    {
+                        PushStart();
+                    }
+                }
+
+                if (HButton == 0)
+                {
+                    nowObject.transform.GetChild(1).GetComponent<Image>().color = Color.yellow;
+                    nowObject.transform.GetChild(2).GetComponent<Image>().color = Color.white;
+                }
+                else
+                {
+                    nowObject.transform.GetChild(2).GetComponent<Image>().color = Color.yellow;
+                    nowObject.transform.GetChild(1).GetComponent<Image>().color = Color.white;
+                }
+                break;
+
         }
     }
 
@@ -103,6 +242,9 @@ public class PushBt : MonoBehaviour
         GAMEMODE = 4;
         MODEselect.SetActive(false);
         PASSInput.SetActive(true);
+        audioSource.PlayOneShot(Push); // Œø‰Ê‰¹‚ð–Â‚ç‚·
+        nowButton = 0;
+        selectButton = 1;
     }
 
     public void PushBack()
@@ -110,6 +252,9 @@ public class PushBt : MonoBehaviour
         GAMEMODE = 1;
         MODEselect.SetActive(true);
         PASSInput.SetActive(false);
+        selectButton = 0;
+        nowButton = 0;
+        InputSpace.GetComponent<InputField>().text = "";
     }
 
     public void PushStart()

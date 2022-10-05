@@ -13558,6 +13558,7 @@ GameObject:
   - component: {fileID: 1362925544}
   - component: {fileID: 1362925543}
   - component: {fileID: 1362925542}
+  - component: {fileID: 1362925545}
   m_Layer: 0
   m_Name: HitBox
   m_TagString: Player
@@ -13589,7 +13590,7 @@ MeshCollider:
   m_GameObject: {fileID: 1362925540}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -13644,6 +13645,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362925540}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!136 &1362925545
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362925540}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1451364098
 GameObject:
   m_ObjectHideFlags: 0

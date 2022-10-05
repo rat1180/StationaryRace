@@ -6,19 +6,24 @@ using UnityEngine.UI; //テキストを扱う場合は、using UnityEngine.UI; を忘れずに記
 using ITEMConst;
 public class UI : MonoBehaviour
 {
+    #region 変数
     // 値を受け取るための変数
-    public static int rank;                        
+    public static int rank;
     public int draw_item;
 
     // 順位表示のオブジェクト
-    public GameObject RankNunber;                
-    
+    public GameObject RankNunber;
+
     public string[] RankUI = new string[6]; // アイテムの画像の配列
     // アイテム表示のオブジェクト
     public GameObject Item_nunber;
-   
+
     public Sprite[] ItemUI = new Sprite[13]; // アイテムの画像の配列
-    //public Text ScoreText;
+                                             //public Text ScoreText;
+
+    public GameObject TimeTx;
+    #endregion
+    
 
     #region テスト
     GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
@@ -46,7 +51,7 @@ public class UI : MonoBehaviour
     {
         rank = ranker;
     }
-    // 値によって表示するオブジェクトを変える
+    // 値によって表示するオブジェクトを変える(順位表示)
     void DRAW_SCORE()
     {
         switch (rank)
@@ -86,7 +91,7 @@ public class UI : MonoBehaviour
     {
         draw_item = item;
     }
-    void DRAW_ITEM()
+    void DRAW_ITEM()// アイテム表示
     {
         Item_nunber.SetActive(false);
        
@@ -145,10 +150,16 @@ public class UI : MonoBehaviour
                 Item_nunber.SetActive(true);
                 break;
             case ITEM.CARDBOARD_WALL:
-                //Item_nunber13.SetActive(true);
+                Item_nunber.GetComponent<Image>().sprite = ItemUI[12];
+                Item_nunber.SetActive(true);
                 break;
             default:
                 break;
         }
+    }
+    // タイム
+    public void DrawTime(float time)
+    {
+        TimeTx.GetComponent<Text>().text = time.ToString("F2");
     }
 }

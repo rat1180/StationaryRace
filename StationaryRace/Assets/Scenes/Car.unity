@@ -1156,6 +1156,7 @@ MonoBehaviour:
   counttime: {fileID: 467596196}
   cntflg: 0
   gamestart: 0
+  GMSytem: {fileID: 0}
 --- !u!4 &467596198
 Transform:
   m_ObjectHideFlags: 0
@@ -3231,6 +3232,7 @@ MonoBehaviour:
   port: 9122
   logLevel: 2
   SystemINF: {fileID: 0}
+  WaitMacth: {fileID: 0}
   capacity: 4
   roomName: New Room
   onRoomEntered:
@@ -3521,15 +3523,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8023468220298864099, guid: a7554719ae1bac84eb642070a64e1805, type: 3}
       propertyPath: objectType
-      value: 1310721
+      value: 524289
       objectReference: {fileID: 0}
     - target: {fileID: 8023468220298864099, guid: a7554719ae1bac84eb642070a64e1805, type: 3}
       propertyPath: strixBehaviours.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8023468220298864099, guid: a7554719ae1bac84eb642070a64e1805, type: 3}
       propertyPath: strixBehaviours.Array.data[2]
       value: 
-      objectReference: {fileID: 884253561}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7554719ae1bac84eb642070a64e1805, type: 3}

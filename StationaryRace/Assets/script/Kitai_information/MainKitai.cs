@@ -41,8 +41,6 @@ public class MainKitai : MonoBehaviour
     /// </summary>
     private void PLmode()
     {
-        Atime -= Time.deltaTime;
-
         switch (Player_Mode)
         {
             //キャラ選択
@@ -51,7 +49,7 @@ public class MainKitai : MonoBehaviour
                 break;
             //スタート前
             case 10:
-                MachineMode();
+                //MachineMode();
                 break;
             //レース中
             case 20:
@@ -83,12 +81,12 @@ public class MainKitai : MonoBehaviour
     /// <summary>
     /// 機体の状態の受け取り
     /// </summary>
-    private void MachineMode()
-    {
-        if (countTime.gamestart == 1)
-        {
-            Player_Mode = 20;
-            Debug.Log("レース中");
-        }
-    }
+    //private void MachineMode()
+    //{
+    //    if (countTime.gamestart == 1)
+    //    {
+    //        Player_Mode = 20;
+    //        Debug.Log("レース中");
+    //    }
+    //}
 }

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using SoftGear.Strix.Unity.Runtime;
+using UnityEngine.UI;
 
 public class Car : StrixBehaviour
 {
     #region 変数
     Rigidbody rb;
+    Animator animator;
 
     public GameObject camera01; // 正面カメラ
     public GameObject camera02; // 後ろ向きカメラ
@@ -41,6 +43,8 @@ public class Car : StrixBehaviour
 
     public GameObject User;
 
+    public GameObject Trail;
+
     #region 追加項目
     private int USER_Num = 0;//ユーザ番号
     public bool itemhave = false;
@@ -71,6 +75,7 @@ public class Car : StrixBehaviour
         }
         #region 初期化処理
         rb = this.GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
 
         Performance();
 
@@ -88,8 +93,6 @@ public class Car : StrixBehaviour
 
         // 初期は緑色
         hitbox.GetComponent<Renderer>().material.color = new Color(colorR, colorG, colorB, clear);
-
-        
 
         #endregion
     }
@@ -114,7 +117,7 @@ public class Car : StrixBehaviour
 
         //追加
         //スペースキーでアイテムの使用（テスト）
-        if (Input.GetKey(KeyCode.P) && itemhave == true)
+        if (Input.GetButton("Itemfir") && itemhave == true)
         {
             IManager.Item_Use(ITEM_NUM);//アイテム使用
 
@@ -122,6 +125,10 @@ public class Car : StrixBehaviour
             //ORIGAMI_CHANGE();
         }
         Pos = this.transform.position;
+
+        if (Input.GetButton("Itemfir")){
+            Debug.Log("発射");
+        }
     }
 
     /// <summary>
@@ -300,11 +307,15 @@ public class Car : StrixBehaviour
                 handle = handle * 1.003f;
             }
             maxspeed = maxspeed_state * 0.8f;
+
+            Trail.SetActive(true);
         }
         else
         {
             handle = handle_state;
             maxspeed = maxspeed_state;
+
+            Trail.SetActive(false);
         }
     }
 
@@ -426,6 +437,6 @@ public class Car : StrixBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
-        Debug.Log(x+"x, y" +y);
+        //Debug.Log(x+"x, y" +y);
     }
 }

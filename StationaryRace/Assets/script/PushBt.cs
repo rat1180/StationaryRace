@@ -34,11 +34,11 @@ public class PushBt : MonoBehaviour
         nowButton = 0;
         HButton = 0;
         PASS = "";
-<<<<<<< HEAD
+
         ButtonFlg = true;
-=======
+
         PlayerName = "Player";
->>>>>>> hida
+
 	}
 
     void Update()

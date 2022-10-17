@@ -19,6 +19,7 @@ public class PushBt : MonoBehaviour
     public GameObject PASSInput;
     public GameObject Players;
     public GameObject InputSpace;
+    public static string PlayerName;
     InputField RoomInputField;
 
     void Start()
@@ -30,6 +31,7 @@ public class PushBt : MonoBehaviour
         nowButton = 0;
         HButton = 0;
         PASS = "";
+        PlayerName = "Player";
 	}
 
     void Update()
@@ -277,5 +279,10 @@ public class PushBt : MonoBehaviour
         int nowSceneIndexNumber = SceneManager.GetActiveScene().buildIndex;
 
         SceneManager.LoadScene(++nowSceneIndexNumber);
+    }
+
+    public void NameInput()
+    {
+        PlayerName = transform.GetChild(0).transform.GetChild(2).GetComponent<InputField>().text;
     }
 }

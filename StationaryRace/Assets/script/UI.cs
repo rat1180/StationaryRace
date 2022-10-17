@@ -93,7 +93,8 @@ public class UI : MonoBehaviour
     }
     void DRAW_ITEM()// アイテム表示
     {
-        Item_nunber.SetActive(false);
+        
+       // Item_nunber.SetActive(true);
        
         switch (CarSc.ITEM_NUM)
         //switch (draw_item)

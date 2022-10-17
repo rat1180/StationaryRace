@@ -10,11 +10,7 @@ public class ParticleDes : MonoBehaviour
         Invoke("Des", 10);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //©g‚ğ”j‰ó‚·‚éŠÖ”.
     void Des()
     {
         Destroy(this.gameObject);

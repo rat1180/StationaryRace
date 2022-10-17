@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.UI;
 
 using ITEMConst; //アイテムの定数値を使うために記入.
@@ -58,14 +57,14 @@ public class ItemManager : MonoBehaviour
     /// </summary>
     public GameObject[] ItemPrefabs = new GameObject[10];
 
-    public GameObject ItemSprite;//アイテム画像の表示用
+    public GameObject ItemSprite;                 //アイテム画像の表示用
     public Sprite[] ItemSprites = new Sprite[13]; // アイテムの画像の配列
 
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
-        CarSc = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
+        CarSc = Player.GetComponent<Car>();      //プレイヤーのスクリプトを参照する.
 
         ItemUI = transform.GetChild(0).gameObject;
         INDIA_INK = ItemUI.GetComponent<Transform>().transform.GetChild(0).gameObject;
@@ -90,6 +89,7 @@ public class ItemManager : MonoBehaviour
 
         if(ItemIconflg)PushItemHit();//ItemIconflgが正ならアイコンを表示
     }
+
     /// <summary>
     /// itemblockが破壊された際にこれを呼ぶ
     /// CarScで定義しているITEM_NUMにアイテム番号を代入する処理を行う
@@ -153,7 +153,6 @@ public class ItemManager : MonoBehaviour
                 CarSc.ITEM_NUM = ITEMConst.ITEM.CARDBOARD_WALL;
                 break;
             default:
-                print("ha?");
                 break;
         }
     }
@@ -181,6 +180,7 @@ public class ItemManager : MonoBehaviour
                 Instantiate(ItemPrefabs[1], RocketA, RocketAQ);
                 break;
             case ITEMConst.ITEM.MECHANICAL_PEN_LEAD://シャー芯.
+                StartCoroutine("PopStay");
                 Instantiate(ItemPrefabs[3], RocketR, RocketRQ);
                 Debug.Log("USE:MECHANICAL_PEN_LEAD!");
                 break;
@@ -248,8 +248,7 @@ public class ItemManager : MonoBehaviour
         else
         {
             ItemIconflg = false;
-            print("aaa");
-            HitIconTime = 0;
+            HitIconTime = 0;//時間をリセット.
             ItemHIt.SetActive(false);//ヒット通知を消す.
             ItemSprite.SetActive(false);//ヒット通知を消す.
         }
@@ -257,7 +256,7 @@ public class ItemManager : MonoBehaviour
     }
     public void ItemIcon(int num)
     {
-        switch (num)
+        switch (num)//各画像を差し込む.
         {
             case ITEMConst.ITEM.ERASER_RESIDDUE:
                 ItemSprite.GetComponent<Image>().sprite = ItemSprites[0];
@@ -303,10 +302,14 @@ public class ItemManager : MonoBehaviour
         }
         ItemIconflg = true;
     }
-    
-    #region ユーザー番号系
-    //起動時にユーザーの数を取得する関数　ゲームマネージャーから取得
-    public void USER_TOTAL(int num)
+    IEnumerator PopStay()
+    {
+        yield return new WaitForSeconds(1f);
+    }
+
+        #region ユーザー番号系
+        //起動時にユーザーの数を取得する関数　ゲームマネージャーから取得
+        public void USER_TOTAL(int num)
     {
         USER_ALL = num;
     }

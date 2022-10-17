@@ -5,14 +5,12 @@ using UnityEngine;
 public class TAPE_BALL : MonoBehaviour
 {
     private int durability;
-    public Vector3 Pos;
     GameObject IManager; //アイテムマネージャーのゲームオブジェクトを取得する準備.
     ItemManager IMSc;
     // Start is called before the first frame update
     void Start()
     {
         durability = 1;
-        Pos = this.transform.position;
         IManager = GameObject.Find("ITEMManager");    //アイテムマネージャーのゲームオブジェクトを取得.
         IMSc = IManager.GetComponent<ItemManager>(); //アイテムマネージャーのスクリプトを参照する.
     }
@@ -22,11 +20,8 @@ public class TAPE_BALL : MonoBehaviour
     {
         if (durability == 0)//耐久値が0になったら
         {
-            IMSc.ItemIcon(ITEMConst.ITEM.TAPE_BALL);
-            Destroy(this.gameObject);
+            Des();
         }
-        Pos.y += 5;
-        Pos.z += 5;
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -35,5 +30,11 @@ public class TAPE_BALL : MonoBehaviour
         {
             durability -= 1;
         }
+    }
+
+    void Des()
+    {
+        IMSc.ItemIcon(ITEMConst.ITEM.TAPE_BALL);
+        Destroy(this.gameObject);
     }
 }

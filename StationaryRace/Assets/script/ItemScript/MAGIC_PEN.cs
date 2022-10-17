@@ -6,10 +6,10 @@ using SoftGear.Strix.Unity.Runtime;
 public class MAGIC_PEN : StrixBehaviour
 {
     private Rigidbody rb;
-    private float speed;
-    public int durability;
-    GameObject ItemMana;
-    ItemManager IMana;
+    private float speed;    //スピード設定用.
+    public int durability;  //対kひゅうち設定.
+    GameObject ItemMana;    //アイテムマネージャーの取得.
+    ItemManager IMana;      //アイテムマネージャーのスクリプトを取得.
 
     // Start is called before the first frame update
     void Start()
@@ -17,20 +17,20 @@ public class MAGIC_PEN : StrixBehaviour
         ItemMana = GameObject.Find("ITEMManager");   //アイテムマネージャーを取得.
         IMana = ItemMana.GetComponent<ItemManager>();//アイテムマネージャーのスクリプトを取得
 
-        rb = GetComponent<Rigidbody>();//Rigidbodyを取得
-        speed = 100.0f;//スピードを設定
-        //Invoke("Des", 10);
+        rb = GetComponent<Rigidbody>();         //Rigidbodyを取得
+        speed = 100.0f;                         //スピードを設定
+        Invoke("Des", 10);                      //何にも当たらなければ破壊する.
         rb.velocity = transform.forward * speed;//向いている方向を取得
-        durability = 1;//耐久値、１   
+        durability = 1;                         //耐久値
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = transform.forward * speed;
+        rb.velocity = transform.forward * speed;//向いている方向に進ませる.
         if (durability <= 0)//耐久値が0以下になったら
         {
-            IMana.INK();
+            IMana.INK();        //墨汁を出す関数を呼び出す.
             Des();
         }
     }
@@ -40,7 +40,7 @@ public class MAGIC_PEN : StrixBehaviour
     void Des()
     {
         Destroy(this.gameObject);
-        IMana.ItemIcon(ITEMConst.ITEM.MAGIC_PEN);
+        IMana.ItemIcon(ITEMConst.ITEM.MAGIC_PEN);//アイテムHITアイコンを出す.
     }
 
     void OnTriggerEnter(Collider collider)
@@ -48,9 +48,7 @@ public class MAGIC_PEN : StrixBehaviour
         durability -= 1;
         // 衝突した相手にPlayerタグが付いているとき.
         if (collider.gameObject.tag == "Player")
-        {
-
-        }
+        {  }
     }
 }
 

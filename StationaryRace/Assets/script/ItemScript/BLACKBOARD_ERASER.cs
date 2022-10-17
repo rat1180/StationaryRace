@@ -6,26 +6,24 @@ using ITEMConst; //アイテムの定数値を使うために記入.
 
 public class BLACKBOARD_ERASER : MonoBehaviour
 {
-    public int durability;//耐久値
-    GameObject Player;    //プレイヤーのゲームオブジェクトを取得する準備.
-    Car CarSc;
-    GameObject IManager; //アイテムマネージャーのゲームオブジェクトを取得する準備.
-    ItemManager IMSc;
+    public int durability;   //耐久値
+    GameObject Player;       //プレイヤーのゲームオブジェクトを取得する準備.
+    Car CarSc;               //Carのスクリプトを取得する.
+    GameObject IManager;     //アイテムマネージャーのゲームオブジェクトを取得する準備.
+    ItemManager IMSc;        //ItemManagerのスクリプトを取得する.
     public Rigidbody rb;
-    public GameObject Effect;
+    public GameObject Effect;//ステージに当たった際の煙のエフェクト
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Player = GameObject.Find("Car");    //プレイヤーのゲームオブジェクトを取得.
-        CarSc = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
-        IManager = GameObject.Find("ITEMManager");    //アイテムマネージャーのゲームオブジェクトを取得.
-        IMSc = IManager.GetComponent<ItemManager>(); //アイテムマネージャーのスクリプトを参照する.
+        Player = GameObject.Find("Car");            //プレイヤーのゲームオブジェクトを取得.
+        CarSc = Player.GetComponent<Car>();         //プレイヤーのスクリプトを参照する.
+        IManager = GameObject.Find("ITEMManager");  //アイテムマネージャーのゲームオブジェクトを取得.
+        IMSc = IManager.GetComponent<ItemManager>();//アイテムマネージャーのスクリプトを参照する.
         durability = 1;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (durability == 0)//耐久値が0になったら
@@ -37,14 +35,13 @@ public class BLACKBOARD_ERASER : MonoBehaviour
     //ステージに当たった際にフラグを切り替える
     void OnCollisionEnter(Collision collision)
     {
-        Instantiate(Effect, this.transform.position, Quaternion.identity);//エフェクト表示.
+        Instantiate(Effect, this.transform.position, Quaternion.identity);//煙のエフェクト表示.
         if (collision.gameObject.tag == "Player")
-        //if (collision.gameObject.tag == "Stage")
         {
             {
                 durability -= 1;
-                CarSc.SpeedDown();
-                IMSc.ItemIcon(ITEMConst.ITEM.BLACKBOARD_ERASER);
+                CarSc.SpeedDown();//Car側の関数を呼び出す
+                IMSc.ItemIcon(ITEMConst.ITEM.BLACKBOARD_ERASER);//アイテムHITアイコンに画像を入れる
             }
         }
     }
@@ -57,13 +54,12 @@ public class BLACKBOARD_ERASER : MonoBehaviour
             rb.isKinematic = true;
             this.GetComponent<Rigidbody>().useGravity = false;//グラビティをなくす
             Instantiate(Effect, this.transform.position, Quaternion.identity);//エフェクト表示.
-            print("bbb");
         }
         // 衝突した相手にPlayerタグが付いているとき.
         if (collider.gameObject.tag == "Player")
         {
             durability -= 1;
-            CarSc.SpeedDown();
+            CarSc.SpeedDown();//Car側の関数を呼び出す
         }
     }
 }

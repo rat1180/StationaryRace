@@ -16,12 +16,6 @@ public class INDIA_INK : MonoBehaviour
         this.gameObject.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
     //フェードイン
     public void Animation()
     {

@@ -5,62 +5,143 @@ using SoftGear.Strix.Unity.Runtime;
 
 public class MECHANICAL_PEN_LEAD : StrixBehaviour
 {
-
-    private Rigidbody rb;
-    private float speed;
-    public int durability;
-    Quaternion kai;
-    GameObject Player;         //プレイヤーのゲームオブジェクトを取得する準備.
+    #region 元のソース
+    GameObject target;
+    GameObject Car;
     Car CarSc;
-    GameObject IManager; //アイテムマネージャーのゲームオブジェクトを取得する準備.
-    ItemManager IMSc;
+    public float speed;
+    GameObject IManager;       //アイテムマネージャーのゲームオブジェクトを取得する準備.
+    ItemManager IMSc;          //アイテムマネージャーのスクリプトを取得.
+    public bool targetflg;
+    string Name;
+    GameObject Enemy;
+    public GameObject FrontCollider;
 
-    // Start is called before the first frame update
+
+    void Awake()
+    {
+        FrontCollider = GameObject.Find("FrontCollider");
+        Name = FrontCollider.GetComponent<FrontColliderHIt>().Namereturn();
+        Enemy = GameObject.Find(Name);
+    }
+
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        speed = 100.0f;
-        Invoke("Des", 20);
-        rb.velocity = transform.forward * speed;
-        durability = 1;
-        Player = GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.
-        CarSc = Player.GetComponent<Car>(); //プレイヤーのスクリプトを参照する.
-        IManager = GameObject.Find("ITEMManager");    //アイテムマネージャーのゲームオブジェクトを取得.
-        IMSc = IManager.GetComponent<ItemManager>(); //アイテムマネージャーのスクリプトを参照する.
+
+        if (Enemy == null)
+        {
+            Debug.Log("???");
+        }
+        speed = 0.05f;
+        Car = GameObject.Find("Car");
+        CarSc = Car.GetComponent<Car>();
+        IManager = GameObject.Find("ITEMManager");  //アイテムマネージャーのゲームオブジェクトを取得.
+        IMSc = IManager.GetComponent<ItemManager>();//アイテムマネージャーのスクリプトを参照する.
+        Debug.Log(Name);
+        targetflg = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        rb.velocity = transform.forward * speed;
+        if (Enemy)
+        {
+            this.transform.LookAt(Enemy.transform);
+            this.transform.position += transform.forward * speed;
+        }
+        else
+        {
+            transform.position += transform.forward * speed;
+        }
     }
 
-
-    //ステージに当たった際にフラグを切り替える
     void OnCollisionEnter(Collision collision)
     {
+        // 衝突した相手にPlayerタグが付いているとき.
         if (collision.gameObject.tag == "Player")
         {
-            {
-                CarSc.SpeedDown();
-                Destroy(this.gameObject);
-            }
-        }
-    }
-
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.tag == "Stage")
-        {
-            rb.isKinematic = true;
-            this.GetComponent<Rigidbody>().useGravity = false;//グラビティをなくす
-        }
-        // 衝突した相手にPlayerタグが付いているとき.
-        if (collider.gameObject.tag == "Player")
-        {
-            CarSc.SpeedDown();
-            IMSc.ItemIcon(ITEMConst.ITEM.MECHANICAL_PEN_LEAD);
+            CarSc.GetComponent<Car>().SpeedDown();                                  //Car側の関数を呼び出す.
+            //IMSc.ItemIcon(ITEMConst.ITEM.MECHANICAL_PEN_LEAD);  //アイテムHITアイテムを出す.
             Destroy(this.gameObject);
         }
     }
+
+    public void HitPlayerCollider(string EnemyName)
+    {
+        //target = GameObject.Find("Cube");
+        //Name = EnemyName;
+        target = GameObject.Find(EnemyName);
+        targetflg = true;
+        //target = GameObject.Find(EnemyName);
+        Debug.Log("nice");
+        //this.transform.LookAt(target.transform);
+        //targetflg = true;
+    }
+    #endregion
+
+
+    #region 参考ソース
+
+    //[SerializeField]
+    //Transform target;
+    //[SerializeField, Min(0)]
+    //float time = 1;
+    //[SerializeField]
+    //float lifeTime = 2;
+    //[SerializeField]
+    //bool limitAcceleration = false;
+    //[SerializeField, Min(0)]
+    //float maxAcceleration = 100;
+    //[SerializeField]
+    //Vector3 minInitVelocity;
+    //[SerializeField]
+    //Vector3 maxInitVelocity;
+    //Vector3 position;
+    //Vector3 velocity;
+    //Vector3 acceleration;
+    //Transform thisTransform;
+    //public Transform Target
+    //{
+    //    set
+    //    {
+    //        target = value;
+    //    }
+    //    get
+    //    {
+    //        return target;
+    //    }
+    //}
+    //void Start()
+    //{
+    //    thisTransform = transform;
+    //    position = thisTransform.position;
+    //    velocity = new Vector3(Random.Range(minInitVelocity.x, maxInitVelocity.x), Random.Range(minInitVelocity.y, maxInitVelocity.y), Random.Range(minInitVelocity.z, maxInitVelocity.z));
+    //    StartCoroutine(nameof(Timer));
+    //}
+    //public void Update()
+    //{
+    //    if (target == null)
+    //    {
+    //        return;
+    //    }
+    //    acceleration = 2f / (time * time) * (target.position - position - time * velocity);
+    //    if (limitAcceleration && acceleration.sqrMagnitude > maxAcceleration * maxAcceleration)
+    //    {
+    //        acceleration = acceleration.normalized * maxAcceleration;
+    //    }
+    //    time -= Time.deltaTime;
+    //    if (time < 0f)
+    //    {
+    //        return;
+    //    }
+    //    velocity += acceleration * Time.deltaTime;
+    //    position += velocity * Time.deltaTime;
+    //    thisTransform.position = position;
+    //    thisTransform.rotation = Quaternion.LookRotation(velocity);
+    //}
+    //IEnumerator Timer()
+    //{
+    //    yield return new WaitForSeconds(lifeTime);
+    //    Destroy(gameObject);
+    //}
+    #endregion
 }

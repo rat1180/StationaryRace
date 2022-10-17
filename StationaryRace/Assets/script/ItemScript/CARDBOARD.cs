@@ -10,28 +10,26 @@ public class CARDBOARD : StrixBehaviour
     private int durability;
     private Rigidbody rb;
     GameObject IManager; //アイテムマネージャーのゲームオブジェクトを取得する準備.
-    ItemManager IMSc;
+    ItemManager IMSc;//ItemManagerのスクリプトを取得する.
 
-    // Start is called before the first frame update
     void Start()
     {
         if (!isLocal) return;
         rb = GetComponent<Rigidbody>();
         durability = 1;
-        rb.velocity = transform.forward;
-        Instantiate(SOUND, this.transform.position, Quaternion.identity);
+        rb.velocity = transform.forward;//向きを取得.
+        Instantiate(SOUND, this.transform.position, Quaternion.identity);//段ボールの音を出す.
         IManager = GameObject.Find("ITEMManager");    //アイテムマネージャーのゲームオブジェクトを取得.
         IMSc = IManager.GetComponent<ItemManager>(); //アイテムマネージャーのスクリプトを参照する.
     }
 
-    // Update is called once per frame
     void Update()
     {
 
         if (!isLocal) return;
         if (durability == 0)//耐久値が0になったら
         {
-            IMSc.ItemIcon(ITEMConst.ITEM.CARDBOARD);
+            IMSc.ItemIcon(ITEMConst.ITEM.CARDBOARD);//アイテムHITアイコンを出す.
             Destroy(this.gameObject);
         }
     }

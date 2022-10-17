@@ -37,7 +37,7 @@ public class Car : StrixBehaviour
 
     public CountTime counttime;
 
-    int gamestart;
+    int gamestart=1;
 
     public GameObject User;
 
@@ -77,8 +77,8 @@ public class Car : StrixBehaviour
         IManager = ItemMana.GetComponent<ItemManager>();
         cp = GameObject.Find("CP");
         hitbox = transform.Find("HitBox").gameObject;
-        User = this.transform.parent.gameObject;
-        counttime = GameObject.Find("CountTime").GetComponent<CountTime>();
+        //User = this.transform.parent.gameObject;
+       // counttime = GameObject.Find("CountTime").GetComponent<CountTime>();
 
         colorR = 0;
         colorG = 255;
@@ -98,7 +98,7 @@ public class Car : StrixBehaviour
     void Update()
     {
         if (!isLocal) return;
-        gamestart = counttime.GetGameStart();
+       // gamestart = counttime.GetGameStart();
         //gamestart = 1;
         //Debug.Log(gamestart);
         if (gamestart == 1)
@@ -115,10 +115,13 @@ public class Car : StrixBehaviour
         //スペースキーでアイテムの使用（テスト）
         if (Input.GetKey(KeyCode.P) && itemhave == true)
         {
+            UseFrontItem();
             IManager.Item_Use(ITEM_NUM);//アイテム使用
 
             itemhave = false;
             //ORIGAMI_CHANGE();
+            //テスト
+
         }
         Pos = this.transform.position;
     }
@@ -458,5 +461,12 @@ public class Car : StrixBehaviour
 
         rb.isKinematic = false;
         upspeed = 10f;
+    }
+
+    public GameObject FrontCollider;
+
+    public void UseFrontItem()
+    {
+        FrontCollider.SetActive(true);
     }
 }

@@ -19,6 +19,7 @@ public class PushBt : MonoBehaviour
     public GameObject PASSInput;
     public GameObject Players;
     public GameObject InputSpace;
+    public static string PlayerName;
     InputField RoomInputField;
     float YAxis;
     float XAxis;
@@ -33,7 +34,11 @@ public class PushBt : MonoBehaviour
         nowButton = 0;
         HButton = 0;
         PASS = "";
+<<<<<<< HEAD
         ButtonFlg = true;
+=======
+        PlayerName = "Player";
+>>>>>>> hida
 	}
 
     void Update()
@@ -296,5 +301,10 @@ public class PushBt : MonoBehaviour
         int nowSceneIndexNumber = SceneManager.GetActiveScene().buildIndex;
 
         SceneManager.LoadScene(++nowSceneIndexNumber);
+    }
+
+    public void NameInput()
+    {
+        PlayerName = transform.GetChild(0).transform.GetChild(2).GetComponent<InputField>().text;
     }
 }

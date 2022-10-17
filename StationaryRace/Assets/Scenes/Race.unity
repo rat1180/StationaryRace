@@ -284,7 +284,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1756086809}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -996,8 +996,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: -95.918846}
-  m_SizeDelta: {x: 214.199, y: 40.1623}
+  m_AnchoredPosition: {x: -5, y: -231}
+  m_SizeDelta: {x: 418.87, y: 78.5381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &807727757
 MonoBehaviour:
@@ -2380,6 +2380,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1087910299, guid: 7260664707620914186e137b49445910, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1087910299, guid: 7260664707620914186e137b49445910, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1087910299, guid: 7260664707620914186e137b49445910, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1087910301, guid: 7260664707620914186e137b49445910, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1172.5801
+      objectReference: {fileID: 0}
+    - target: {fileID: 1087910301, guid: 7260664707620914186e137b49445910, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 278.5209
+      objectReference: {fileID: 0}
+    - target: {fileID: 1087910301, guid: 7260664707620914186e137b49445910, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -304.10352
+      objectReference: {fileID: 0}
+    - target: {fileID: 1087910301, guid: 7260664707620914186e137b49445910, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 297.7896
+      objectReference: {fileID: 0}
     - target: {fileID: 432677299115721234, guid: 7260664707620914186e137b49445910, type: 3}
       propertyPath: ItemUI.Array.data[0]
       value: 
@@ -2432,8 +2460,17 @@ PrefabInstance:
       propertyPath: ItemUI.Array.data[12]
       value: 
       objectReference: {fileID: 21300000, guid: eb0bc678703f2644eb19c03de40f2062, type: 3}
+<<<<<<< HEAD
     - target: {fileID: 837509563685531681, guid: 7260664707620914186e137b49445910, type: 3}
       propertyPath: m_Enabled
+=======
+    - target: {fileID: 432677299115721244, guid: 7260664707620914186e137b49445910, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1756086809}
+    - target: {fileID: 432677299115721244, guid: 7260664707620914186e137b49445910, type: 3}
+      propertyPath: m_RenderMode
+>>>>>>> hida
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2392126130803540814, guid: 7260664707620914186e137b49445910, type: 3}
@@ -2859,11 +2896,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -3177,6 +3214,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3854e1c3365c45e44b5687a772dd7099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!20 &1756086809 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4730582220502648035, guid: 7260664707620914186e137b49445910, type: 3}
+  m_PrefabInstance: {fileID: 1260829011}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1815047952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,8 +3894,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 127}
-  m_SizeDelta: {x: 613.234, y: 90.9393}
+  m_AnchoredPosition: {x: 183.5332, y: 299.05334}
+  m_SizeDelta: {x: 970.3004, y: 110.8326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2077410805
 MonoBehaviour:
@@ -3877,11 +3919,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 60
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1

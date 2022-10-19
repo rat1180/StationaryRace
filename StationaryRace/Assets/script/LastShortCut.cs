@@ -8,7 +8,11 @@ public class LastShortCut : MonoBehaviour
     public GameObject Break_wall2;
 
     private float speed = 10.0f;
-    private bool BreakFlg = false;
+    public bool BreakFlg = false;
+
+    private AudioSource a;
+
+    public  AudioClip Impact;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +30,7 @@ public class LastShortCut : MonoBehaviour
     public void Bomber()
     {
         BreakFlg = true;
-
+        a.PlayOneShot(Impact);
         Break_wall.SetActive(false);
         Break_wall2.SetActive(false);
     }

@@ -19,7 +19,6 @@ public class MainKitai : MonoBehaviour
 
     public int Player_Mode;        //機体の状態
     public GameObject Skin;             //オブジェクトの割り当て
-    public CountTime countTime;         //CountTimeスクリプトへ参照
     #endregion
 
     // Start is called before the first frame update

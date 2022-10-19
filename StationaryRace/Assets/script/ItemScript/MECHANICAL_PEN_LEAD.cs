@@ -27,17 +27,11 @@ public class MECHANICAL_PEN_LEAD : StrixBehaviour
 
     void Start()
     {
-
-        if (Enemy == null)
-        {
-            Debug.Log("???");
-        }
         speed = 0.05f;
         Car = GameObject.Find("Car");
         CarSc = Car.GetComponent<Car>();
         IManager = GameObject.Find("ITEMManager");  //アイテムマネージャーのゲームオブジェクトを取得.
         IMSc = IManager.GetComponent<ItemManager>();//アイテムマネージャーのスクリプトを参照する.
-        Debug.Log(Name);
         targetflg = true;
     }
 
@@ -60,7 +54,7 @@ public class MECHANICAL_PEN_LEAD : StrixBehaviour
         if (collision.gameObject.tag == "Player")
         {
             CarSc.GetComponent<Car>().SpeedDown();                                  //Car側の関数を呼び出す.
-            //IMSc.ItemIcon(ITEMConst.ITEM.MECHANICAL_PEN_LEAD);  //アイテムHITアイテムを出す.
+            IMSc.ItemIcon(ITEMConst.ITEM.MECHANICAL_PEN_LEAD);  //アイテムHITアイテムを出す.
             Destroy(this.gameObject);
         }
     }

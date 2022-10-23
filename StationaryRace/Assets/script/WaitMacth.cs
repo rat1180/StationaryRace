@@ -137,7 +137,7 @@ public class WaitMacth : MonoBehaviour
 
     public void RdmenberText()
     {
-        RdText.GetComponent<Text>().text = Rdmenber + "人のプレイヤーが待っています！";
+        RdText.GetComponent<Text>().text = Rdmenber + "個の文房具が待機中！";
     }
 
 }

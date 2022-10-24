@@ -19,7 +19,11 @@ public class PushBt : MonoBehaviour
     public GameObject PASSInput;
     public GameObject Players;
     public GameObject InputSpace;
+    public static string PlayerName;
     InputField RoomInputField;
+    float YAxis;
+    float XAxis;
+    bool ButtonFlg;
 
     void Start()
     {
@@ -30,10 +34,21 @@ public class PushBt : MonoBehaviour
         nowButton = 0;
         HButton = 0;
         PASS = "";
+
+        ButtonFlg = true;
+
+        PlayerName = "Player";
+
 	}
 
     void Update()
     {
+        YAxis = Input.GetAxis("ClossKeyYAxis");
+        XAxis = Input.GetAxis("ClossKeyXAxis");
+        if(XAxis ==0 && YAxis == 0)
+        {
+            ButtonFlg = true;
+        }
         switch (selectButton)
         {
             case 0:
@@ -74,15 +89,17 @@ public class PushBt : MonoBehaviour
     void selectmode()
     {
         //“ñ‚Â‚µ‚©‚È‚¢‚Ì‚Å“¯‚¶
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (YAxis == 1 && ButtonFlg)
         {
             nowButton = (0 == nowButton) ? 1 : 0;
+            ButtonFlg = false;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (YAxis == -1 && ButtonFlg)
         {
-            nowButton = (0 == nowButton) ? 1 : 0; 
+            nowButton = (0 == nowButton) ? 1 : 0;
+            ButtonFlg = false;
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButton("Ready") && ButtonFlg)
         {
             if(nowButton == 0)
             {
@@ -91,6 +108,7 @@ public class PushBt : MonoBehaviour
             else
             {
                 PushMalti();
+                ButtonFlg = false;
             }
         }
 
@@ -115,15 +133,17 @@ public class PushBt : MonoBehaviour
         }
         nowObject.transform.GetChild(1).GetComponent<Image>().color = Color.white;
         nowObject.transform.GetChild(2).GetComponent<Image>().color = Color.white;
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (YAxis == -1 && ButtonFlg)
         {
             nowButton++;
             if (nowButton > 2) nowButton = 0;
+            ButtonFlg = false;
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (YAxis == 1 && ButtonFlg)
         {
             nowButton--;
             if (nowButton < 0) nowButton = 2;
+            ButtonFlg = false;
         }
 
         switch (nowButton)
@@ -133,15 +153,18 @@ public class PushBt : MonoBehaviour
                 {
                     nowObject.transform.GetChild(3).gameObject.transform.GetChild(i).gameObject.GetComponent<Outline>().enabled = true;
                 }
-                if (Input.GetKeyDown(KeyCode.RightArrow))
+
+                if (XAxis == 1 && ButtonFlg)
                 {
                     GAMEMODE++;
                     if (GAMEMODE > 4) GAMEMODE = 0;
+                    ButtonFlg = false;
                 }
-                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                if (XAxis == -1 && ButtonFlg)
                 {
                     GAMEMODE--;
                     if (GAMEMODE < 0) GAMEMODE = 4;
+                    ButtonFlg = false;
                 }
                 break;
 
@@ -151,24 +174,27 @@ public class PushBt : MonoBehaviour
                 break;
 
             case 2:
-                if (Input.GetKeyDown(KeyCode.RightArrow))
+                if (XAxis == 1 && ButtonFlg)
                 {
                     HButton++;
-                    if (HButton > 2) HButton = 0;
+                    if (HButton > 1) HButton = 0;
+                    ButtonFlg = false;
                 }
-                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                if (XAxis == -1 && ButtonFlg)
                 {
                     HButton--;
                     if (HButton < 0) HButton = 1;
+                    ButtonFlg = false;
                 }
 
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetButton("Ready") && ButtonFlg)
                 {
                     if (HButton == 0)
                     {
                         PushBack();
+                        ButtonFlg = false;
                     }
-                    else
+                    else if(HButton == 1)
                     {
                         PushStart();
                     }
@@ -277,5 +303,10 @@ public class PushBt : MonoBehaviour
         int nowSceneIndexNumber = SceneManager.GetActiveScene().buildIndex;
 
         SceneManager.LoadScene(++nowSceneIndexNumber);
+    }
+
+    public void NameInput()
+    {
+        PlayerName = transform.GetChild(0).transform.GetChild(2).GetComponent<InputField>().text;
     }
 }

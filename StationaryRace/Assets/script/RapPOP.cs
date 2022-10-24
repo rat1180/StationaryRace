@@ -20,7 +20,7 @@ public class RapPOP : MonoBehaviour
         Popflg = false;
         RAP = 0;
         Timecnt = 0;
-        Downtext();
+        Uptext();
     }
 
     // Update is called once per frame
@@ -47,7 +47,7 @@ public class RapPOP : MonoBehaviour
                     txtflg = false;
                     Timer = 0;
                     Timecnt = 0;
-                    Downtext();
+                    Uptext();
                 }
             }
         }

@@ -38,6 +38,11 @@ public class WaitMacth : MonoBehaviour
         {
             memberWait();
         }
+
+        if (Input.GetButton("Ready"))
+        {
+            ClickBottun();
+        }
     }
 
     void memberWait()

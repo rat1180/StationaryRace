@@ -99,7 +99,7 @@ public class PushBt : MonoBehaviour
             nowButton = (0 == nowButton) ? 1 : 0;
             ButtonFlg = false;
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButton("Ready") && ButtonFlg)
         {
             if(nowButton == 0)
             {
@@ -108,6 +108,7 @@ public class PushBt : MonoBehaviour
             else
             {
                 PushMalti();
+                ButtonFlg = false;
             }
         }
 
@@ -176,7 +177,7 @@ public class PushBt : MonoBehaviour
                 if (XAxis == 1 && ButtonFlg)
                 {
                     HButton++;
-                    if (HButton > 2) HButton = 0;
+                    if (HButton > 1) HButton = 0;
                     ButtonFlg = false;
                 }
                 if (XAxis == -1 && ButtonFlg)
@@ -186,13 +187,14 @@ public class PushBt : MonoBehaviour
                     ButtonFlg = false;
                 }
 
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetButton("Ready") && ButtonFlg)
                 {
                     if (HButton == 0)
                     {
                         PushBack();
+                        ButtonFlg = false;
                     }
-                    else
+                    else if(HButton == 1)
                     {
                         PushStart();
                     }

@@ -13,21 +13,15 @@ public class itemblock : MonoBehaviour
     public AudioClip Dessound; //CDみたいなもの.
     AudioSource audioSource;   //CDプレイヤーみたいなもの.
     public GameObject SetBox_particle; //アイテムボックスが破壊されたらパーティクルを生成
-
-    // Start is called before the first frame update
+    Vector3 EffectPos;
     void Start()
     {
-        //コンポーネント取得.
         audioSource = GetComponent<AudioSource>();  //オーディオソースの取得.
         ItemMana = GameObject.Find("ITEMManager");  //アイテムマネージャーを取得.
         Player = GameObject.Find("Car");            //プレイヤーのゲームオブジェクトを取得.
         ItemHave = Player.GetComponent<Car>();      //プレイヤーのスクリプトを参照する.
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
     //ステージに当たった際にフラグを切り替える
     void OnCollisionEnter(Collision collision)
     {
@@ -47,16 +41,15 @@ public class itemblock : MonoBehaviour
         {
             StrixReplicator Check = collider.transform.parent.GetComponent<StrixReplicator>();
             if (Check == null || !(Check.isLocal)) return;
-            AudioSource.PlayClipAtPoint(Dessound, transform.position); //アイテムが破壊された際に効果音を鳴らす.
-
+            AudioSource.PlayClipAtPoint(Dessound, transform.position);                  //アイテムが破壊された際に効果音を鳴らす.
             this.gameObject.SetActive(false);                                           //アイテムブロックのゲームオブジェクトを非表示にする.
             Instantiate(SetBox_particle, this.transform.position, Quaternion.identity); //パーティクルを生成.
 
             if (ItemHave.itemhave == false)//プレイヤーがアイテムを持っていなければアイテムマネージャーに数値を渡す.
             {
-                //USER_NUM = ItemHave.NUMBER_RETURN();                         //どのプレイヤーがアイテムを取得したか番号を参照.
+                //USER_NUM = ItemHave.NUMBER_RETURN();       //どのプレイヤーがアイテムを取得したか番号を参照.
                 ItemMana.GetComponent<ItemManager>().Item(); //ItemManagerというスクリプトのItem関数を使う.
-                ItemHave.itemhave = true;                                         //プレーヤースクリプトでアイテムフラグをtrueにする.
+                ItemHave.itemhave = true;                    //プレーヤースクリプトでアイテムフラグをtrueにする.
             }
             Invoke("Respawn", 3); //3秒後にその場に複製される.
         }

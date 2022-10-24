@@ -21,7 +21,7 @@ namespace ITEMConst
 
         //順位によってのアイテム数値の最大値・最小値
         public const int ItemMin = 103; //最小の値
-        public const int ItemMax = 104; //最大の値（最大の値に+1して範囲に入れる）
+        public const int ItemMax = 113; //最大の値（最大の値に+1して範囲に入れる）
         //public const int ItemMin = 110; //最小の値
         //public const int ItemMax = 111; //最大の値（最大の値に+1して範囲に入れる）
         public const int UpperMin  = 101; //上位のアイテム最小値

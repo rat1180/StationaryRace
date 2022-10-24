@@ -229,6 +229,7 @@ public class PushBt : MonoBehaviour
     {
         if (PushFlg == false)
         {
+            NameInput();
             Invoke("SceneTrip", 1);
             PushFlg = true;
             audioSource.PlayOneShot(Push); // Œø‰Ê‰¹‚ð–Â‚ç‚·
@@ -265,6 +266,7 @@ public class PushBt : MonoBehaviour
 
     public void PushMalti()
     {
+        NameInput();
         GAMEMODE = 4;
         MODEselect.SetActive(false);
         PASSInput.SetActive(true);

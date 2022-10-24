@@ -15,7 +15,7 @@ public class TextController : StrixBehaviour
         transform.localScale = new Vector3(-1, 1, 1);
         if (isLocal)
         {
-            StrixNetwork.instance.selfRoomMember.GetName();
+            PName = PushBt.PlayerName;
         }
     }
 

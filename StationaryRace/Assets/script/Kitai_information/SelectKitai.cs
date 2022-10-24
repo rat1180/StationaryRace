@@ -70,14 +70,14 @@ public class SelectKitai : StrixBehaviour
             audioSource.PlayOneShot(Select);      // キャラ変更時(nyu)を再生
         }
 
-        //Enterキー押下
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            //スタート前へシーン切り替え
-            //SceneManager.LoadScene("Kitai");
-            mode = 1;
-                Debug.Log("キャラ選択終わり");
-        }
+        ////Enterキー押下
+        //if (Input.GetKeyDown(KeyCode.Return))
+        //{
+        //    //スタート前へシーン切り替え
+        //    //SceneManager.LoadScene("Kitai");
+        //    mode = 1;
+        //        Debug.Log("キャラ選択終わり");
+        //}
     }
 
     /// <summary>

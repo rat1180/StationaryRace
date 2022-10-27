@@ -89,7 +89,7 @@ public class ONSystem : MonoBehaviour
 
         #region 接続案２(成功)
         //サーバー接続
-        StrixNetwork.instance.playerName = "TestPlayer";
+        StrixNetwork.instance.playerName = PushBt.PlayerName;
         StrixNetwork.instance.ConnectMasterServer(host, port, OnConnectCallback, OnConnectFailedCallback);
         #endregion
     }

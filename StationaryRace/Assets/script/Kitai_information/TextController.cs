@@ -7,16 +7,13 @@ using SoftGear.Strix.Unity.Runtime;
 public class TextController : StrixBehaviour
 {
     public TextMeshPro nameText;
+    [StrixSyncField]
     public string PName; //–¼‘O‚Ì“ü—Í
 
     // Start is called before the first frame update
     void Start()
     {
         transform.localScale = new Vector3(-1, 1, 1);
-        if (isLocal)
-        {
-            PName = PushBt.PlayerName;
-        }
     }
 
     // Update is called once per frame
@@ -29,5 +26,17 @@ public class TextController : StrixBehaviour
     public void PlayerName()
     {
         nameText.text = PName; //–¼‘O‚Ì•\Ž¦
+    }
+    
+    public void waitConect()
+    {
+        if (isLocal)
+        {
+            PName = StrixNetwork.instance.selfRoomMember.GetName();
+            if(PName == "")
+            {
+                PName = "Player";
+            }
+        }
     }
 }

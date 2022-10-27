@@ -28,7 +28,7 @@ public class UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // RankNunber.SetActive(true);
+        RankNunber.SetActive(true);
 
         #region テスト
         Player = GameObject.Find("Car");         //プレイヤーのゲームオブジェクトを取得.

@@ -57,7 +57,7 @@ public class SelectKitai : StrixBehaviour
         if (!isLocal) return;
 
         //Qキー押下
-        if (Input.GetKeyDown("q"))
+        if (Input.GetButtonDown("ChengeKey"))
         {
             //現在のアクティブな子オブジェクトを非アクティブ
             Skin.transform.GetChild(MachineNum).gameObject.SetActive(false);
@@ -71,7 +71,7 @@ public class SelectKitai : StrixBehaviour
         }
 
         //Enterキー押下
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetButtonDown("Ready"))
         {
             //スタート前へシーン切り替え
             //SceneManager.LoadScene("Kitai");

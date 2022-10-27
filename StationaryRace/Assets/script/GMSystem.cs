@@ -108,6 +108,10 @@ public class GMSystem : MonoBehaviour
     {
         Timer();
         BGM();
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            TitleBack();
+        }
     }
 
     #region ‹N“®ˆ—

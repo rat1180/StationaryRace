@@ -317,7 +317,7 @@ public class UserOperation : MonoBehaviour
     //ゲームが始まった時とCP通過時にシステムからもらう
     public void RankSet()
     {
-        //int NewRank = GMSystem.GetComponent<GMSystem>().RankGet();
+        int NewRank = GMSystem.GetComponent<GMSystem>().RankGet();
         //Debug.Log(NewRank);
         //ランクの変動がなければ行わない
         //if (Rank == NewRank)
@@ -325,7 +325,7 @@ public class UserOperation : MonoBehaviour
         //    return;
         //}
 
-        //Rank = NewRank;
+        Rank = NewRank;
 
         RankSend();
     }

@@ -4,10 +4,9 @@ using UnityEngine;
 using TMPro;
 using SoftGear.Strix.Unity.Runtime;
 
-public class TextController : StrixBehaviour
+public class TextController : MonoBehaviour
 {
     public TextMeshPro nameText;
-    [StrixSyncField]
     public string PName; //名前の入力
 
     // Start is called before the first frame update
@@ -19,7 +18,12 @@ public class TextController : StrixBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+        NameGet();
         PlayerName();
+        
+            
         transform.LookAt(Camera.main.transform);  // Cameraに合わせてNameテキストを回転
     }
 
@@ -28,15 +32,13 @@ public class TextController : StrixBehaviour
         nameText.text = PName; //名前の表示
     }
     
-    public void waitConect()
+    public void NameGet()
     {
-        if (isLocal)
+        GameObject Car = transform.parent.transform.parent.transform.parent.gameObject;
+        PName = Car.GetComponent<Car>().Name;
+        if (PName == "")
         {
-            PName = StrixNetwork.instance.selfRoomMember.GetName();
-            if(PName == "")
-            {
-                PName = "Player";
-            }
+            PName = "Player";
         }
     }
 }

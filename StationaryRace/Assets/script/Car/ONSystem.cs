@@ -206,7 +206,7 @@ public class ONSystem : MonoBehaviour
 
             RoomMemberProperties memberProperties = new RoomMemberProperties
             {
-                name = PushBt.PlayerName,
+                name = StrixNetwork.instance.playerName,
                 //’Ç‰Á
                 properties = new Dictionary<string, object>() {
             { "state", 0 }  // ‰Šúó‘Ô‚Í "Not Ready"

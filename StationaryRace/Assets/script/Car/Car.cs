@@ -59,6 +59,11 @@ public class Car : StrixBehaviour
     private float speednow;
 
     public Vector3 Pos;
+
+    //’Ç‰Á:”ò“c
+    [StrixSyncField]
+    public string Name;
+
     #endregion
 
     #endregion
@@ -129,6 +134,7 @@ public class Car : StrixBehaviour
         if (Input.GetButton("Itemfir")){
             Debug.Log("”­ŽË");
         }
+
     }
 
     /// <summary>
@@ -438,5 +444,14 @@ public class Car : StrixBehaviour
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         //Debug.Log(x+"x, y" +y);
+    }
+
+    //’Ç‰Á:”ò“c
+    public void NameSet()
+    {
+        if (isLocal)
+        {
+            Name = StrixNetwork.instance.selfRoomMember.GetName();
+        }
     }
 }

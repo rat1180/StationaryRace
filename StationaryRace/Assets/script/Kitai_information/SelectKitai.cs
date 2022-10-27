@@ -75,6 +75,7 @@ public class SelectKitai : StrixBehaviour
         {
             //スタート前へシーン切り替え
             //SceneManager.LoadScene("Kitai");
+            SelectOff();
             mode = 1;
                 Debug.Log("キャラ選択終わり");
         }

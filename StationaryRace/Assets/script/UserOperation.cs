@@ -133,8 +133,6 @@ public class UserOperation : MonoBehaviour
         Key.BrakeKey = false;
         Key.ItemKey = false;
         Key.HandleKey = NULL;
-        
-
     }
 
     //機体、UIの取得や各値の初期値セット
